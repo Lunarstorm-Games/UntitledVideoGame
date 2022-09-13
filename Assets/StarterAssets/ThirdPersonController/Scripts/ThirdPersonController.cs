@@ -105,6 +105,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
+        private bool _rotateOnMove = true;
 
         private const float _threshold = 0.01f;
 
@@ -261,7 +262,10 @@ namespace StarterAssets
                     RotationSmoothTime);
 
                 // rotate to face input direction relative to camera position
-                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                if (_rotateOnMove)
+                {
+                    transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);    
+                }
             }
 
 
@@ -387,6 +391,11 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void SetRotateOnMove(bool newRotateOnMove)
+        {
+            _rotateOnMove = newRotateOnMove;
         }
     }
 }
