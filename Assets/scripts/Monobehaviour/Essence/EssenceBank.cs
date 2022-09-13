@@ -12,6 +12,7 @@ namespace Assets.scripts.Monobehaviour.Essence
         [SerializeReference]
         private EssenceBankModel Bank = new EssenceBankModel();
 
+        public float EssenceAmount => Bank.EssenceAmount;
         public static EssenceBank Instance { get; private set; }
         void Start()
         {
