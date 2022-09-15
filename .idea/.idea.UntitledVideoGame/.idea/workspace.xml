@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d6ba63e-317d-4308-8e0c-d09fb61815e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Building.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreYouSurePrompt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreYouSurePrompt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EtoBuild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EtoBuild.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRaycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRaycast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniStorm Weather System/URP Support.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniStorm Weather System/URP Support.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniStorm Weather System/URP Support/UniStorm URP Support.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniStorm Weather System/URP Support/UniStorm URP Support.unitypackage.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +16,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AreYouSurePrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.2/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -84,6 +82,7 @@
       <workItem from="1663107489942" duration="4609000" />
       <workItem from="1663145969037" duration="17524000" />
       <workItem from="1663190932156" duration="2249000" />
+      <workItem from="1663239192198" duration="14000" />
     </task>
     <servers />
   </component>
