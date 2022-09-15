@@ -9,24 +9,25 @@ public class EtoBuild : MonoBehaviour
 {
     [SerializeField] private AreYouSurePrompt areYouSurePrompt;
 
-    private GameObject buildSpot;
+    private Transform buildSpot;
 
     void Update()
     {
         if (Input.GetKey(KeyCode.E))
         {
             areYouSurePrompt.ShowPrompt();
+            areYouSurePrompt.SetBuildSpot(buildSpot);
         }
     }
 
-    public GameObject GetBuildSpot()
+    public Transform GetBuildSpot()
     {
         return buildSpot;
     }
 
-    public void SetGameSpot(GameObject go)
+    public void SetBuildSpot(Transform trans)
     {
-        buildSpot = go;
+        buildSpot = trans;
     }
     
 }

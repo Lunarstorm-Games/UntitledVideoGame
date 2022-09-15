@@ -10,6 +10,7 @@ public class PlayerRaycast : MonoBehaviour
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform ui;
 
+    // UI ELEMENTS
     private GameObject etoBuiildPopUp;
     private bool isPromptOpen = false;
 
@@ -30,7 +31,7 @@ public class PlayerRaycast : MonoBehaviour
             if (hit.transform.CompareTag("BuildingSpot") && hit.distance <= 7f && !isPromptOpen)
             {
                 ShowEtoBuildPopUp(true);
-                etoBuiildPopUp.GetComponent<EtoBuild>().SetGameSpot(hit.transform.gameObject);
+                etoBuiildPopUp.GetComponent<EtoBuild>().SetBuildSpot(hit.transform.parent.transform.parent);
                 return;
             }
             ShowEtoBuildPopUp(false);

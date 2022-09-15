@@ -6,8 +6,8 @@ using UnityEngine;
 public class AreYouSurePrompt : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
-    [SerializeField] private GameObject building;
     private PlayerRaycast playerRaycast;
+    private Transform buildSpot = new RectTransform();
 
     void Awake()
     {
@@ -28,5 +28,25 @@ public class AreYouSurePrompt : MonoBehaviour
         starterAssetsInputs.cursorInputForLook = true;
         gameObject.SetActive(false);
         playerRaycast.SetIsPormptOpen(false);
+    }
+    
+    public Transform GetBuildSpot()
+    {
+        return buildSpot;
+    }
+    
+    public void SetBuildSpot(Transform trans)
+    {
+        buildSpot = trans;
+    }
+
+    public void BuildBuilding()
+    {
+        if (buildSpot)
+        {
+            buildSpot.transform.Find("Building").gameObject.SetActive(true);
+            buildSpot.transform.Find("BuildingSpotModel").gameObject.SetActive(false);
+            HidePrompt();
+        }
     }
 }
