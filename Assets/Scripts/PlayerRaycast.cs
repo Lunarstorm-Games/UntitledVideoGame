@@ -31,7 +31,7 @@ public class PlayerRaycast : MonoBehaviour
             if (hit.transform.CompareTag("BuildingSpot") && hit.distance <= 7f && !isPromptOpen)
             {
                 ShowEtoBuildPopUp(true);
-                etoBuiildPopUp.GetComponent<EtoBuild>().SetBuildSpot(hit.transform.parent.transform.parent);
+                etoBuiildPopUp.GetComponent<EtoBuild>().SetBuildSpot(hit.transform.parent);
                 return;
             }
             ShowEtoBuildPopUp(false);
