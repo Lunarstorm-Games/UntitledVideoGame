@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Assets.scripts.Models.WaveModels;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField]
-    private List<Transform> SpawnPoints=new List<Transform>();
+    private List<Transform> SpawnPoints;
     
     [SerializeField]
     public List<EnemySpawnSetting> SpawnAblePrefabs = new List<EnemySpawnSetting>();
@@ -19,6 +20,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
      AddSpawnPoints();   
+     //MoveSpawnPointsToNavmesh();
     }
 
     // Update is called once per frame
@@ -26,7 +28,17 @@ public class WaveSpawner : MonoBehaviour
     {
         
     }
-    
+
+    private void MoveSpawnPointsToNavmesh()
+    {
+        foreach (var spawnPoint in SpawnPoints)
+        {
+            if (Physics.Raycast(new Ray(transform.position, Vector3.down),out RaycastHit hit))
+            {
+                spawnPoint.position = hit.point;
+            }
+        }
+    }
     public void SpawnWave(float strength)
     {
      var enemies= DetermineEnemiesToSpawn(strength);
@@ -56,7 +68,11 @@ public class WaveSpawner : MonoBehaviour
     {
         foreach (var enemySpawnSetting in enemies)
         {
-            Instantiate(enemySpawnSetting.Prefab, transform.position, new Quaternion());
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(spawnPoint.position, out hit, 100f, NavMesh.AllAreas)){
+                Instantiate(enemySpawnSetting.Prefab, hit.position, Quaternion.identity);
+            }
+          
         }
     }
     /// <summary>

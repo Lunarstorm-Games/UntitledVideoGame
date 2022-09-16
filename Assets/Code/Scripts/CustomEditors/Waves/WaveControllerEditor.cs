@@ -16,7 +16,7 @@ namespace Assets.scripts.CustomEditors.Waves
         private void OnEnable()
         {
             // Link the SerializedProperty to the variable 
-            waveStrengthProp.FindProperty(nameof(waveStrength));
+            //waveStrengthProp.FindProperty(nameof(waveStrength));
 
         }
         public override void OnInspectorGUI()
