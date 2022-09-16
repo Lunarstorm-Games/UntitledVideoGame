@@ -6,126 +6,59 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    protected enum EnemyState
-    {
-        Patrol,
-        Chase,
-        Attack,
-    }
+    //Default states of an enemy
+    public ChaseState ChaseState { get; protected set; }
+    public AttackState AttackState { get; protected set; }
+    public SpawnState SpawnState { get; protected set; }
+
 
     public Animator Animator { get; protected set; }
     public NavMeshAgent Agent { get; protected set; }
+    public FiniteStateMachine FSM { get; protected set; }
+    public Target[] TargetInterests { get; protected set; }
 
-    [SerializeField] protected float health = 30f;
-    [SerializeField] protected float damage = 10f;
-    [SerializeField] protected float speed = 3f;
-    [SerializeField] protected float aggroRange = 15f;
-    [SerializeField] protected float attackRange = 4f;
-    [SerializeField] protected float attackDelay = 4f;
-    [SerializeField] protected int essenceDropAmount = 10;
-    [SerializeField] protected EnemyState enemyState = EnemyState.Patrol;
 
-    protected float currentAttackDelay;
-    protected EnemyState lastState;
+    [SerializeField] protected EnemyData enemyData;
 
-    public GameObject player;
-    public GameObject villageCenter;
+    [HideInInspector] public GameObject CurrentTarget;
+
 
     public virtual void Awake()
     {
         Animator = GetComponent<Animator>();
         Agent = GetComponent<NavMeshAgent>();
+        TargetInterests = GameObject.FindObjectsOfType<Target>();
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        villageCenter = GameObject.FindGameObjectWithTag("VillageCenter");
-
-        Agent.speed = speed;
+        //StateMachine
+        FSM = new FiniteStateMachine();
+        SpawnState = new SpawnState(this, FSM, enemyData);
+        ChaseState = new ChaseState(this, FSM, enemyData);
+        AttackState = new AttackState(this, FSM, enemyData);
     }
 
     public virtual void Start()
     {
-
+        FSM.InitializeState(SpawnState);
     }
 
     public virtual void Update()
     {
-        switch (enemyState)
-        {
-            case EnemyState.Patrol:
-                Patrol();
-                break;
-
-            case EnemyState.Chase:
-                Chase();
-                break;
-
-            case EnemyState.Attack:
-                Attack();
-                break;
-
-            default:
-                Debug.LogError("No EnemyState Found");
-                return;
-        }
+        FSM.CurrentState.LogicUpdate();
     }
 
-    protected virtual void Attack()
+    public virtual void LateUpdate()
     {
-        currentAttackDelay -= Time.deltaTime;
-        if (currentAttackDelay <= 0f)
-        {
-            currentAttackDelay = attackDelay;
-            Animator.SetTrigger("Attacking");
-        }
-        if (!InAttackRange())
-        {
-            SetState(EnemyState.Chase);
-            return;
-        }
-    }
-
-    protected virtual void Chase()
-    {
-        Animator.SetFloat("Speed", 1);
-        Agent.SetDestination(player.transform.position);
-
-        if (!LineOfSight())
-        {
-            SetState(EnemyState.Patrol);
-            return;
-        }
-        if (InAttackRange())
-        {
-            SetState(EnemyState.Patrol);
-            return;
-        }
-    }
-
-    protected virtual void Patrol()
-    {
-        Animator.SetFloat("Speed", 1);
-        Agent.SetDestination(villageCenter.transform.position);
-
-        if (LineOfSight())
-        {
-            SetState(EnemyState.Chase);
-            return;
-        }
-        if (InAttackRange())
-        {
-            SetState(EnemyState.Patrol);
-            return;
-        }
+        FSM.CurrentState.PhysicsUpdate();
     }
 
     public virtual void TakeDamage(float damage)
     {
-        health -= damage;
+        enemyData.health -= damage;
 
-        if (health <= 0)
+        if (enemyData.health <= 0)
         {
             DropEssence();
-            Animator.SetTrigger("Dead");
+            Animator.SetTrigger("Death");
             Destroy(this.gameObject);
         }
         else
@@ -139,32 +72,4 @@ public class Enemy : MonoBehaviour, IDamageable
         //Essence system task
     }
 
-
-
-
-    protected virtual bool LineOfSight()
-    {
-        float distance = Vector3.Distance(this.transform.position, player.transform.position);
-        if (distance <= aggroRange)
-        {
-            return true;
-        }
-        return false;    
-    }
-
-    protected virtual bool InAttackRange()
-    {
-        float distance = Vector3.Distance(this.transform.position, player.transform.position);
-        if (distance <= attackRange)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    protected void SetState(EnemyState newState)
-    {
-        lastState = enemyState;
-        enemyState = newState;
-    }
 }

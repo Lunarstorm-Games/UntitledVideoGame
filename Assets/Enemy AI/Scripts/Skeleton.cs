@@ -7,45 +7,29 @@ public class Skeleton : Enemy
     public override void Awake()
     {
         base.Awake();
+        //add here extra states of behaviour
     }
 
     public override void Start()
     {
         base.Start();
-    }
-
-    public override void TakeDamage(float damage)
-    {
-        base.TakeDamage(damage);
+        
     }
 
     public override void Update()
     {
         base.Update();
+        Debug.Log(CurrentTarget.gameObject.transform.position);
+        Debug.Log(FSM.CurrentState);
     }
 
-    protected override void Attack()
+    public override void LateUpdate()
     {
-        base.Attack();
+        base.LateUpdate();
     }
 
-    protected override void Chase()
+    public override void TakeDamage(float damage)
     {
-        base.Chase();
-    }
-
-    protected override bool InAttackRange()
-    {
-        return base.InAttackRange();
-    }
-
-    protected override bool LineOfSight()
-    {
-        return base.LineOfSight();
-    }
-
-    protected override void Patrol()
-    {
-        base.Patrol();
+        base.TakeDamage(damage);
     }
 }
