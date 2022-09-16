@@ -780,56 +780,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6067049128572240401, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: m_Speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067049128572240401, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7514962589122547655, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: enemyData
-      value: 
-      objectReference: {fileID: 11400000, guid: 3c4a40e61f3eb0d4ebb84efc15d400f9,
-        type: 2}
-    - target: {fileID: 7514962589122547655, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: attackRange
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9196526310284169000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: CurrentState
-      value: 
-      objectReference: {fileID: 11400000, guid: 560c865b35a654d4cacc3f757b026ec8,
-        type: 2}
-    - target: {fileID: 9196526310284169000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: currentState
-      value: 
-      objectReference: {fileID: 11400000, guid: aa2540fc238865448b4d9f0b706b6b7a,
-        type: 2}
-    - target: {fileID: 9196526310284169000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: Transitions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9196526310284169000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: Transitions.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 801e7aa4a58d8d545aa3fbee7efa2a73,
-        type: 2}
-    - target: {fileID: 9196526310284169000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
-        type: 3}
-      propertyPath: Transitions.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: ac69604209ad4af4aba58b26555b0a05,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38283d0f2f9588c4a90e9a27a86fdbdc, type: 3}
 --- !u!1 &311920391
