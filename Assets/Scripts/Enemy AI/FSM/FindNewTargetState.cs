@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnState : EnemyState
+public class FindNewTargetState : EnemyState
 {
-    public SpawnState(Enemy enemy, FiniteStateMachine fsm, EnemyData enemyData) : base(enemy, fsm, enemyData)
+    public FindNewTargetState(Enemy enemy, FiniteStateMachine fsm, EnemyData enemyData) : base(enemy, fsm, enemyData)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
-
-        enemy.Agent.speed = enemyData.speed;
-        enemy.Agent.stoppingDistance = enemyData.attackRange;
-        fsm.ChangeState(enemy.FindNewTargetState);
+        enemy.FindClosestTarget();
+        fsm.ChangeState(enemy.FollowTargetState);
     }
 
     public override void Exit()
@@ -31,4 +29,6 @@ public class SpawnState : EnemyState
     {
         base.PhysicsUpdate();
     }
+
+    
 }

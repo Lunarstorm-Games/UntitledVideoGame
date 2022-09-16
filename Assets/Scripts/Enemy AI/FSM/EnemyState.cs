@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyState : BaseState
 {
-    protected EnemyData entityData;
+    protected EnemyData enemyData;
     protected FiniteStateMachine fsm;
-    protected Enemy entity;
+    protected Enemy enemy;
 
-    public EnemyState(Enemy entity, FiniteStateMachine fsm, EnemyData entityData)
+    public EnemyState(Enemy enemy, FiniteStateMachine fsm, EnemyData enemyData)
     {
-        this.entity = entity;
-        this.entityData = entityData;
+        this.enemy = enemy;
+        this.enemyData = enemyData;
         this.fsm = fsm;
     }
 

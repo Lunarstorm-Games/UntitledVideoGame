@@ -11,6 +11,7 @@ public class EnemyData : ScriptableObject
     [SerializeField] public float aggroRange = 15f;
     [SerializeField] public float attackRange = 4f;
     [SerializeField] public float attackDelay = 4f;
+    [SerializeField] public float preAttackDelay = 1.5f;
     [SerializeField] public int essenceDropAmount = 10;
     [SerializeField] public LayerMask targetInterests;
 }
