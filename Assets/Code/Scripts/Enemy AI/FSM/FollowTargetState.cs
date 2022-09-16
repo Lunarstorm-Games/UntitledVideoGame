@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : EnemyState
+public class FollowTargetState : EnemyState
 {
-
-    public AttackState(Enemy enemy, FiniteStateMachine fsm, EnemyData enemyData) : base(enemy, fsm, enemyData)
+    public FollowTargetState(Enemy enemy, FiniteStateMachine fsm, EnemyData enemyData) : base(enemy, fsm, enemyData)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
-        enemy.Animator.SetFloat("Speed", 0f);
-        enemyData.currentAttackDelay = enemyData.preAttackDelay;
+
     }
 
     public override void Exit()
@@ -27,11 +25,12 @@ public class AttackState : EnemyState
 
         enemy.LookAtTarget();
 
-        enemy.Attack();
+        enemy.SetTargetDestination(enemy.CurrentTarget.transform.position);
+        enemy.Animator.SetFloat("Speed", enemy.Agent.velocity.magnitude / enemy.Agent.speed);
 
-        if (!enemy.InAttackRange())
+        if (enemy.InAttackRange())
         {
-            fsm.ChangeState(enemy.FollowTargetState);
+            fsm.ChangeState(enemy.AttackState);
         }
     }
 
