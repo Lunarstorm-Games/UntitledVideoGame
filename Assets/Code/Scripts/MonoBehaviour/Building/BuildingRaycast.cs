@@ -8,7 +8,6 @@ public class BuildingRaycast : MonoBehaviour
 {
     [SerializeField] private LayerMask rayCollider;
     [SerializeField] private Transform ui;
-    [SerializeField] private Transform playerOrigin;
 
     // UI ELEMENTS
     private GameObject etoBuiildPopUp;

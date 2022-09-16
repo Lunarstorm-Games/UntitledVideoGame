@@ -5,18 +5,164 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d6ba63e-317d-4308-8e0c-d09fb61815e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UntitledVideoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UntitledVideoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/MonoBehaviour/Building/AreYouSurePrompt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/MonoBehaviour/Building/AreYouSurePrompt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/MonoBehaviour/Building/PlayerRaycast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/MonoBehaviour/Building/PlayerRaycast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/ThirdPersonShooterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/ThirdPersonShooterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/EnemyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/EnemyData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/AttackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/AttackState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/BaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/BaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/BaseState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/ChaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/ChaseState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/EnemyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/EnemyState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/EnemyState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/EnemyState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/SpawnState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/SpawnState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FSM/SpawnState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/SpawnState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FiniteStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/FiniteStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/FiniteStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/FSM/FiniteStateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/IDamageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/IDamageable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/IDamageable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Skeleton Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Skeleton Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Skeleton Data.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Skeleton Data.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Skeleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Skeleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Skeleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Skeleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Scripts/Target.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Enemy AI/Target.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/PT_Medieval_Lowpoly_Peasant_doc.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/PT_Medieval_Lowpoly_Peasant_doc.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/PT_Medieval_Male_Armor_Skeleton_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/PT_Medieval_Male_Armor_Skeleton_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_body.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_body.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_boots.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_boots.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_gauntlets.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_gauntlets.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_head.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_head.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_legs.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Modular_Armors/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_legs.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Unique_NPCs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Unique_NPCs/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Prefab/Skeleton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Prefabs/Unique_NPCs/Skeleton.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Prefab/Skeleton.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Anim_controllers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Anim_controllers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Anim_controllers/PT_Medieval_Anim_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Anim_controllers/PT_Medieval_Anim_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Anim_controllers/PT_Medieval_Anim_Controller.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Anim_controllers/PT_Medieval_Anim_Controller.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Idle.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Idle.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Receive Uppercut To The Face.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Receive Uppercut To The Face.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Receive Uppercut To The Face.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Receive Uppercut To The Face.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Running.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Running.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Running.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Standing Death Forward 02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Standing Death Forward 02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Standing Death Forward 02.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Standing Death Forward 02.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Standing Melee Attack Downward.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Standing Melee Attack Downward.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Standing Melee Attack Downward.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Standing Melee Attack Downward.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Walking Turn 180.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Walking Turn 180.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Animations/Walking Turn 180.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Animations/Walking Turn 180.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_Armors_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_Armors_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_Armors_Material_Toon.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_Armors_Material_Toon.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Materials/PT_Medieval_mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/PT_Medieval_Male_Armor_Skeleton_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/PT_Medieval_Male_Armor_Skeleton_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_body.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_body.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_boots.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_boots.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_gauntlets.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_gauntlets.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_head.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_head.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_legs.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Meshes/Separate_Parts/PT_Medieval_Male_Armor_Skeleton_01_legs.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Base_Texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Base_Texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Cloth_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Cloth_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Feathers_Mask_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Feathers_Mask_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Gems_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Gems_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Leather_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Leather_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Lips_Scars_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Lips_Scars_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Metal_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Metal_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Skin_Eye_Hair_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Skin_Eye_Hair_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Skin_Eye_Hair_Mask_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_Armors_Skin_Eye_Hair_Mask_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_texture.tga" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Textures/PT_Medieval_texture.tga" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Modular_Armors/Textures/PT_Medieval_texture.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Shaders/PT_Medieval_Armors_Shader_PBR.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Shaders/PT_Medieval_Armors_Shader_PBR.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Shaders/PT_Medieval_Armors_Shader_PBR.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Shaders/PT_Medieval_Armors_Shader_PBR.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Shaders/PT_Medieval_Armors_Shader_Toon.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Shaders/PT_Medieval_Armors_Shader_Toon.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Shaders/PT_Medieval_Armors_Shader_Toon.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Shaders/PT_Medieval_Armors_Shader_Toon.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Materials/PT_Medieval_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Materials/PT_Medieval_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Materials/PT_Medieval_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Materials/PT_Medieval_mat.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Meshes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Meshes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Meshes/PT_Medieval_Male_NPC_Skeleton_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Meshes/PT_Medieval_Male_NPC_Skeleton_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Skeleton_character/Sources/Unique_NPCs/Meshes/PT_Medieval_Male_NPC_Skeleton_01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Skeleton/Sources/Meshes/PT_Medieval_Male_NPC_Skeleton_01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Prefabs/Shield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Prefabs/Shield.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Prefabs/Shield.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Prefabs/Shield.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Prefabs/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Prefabs/Sword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Prefabs/Sword.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Prefabs/Sword.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Materials/PT_Medieval_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Materials/PT_Medieval_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Materials/PT_Medieval_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Materials/PT_Medieval_mat.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Meshes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Meshes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Meshes/PT_Medieval_Shield_01_a.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Meshes/PT_Medieval_Shield_01_a.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Meshes/PT_Medieval_Shield_01_a.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Meshes/PT_Medieval_Shield_01_a.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Meshes/PT_Medieval_Sword_01_a.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Meshes/PT_Medieval_Sword_01_a.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Meshes/PT_Medieval_Sword_01_a.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Meshes/PT_Medieval_Sword_01_a.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Textures/PT_Medieval_texture.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy AI/Weapons/Sources/Textures/PT_Medieval_texture.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy Art/Weapons/Sources/Textures/PT_Medieval_texture.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Building/Building Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Building/Building Variant.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Building/BuildingSpot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Prefabs/Building/BuildingSpot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/Building.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/Daniels test scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/Daniels test scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/UI/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/VillageGreybox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/VillageGreybox 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Polytope Studio/Lowpoly Medieval Characters/SRP/PT_Lowpoly_Medieval_Modular_Armors_URP_7.3.1.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Polytope Studio/Lowpoly Medieval Characters/Sources/SRP/PT_Lowpoly_Medieval_Modular_Peasants_LWRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Polytope Studio/Lowpoly Medieval Characters/Sources/SRP/PT_Lowpoly_Medieval_Modular_Peasants_URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Polytope Studio/Lowpoly Medieval Weapons/SRP/PT_Lowpoly_Medieval_Weapons_URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/BetterUI_TextMeshPro_EditorPanelUI.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/BetterUI_TextMeshPro_UiEditorPanel.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/Example_AnchorAnimations.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/Example_CustomScreenTag.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/Example_Ghost.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/Example_Overview.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/Example_ResolutionTracking.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/asmdef_excl_TextMeshPro.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TheraBytes/BetterUI/Packages/asmdef_incl_TextMeshPro.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniStorm Weather System/Network Integration/UnityPackages/UniStorm PUN 2 Integration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniStorm Weather System/URP Support/UniStorm URP Support.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +239,7 @@
       <workItem from="1663190932156" duration="2249000" />
       <workItem from="1663239192198" duration="14000" />
       <workItem from="1663250196739" duration="23000" />
-      <workItem from="1663317142244" duration="7271000" />
+      <workItem from="1663317142244" duration="7654000" />
     </task>
     <servers />
   </component>
