@@ -15,6 +15,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
+    private bool isPromptOpen = false;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             mouseWorldPosition = raycastHit.point;
         }
         
-        if (_starterAssetsInputs.aim)
+        if (_starterAssetsInputs.aim && !isPromptOpen)
         {
             _virtualCamera.gameObject.SetActive(true);
             _thirdPersonController.SetRotateOnMove(false);
@@ -50,7 +51,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             _thirdPersonController.SetRotateOnMove(true);
         }
         
-        if (_starterAssetsInputs.attack)
+        if (_starterAssetsInputs.attack && !isPromptOpen)
         {
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
@@ -61,5 +62,10 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),0f,Time.deltaTime * 10f));
         }
+    }
+    
+    public void SetIsPormptOpen(bool status)
+    {
+        isPromptOpen = status;
     }
 }
