@@ -9,10 +9,11 @@ namespace Assets.scripts.CustomEditors.Waves
     [CustomEditor(typeof(WaveSpawner))]
     public class WaveControllerEditor : Editor
     {
-        
+
         private WaveSpawner EditorTarget;
         private SerializedObject waveStrengthProp;
-        private float waveStrength=0f;
+        private float waveStrength = 0f;
+        
         private void OnEnable()
         {
             // Link the SerializedProperty to the variable 
@@ -34,6 +35,10 @@ namespace Assets.scripts.CustomEditors.Waves
             {
                 EditorTarget.SpawnWave(waveStrength);
             }
+            
+
+            
+
             serializedObject.ApplyModifiedProperties();
         }
     }

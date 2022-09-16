@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.scripts.Models
+namespace Assets.Code.Scripts.Models.Essence
 {
     public class EssenceBankModel
     {
