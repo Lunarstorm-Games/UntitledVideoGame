@@ -5,15 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - VillageCenter
+  - BuildingSpot
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
-  - 
+  - Raycast
   - 
   - 
   - 
