@@ -22,9 +22,8 @@ public class FollowTargetState : EnemyState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        Vector3 dir = enemy.CurrentTarget.transform.position - enemy.transform.position;
-        dir.y = 0;
-        enemy.transform.rotation = Quaternion.LookRotation(dir);
+
+        enemy.LookAtTarget();
 
         enemy.SetTargetDestination(enemy.CurrentTarget.transform.position);
         enemy.Animator.SetFloat("Speed", enemy.Agent.velocity.magnitude / enemy.Agent.speed);

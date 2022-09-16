@@ -13,6 +13,7 @@ public class AttackState : EnemyState
     {
         base.Enter();
         enemy.Animator.SetFloat("Speed", 0f);
+        enemyData.currentAttackDelay = enemyData.preAttackDelay;
     }
 
     public override void Exit()
@@ -24,11 +25,10 @@ public class AttackState : EnemyState
     {
         base.LogicUpdate();
 
-        Vector3 dir = enemy.CurrentTarget.transform.position - enemy.transform.position;
-        dir.y = 0;
-        enemy.transform.rotation = Quaternion.LookRotation(dir);
+        enemy.LookAtTarget();
 
         enemy.Attack();
+
         if (!enemy.InAttackRange())
         {
             fsm.ChangeState(enemy.FollowTargetState);

@@ -13,7 +13,8 @@ public class SpawnState : EnemyState
         base.Enter();
 
         enemy.Agent.speed = enemyData.speed;
-        enemy.Agent.stoppingDistance = enemyData.attackRange;
+        enemy.Agent.stoppingDistance = enemyData.attackRange * 0.85f;
+        enemyData.currentHealth = enemyData.health;
         fsm.ChangeState(enemy.FindNewTargetState);
     }
 

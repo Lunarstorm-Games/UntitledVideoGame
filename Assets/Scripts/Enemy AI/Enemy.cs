@@ -20,8 +20,10 @@ public class Enemy : MonoBehaviour, IDamageable
 
 
     [SerializeField] protected EnemyData enemyData;
-    [HideInInspector] public GameObject CurrentTarget;
-    protected float currentAttackDelay;
+    [SerializeField] public GameObject CurrentTarget;
+
+    protected bool damageAnimFinished = true;
+   
 
 
     public virtual void Awake()
@@ -47,7 +49,6 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         CheckTargetAlive();
         FSM.CurrentState.LogicUpdate();
-
     }
 
     public virtual void LateUpdate()
@@ -57,18 +58,29 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public virtual void TakeDamage(float damage)
     {
-        enemyData.health -= damage;
+        enemyData.currentHealth -= damage;
 
-        if (enemyData.health <= 0)
+        if (enemyData.currentHealth <= 0)
         {
-            DropEssence();
             Animator.SetTrigger("Death");
-            Destroy(this.gameObject);
         }
-        else
+        else if (damageAnimFinished)
         {
+            damageAnimFinished = false;
             Animator.SetTrigger("Damaged");
         }
+    }
+
+
+    public virtual void DeathAnimFinished()
+    {
+        DropEssence();
+        Destroy(this.gameObject);
+    }
+
+    public virtual void DamageAnimFinished()
+    {
+        damageAnimFinished = true;
     }
 
     public virtual void FindClosestTarget()
@@ -101,10 +113,11 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public virtual void Attack()
     {
-        currentAttackDelay -= Time.deltaTime;
-        if (currentAttackDelay <= 0f)
+        Debug.Log(enemyData.currentAttackDelay);
+        enemyData.currentAttackDelay -= Time.deltaTime;
+        if (enemyData.currentAttackDelay <= 0f)
         {
-            currentAttackDelay = enemyData.attackDelay;
+            enemyData.currentAttackDelay = enemyData.attackDelay;
             Animator.SetTrigger("Attacking");
         }
     }
@@ -112,6 +125,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public virtual bool InAttackRange()
     {
         float distance = Vector3.Distance(this.transform.position, CurrentTarget.transform.position);
+        Debug.Log(distance);
         if (distance < enemyData.attackRange)
         {
             return true;
@@ -132,7 +146,14 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
-    protected void DropEssence()
+    public virtual void LookAtTarget()
+    {
+        Vector3 dir = CurrentTarget.transform.position - this.transform.position;
+        dir.y = 0;
+        this.transform.rotation = Quaternion.LookRotation(dir);
+    }
+
+    public virtual void DropEssence()
     {
         //Essence system task
     }

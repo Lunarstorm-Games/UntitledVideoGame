@@ -16,9 +16,9 @@ MonoBehaviour:
   damage: 10
   speed: 3
   aggroRange: 15
-  attackRange: 2
-  attackDelay: 4
+  attackRange: 1.9
+  attackDelay: 1.8
+  preAttackDelay: 0.7
   essenceDropAmount: 10
-  targetInterests:
-    serializedVersion: 2
-    m_Bits: 54
+  currentAttackDelay: 0.7909251
+  currentHealth: -3
