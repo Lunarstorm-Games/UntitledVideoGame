@@ -53,14 +53,34 @@ MonoBehaviour:
   - Prefab: {fileID: 1948329710155509286, guid: 53627a16cfeb50a4cafc5baf4783fac7,
       type: 3}
     StrengthRating: 5
-  MaxEnemyStrengh: 1
-  SecondsPerLargeWave: 10
   DebugInfo: 0
-  XStep: 0
-  SecondsBetweenTrickleSpawns: 2
-  TrickleSpawnStrengthMultiplier: 1
+  MaxEnemyStrengh: 1
+  MaxEnemyStrengthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.016540527
+      value: 3.9658203
+      inSlope: 0.4054657
+      outSlope: 0.4054657
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14.947716
+      value: 10.033313
+      inSlope: 0.4054657
+      outSlope: 0.4054657
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SecondsPerLargeWave: 10
   WaveStrengthMultiplier: 10
-  SpawnPerFixedUpdate: 1000
   LargeWaveAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -121,30 +141,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  MaxEnemyStrengthCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.016540527
-      value: 3.9658203
-      inSlope: 0.4054657
-      outSlope: 0.4054657
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 14.947716
-      value: 10.033313
-      inSlope: 0.4054657
-      outSlope: 0.4054657
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  XStep: 0
+  SecondsBetweenTrickleSpawns: 2
+  TrickleSpawnStrengthMultiplier: 1
   TrickleWaveCurve:
     serializedVersion: 2
     m_Curve:
@@ -169,6 +168,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  SpawnPerFixedUpdate: 1000
   roundTime: 0
 --- !u!1 &4267196845895648570
 GameObject:
