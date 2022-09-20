@@ -63,6 +63,8 @@ namespace StarterAssets
         [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
         public GameObject CinemachineCameraTarget;
 
+        public GameObject pauseMenuUI;
+
         [Tooltip("How far in degrees can you move the camera up")]
         public float TopClamp = 70.0f;
 
@@ -105,6 +107,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
+        private bool _rotateOnMove = true;
 
         private const float _threshold = 0.01f;
 
@@ -193,22 +196,22 @@ namespace StarterAssets
         private void CameraRotation()
         {
             // if there is an input and camera position is not fixed
-            if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
-            {
-                //Don't multiply mouse input by Time.deltaTime;
-                float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+                if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
+                {
+                    //Don't multiply mouse input by Time.deltaTime;
+                    float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
-            }
+                    _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
+                    _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+                }
 
-            // clamp our rotations so our values are limited 360 degrees
-            _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
-            _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+                // clamp our rotations so our values are limited 360 degrees
+                _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+                _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
-            // Cinemachine will follow this target
-            CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
-                _cinemachineTargetYaw, 0.0f);
+                // Cinemachine will follow this target
+                CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
+                    _cinemachineTargetYaw, 0.0f);
         }
 
         private void Move()
@@ -261,7 +264,10 @@ namespace StarterAssets
                     RotationSmoothTime);
 
                 // rotate to face input direction relative to camera position
-                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                if (_rotateOnMove)
+                {
+                    transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);    
+                }
             }
 
 
@@ -387,6 +393,11 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void SetRotateOnMove(bool newRotateOnMove)
+        {
+            _rotateOnMove = newRotateOnMove;
         }
     }
 }
