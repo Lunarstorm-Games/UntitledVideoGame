@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class SpellProjectileMovement : MonoBehaviour
 {
     public float spellSpeed;
+    [SerializeField] private VisualEffect impactEffect;
 
     void Update()
     {
@@ -21,7 +23,8 @@ public class SpellProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Target")
+        Instantiate(impactEffect, transform.position, Quaternion.LookRotation(transform.forward));
+        if (other.name == "Target")
         {
             other.GetComponent<EnemyHealthController>().health -= 10;
         }
