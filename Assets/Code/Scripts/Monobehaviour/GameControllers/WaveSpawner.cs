@@ -6,28 +6,41 @@ using Assets.scripts.Models.WaveModels;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class WaveSpawner : MonoBehaviour
 {
+    [Header("General Settings")]
+    [Space]
     [SerializeField]
     private List<Transform> SpawnPoints;
-
     [SerializeField]
     public List<EnemySpawnSetting> SpawnAblePrefabs = new List<EnemySpawnSetting>();
-
-    public float MaxEnemyStrengh = 1f;
-    public float SecondsPerLargeWave = 10;
     public bool DebugInfo = false;
+    [Space]
+    
+    
+    public float MaxEnemyStrengh = 1f;
+    public AnimationCurve MaxEnemyStrengthCurve = new AnimationCurve();
+    [Space]
+    [Header("Large Wave Settings")]
+    [Space]
+    public float SecondsPerLargeWave = 10;
+    public float WaveStrengthMultiplier = 10;
+    public AnimationCurve LargeWaveAnimationCurve = new AnimationCurve();
     [SerializeField] private int XStep;
+
+    [Space]
+    [Header("Trickle spawn settings")]
+    [Space]
     public float SecondsBetweenTrickleSpawns = 2;
     public float TrickleSpawnStrengthMultiplier = 1f;
-    public float WaveStrengthMultiplier = 10;
-    public int SpawnPerFixedUpdate = 3;
-    public AnimationCurve LargeWaveAnimationCurve = new AnimationCurve();
-
-    public AnimationCurve MaxEnemyStrengthCurve = new AnimationCurve();
-
     public AnimationCurve TrickleWaveCurve = new AnimationCurve();
+    [Space]
+    public int SpawnPerFixedUpdate = 3;
+
+
+
     [SerializeField] private float roundTime = 0;
     private string SpawnPointName = "SpawnPoint";
     // Start is called before the first frame update
