@@ -21,12 +21,16 @@ public class SpellProjectileMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        Instantiate(impactEffect, transform.position, Quaternion.LookRotation(transform.forward));
-        if (other.name == "Target")
+        GameObject collisionObject = other.gameObject;
+        Vector3 collisionPoint = other.GetContact(0).point;
+
+        VisualEffect impactEffectObject = Instantiate(impactEffect, collisionPoint, Quaternion.LookRotation(transform.forward));
+        Destroy(impactEffectObject.gameObject, 1);
+        if (collisionObject.name == "Target")
         {
-            other.GetComponent<EnemyHealthController>().health -= 10;
+            collisionObject.GetComponent<EnemyHealthController>().health -= 10;
         }
         Destroy(gameObject);
     }

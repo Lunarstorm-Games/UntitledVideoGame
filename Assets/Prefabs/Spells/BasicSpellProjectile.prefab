@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5093391499473041880}
   - component: {fileID: 9074186228458563069}
   - component: {fileID: -2338750469617564991}
+  - component: {fileID: -1450108528857507897}
   m_Layer: 0
   m_Name: BasicSpellProjectile
   m_TagString: Untagged
@@ -94,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252805924365581705}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -114,6 +115,22 @@ MonoBehaviour:
   spellSpeed: 20
   impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
     type: 3}
+--- !u!54 &-1450108528857507897
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805924365581705}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0
