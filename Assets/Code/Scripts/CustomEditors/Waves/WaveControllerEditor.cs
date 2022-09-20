@@ -35,7 +35,10 @@ namespace Assets.scripts.CustomEditors.Waves
             {
                 EditorTarget.SpawnWave(waveStrength);
             }
-            
+
+            EditorGUILayout.HelpBox(@"The wave controller is configured by setting the animation curves of the waves and it's strength multiplier values.
+The value of the X-Axes is defined by the amount of large waves that have spawned.
+Spawnpoints are added by duplicating the spawnpoint transform and placing it wherever you want.",MessageType.Info);
 
             
 

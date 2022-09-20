@@ -1454,24 +1454,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
+      propertyPath: WaveStrengthPerY
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: SpawnPerFixedUpdate
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: AmountOfSecondsPerLargeWave
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: SecondsBetweenTrickleSpawns
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
       propertyPath: SpawnAblePrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 1948329710155509286, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
         type: 3}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[1].Prefab
+      value: 
+      objectReference: {fileID: 1948329710155509286, guid: 53627a16cfeb50a4cafc5baf4783fac7,
+        type: 3}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[0].time
-      value: 0.038311183
+      value: 0.008800685
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[1].time
-      value: 20.023798
+      value: 40.020134
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[0].value
-      value: 0.21308953
+      value: 0.09675652
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
@@ -1480,23 +1516,178 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[1].StrengthRating
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[0].inSlope
-      value: 0.040563665
+      value: 0.023168877
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[1].inSlope
-      value: 0.040563665
+      value: 0.023168877
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[0].outSlope
-      value: 0.040563665
+      value: 0.023168877
       objectReference: {fileID: 0}
     - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
         type: 3}
       propertyPath: TrickleWaveCurve.m_Curve.Array.data[1].outSlope
-      value: 0.040563665
+      value: 0.023168877
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].time
+      value: -0.016540527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].time
+      value: 14.947716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].value
+      value: 3.9658203
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].value
+      value: 10.033313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[1].time
+      value: 0.9928311
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[2].time
+      value: 2.0099268
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[3].time
+      value: 4.00043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[4].time
+      value: 5.9839044
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[5].time
+      value: 9.032036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[6].time
+      value: 7.003716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[1].value
+      value: 1.9910468
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[2].value
+      value: 1.332076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[3].value
+      value: 5.001414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[4].value
+      value: 2.7676284
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[5].value
+      value: 5.15434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[6].value
+      value: 4.013913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].inSlope
+      value: 0.4054657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].inSlope
+      value: 0.4054657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].outSlope
+      value: 0.4054657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].outSlope
+      value: 0.4054657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[3].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[4].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[5].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[3].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[4].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930463125713136012, guid: 6b4548875e8d2804d9585b5b551cdaee,
+        type: 3}
+      propertyPath: LargeWaveAnimationCurve.m_Curve.Array.data[5].outSlope
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b4548875e8d2804d9585b5b551cdaee, type: 3}
