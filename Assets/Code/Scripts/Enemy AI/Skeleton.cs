@@ -19,8 +19,6 @@ public class Skeleton : Enemy
     public override void Update()
     {
         base.Update();
-        Debug.Log(CurrentTarget.gameObject.transform.position);
-        Debug.Log(FSM.CurrentState);
     }
 
     public override void LateUpdate()

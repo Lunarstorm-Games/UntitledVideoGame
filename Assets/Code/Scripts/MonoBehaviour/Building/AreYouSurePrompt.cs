@@ -6,12 +6,14 @@ using UnityEngine;
 public class AreYouSurePrompt : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
-    private PlayerRaycast playerRaycast;
+    private ThirdPersonShooterController thirdPersonShooter;
+    private BuildingRaycast buildingRaycast;
     private Transform buildSpot = new RectTransform();
 
     void Awake()
     {
-        playerRaycast = starterAssetsInputs.GetComponent<PlayerRaycast>();
+        buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
+        thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
     }
     
     public void ShowPrompt()
@@ -19,7 +21,8 @@ public class AreYouSurePrompt : MonoBehaviour
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
         gameObject.SetActive(true);
-        playerRaycast.SetIsPormptOpen(true);
+        buildingRaycast.SetIsPormptOpen(true);
+        thirdPersonShooter.SetIsPormptOpen(true);
     }
 
     private void HidePrompt()
@@ -27,7 +30,8 @@ public class AreYouSurePrompt : MonoBehaviour
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
         gameObject.SetActive(false);
-        playerRaycast.SetIsPormptOpen(false);
+        buildingRaycast.SetIsPormptOpen(false);
+        thirdPersonShooter.SetIsPormptOpen(false);
     }
     
     public Transform GetBuildSpot()
