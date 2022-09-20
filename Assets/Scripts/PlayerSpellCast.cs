@@ -11,12 +11,6 @@ public class PlayerSpellCast : MonoBehaviour
     bool isCasting;
     float maxSpellRange;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         isCasting = Input.GetKeyDown(KeyCode.Mouse0);
