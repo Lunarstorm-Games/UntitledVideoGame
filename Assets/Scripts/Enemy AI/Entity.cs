@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamageable
+public class Entity : MonoBehaviour
 {
-    void TakeDamage(float damage, Entity entity);
+    
 }

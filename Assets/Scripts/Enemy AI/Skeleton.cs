@@ -1,33 +1,27 @@
+using BehaviorTree;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Skeleton : Enemy
 {
+    public EnemyTree Tree { get; protected set; }
+
     public override void Awake()
     {
         base.Awake();
-        //add here extra states of behaviour
-    }
-
-    public override void Start()
-    {
-        base.Start();
-        
+        Tree = new EnemyTree(this);
+        Tree.Initialize();
     }
 
     public override void Update()
     {
         base.Update();
+        Tree.Evaluate();
     }
 
-    public override void LateUpdate()
+    public override void TakeDamage(float damage, Entity entity)
     {
-        base.LateUpdate();
-    }
-
-    public override void TakeDamage(float damage)
-    {
-        base.TakeDamage(damage);
+        base.TakeDamage(damage, entity);
     }
 }
