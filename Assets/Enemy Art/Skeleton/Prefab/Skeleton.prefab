@@ -721,12 +721,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTarget: {fileID: 0}
-  IsDamaged: 0
   health: 30
   damage: 10
   speed: 3
-  aggroRange: 3
+  aggroRange: 6
   attackRange: 2.4
   attackDelay: 3
   preAttackDelay: 1
