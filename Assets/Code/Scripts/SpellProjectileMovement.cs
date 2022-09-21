@@ -12,7 +12,7 @@ public class SpellProjectileMovement : MonoBehaviour
     {
         StartCoroutine(SpellTimer());
 
-        transform.position += Vector3.forward * spellSpeed * Time.deltaTime;
+        transform.position += transform.forward * spellSpeed * Time.deltaTime;
 
         IEnumerator SpellTimer()
         {
