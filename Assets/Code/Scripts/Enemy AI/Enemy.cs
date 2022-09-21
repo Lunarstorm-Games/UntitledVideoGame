@@ -10,8 +10,8 @@ public class Enemy : Entity, IDamageable
     public Animator Animator { get; protected set; }
     public NavMeshAgent Agent { get; protected set; }
     public Transform PlayerPos { get; protected set; }
-    public EnemyTree Tree { get; protected set; }
     public GameObject CurrentTarget { get; set; }
+    public GameObject HitByGO { get; set; }
 
     [SerializeField] public float health = 30f;
     [SerializeField] public float damage = 10f;
@@ -31,8 +31,7 @@ public class Enemy : Entity, IDamageable
         Agent = GetComponent<NavMeshAgent>();
         PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
 
-        Tree = new EnemyTree(this);
-        Tree.Initialize();
+        
 
         Agent.speed = speed;
         Agent.stoppingDistance = attackRange * 0.85f;
@@ -42,7 +41,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void Update()
     {
-        Tree.Evaluate();
+
     }
 
 
@@ -63,10 +62,7 @@ public class Enemy : Entity, IDamageable
 
         if (currentHealth > 0)
         {
-            if (entity != null && entity.gameObject.CompareTag("Player"))
-            {
-                CurrentTarget = entity.gameObject;
-            }
+            HitByGO = entity.gameObject;
         }
         else
         {

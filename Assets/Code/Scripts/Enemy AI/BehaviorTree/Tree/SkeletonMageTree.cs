@@ -1,3 +1,4 @@
+using BehaviorTree;
 using BehaviorTree.EnemyTask;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,11 +6,10 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class EnemyTree : Tree
+    public class SkeletonMageTree : Tree
     {
-        protected Enemy enemy;
-
-        public EnemyTree(Enemy enemy)
+        protected SkeletonMage enemy;
+        public SkeletonMageTree(SkeletonMage enemy)
         {
             this.enemy = enemy;
         }
@@ -18,11 +18,15 @@ namespace BehaviorTree
         {
             Node root = new Selector(new List<Node>
             {
-                
+                new Sequence(new List<Node>
+                {
+                    new CheckHitByPlayer(enemy),
+                    new TaskGoToTarget(enemy),
+                }),
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskAttack(enemy),
+                    new TaskRangeAttack(enemy),
                 }),
                 new Sequence(new List<Node>
                 {
@@ -34,7 +38,7 @@ namespace BehaviorTree
                     new CheckFoundTarget(enemy),
                     new TaskGoToTarget(enemy),
                 }),
-                
+
             });
 
             return root;

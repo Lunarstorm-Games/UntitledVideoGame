@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace BehaviorTree.EnemyTask
 {
-    public class TaskAttack : Node
+    public class TaskRangeAttack : Node
     {
-        protected MeleeEnemy enemy;
+        protected RangeEnemy enemy;
         protected float currentAttackDelay = 0f;
 
-        public TaskAttack(MeleeEnemy enemy)
+        public TaskRangeAttack(RangeEnemy enemy)
         {
             this.enemy = enemy;
             this.currentAttackDelay = enemy.preAttackDelay;
@@ -29,10 +29,10 @@ namespace BehaviorTree.EnemyTask
                 currentAttackDelay = enemy.attackDelay;
                 enemy.Animator.SetTrigger("Attacking");
 
-                if (enemy.CurrentTarget.TryGetComponent<IDamageable>(out IDamageable target))
-                {
-                    target.TakeDamage(enemy.damage, enemy);
-                }
+                Projectile projectile = GameObject.Instantiate<Projectile>(enemy.projectilePrefab, enemy.projectileSpawnPos.position, Quaternion.identity);
+                Vector3 shootDir = (enemy.CurrentTarget.transform.position - enemy.projectileSpawnPos.position).normalized;
+                projectile.transform.LookAt(enemy.CurrentTarget.transform);
+                projectile.Initialize(enemy, enemy.projectileSpeed, enemy.damage, shootDir, enemy.projectileRange);
             }
             state = NodeState.RUNNING;
             return state;

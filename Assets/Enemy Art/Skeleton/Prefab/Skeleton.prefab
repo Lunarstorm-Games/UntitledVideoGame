@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 7514962589122547655}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -663,7 +663,7 @@ Animator:
   m_GameObject: {fileID: 1948329710155509286}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ee116a9c76d3a0e48bd97c1e76ed6bd3, type: 3}
-  m_Controller: {fileID: 9100000, guid: d2b9c670c29ab024ba891fa5afc55443, type: 2}
+  m_Controller: {fileID: 9100000, guid: d2094f5cb4425764db328ecb04bcff91, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
