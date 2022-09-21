@@ -663,7 +663,7 @@ Animator:
   m_GameObject: {fileID: 1948329710155509286}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ee116a9c76d3a0e48bd97c1e76ed6bd3, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6e9f7d23aaf9b4a4aa92311f4d6fd929, type: 2}
+  m_Controller: {fileID: 9100000, guid: d2b9c670c29ab024ba891fa5afc55443, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -721,8 +721,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 3c4a40e61f3eb0d4ebb84efc15d400f9, type: 2}
   CurrentTarget: {fileID: 0}
+  IsDamaged: 0
+  health: 30
+  damage: 10
+  speed: 3
+  aggroRange: 3
+  attackRange: 2.4
+  attackDelay: 3
+  preAttackDelay: 1
+  essenceDropAmount: 10
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
