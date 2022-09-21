@@ -18,7 +18,7 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.activeInHierarchy)
+            if (player == null || !player.gameObject.activeInHierarchy)
             {
                 state = NodeState.FAILURE;
                 return state;

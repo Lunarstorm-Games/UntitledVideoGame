@@ -23,7 +23,6 @@ public class Enemy : Entity, IDamageable
     [SerializeField] public int essenceDropAmount = 10;
 
     protected float currentHealth = 0f;
-    protected bool damageAnimFinished = true;
 
     public virtual void Awake()
     {
