@@ -10,8 +10,8 @@ public class Enemy : Entity, IDamageable
     public Animator Animator { get; protected set; }
     public NavMeshAgent Agent { get; protected set; }
     public Transform PlayerPos { get; protected set; }
-
-    [HideInInspector] public GameObject CurrentTarget;
+    public EnemyTree Tree { get; protected set; }
+    public GameObject CurrentTarget { get; set; }
 
     [SerializeField] public float health = 30f;
     [SerializeField] public float damage = 10f;
@@ -24,12 +24,16 @@ public class Enemy : Entity, IDamageable
 
     protected float currentHealth = 0f;
 
+
     public virtual void Awake()
     {
         Animator = GetComponent<Animator>();
         Agent = GetComponent<NavMeshAgent>();
         PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        
+
+        Tree = new EnemyTree(this);
+        Tree.Initialize();
+
         Agent.speed = speed;
         Agent.stoppingDistance = attackRange * 0.85f;
         currentHealth = health;
@@ -38,7 +42,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void Update()
     {
-        
+        Tree.Evaluate();
     }
 
 
