@@ -10,8 +10,9 @@ public class ThirdPersonShooterController : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-    [SerializeField] private Transform pfBulletProjectile;
+    [SerializeField] private SpellProjectile pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
+    [SerializeField] private GameObject test;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
@@ -55,8 +56,11 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Instantiate(pfBulletProjectile, spawnBulletPosition.position,Quaternion.LookRotation(aimDir,Vector3.up));
-            pfBulletProjectile.GetComponent<SpellProjectile>().player = gameObject;
+            SpellProjectile projectile = Instantiate<SpellProjectile>(pfBulletProjectile, spawnBulletPosition.position,Quaternion.LookRotation(aimDir,Vector3.up));
+            Debug.Log("Here");
+            test = projectile.gameObject;
+            projectile.player = gameObject.GetComponent<Entity>();
+            Debug.Log("Player Entity");
             _starterAssetsInputs.attack = false;
         }
         else

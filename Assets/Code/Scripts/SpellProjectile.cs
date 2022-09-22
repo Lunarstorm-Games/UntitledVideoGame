@@ -5,7 +5,7 @@ using UnityEngine.VFX;
 
 public class SpellProjectile : MonoBehaviour
 {
-    public GameObject player;
+    public Entity player;
     public float spellSpeed;
     [SerializeField] private VisualEffect impactEffect;
     public float DamageValue = 10;
@@ -31,7 +31,7 @@ public class SpellProjectile : MonoBehaviour
         Destroy(impactEffectObject.gameObject, 1);
         if (collisionObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            enemy.TakeDamage(DamageValue, player.GetComponent<Entity>());
+            enemy.TakeDamage(DamageValue, player);
         }
         Destroy(gameObject);
     }

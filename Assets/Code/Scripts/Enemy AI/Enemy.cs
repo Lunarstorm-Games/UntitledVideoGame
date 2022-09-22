@@ -31,14 +31,6 @@ public class Enemy : Entity, IDamageable
     public float AttackDelay { get => attackDelay; protected set => attackDelay = value; }
     public float PreAttackDelay { get => preAttackDelay; protected set => preAttackDelay = value; }
     public int EssenceDropAmount { get => essenceDropAmount; protected set => essenceDropAmount = value; }
-
-    [SerializeField] public float health = 30f;
-    [SerializeField] public float damage = 10f;
-    [SerializeField] public float speed = 3f;
-    [SerializeField] public float aggroRange = 6f;
-    [SerializeField] public float attackRange = 2.4f;
-    [SerializeField] public float attackDelay = 3f;
-    [SerializeField] public float preAttackDelay = 1f;
      
     [SerializeReference]public EssenceSourceLogic EssenceSource= new ();
 
@@ -74,7 +66,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void DropEssence()
     {
-        EssenceSource.DropEssence();
+        //EssenceSource.DropEssence();
     }
 
     public virtual void TakeDamage(float damage, Entity entity)
