@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 7514962589122547655}
   m_Layer: 0
   m_Name: Skeleton 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,8 +721,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 3c4a40e61f3eb0d4ebb84efc15d400f9, type: 2}
-  CurrentTarget: {fileID: 0}
+  health: 30
+  damage: 10
+  speed: 3
+  aggroRange: 6
+  attackRange: 2.4
+  attackDelay: 3
+  preAttackDelay: 1
+  essenceDropAmount: 10
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PT_Medieval_Sword_01_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243958488727707932, guid: 87d2b1ecfb26a3349af12d1ba83f0883,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3243958488727944508, guid: 87d2b1ecfb26a3349af12d1ba83f0883,
         type: 3}

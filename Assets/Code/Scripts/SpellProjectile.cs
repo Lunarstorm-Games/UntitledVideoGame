@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class SpellProjectileMovement : MonoBehaviour
+public class SpellProjectile : MonoBehaviour
 {
+    public GameObject player;
     public float spellSpeed;
     [SerializeField] private VisualEffect impactEffect;
 
@@ -28,9 +29,9 @@ public class SpellProjectileMovement : MonoBehaviour
 
         VisualEffect impactEffectObject = Instantiate(impactEffect, collisionPoint, Quaternion.LookRotation(transform.forward));
         Destroy(impactEffectObject.gameObject, 1);
-        if (collisionObject.name == "Target")
+        if (collisionObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            collisionObject.GetComponent<EnemyHealthController>().health -= 10;
+            enemy.TakeDamage(10, player.GetComponent<Entity>());
         }
         Destroy(gameObject);
     }
