@@ -728,7 +728,15 @@ MonoBehaviour:
   attackRange: 2.4
   attackDelay: 3
   preAttackDelay: 1
-  essenceDropAmount: 10
+  EssenceSource:
+    rid: 1000
+  references:
+    version: 2
+    RefIds:
+    - rid: 1000
+      type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
+      data:
+        EssenceValue: 10
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
