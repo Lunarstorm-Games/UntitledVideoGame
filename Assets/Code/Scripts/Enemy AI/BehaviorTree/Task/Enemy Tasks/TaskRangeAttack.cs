@@ -5,25 +5,33 @@ using UnityEngine.AI;
 
 namespace BehaviorTree.EnemyTask
 {
-    public class TaskAttack : Node
+    public class TaskRangeAttack : Node
     {
         protected Animator animator;
         protected NavMeshAgent agent;
         protected float currentAttackDelay;
-        protected float attackDelay;
         protected float preAttackDelay;
+        protected float attackDelay;
         protected float damage;
+        protected float projectileRange;
+        protected float projectileSpeed;
         protected Enemy enemy;
+        protected Projectile projectilePrefab;
+        protected Transform projectileSpawnPos;
 
-        public TaskAttack(Animator animator, NavMeshAgent agent, float attackDelay, float preAttackDelay, float damage, Enemy enemy)
+        public TaskRangeAttack(Animator animator, NavMeshAgent agent, float preAttackDelay, float attackDelay, float damage, float projectileRange, float projectileSpeed, Enemy enemy, Projectile projectilePrefab, Transform projectileSpawnPos)
         {
             this.animator = animator;
             this.agent = agent;
             this.currentAttackDelay = preAttackDelay;
-            this.attackDelay = attackDelay;
             this.preAttackDelay = preAttackDelay;
+            this.attackDelay = attackDelay;
             this.damage = damage;
+            this.projectileRange = projectileRange;
+            this.projectileSpeed = projectileSpeed;
             this.enemy = enemy;
+            this.projectilePrefab = projectilePrefab;
+            this.projectileSpawnPos = projectileSpawnPos;
         }
 
         public override NodeState Evaluate()
@@ -40,10 +48,10 @@ namespace BehaviorTree.EnemyTask
                 currentAttackDelay = attackDelay;
                 animator.SetTrigger("Attacking");
 
-                if (enemy.CurrentTarget.TryGetComponent<IDamageable>(out IDamageable target))
-                {
-                    target.TakeDamage(damage, enemy);
-                }
+                Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
+                Vector3 shootDir = (enemy.CurrentTarget.targetOffset - projectileSpawnPos.position).normalized;
+                projectile.transform.LookAt(enemy.CurrentTarget.targetOffset);
+                projectile.Initialize(enemy, projectileSpeed, damage, shootDir, projectileRange);
             }
             state = NodeState.RUNNING;
             return state;

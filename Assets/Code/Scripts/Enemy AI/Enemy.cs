@@ -8,11 +8,29 @@ using UnityEngine.AI;
 
 public class Enemy : Entity, IDamageable
 {
+    [SerializeField] private float health = 30f;
+    [SerializeField] private float damage = 10f;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private float aggroRange = 6f;
+    [SerializeField] private float attackRange = 2.4f;
+    [SerializeField] private float attackDelay = 3f;
+    [SerializeField] private float preAttackDelay = 1f;
+    [SerializeField] private int essenceDropAmount = 10;
+
+    public Target CurrentTarget { get; set; }
+    public GameObject DamagedByGO { get; set; }
+
     public Animator Animator { get; protected set; }
     public NavMeshAgent Agent { get; protected set; }
     public Transform PlayerPos { get; protected set; }
-    public EnemyTree Tree { get; protected set; }
-    public GameObject CurrentTarget { get; set; }
+    public float Health { get => health; protected set => health = value; }
+    public float Damage { get => damage; protected set => damage = value; }
+    public float Speed { get => speed; protected set => speed = value; }
+    public float AggroRange { get => aggroRange; protected set => aggroRange = value; }
+    public float AttackRange { get => attackRange; protected set => attackRange = value; }
+    public float AttackDelay { get => attackDelay; protected set => attackDelay = value; }
+    public float PreAttackDelay { get => preAttackDelay; protected set => preAttackDelay = value; }
+    public int EssenceDropAmount { get => essenceDropAmount; protected set => essenceDropAmount = value; }
 
     [SerializeField] public float health = 30f;
     [SerializeField] public float damage = 10f;
@@ -25,6 +43,7 @@ public class Enemy : Entity, IDamageable
     [SerializeReference]public EssenceSourceLogic EssenceSource= new ();
 
     protected float currentHealth = 0f;
+    protected bool death;
 
 
     public virtual void Awake()
@@ -33,18 +52,17 @@ public class Enemy : Entity, IDamageable
         Agent = GetComponent<NavMeshAgent>();
         PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
 
-        Tree = new EnemyTree(this);
-        Tree.Initialize();
+        
 
-        Agent.speed = speed;
-        Agent.stoppingDistance = attackRange * 0.85f;
-        currentHealth = health;
+        Agent.speed = Speed;
+        Agent.stoppingDistance = AttackRange * 0.85f;
+        currentHealth = Health;
     }
 
 
     public virtual void Update()
     {
-        Tree.Evaluate();
+
     }
 
 
@@ -65,14 +83,14 @@ public class Enemy : Entity, IDamageable
 
         if (currentHealth > 0)
         {
-            if (entity != null && entity.gameObject.CompareTag("Player"))
-            {
-                CurrentTarget = entity.gameObject;
-            }
+            DamagedByGO = entity.gameObject;
         }
-        else
+        else if (!death)
         {
+            death = true;
             Animator.SetTrigger("Death");
+            GetComponent<Collider>().enabled = false;
+            Agent.isStopped = true;
         }
     }
 }

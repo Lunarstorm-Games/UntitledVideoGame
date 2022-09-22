@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 6067049128572240401}
   - component: {fileID: 7514962589122547655}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Skeleton 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,8 +729,6 @@ MonoBehaviour:
   attackDelay: 3
   preAttackDelay: 1
   essenceDropAmount: 10
-  CurrentTarget: {fileID: 0}
-  DamagedByGO: {fileID: 0}
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,7 +1685,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49b7fc8b4773ec641ac70c70f20fd239, type: 2}
+  - {fileID: 2100000, guid: 6751e291ca9f5c944981f8818b3adba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2644,7 +2642,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49b7fc8b4773ec641ac70c70f20fd239, type: 2}
+  - {fileID: 2100000, guid: 6751e291ca9f5c944981f8818b3adba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3610,7 +3608,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49b7fc8b4773ec641ac70c70f20fd239, type: 2}
+  - {fileID: 2100000, guid: 6751e291ca9f5c944981f8818b3adba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3748,7 +3746,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49b7fc8b4773ec641ac70c70f20fd239, type: 2}
+  - {fileID: 2100000, guid: 6751e291ca9f5c944981f8818b3adba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
