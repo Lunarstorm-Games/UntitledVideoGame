@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BehaviorTree.EnemyTask
 {
     public class TaskAttack : Node
     {
-        protected MeleeEnemy enemy;
-        protected float currentAttackDelay = 0f;
+        protected Animator animator;
+        protected NavMeshAgent agent;
+        protected float currentAttackDelay;
+        protected float attackDelay;
+        protected float preAttackDelay;
+        protected float damage;
+        protected Enemy enemy;
 
-        public TaskAttack(MeleeEnemy enemy)
+        public TaskAttack(Animator animator, NavMeshAgent agent, float attackDelay, float preAttackDelay, float damage, Enemy enemy)
         {
+            this.animator = animator;
+            this.agent = agent;
+            this.currentAttackDelay = preAttackDelay;
+            this.attackDelay = attackDelay;
+            this.preAttackDelay = preAttackDelay;
+            this.damage = damage;
             this.enemy = enemy;
-            this.currentAttackDelay = enemy.preAttackDelay;
         }
 
         public override NodeState Evaluate()
@@ -21,17 +32,17 @@ namespace BehaviorTree.EnemyTask
             dir.y = 0;
             enemy.transform.rotation = Quaternion.LookRotation(dir);
 
-            enemy.Animator.SetFloat("Speed", enemy.Agent.velocity.magnitude / enemy.Agent.speed);
+            animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
 
             currentAttackDelay -= Time.deltaTime;
             if (currentAttackDelay <= 0f)
             {
-                currentAttackDelay = enemy.attackDelay;
-                enemy.Animator.SetTrigger("Attacking");
+                currentAttackDelay = attackDelay;
+                animator.SetTrigger("Attacking");
 
                 if (enemy.CurrentTarget.TryGetComponent<IDamageable>(out IDamageable target))
                 {
-                    target.TakeDamage(enemy.damage, enemy);
+                    target.TakeDamage(damage, enemy);
                 }
             }
             state = NodeState.RUNNING;

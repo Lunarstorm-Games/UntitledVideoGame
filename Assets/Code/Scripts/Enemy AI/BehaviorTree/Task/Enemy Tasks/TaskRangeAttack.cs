@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BehaviorTree.EnemyTask
 {
     public class TaskRangeAttack : Node
     {
-        protected RangeEnemy enemy;
-        protected float currentAttackDelay = 0f;
+        protected Animator animator;
+        protected NavMeshAgent agent;
+        protected float currentAttackDelay;
+        protected float preAttackDelay;
+        protected float attackDelay;
+        protected float damage;
+        protected float projectileRange;
+        protected float projectileSpeed;
+        protected Enemy enemy;
+        protected Projectile projectilePrefab;
+        protected Transform projectileSpawnPos;
 
-        public TaskRangeAttack(RangeEnemy enemy)
+        public TaskRangeAttack(Animator animator, NavMeshAgent agent, float preAttackDelay, float attackDelay, float damage, float projectileRange, float projectileSpeed, Enemy enemy, Projectile projectilePrefab, Transform projectileSpawnPos)
         {
+            this.animator = animator;
+            this.agent = agent;
+            this.currentAttackDelay = preAttackDelay;
+            this.preAttackDelay = preAttackDelay;
+            this.attackDelay = attackDelay;
+            this.damage = damage;
+            this.projectileRange = projectileRange;
+            this.projectileSpeed = projectileSpeed;
             this.enemy = enemy;
-            this.currentAttackDelay = enemy.preAttackDelay;
+            this.projectilePrefab = projectilePrefab;
+            this.projectileSpawnPos = projectileSpawnPos;
         }
 
         public override NodeState Evaluate()
@@ -21,18 +40,18 @@ namespace BehaviorTree.EnemyTask
             dir.y = 0;
             enemy.transform.rotation = Quaternion.LookRotation(dir);
 
-            enemy.Animator.SetFloat("Speed", enemy.Agent.velocity.magnitude / enemy.Agent.speed);
+            animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
 
             currentAttackDelay -= Time.deltaTime;
             if (currentAttackDelay <= 0f)
             {
-                currentAttackDelay = enemy.attackDelay;
-                enemy.Animator.SetTrigger("Attacking");
+                currentAttackDelay = attackDelay;
+                animator.SetTrigger("Attacking");
 
-                Projectile projectile = GameObject.Instantiate<Projectile>(enemy.projectilePrefab, enemy.projectileSpawnPos.position, Quaternion.identity);
-                Vector3 shootDir = (enemy.CurrentTarget.transform.position - enemy.projectileSpawnPos.position).normalized;
-                projectile.transform.LookAt(enemy.CurrentTarget.transform);
-                projectile.Initialize(enemy, enemy.projectileSpeed, enemy.damage, shootDir, enemy.projectileRange);
+                Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
+                Vector3 shootDir = (enemy.CurrentTarget.targetOffset - projectileSpawnPos.position).normalized;
+                projectile.transform.LookAt(enemy.CurrentTarget.targetOffset);
+                projectile.Initialize(enemy, projectileSpeed, damage, shootDir, projectileRange);
             }
             state = NodeState.RUNNING;
             return state;

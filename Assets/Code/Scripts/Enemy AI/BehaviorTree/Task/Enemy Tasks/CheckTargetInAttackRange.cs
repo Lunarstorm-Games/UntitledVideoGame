@@ -15,13 +15,13 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.activeInHierarchy)
+            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.gameObject.activeInHierarchy)
             {
                 state = NodeState.FAILURE;
                 return state;
             }
 
-            if (Vector3.Distance(enemy.transform.position, enemy.CurrentTarget.transform.position) <= enemy.attackRange)
+            if (Vector3.Distance(enemy.transform.position, enemy.CurrentTarget.transform.position) <= enemy.AttackRange)
             {
                 state = NodeState.SUCCESS;
                 return state;

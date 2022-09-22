@@ -7,7 +7,7 @@ namespace BehaviorTree.EnemyTask
 {
     public class CheckHitByPlayer : Node
     {
-        private Enemy enemy;
+        protected Enemy enemy;
 
         public CheckHitByPlayer(Enemy enemy)
         {
@@ -16,18 +16,22 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            if (enemy.HitByGO != null && enemy.HitByGO.CompareTag("Player"))
+            if (enemy.DamagedByGO != null && enemy.DamagedByGO.CompareTag("Player"))
             {
-                enemy.CurrentTarget = enemy.HitByGO;
-                enemy.HitByGO = null;
-
-                Debug.Log("hit by player");
-                state = NodeState.SUCCESS;
+                if (enemy.DamagedByGO.TryGetComponent<Target>(out Target target))
+                {
+                    enemy.CurrentTarget = target;
+                    enemy.DamagedByGO = null;
+                    state = NodeState.SUCCESS;
+                    return state;
+                }
+                state = NodeState.FAILURE;
                 return state;
+
             }
-            
             state = NodeState.FAILURE;
             return state;
+
 
         }
     }

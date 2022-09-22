@@ -21,25 +21,25 @@ namespace BehaviorTree
                 new Sequence(new List<Node>
                 {
                     new CheckHitByPlayer(enemy),
-                    new TaskGoToTarget(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskRangeAttack(enemy),
+                    new TaskRangeAttack(enemy.Animator, enemy.Agent, enemy.PreAttackDelay, enemy.AttackDelay, enemy.Damage, enemy.projectileRange, enemy.projectileSpeed, enemy, enemy.projectilePrefab, enemy.projectileSpawnPos),
                 }),
                 new Sequence(new List<Node>
                 {
-                    new CheckPlayerInAggroRange(enemy, enemy.PlayerPos),
-                    new TaskGoToTarget(enemy),
+                    new CheckPlayerInAggroRange(enemy.PlayerPos, enemy, enemy.AggroRange),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckFoundTarget(enemy),
-                    new TaskGoToTarget(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
 
-            });
+            });  
 
             return root;
         }

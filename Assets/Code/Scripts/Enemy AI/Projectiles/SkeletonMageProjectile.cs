@@ -6,7 +6,6 @@ public class SkeletonMageProjectile : Projectile
 {
     public override void Update()
     {
-        Debug.Log("Projectile Moving");
         base.Update();
     }
 

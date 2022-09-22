@@ -2,6 +2,7 @@ using BehaviorTree.EnemyTask;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BehaviorTree
 {
@@ -21,22 +22,22 @@ namespace BehaviorTree
                 new Sequence(new List<Node>
                 {
                     new CheckHitByPlayer(enemy),
-                    new TaskGoToTarget(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskAttack(enemy),
+                    new TaskAttack(enemy.Animator, enemy.Agent, enemy.AttackDelay, enemy.PreAttackDelay, enemy.Damage, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
-                    new CheckPlayerInAggroRange(enemy, enemy.PlayerPos),
-                    new TaskGoToTarget(enemy),
+                    new CheckPlayerInAggroRange(enemy.PlayerPos, enemy, enemy.AggroRange),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckFoundTarget(enemy),
-                    new TaskGoToTarget(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 
             });

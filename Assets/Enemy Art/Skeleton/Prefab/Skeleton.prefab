@@ -729,6 +729,8 @@ MonoBehaviour:
   attackDelay: 3
   preAttackDelay: 1
   essenceDropAmount: 10
+  CurrentTarget: {fileID: 0}
+  DamagedByGO: {fileID: 0}
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
