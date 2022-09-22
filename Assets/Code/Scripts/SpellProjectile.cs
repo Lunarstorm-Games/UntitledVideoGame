@@ -9,6 +9,7 @@ public class SpellProjectile : MonoBehaviour
     public float spellSpeed;
     [SerializeField] private VisualEffect impactEffect;
     public float DamageValue = 10;
+
     void Update()
     {
         StartCoroutine(SpellTimer());

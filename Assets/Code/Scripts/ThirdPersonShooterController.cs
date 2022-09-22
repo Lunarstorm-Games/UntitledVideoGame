@@ -57,10 +57,8 @@ public class ThirdPersonShooterController : MonoBehaviour
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             SpellProjectile projectile = Instantiate<SpellProjectile>(pfBulletProjectile, spawnBulletPosition.position,Quaternion.LookRotation(aimDir,Vector3.up));
-            Debug.Log("Here");
             test = projectile.gameObject;
             projectile.player = gameObject.GetComponent<Entity>();
-            Debug.Log("Player Entity");
             _starterAssetsInputs.attack = false;
         }
         else
