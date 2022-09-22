@@ -2,14 +2,15 @@ using BehaviorTree.EnemyTask;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BehaviorTree
 {
-    public class EnemyTree : Tree
+    public class MeleeSkeletonTree : Tree
     {
-        protected Enemy enemy;
+        protected MeleeSkeleton enemy;
 
-        public EnemyTree(Enemy enemy)
+        public MeleeSkeletonTree(MeleeSkeleton enemy)
         {
             this.enemy = enemy;
         }
@@ -18,21 +19,25 @@ namespace BehaviorTree
         {
             Node root = new Selector(new List<Node>
             {
-                
                 new Sequence(new List<Node>
                 {
-                    new CheckTargetInAttackRange(enemy),
-                    new TaskAttack(enemy),
+                    new CheckHitByPlayer(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
-                    new CheckPlayerInAggroRange(enemy, enemy.PlayerPos),
-                    new TaskGoToTarget(enemy),
+                    new CheckTargetInAttackRange(enemy),
+                    new TaskAttack(enemy.Animator, enemy.Agent, enemy.AttackDelay, enemy.PreAttackDelay, enemy.Damage, enemy),
+                }),
+                new Sequence(new List<Node>
+                {
+                    new CheckPlayerInAggroRange(enemy.PlayerPos, enemy, enemy.AggroRange),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckFoundTarget(enemy),
-                    new TaskGoToTarget(enemy),
+                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
                 }),
                 
             });

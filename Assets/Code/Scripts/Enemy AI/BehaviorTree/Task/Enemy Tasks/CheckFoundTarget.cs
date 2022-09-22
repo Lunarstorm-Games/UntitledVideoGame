@@ -14,9 +14,9 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.activeInHierarchy)
+            
+            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.gameObject.activeInHierarchy)
             {
-                enemy.CurrentTarget = null;
                 Target[] targetInterests = GameObject.FindObjectsOfType<Target>();
                 if (targetInterests.Length > 0)
                 {
@@ -33,7 +33,7 @@ namespace BehaviorTree.EnemyTask
                             distance = curDistance;
                         }
                     }
-                    enemy.CurrentTarget = closest.gameObject;
+                    enemy.CurrentTarget = closest;
                     state = NodeState.SUCCESS;
                     return state;
 
@@ -41,7 +41,6 @@ namespace BehaviorTree.EnemyTask
                 state = NodeState.FAILURE;
                 return state;
             }
-
             state = NodeState.SUCCESS;
             return state;
         }
