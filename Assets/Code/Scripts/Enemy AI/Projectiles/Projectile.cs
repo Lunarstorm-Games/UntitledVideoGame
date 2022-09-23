@@ -5,10 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour, IProjectile
 {
 
-    private Entity Origin;
-    private float Speed;
-    private float Damage;
-    private Vector3 MoveDir;
+    protected Entity Origin;
+    protected float Speed;
+    protected float Damage;
+    protected Vector3 MoveDir;
 
     public virtual void Update()
     {
@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour, IProjectile
         Destroy(this.gameObject);
     }
 
-    public void Initialize(Entity origin, float speed, float damage, Vector3 moveDir, float lifeTime)
+    public virtual void Initialize(Entity origin, float speed, float damage, Vector3 moveDir, float lifeTime)
     {
         this.Origin = origin;
         this.Speed = speed;

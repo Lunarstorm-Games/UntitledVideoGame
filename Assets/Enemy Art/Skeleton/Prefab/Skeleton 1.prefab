@@ -729,11 +729,20 @@ MonoBehaviour:
   attackDelay: 3
   preAttackDelay: 1
   essenceDropAmount: 10
-  projectilePrefab: {fileID: 12787584233186923, guid: e8b7463f1ad854143a202546bc766d1f,
+  EssenceSource:
+    rid: 7853769204235501568
+  projectilePrefab: {fileID: -138429658249881365, guid: 6c5d5632228cbb741b3c5c75d6e5e5ee,
     type: 3}
   projectileSpawnPos: {fileID: 3979479768972305576}
   projectileSpeed: 8
   projectileRange: 5
+  references:
+    version: 2
+    RefIds:
+    - rid: 7853769204235501568
+      type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
+      data:
+        EssenceValue: 0
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

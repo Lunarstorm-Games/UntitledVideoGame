@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/ImpactEffect.prefab.meta
-guid: 370a405a42ee93046a3e26e90eabd501
+<<<<<<<< HEAD:Assets/Scripts.meta
+guid: 8c5a978d8b3d2be4cbeb47047170e688
+folderAsset: yes
+DefaultImporter:
 ========
 guid: 9e078ab75bcc455418043711ff43adf1
->>>>>>>> Enemies:Assets/Enemy Art/Skeleton/Prefab/Skeleton 2.prefab.meta
 PrefabImporter:
+>>>>>>>> Enemies:Assets/Enemy Art/Skeleton/Prefab/Skeleton 2.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

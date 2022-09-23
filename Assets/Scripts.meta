@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 <<<<<<<< HEAD:Assets/Scripts.meta
-guid: 4c4da67cc139ebf4193a2e8b1802bb2e
-========
-guid: e75d89dc3308ed54dbc5288bbd7f0fc6
->>>>>>>> Enemies:Assets/Code/Scripts/Enemy AI/Interfaces.meta
+guid: ecbc93ac508247345a83cfba9eb6b20e
 folderAsset: yes
 DefaultImporter:
+========
+guid: 9e078ab75bcc455418043711ff43adf1
+PrefabImporter:
+>>>>>>>> Enemies:Assets/Enemy Art/Skeleton/Prefab/Skeleton 2.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

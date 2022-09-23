@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/BasicSpellProjectile.prefab.meta
 guid: bbb575ee0018eda40be587595580859b
 PrefabImporter:
-========
-guid: a9bd159a1578a3b43985fc22683edc6e
-folderAsset: yes
-DefaultImporter:
->>>>>>>> Enemies:Assets/Code/Scripts/Enemy AI/Projectiles.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

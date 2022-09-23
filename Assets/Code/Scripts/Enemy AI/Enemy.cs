@@ -2,6 +2,7 @@ using BehaviorTree;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.scripts.Logic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,7 +31,8 @@ public class Enemy : Entity, IDamageable
     public float AttackDelay { get => attackDelay; protected set => attackDelay = value; }
     public float PreAttackDelay { get => preAttackDelay; protected set => preAttackDelay = value; }
     public int EssenceDropAmount { get => essenceDropAmount; protected set => essenceDropAmount = value; }
-
+     
+    [SerializeReference]public EssenceSourceLogic EssenceSource= new ();
 
     protected float currentHealth = 0f;
     protected bool death;
@@ -64,7 +66,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void DropEssence()
     {
-        //Essence system task
+        //EssenceSource.DropEssence();
     }
 
     public virtual void TakeDamage(float damage, Entity entity)
