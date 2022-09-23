@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using StarterAssets;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class AreYouSurePrompt : MonoBehaviour
+public class AreYouSureBuildPrompt : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
+    [SerializeField] private PlayerInput playerInput;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
     private Transform buildSpot = new RectTransform();
+
 
     void Awake()
     {
@@ -20,6 +24,7 @@ public class AreYouSurePrompt : MonoBehaviour
     {
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
+        playerInput.actions.Disable();
         gameObject.SetActive(true);
         buildingRaycast.SetIsPormptOpen(true);
         thirdPersonShooter.SetIsPormptOpen(true);
@@ -29,6 +34,7 @@ public class AreYouSurePrompt : MonoBehaviour
     {
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
+        playerInput.actions.Enable();
         gameObject.SetActive(false);
         buildingRaycast.SetIsPormptOpen(false);
         thirdPersonShooter.SetIsPormptOpen(false);
@@ -48,7 +54,7 @@ public class AreYouSurePrompt : MonoBehaviour
     {
         if (buildSpot)
         {
-            buildSpot.transform.Find("Building").gameObject.SetActive(true);
+            buildSpot.transform.Find("BuildingModel").gameObject.SetActive(true);
             buildSpot.transform.Find("BuildingSpotModel").gameObject.SetActive(false);
             HidePrompt();
         }

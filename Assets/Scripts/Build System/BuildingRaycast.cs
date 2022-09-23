@@ -10,12 +10,14 @@ public class BuildingRaycast : MonoBehaviour
     [SerializeField] private Transform ui;
 
     // UI ELEMENTS
-    private GameObject etoBuiildPopUp;
+    private GameObject etoBuildPopUp;
+    private GameObject etoUpgradePopUp;
     private bool isPromptOpen = false;
 
-    void Start()
+    void Awake()
     {
-        etoBuiildPopUp = ui.Find("EtoBuildPopUp").gameObject;
+        etoBuildPopUp = ui.Find("EtoBuildPopUp").gameObject;
+        etoUpgradePopUp = ui.Find("EtoUpgradePopUp").gameObject;
     }
 
     void Update()
@@ -25,23 +27,39 @@ public class BuildingRaycast : MonoBehaviour
         
         if (Physics.Raycast(ray, out hit, 200f, rayCollider))
         {
-            if (hit.transform.CompareTag("BuildingSpot") && hit.distance <= 11f && !isPromptOpen)
+            if (hit.distance <= 11f && !isPromptOpen)
             {
-                ShowEtoBuildPopUp(true);
-                etoBuiildPopUp.GetComponent<EtoBuild>().SetBuildSpot(hit.transform.parent);
-                return;
+                if (hit.transform.CompareTag("BuildingSpot"))
+                {
+                    ShowEtoBuildPopUp(true);
+                    etoBuildPopUp.GetComponent<EtoAction>().SetBuildSpot(hit.transform.parent);
+                    return;
+                }
+                if (hit.transform.CompareTag("Blacksmith"))
+                {
+                    ShowEtoUpgradePopUp(true);
+                    etoUpgradePopUp.GetComponent<EtoAction>().SetBuilding(hit.transform.parent);
+                    return;
+                }
             }
             ShowEtoBuildPopUp(false);
+            ShowEtoUpgradePopUp(false);
         }
         else
         {
             ShowEtoBuildPopUp(false);
+            ShowEtoUpgradePopUp(false);
         }
     }
 
     void ShowEtoBuildPopUp(bool status)
     {
-        etoBuiildPopUp.SetActive(status);
+        etoBuildPopUp.SetActive(status);
+    }
+
+    void ShowEtoUpgradePopUp(bool status)
+    {
+        etoUpgradePopUp.SetActive(status);
     }
 
     public void SetIsPormptOpen(bool status)

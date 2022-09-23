@@ -2594,6 +2594,7 @@ GameObject:
   - component: {fileID: 4207321055489993421}
   - component: {fileID: 4143355195471934057}
   - component: {fileID: 840331726542462986}
+  - component: {fileID: 8047051123743997973}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2696,7 +2697,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 520
   CinemachineCameraTarget: {fileID: 2971970552429335401}
   pauseMenuUI: {fileID: 0}
   TopClamp: 70
@@ -2855,7 +2856,7 @@ MonoBehaviour:
   _virtualCamera: {fileID: 0}
   aimColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   pfBulletProjectile: {fileID: 1252805924365581705, guid: bbb575ee0018eda40be587595580859b,
     type: 3}
   spawnBulletPosition: {fileID: 6522486129203822587}
@@ -2885,3 +2886,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c133686aace1747adac7d4e33e252c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+--- !u!114 &8047051123743997973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478390241683647026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e80ccfc4966e346aa6f462c763f590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCollider:
+    serializedVersion: 2
+    m_Bits: 64
+  ui: {fileID: 0}
