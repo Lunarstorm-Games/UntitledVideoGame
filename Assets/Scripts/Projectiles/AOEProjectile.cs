@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
 
-public class SpellProjectile : Projectile
+public class AOEProjectile : Projectile
 {
     public override void Initialize(Entity shooter, Vector3 direction)
     {

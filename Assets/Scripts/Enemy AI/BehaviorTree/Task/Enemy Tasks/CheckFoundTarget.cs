@@ -17,14 +17,17 @@ namespace BehaviorTree.EnemyTask
             
             if (enemy.CurrentTarget == null || !enemy.CurrentTarget.gameObject.activeInHierarchy)
             {
-                Target[] targetInterests = GameObject.FindObjectsOfType<Target>();
+                Entity[] targetInterests = GameObject.FindObjectsOfType<Entity>();
                 if (targetInterests.Length > 0)
                 {
-                    Target closest = null;
+                    Entity closest = null;
                     float distance = Mathf.Infinity;
 
-                    foreach (Target target in targetInterests)
+                    foreach (Entity target in targetInterests)
                     {
+                        if (target.Type == TargetType.Enemy)
+                            continue;
+
                         Vector3 diff = target.transform.position - enemy.transform.position;
                         float curDistance = diff.sqrMagnitude;
                         if (curDistance < distance)

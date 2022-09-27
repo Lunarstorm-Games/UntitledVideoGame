@@ -14,9 +14,8 @@ public class MeleeSkeleton : MeleeEnemy
         Tree.Initialize();
     }
 
-    public override void Update()
+    public virtual void Update()
     {
-        base.Update();
         Tree.Evaluate();
     }
 
@@ -25,9 +24,9 @@ public class MeleeSkeleton : MeleeEnemy
         base.TakeDamage(damage, entity);
     }
 
-    public override void DeathAnimFinished()
+    public override void DeathAnimEvent()
     {
-        base.DeathAnimFinished();
+        base.DeathAnimEvent();
     }
 
     public override void DropEssence()

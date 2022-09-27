@@ -11,10 +11,10 @@ namespace BehaviorTree.EnemyTask
         protected NavMeshAgent agent;
         protected Enemy enemy;
 
-        public TaskGoToTarget(Animator animator, NavMeshAgent agent, Enemy enemy)
+        public TaskGoToTarget(Enemy enemy)
         {
-            this.animator = animator;
-            this.agent = agent;
+            this.animator = enemy.Animator;
+            this.agent = enemy.Agent;
             this.enemy = enemy;
         }
 

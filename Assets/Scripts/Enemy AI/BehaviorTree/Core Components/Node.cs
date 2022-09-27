@@ -35,6 +35,8 @@ namespace BehaviorTree
             children.Add(node);
         }
 
+        public virtual void Start() { return; }
+
         public virtual NodeState Evaluate() => NodeState.FAILURE;
 
         public void ChangeState(NodeState state)

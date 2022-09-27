@@ -15,23 +15,20 @@ namespace BehaviorTree.EnemyTask
         protected float damage;
         protected float projectileRange;
         protected float projectileSpeed;
-        protected Enemy enemy;
+        protected RangeEnemy enemy;
         protected Projectile projectilePrefab;
         protected Transform projectileSpawnPos;
 
-        public TaskRangeAttack(Animator animator, NavMeshAgent agent, float preAttackDelay, float attackDelay, float damage, float projectileRange, float projectileSpeed, Enemy enemy, Projectile projectilePrefab, Transform projectileSpawnPos)
+        public TaskRangeAttack(RangeEnemy enemy)
         {
-            this.animator = animator;
-            this.agent = agent;
-            this.currentAttackDelay = preAttackDelay;
-            this.preAttackDelay = preAttackDelay;
-            this.attackDelay = attackDelay;
-            this.damage = damage;
-            this.projectileRange = projectileRange;
-            this.projectileSpeed = projectileSpeed;
+            this.animator = enemy.Animator;
+            this.agent = enemy.Agent;
+            this.currentAttackDelay = enemy.PreAttackDelay;
+            this.preAttackDelay = enemy.PreAttackDelay;
+            this.attackDelay = enemy.AttackDelay;
             this.enemy = enemy;
-            this.projectilePrefab = projectilePrefab;
-            this.projectileSpawnPos = projectileSpawnPos;
+            this.projectilePrefab = enemy.Projectile;
+            this.projectileSpawnPos = enemy.ProjectileSpawnPos;
         }
 
         public override NodeState Evaluate()
@@ -49,9 +46,9 @@ namespace BehaviorTree.EnemyTask
                 animator.SetTrigger("Attacking");
 
                 Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
-                Vector3 shootDir = (enemy.CurrentTarget.targetOffset - projectileSpawnPos.position).normalized;
-                projectile.transform.LookAt(enemy.CurrentTarget.targetOffset);
-                projectile.Initialize(enemy, projectileSpeed, damage, shootDir, projectileRange);
+                Vector3 shootDir = (enemy.CurrentTarget.Offset - projectileSpawnPos.position).normalized;
+                projectile.transform.LookAt(enemy.CurrentTarget.Offset);
+                projectile.Initialize(enemy, shootDir);
             }
             state = NodeState.RUNNING;
             return state;

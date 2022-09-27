@@ -7,28 +7,26 @@ namespace BehaviorTree.EnemyTask
 {
     public class CheckPlayerInAggroRange : Node
     {
-        protected Transform player;
         protected Enemy enemy;
         protected float aggroRange;
 
-        public CheckPlayerInAggroRange(Transform player, Enemy enemy, float aggroRange)
+        public CheckPlayerInAggroRange(Enemy enemy)
         {
-            this.player = player;
             this.enemy = enemy;
-            this.aggroRange = aggroRange;
+            this.aggroRange = enemy.AggroRange;
         }
 
         public override NodeState Evaluate()
         {
-            if (player == null || !player.gameObject.activeInHierarchy)
+            if (Player.Instance == null || !Player.Instance.gameObject.activeInHierarchy)
             {
                 state = NodeState.FAILURE;
                 return state;
             }
 
-            if (Vector3.Distance(enemy.transform.position, player.position) <= aggroRange)
+            if (Vector3.Distance(enemy.transform.position, Player.Instance.transform.position) <= aggroRange)
             {
-                enemy.CurrentTarget = player.GetComponent<Target>();
+                enemy.CurrentTarget = Player.Instance.GetComponent<Entity>();
                 state = NodeState.SUCCESS;
                 return state;
             }

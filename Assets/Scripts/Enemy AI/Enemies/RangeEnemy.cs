@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class RangeEnemy : Enemy
 {
-    [SerializeField] public Projectile projectilePrefab;
-    [SerializeField] public Transform projectileSpawnPos;
-    [SerializeField] public float projectileSpeed;
-    [SerializeField] public float projectileRange;
+    [SerializeField] public Transform ProjectileSpawnPos;
+    [SerializeField] public Projectile Projectile;
 
     public override void Awake()
     {
         base.Awake();
     }
 
-    public override void DeathAnimFinished()
+    public override void DeathAnimEvent()
     {
-        base.DeathAnimFinished();
+        base.DeathAnimEvent();
     }
 
     public override void DropEssence()
@@ -27,10 +25,5 @@ public class RangeEnemy : Enemy
     public override void TakeDamage(float damage, Entity entity)
     {
         base.TakeDamage(damage, entity);
-    }
-
-    public override void Update()
-    {
-        base.Update();
     }
 }

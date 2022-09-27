@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 2371188300362318032}
   - component: {fileID: 6067049128572240401}
   - component: {fileID: 7514962589122547655}
+  - component: {fileID: 1963350626355912525}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -721,16 +722,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
-  damage: 10
-  speed: 3
-  aggroRange: 6
-  attackRange: 2.4
-  attackDelay: 3
-  preAttackDelay: 1
-  essenceDropAmount: 10
+  Type: 2
+  Offset: {x: 0, y: 0, z: 0}
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Health: 30
+  Speed: 3
+  AggroRange: 6
+  AttackRange: 2.4
+  AttackDelay: 3
+  PreAttackDelay: 1
+  EssenceDropAmount: 10
+  EssenceSource:
+    rid: 7853769208530731008
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentTarget: {fileID: 0}
-  DamagedByGO: {fileID: 0}
+  HitByTarget: {fileID: 0}
+  Animator: {fileID: 0}
+  Agent: {fileID: 0}
+  Death: 0
+  Damage: 40
+  references:
+    version: 2
+    RefIds:
+    - rid: 7853769208530731008
+      type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
+      data:
+        EssenceValue: 0
+--- !u!137 &1963350626355912525
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948329710155509286}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 0}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
 
-public class SpellProjectile : Projectile
+public class AcceleratingProjectile : Projectile
 {
-    public override void Initialize(Entity shooter, Vector3 direction)
+    [SerializeField] private Vector3 velocity;
+
+    public override void Initialize(Entity origin, Vector3 direction)
     {
-        base.Initialize(shooter, direction);
+        base.Initialize(origin, direction);
     }
 
     public override void OnTriggerEnter(Collider other)
@@ -22,7 +23,8 @@ public class SpellProjectile : Projectile
 
     public override void Update()
     {
-        base.Update();
+        velocity += direction * speed * Time.deltaTime;
+        transform.position += velocity * Time.deltaTime;
     }
 
     protected override void DestroyProjectile(float delay = 0f)

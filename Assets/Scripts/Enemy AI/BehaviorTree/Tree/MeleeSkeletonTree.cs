@@ -19,27 +19,28 @@ namespace BehaviorTree
         {
             Node root = new Selector(new List<Node>
             {
+                new CheckDeath(enemy),
                 new Sequence(new List<Node>
                 {
                     new CheckHitByPlayer(enemy),
-                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
+                    new TaskGoToTarget(enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskAttack(enemy.Animator, enemy.Agent, enemy.AttackDelay, enemy.PreAttackDelay, enemy.Damage, enemy),
+                    new TaskAttack(enemy),
                 }),
                 new Sequence(new List<Node>
                 {
-                    new CheckPlayerInAggroRange(enemy.PlayerPos, enemy, enemy.AggroRange),
-                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
+                    new CheckPlayerInAggroRange(enemy),
+                    new TaskGoToTarget(enemy),
                 }),
                 new Sequence(new List<Node>
                 {
                     new CheckFoundTarget(enemy),
-                    new TaskGoToTarget(enemy.Animator, enemy.Agent, enemy),
+                    new TaskGoToTarget(enemy),
                 }),
-                
+
             });
 
             return root;
