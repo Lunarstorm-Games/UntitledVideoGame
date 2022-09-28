@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Assets.Scripts.SaveSystem
 {
@@ -6,5 +7,6 @@ namespace Assets.Scripts.SaveSystem
     {
         public void Serialize(Hashtable data, string filepath);
         public Hashtable DeSerialize(string filepath);
+   
     }
 }

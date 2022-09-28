@@ -11,11 +11,12 @@ namespace Assets.scripts.Monobehaviour.Essence
     public class EssenceBank : PersistableMonoBehaviour
     {
         // Start is called before the first frame update
-        [SerializeReference] [Persistance]
+        [SerializeReference] [SaveField]
         private EssenceBankModel Bank = new();
 
         public float EssenceAmount => Bank.EssenceAmount;
         public static EssenceBank Instance { get; private set; }
+        [SaveField] public float testValue=0f;
         void Start()
         {
 
@@ -33,7 +34,7 @@ namespace Assets.scripts.Monobehaviour.Essence
         // Update is called once per frame
         void Update()
         {
-        
+            Debug.Log("playing");
         }
 
         public void AddEssence(int amount)

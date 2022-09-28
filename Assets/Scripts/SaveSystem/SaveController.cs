@@ -24,11 +24,11 @@ public class SaveController : MonoBehaviour
     [ContextMenu("SaveState")]
     public void SaveState()
     {
-        StateStore.Instance.SaveStateToFile(Path.Combine(folder,FileName));
+        SaveManager.Instance.SaveStateToFile(Path.Combine(folder,FileName));
     }
     [ContextMenu("LoadState")]
     public void LoadState()
     {
-        StateStore.Instance.LoadSave(Path.Combine(folder, FileName));
+        SaveManager.Instance.LoadSave(Path.Combine(folder, FileName));
     }
 }
