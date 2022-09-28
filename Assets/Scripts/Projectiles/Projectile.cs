@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
         {
             target.TakeDamage(damage, shooter);
         }
-        DestroyProjectile();
+        ProjectileImpact();
     }
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
@@ -46,15 +46,22 @@ public class Projectile : MonoBehaviour
 
     protected virtual void DestroyProjectile(float delay = 0f)
     {
+        Destroy(gameObject, delay);
+    }
+
+    protected virtual void ProjectileImpact()
+    {
         if (hitSound != null)
+        {
             //SoundManager.Instance.PlaySoundAtLocation();
-        
+        }
+
         if (impactEffect != null)
         {
-            //VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
-            //Destroy(impactEffectObject.gameObject, 1);
+            VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
+            Destroy(impactEffectObject.gameObject, 1);
         }
-        
-       Destroy(gameObject, delay);
+
+        Destroy(gameObject);
     }
 }
