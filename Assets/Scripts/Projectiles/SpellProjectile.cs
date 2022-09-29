@@ -13,6 +13,7 @@ public class SpellProjectile : Projectile
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
+        base.ProjectileImpact();
     }
 
     public override void Start()
@@ -28,5 +29,10 @@ public class SpellProjectile : Projectile
     protected override void DestroyProjectile(float delay = 0f)
     {
         base.DestroyProjectile(delay);
+    }
+
+    protected override void ProjectileImpact()
+    {
+        base.ProjectileImpact();
     }
 }

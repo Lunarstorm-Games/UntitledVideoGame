@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
         {
             target.TakeDamage(damage, shooter);
         }
-        ProjectileImpact();
+        //ProjectileImpact();
     }
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
