@@ -9,6 +9,8 @@ public class TrapBuildingManager : MonoBehaviour
     private GameObject pendingObject;
     private Vector3 pos;
     private RaycastHit hit;
+    public bool canPlace;
+    [SerializeField] private Material[] materials;
     [SerializeField]private float rotateAmount;
 
     [SerializeField]
@@ -21,7 +23,7 @@ public class TrapBuildingManager : MonoBehaviour
         {
             pendingObject.transform.position = pos;
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && canPlace)
             {
                 PlaceObject();
             }
@@ -30,11 +32,25 @@ public class TrapBuildingManager : MonoBehaviour
             {
                 RotateObject();
             }
+            UpdateMaterials();
+        }
+    }
+
+    void UpdateMaterials()
+    {
+        if (canPlace)
+        {
+            pendingObject.GetComponent<MeshRenderer>().material = materials[0];
+        }
+        if (!canPlace)
+        {
+            pendingObject.GetComponent<MeshRenderer>().material = materials[1];
         }
     }
 
     public void PlaceObject()
     {
+        pendingObject.GetComponent<MeshRenderer>().material = materials[2];
         pendingObject = null;
     }
 
