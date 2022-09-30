@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8644679059876152416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8340b666cf0b41489e54cc2da9a8b5d, type: 3}
+  m_Name: EffectBlit
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 500
+    blitMaterial: {fileID: 2100000, guid: 152ada0a4dee4d44dbbd3808c1cc37a3, type: 2}
+    blitMaterialPassIndex: 0
+    destination: 0
+    textureId: _BlitPassTexture
 --- !u!114 &-7801267098062697670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,7 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8340b666cf0b41489e54cc2da9a8b5d, type: 3}
   m_Name: BlitFog2
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 500
     blitMaterial: {fileID: 2100000, guid: cd04359eae45a2c45a22b166774d69f6, type: 2}
@@ -36,7 +55,8 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -7801267098062697670}
-  m_RendererFeatureMap: 3acb073ee854bc93
+  - {fileID: -8644679059876152416}
+  m_RendererFeatureMap: 3acb073ee854bc93a0fbd24e32ee0788
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
