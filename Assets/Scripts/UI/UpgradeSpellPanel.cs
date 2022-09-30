@@ -12,14 +12,15 @@ public class UpgradeSpellPanel : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private Sprite spellIcon;
+    [SerializeField] private LightSpell lightSpell;
+    [SerializeField] private Button[] buttons;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
     private Transform building;
     private Transform rightPanel = new RectTransform();
     private Text essenceAmount;
     
-    // RIGHT PANEL DATA
+    // SPELL PANEL DATA
     private Image icon;
     private TextMeshProUGUI upgradeName;
     private TextMeshProUGUI description;
@@ -34,10 +35,11 @@ public class UpgradeSpellPanel : MonoBehaviour
         buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
         thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
         essenceAmount = transform.Find("TopPanel").transform.Find("EssenceAmount").GetComponent<Text>();
+        SetLeftPanelIcons();
         
-        // RIGHT PANEL OBJECTS
+        // SPELL PANEL OBJECTS
         rightPanel = gameObject.transform.Find("RightPanel").transform;
-        ShowRightPanel(false);
+        HideSpellPanel();
         icon = rightPanel.transform.Find("UpgradeIcon").transform.GetComponent<Image>();
         upgradeName = rightPanel.transform.Find("Name").transform.GetComponent<TextMeshProUGUI>();
         description = rightPanel.transform.Find("Description").transform.GetComponent<TextMeshProUGUI>();
@@ -52,11 +54,43 @@ public class UpgradeSpellPanel : MonoBehaviour
         upgradeCost = rightPanel.transform.Find("UpgradeButton").transform.Find("Cost").GetComponent<TextMeshProUGUI>();
     }
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
         {
             HidePanel();
+        }
+    }
+
+    private void SetLeftPanelIcons()
+    {
+        buttons[0].transform.Find("Icon").GetComponent<Image>().sprite = lightSpell.Icon;
+    }
+    
+    private void setSpellPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, float _currentStat, float _futureStat, int _upgradeCost)
+    {
+        icon.sprite = _icon;
+        upgradeName.text = _upgradeName;
+        description.text = _description;
+        currentLevel.text = _currentLevel.ToString();
+        nextLevel.text = (_currentLevel + 1).ToString();
+        currentStat.text = _currentStat.ToString();
+        nextStat.text = _futureStat.ToString();
+        upgradeCost.text = _upgradeCost + ")";
+    }
+
+    private void spellSelect(string spell)
+    {
+        switch (spell)
+        {
+            case "light dmg":
+                setSpellPanelData(lightSpell.Icon, lightSpell.Name + " Damage", lightSpell.Description, lightSpell.Level, 
+                    lightSpell.CurrentDamage, (lightSpell.CurrentDamage + lightSpell.DamageGrowthAmount), lightSpell.UpgradeCost);
+                break;
+            
+            default:
+                Debug.LogWarning("No Such Spell Found");
+                break;
         }
     }
 
@@ -72,7 +106,7 @@ public class UpgradeSpellPanel : MonoBehaviour
 
     public void HidePanel()
     {
-        ShowRightPanel(false);
+        HideSpellPanel();
         gameObject.SetActive(false);
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
@@ -87,27 +121,22 @@ public class UpgradeSpellPanel : MonoBehaviour
         building = b;
     }
 
-    public void SetRightPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, int _currentStat, int _futureStat, int _upgradeCost)
+    public void ShowSpellPanel(string spell)
     {
-        icon.sprite = _icon;
-        upgradeName.text = _upgradeName;
-        description.text = _description;
-        currentLevel.text = _currentLevel.ToString();
-        nextLevel.text = (_currentLevel + 1).ToString();
-        currentStat.text = _currentStat.ToString();
-        nextStat.text = _futureStat.ToString();
-        upgradeCost.text = _upgradeCost + ")";
+        if (rightPanel.gameObject.activeSelf)
+        {
+            spellSelect(spell);
+        }
+        else
+        {
+            rightPanel.gameObject.SetActive(true);
+            spellSelect(spell);
+        }
     }
 
-    public void ShowRightPanel(bool status)
+    public void HideSpellPanel()
     {
-        rightPanel.gameObject.SetActive(status);
-        // Test Data for Right Panel
-        if (status == true)
-        {
-            SetRightPanelData(spellIcon, "Test Upgrade", "Test description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus ex tortor, " +
-                                                         "eu congue orci.", 0, 100, 160, 500);
-        }
+        rightPanel.gameObject.SetActive(false);
     }
 
     public void SetEssence(int essence)
@@ -123,7 +152,16 @@ public class UpgradeSpellPanel : MonoBehaviour
 
     public void UpgradeSpell()
     {
-        Debug.Log("Spell " + upgradeName.text + " upgraded, for " + upgradeCost.text + " in building " + building.parent.tag);
+        switch (upgradeName.text)
+        {
+          case "Light Spell Damage":
+              lightSpell.UpgradeDamage();
+              break;
+          
+          default:
+              Debug.LogWarning("No such spell");
+              break;
+        }
         HidePanel();
     }
 }

@@ -8,7 +8,7 @@ public class SpellProjectile : MonoBehaviour
     public Entity player;
     public float spellSpeed;
     [SerializeField] private VisualEffect impactEffect;
-    public float DamageValue = 10;
+    public float DamageValue = 10f;
 
     void Update()
     {
