@@ -20,6 +20,7 @@ namespace BehaviorTree.EnemyTask
             {
                 enemy.CurrentTarget = enemy.HitByTarget;
                 enemy.HitByTarget = null;
+
                 state = NodeState.SUCCESS;
                 return state;
                 

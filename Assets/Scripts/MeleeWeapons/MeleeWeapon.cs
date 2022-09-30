@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MeleeWeapon : MonoBehaviour
 {
-    
     [SerializeField] protected float damage;
     [SerializeField] protected ParticleSystem hitEffect;
     [SerializeField] protected AudioClip hitSound;
@@ -13,22 +13,31 @@ public class MeleeWeapon : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider collider)
     {
-        // Can't stab yourself
-        if (collider.gameObject == holder)
-            return;
-
-        if (collider.GetComponent<Entity>().Type == holder.Type)
-            return;
-
-        if (collider.TryGetComponent(out IDamageable target))
+        Debug.Log(collider.name, collider.gameObject);
+        if (collider.TryGetComponent<Entity>(out Entity entity))
         {
-            target.TakeDamage(damage, holder);
+            if (entity == holder)
+                return;
+
+            if (!holder.ValidTarget(holder.TargetsType, entity.Type))
+                return;
+
+            if (collider.TryGetComponent<IDamageable>(out IDamageable target))
+            {
+                target.TakeDamage(damage, holder);
+            }
         }
     }
 
-    public virtual void Initialize(Entity shooter, float damage)
+   
+
+    //public virtual void OnTriggerExit(Collider collider)
+    //{
+
+    //}
+
+    public virtual void Initialize(Entity holder)
     {
-        this.holder = shooter;
-        this.damage = damage;
+        this.holder = holder;
     }
 }

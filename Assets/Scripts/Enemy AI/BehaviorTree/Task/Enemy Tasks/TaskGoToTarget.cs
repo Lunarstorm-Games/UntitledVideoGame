@@ -20,9 +20,8 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            //Vector3 dir = target.transform.position - entity.transform.position;
-            //dir.y = 0;
-            //entity.transform.rotation = Quaternion.LookRotation(dir);
+            if (!animator.GetBool("Attacking"))
+                agent.isStopped = false;
 
             agent.SetDestination(enemy.CurrentTarget.transform.position);
 
@@ -31,6 +30,5 @@ namespace BehaviorTree.EnemyTask
             state = NodeState.RUNNING;
             return state;
         }
-
     } 
 }

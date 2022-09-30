@@ -1,32 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BehaviorTree.EnemyTask
 {
     public class CheckTargetInAttackRange : Node
     {
         protected Enemy enemy;
+        protected NavMeshAgent agent;
+        protected Animator animator;
+        protected float attackRange;
 
         public CheckTargetInAttackRange(Enemy enemy)
         {
+            this.attackRange = enemy.AttackRange;
+            this.agent = enemy.Agent;
+            this.animator = enemy.Animator;
             this.enemy = enemy;
         }
 
         public override NodeState Evaluate()
         {
-            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.gameObject.activeInHierarchy)
+            Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, attackRange);
+            foreach (Collider collider in hitColliders)
             {
-                state = NodeState.FAILURE;
-                return state;
+                if (collider.TryGetComponent<Entity>(out Entity entity))
+                {
+                    if (entity == enemy.CurrentTarget)
+                    {
+                        agent.isStopped = true;
+                        state = NodeState.SUCCESS;
+                        return state;
+                    }
+                }
             }
 
-            if (Vector3.Distance(enemy.transform.position, enemy.CurrentTarget.transform.position) <= enemy.AttackRange)
-            {
-                state = NodeState.SUCCESS;
-                return state;
-            }
-
+            enemy.CurrentAttackDelay = 0f;
+            animator.SetBool("PreAttack", false);
             state = NodeState.FAILURE;
             return state;
         }
