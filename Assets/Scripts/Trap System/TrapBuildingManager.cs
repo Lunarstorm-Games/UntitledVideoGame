@@ -22,9 +22,10 @@ public class TrapBuildingManager : MonoBehaviour
         if (pendingObject != null)
         {
             pendingObject.transform.position = pos;
-
+            
             if (Input.GetMouseButtonDown(0) && canPlace)
             {
+                Debug.Log("Object Placed");
                 PlaceObject();
             }
 

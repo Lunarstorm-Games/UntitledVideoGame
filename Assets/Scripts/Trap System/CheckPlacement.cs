@@ -14,8 +14,10 @@ public class CheckPlacement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("y");
         if (other.gameObject.CompareTag("Object"))
         {
+            Debug.Log("ye");
             _buildingManager.canPlace = false;
         }
     }
