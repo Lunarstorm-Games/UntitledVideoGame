@@ -35,7 +35,7 @@ public class BuildingRaycast : MonoBehaviour
                     etoBuildPopUp.GetComponent<EtoAction>().SetBuildSpot(hit.transform.parent);
                     return;
                 }
-                if (hit.transform.CompareTag("Blacksmith"))
+                if (hit.transform.CompareTag("MagicWorkshop"))
                 {
                     ShowEtoUpgradePopUp(true);
                     etoUpgradePopUp.GetComponent<EtoAction>().SetBuilding(hit.transform.parent);

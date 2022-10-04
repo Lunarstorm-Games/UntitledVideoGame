@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using StarterAssets;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,13 +13,14 @@ public class AreYouSureBuildPrompt : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
-    private Transform buildSpot = new RectTransform();
-
+    private Transform buildSpot;
+    private TextMeshProUGUI text;
 
     void Awake()
     {
         buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
         thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
+        text = transform.Find("Text").GetComponent<TextMeshProUGUI>();
     }
     
     public void ShowPrompt()
@@ -26,6 +29,9 @@ public class AreYouSureBuildPrompt : MonoBehaviour
         starterAssetsInputs.cursorInputForLook = false;
         playerInput.actions.Disable();
         gameObject.SetActive(true);
+        var buildingName = Regex.Replace(buildSpot.Find("BuildingModel").tag,
+            "([A-Z])", " $1", RegexOptions.Compiled).Trim();
+        text.text = $"Are you sure you want to build a {buildingName}?";
         buildingRaycast.SetIsPormptOpen(true);
         thirdPersonShooter.SetIsPormptOpen(true);
     }
@@ -54,8 +60,8 @@ public class AreYouSureBuildPrompt : MonoBehaviour
     {
         if (buildSpot)
         {
-            buildSpot.transform.Find("BuildingModel").gameObject.SetActive(true);
-            buildSpot.transform.Find("BuildingSpotModel").gameObject.SetActive(false);
+            buildSpot.Find("BuildingModel").gameObject.SetActive(true);
+            buildSpot.Find("BuildingSpotModel").gameObject.SetActive(false);
             HidePrompt();
         }
     }

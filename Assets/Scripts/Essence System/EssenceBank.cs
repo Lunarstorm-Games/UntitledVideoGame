@@ -38,12 +38,15 @@ namespace Assets.scripts.Monobehaviour.Essence
             Bank.EssenceAmount += amount;
         }
 
-        public void SpendEssence(int amount)
+        public bool SpendEssence(int amount)
         {
-            if (Bank.EssenceAmount > amount)
+            if (Bank.EssenceAmount >= amount)
             {
                 Bank.EssenceAmount-=amount;
+                return true;
             }
+
+            return false;
         }
     }
 }

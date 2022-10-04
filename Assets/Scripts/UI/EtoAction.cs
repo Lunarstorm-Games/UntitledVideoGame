@@ -25,13 +25,13 @@ public class EtoAction : MonoBehaviour
             switch (action)
             {
                 case PopUpAction.Build:
-                    areYouSureBuildPrompt.ShowPrompt();
                     areYouSureBuildPrompt.SetBuildSpot(buildSpot);
+                    areYouSureBuildPrompt.ShowPrompt();
                     break;
                 
                 case PopUpAction.Upgrade:
-                    upgradeSpellPanel.ShowPanel();
                     upgradeSpellPanel.SetBuilding(building);
+                    upgradeSpellPanel.ShowPanel();
                     break;
             }
         }

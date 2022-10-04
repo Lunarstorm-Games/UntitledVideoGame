@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using Assets.scripts.Monobehaviour.Essence;
 using StarterAssets;
 using TMPro;
 using Unity.VisualScripting;
@@ -14,11 +16,13 @@ public class UpgradeSpellPanel : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private LightSpell lightSpell;
     [SerializeField] private Button[] buttons;
+    private EssenceBank essenceBank;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
     private Transform building;
     private Transform rightPanel = new RectTransform();
-    private Text essenceAmount;
+    private TextMeshProUGUI essenceAmount;
+    private Transform warning;
     
     // SPELL PANEL DATA
     private Image icon;
@@ -34,9 +38,11 @@ public class UpgradeSpellPanel : MonoBehaviour
     {
         buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
         thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
-        essenceAmount = transform.Find("TopPanel").transform.Find("EssenceAmount").GetComponent<Text>();
-        SetLeftPanelIcons();
-        
+        essenceAmount = transform.Find("TopPanel").transform.Find("EssenceAmount").GetComponent<TextMeshProUGUI>();
+        SetLeftPaneData();
+        essenceBank = GameObject.Find("WaveController").GetComponent<EssenceBank>();
+        warning = transform.Find("Warning");
+
         // SPELL PANEL OBJECTS
         rightPanel = gameObject.transform.Find("RightPanel").transform;
         HideSpellPanel();
@@ -62,12 +68,13 @@ public class UpgradeSpellPanel : MonoBehaviour
         }
     }
 
-    private void SetLeftPanelIcons()
+    private void SetLeftPaneData()
     {
         buttons[0].transform.Find("Icon").GetComponent<Image>().sprite = lightSpell.Icon;
+        buttons[0].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = lightSpell.DamageLevel.ToString();
     }
     
-    private void setSpellPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, float _currentStat, float _futureStat, int _upgradeCost)
+    private void SetSpellPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, float _currentStat, float _futureStat, int _upgradeCost)
     {
         icon.sprite = _icon;
         upgradeName.text = _upgradeName;
@@ -79,12 +86,12 @@ public class UpgradeSpellPanel : MonoBehaviour
         upgradeCost.text = _upgradeCost + ")";
     }
 
-    private void spellSelect(string spell)
+    private void SpellSelect(string spell)
     {
         switch (spell)
         {
             case "light dmg":
-                setSpellPanelData(lightSpell.Icon, lightSpell.Name + " Damage", lightSpell.Description, lightSpell.Level, 
+                SetSpellPanelData(lightSpell.Icon, lightSpell.Name + " Damage", lightSpell.Description, lightSpell.DamageLevel, 
                     lightSpell.CurrentDamage, (lightSpell.CurrentDamage + lightSpell.DamageGrowthAmount), lightSpell.UpgradeCost);
                 break;
             
@@ -94,12 +101,31 @@ public class UpgradeSpellPanel : MonoBehaviour
         }
     }
 
+    private void ShowWarning(string warningText)
+    {
+        warning.gameObject.SetActive(true);
+        warning.Find("Text").GetComponent<TextMeshProUGUI>().text = warningText;
+        StartCoroutine(HideWarning(2f));
+    }
+
+    private IEnumerator HideWarning(float secondsToWait)
+    {
+        yield return new WaitForSeconds(secondsToWait);
+        warning.gameObject.SetActive(false);
+    }
+
+    private void HideWarningQuick()
+    {
+        warning.gameObject.SetActive(false);
+    }
+
     public void ShowPanel()
     {
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
         playerInput.actions.Disable();
         gameObject.SetActive(true);
+        SetEssence(essenceBank.EssenceAmount);
         buildingRaycast.SetIsPormptOpen(true);
         thirdPersonShooter.SetIsPormptOpen(true);
     }
@@ -107,13 +133,13 @@ public class UpgradeSpellPanel : MonoBehaviour
     public void HidePanel()
     {
         HideSpellPanel();
+        HideWarningQuick();
         gameObject.SetActive(false);
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
         playerInput.actions.Enable();
         buildingRaycast.SetIsPormptOpen(false);
         thirdPersonShooter.SetIsPormptOpen(false);
-
     }
 
     public void SetBuilding(Transform b)
@@ -125,12 +151,12 @@ public class UpgradeSpellPanel : MonoBehaviour
     {
         if (rightPanel.gameObject.activeSelf)
         {
-            spellSelect(spell);
+            SpellSelect(spell);
         }
         else
         {
             rightPanel.gameObject.SetActive(true);
-            spellSelect(spell);
+            SpellSelect(spell);
         }
     }
 
@@ -139,15 +165,9 @@ public class UpgradeSpellPanel : MonoBehaviour
         rightPanel.gameObject.SetActive(false);
     }
 
-    public void SetEssence(int essence)
+    public void SetEssence(float essence)
     {
-        if (essence != 0)
-        {
-            essenceAmount.text = essence.ToString(); 
-            return;
-        }
-
-        essenceAmount.text = "69420";
+        essenceAmount.text = essence.ToString();
     }
 
     public void UpgradeSpell()
@@ -155,13 +175,23 @@ public class UpgradeSpellPanel : MonoBehaviour
         switch (upgradeName.text)
         {
           case "Light Spell Damage":
-              lightSpell.UpgradeDamage();
+              if (essenceBank.SpendEssence(lightSpell.UpgradeCost))
+              {
+                  lightSpell.UpgradeDamage();
+                  SetEssence(essenceBank.EssenceAmount);
+                  SetLeftPaneData();
+                  HideSpellPanel();
+                  ShowSpellPanel("light dmg");
+              }
+              else
+              {
+                  ShowWarning("You do not have enough essence to increase the damage of your Light Spell");
+              }
               break;
           
           default:
               Debug.LogWarning("No such spell");
               break;
         }
-        HidePanel();
     }
 }

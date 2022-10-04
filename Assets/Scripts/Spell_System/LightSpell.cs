@@ -4,7 +4,7 @@ using UnityEngine.VFX;
 
 public class LightSpell : SpellBase
 {
-    public int Level = 1;
+    public int DamageLevel = 1;
     public float CurrentDamage;
     public float CurrentSpeed;
     public float DamageGrowthAmount;
@@ -18,6 +18,7 @@ public class LightSpell : SpellBase
 
     public void UpgradeDamage()
     {
+        DamageLevel += 1;
         CurrentDamage += DamageGrowthAmount;
     }
 
