@@ -12,7 +12,6 @@ namespace BehaviorTree.EnemyTask
         protected float attackDelay;
         protected float preAttackDelay;
         protected Enemy enemy;
-        protected float damage;
         protected MeleeWeapon weapon;
 
         public TaskAttack(MeleeEnemy enemy)
@@ -21,7 +20,6 @@ namespace BehaviorTree.EnemyTask
             this.agent = enemy.Agent;
             this.attackDelay = enemy.AttackDelay;
             this.preAttackDelay = enemy.PreAttackDelay;
-            this.damage = enemy.Damage;
             this.enemy = enemy;
             this.weapon = enemy.Weapon;
 
