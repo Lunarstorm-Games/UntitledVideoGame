@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class MeleeEnemy : Enemy
 {
+    [SerializeField] public float Damage;
     public override void Awake()
     {
         base.Awake();
     }
 
-    public override void DeathAnimFinished()
+    public override void DeathAnimEvent()
     {
-        base.DeathAnimFinished();
+        base.DeathAnimEvent();
     }
 
     public override void DropEssence()
@@ -22,10 +23,5 @@ public class MeleeEnemy : Enemy
     public override void TakeDamage(float damage, Entity entity)
     {
         base.TakeDamage(damage, entity);
-    }
-
-    public override void Update()
-    {
-        base.Update();
     }
 }

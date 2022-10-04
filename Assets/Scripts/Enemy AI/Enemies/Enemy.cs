@@ -5,63 +5,39 @@ using System.Collections.Generic;
 using Assets.scripts.Logic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Enemy : Entity, IDamageable
 {
-    [SerializeField] private float health = 30f;
-    [SerializeField] private float damage = 10f;
-    [SerializeField] private float speed = 3f;
-    [SerializeField] private float aggroRange = 6f;
-    [SerializeField] private float attackRange = 2.4f;
-    [SerializeField] private float attackDelay = 3f;
-    [SerializeField] private float preAttackDelay = 1f;
-    [SerializeField] private int essenceDropAmount = 10;
+    [SerializeField] public float Health = 30f;
+    [SerializeField] public float Speed = 3f;
+    [SerializeField] public float AggroRange = 6f;
+    [SerializeField] public float AttackRange = 2.4f;
+    [SerializeField] public float AttackDelay = 3f;
+    [SerializeField] public float PreAttackDelay = 1f;
+    [SerializeField] public int EssenceDropAmount = 10;
+    [SerializeReference] public EssenceSourceLogic EssenceSource = new();
+    [SerializeField] public UnityEvent OnDamageTaken;
+    [SerializeField] public UnityEvent OnDeath;
 
-    public Target CurrentTarget { get; set; }
-    public GameObject DamagedByGO { get; set; }
-
-    public Animator Animator { get; protected set; }
-    public NavMeshAgent Agent { get; protected set; }
-    public Transform PlayerPos { get; protected set; }
-    public float Health { get => health; protected set => health = value; }
-    public float Damage { get => damage; protected set => damage = value; }
-    public float Speed { get => speed; protected set => speed = value; }
-    public float AggroRange { get => aggroRange; protected set => aggroRange = value; }
-    public float AttackRange { get => attackRange; protected set => attackRange = value; }
-    public float AttackDelay { get => attackDelay; protected set => attackDelay = value; }
-    public float PreAttackDelay { get => preAttackDelay; protected set => preAttackDelay = value; }
-    public int EssenceDropAmount { get => essenceDropAmount; protected set => essenceDropAmount = value; }
-     
-    [SerializeReference]public EssenceSourceLogic EssenceSource= new ();
+    [HideInInspector] public Entity CurrentTarget;
+    [HideInInspector] public Entity HitByTarget;
+    [HideInInspector] public Animator Animator;
+    [HideInInspector] public NavMeshAgent Agent;
+    [HideInInspector] public bool Death;
 
     protected float currentHealth = 0f;
-    protected bool death;
+    
 
 
     public virtual void Awake()
     {
         Animator = GetComponent<Animator>();
-        Agent = GetComponent<NavMeshAgent>();
-        PlayerPos = GameObject.FindGameObjectWithTag("Player").transform;
-
-        
+        Agent = GetComponent<NavMeshAgent>();  
 
         Agent.speed = Speed;
         Agent.stoppingDistance = AttackRange * 0.85f;
         currentHealth = Health;
-    }
-
-
-    public virtual void Update()
-    {
-
-    }
-
-
-    public virtual void DeathAnimFinished()
-    {
-        DropEssence();
-        Destroy(this.gameObject);
     }
 
     public virtual void DropEssence()
@@ -73,16 +49,24 @@ public class Enemy : Entity, IDamageable
     {
         currentHealth -= damage;
 
-        if (currentHealth > 0)
+        if (currentHealth <= 0 && !Death)
         {
-            DamagedByGO = entity.gameObject;
-        }
-        else if (!death)
-        {
-            death = true;
-            Animator.SetTrigger("Death");
+            OnDeath?.Invoke();
+            Death = true;
             GetComponent<Collider>().enabled = false;
             Agent.isStopped = true;
+            Animator.SetTrigger("Death");
         }
+        else
+        {
+
+            HitByTarget = entity;
+        }
+    }
+
+    public virtual void DeathAnimEvent()
+    {
+        DropEssence();
+        Destroy(this.gameObject);
     }
 }

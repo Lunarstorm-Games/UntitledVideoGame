@@ -9,8 +9,23 @@ public class SkeletonMageProjectile : Projectile
         base.Update();
     }
 
-    public override void OnTriggerEnter(Collider collider)
+    public override void Start()
     {
-        base.OnTriggerEnter(collider);
+        base.Start();
+    }
+
+    public override void Initialize(Entity shooter, Vector3 direction)
+    {
+        base.Initialize(shooter, direction);
+    }
+
+    protected override void DestroyProjectile(float delay = 0f)
+    {
+        base.DestroyProjectile(delay);
+    }
+
+    public override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
     }
 }

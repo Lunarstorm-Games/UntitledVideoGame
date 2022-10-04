@@ -3,37 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class SpellProjectile : MonoBehaviour
+public class SpellProjectile : Projectile
 {
-    public Entity player;
-    public float spellSpeed;
-    [SerializeField] private VisualEffect impactEffect;
-    public float DamageValue = 10f;
-
-    void Update()
+    public override void Initialize(Entity shooter, Vector3 direction)
     {
-        StartCoroutine(SpellTimer());
-
-        transform.position += transform.forward * spellSpeed * Time.deltaTime;
-
-        IEnumerator SpellTimer()
-        {
-            yield return new WaitForSeconds(1.5f);
-            Destroy(gameObject);
-        }
+        base.Initialize(shooter, direction);
     }
 
-    private void OnCollisionEnter(Collision other)
+    public override void OnTriggerEnter(Collider other)
     {
-        GameObject collisionObject = other.gameObject;
-        Vector3 collisionPoint = other.GetContact(0).point;
+        base.OnTriggerEnter(other);
+    }
 
-        VisualEffect impactEffectObject = Instantiate(impactEffect, collisionPoint, Quaternion.LookRotation(transform.forward));
-        Destroy(impactEffectObject.gameObject, 1);
-        if (collisionObject.TryGetComponent<Enemy>(out Enemy enemy))
-        {
-            enemy.TakeDamage(DamageValue, player);
-        }
-        Destroy(gameObject);
+    public override void Start()
+    {
+        base.Start();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+    }
+
+    protected override void DestroyProjectile(float delay = 0f)
+    {
+        base.DestroyProjectile(delay);
     }
 }

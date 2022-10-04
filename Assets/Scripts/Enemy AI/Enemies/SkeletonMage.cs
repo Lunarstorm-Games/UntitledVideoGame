@@ -13,15 +13,14 @@ public class SkeletonMage : RangeEnemy
         Tree = new SkeletonMageTree(this);
         Tree.Initialize();
     }
-    public override void Update()
+    public virtual void Update()
     {
-        base.Update();
         Tree.Evaluate();
     }
 
-    public override void DeathAnimFinished()
+    public override void DeathAnimEvent()
     {
-        base.DeathAnimFinished();
+        base.DeathAnimEvent();
     }
 
     public override void DropEssence()

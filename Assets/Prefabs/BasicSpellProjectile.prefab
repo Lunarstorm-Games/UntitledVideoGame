@@ -95,11 +95,30 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252805924365581705}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2338750469617564991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805924365581705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4ad468f37e022469ef5b35cc21073b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellSpeed: 14
+  damage: 10
+  range: 3
+  impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
+    type: 3}
+  DamageValue: 10
+  hitSound: {fileID: 0}
 --- !u!54 &-1450108528857507897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,23 +135,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2338750469617564991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252805924365581705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e4ad468f37e022469ef5b35cc21073b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spellSpeed: 20
-  impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
-    type: 3}
-  DamageValue: 10
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0

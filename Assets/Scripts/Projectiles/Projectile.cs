@@ -1,35 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
-public class Projectile : MonoBehaviour, IProjectile
+public class Projectile : MonoBehaviour
 {
+                     
+    [SerializeField] protected float speed;
+    [SerializeField] protected float damage;
+    [SerializeField] protected float range;
+    [SerializeField] protected VisualEffect impactEffect;
+    [SerializeField] protected AudioClip hitSound;
 
-    protected Entity Origin;
-    protected float Speed;
-    protected float Damage;
-    protected Vector3 MoveDir;
+    protected Entity shooter;
+    protected Vector3 direction;
+
+    public virtual void Start()
+    {
+        DestroyProjectile(range);
+    }
 
     public virtual void Update()
     {
-        transform.position += MoveDir * Speed * Time.deltaTime;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    public virtual void OnTriggerEnter(Collider collider)
+    public virtual void OnTriggerEnter(Collider other)
     {
-        if (collider.TryGetComponent<IDamageable>(out IDamageable target) && !collider.CompareTag("Enemy"))
+        // Can't shoot yourself
+        if (other.gameObject == shooter)
+            return;
+
+        if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)
         {
-            target.TakeDamage(Damage, Origin);
+            target.TakeDamage(damage, shooter);
         }
-        Destroy(this.gameObject);
+        DestroyProjectile();
     }
 
-    public virtual void Initialize(Entity origin, float speed, float damage, Vector3 moveDir, float lifeTime)
+    public virtual void Initialize(Entity shooter, Vector3 direction)
     {
-        this.Origin = origin;
-        this.Speed = speed;
-        this.Damage = damage;
-        this.MoveDir = moveDir;
-        Destroy(this.gameObject, lifeTime);
+        this.shooter = shooter;
+        this.direction = direction;
+    }
+
+    public void SetDamage(float newDamage)
+    {
+        damage = newDamage;
+    }
+
+    protected virtual void DestroyProjectile(float delay = 0f)
+    {
+        if (hitSound != null)
+            //SoundManager.Instance.PlaySoundAtLocation();
+        
+        if (impactEffect != null)
+        {
+            //VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
+            //Destroy(impactEffectObject.gameObject, 1);
+        }
+        
+       Destroy(gameObject, delay);
     }
 }

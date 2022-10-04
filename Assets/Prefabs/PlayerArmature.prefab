@@ -2593,8 +2593,7 @@ GameObject:
   - component: {fileID: 7478390241683647038}
   - component: {fileID: 4207321055489993421}
   - component: {fileID: 4143355195471934057}
-  - component: {fileID: 840331726542462986}
-  - component: {fileID: 8047051123743997973}
+  - component: {fileID: 6501085583160568173}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2857,8 +2856,7 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 9
-  pfBulletProjectile: {fileID: 1252805924365581705, guid: bbb575ee0018eda40be587595580859b,
-    type: 3}
+  projectilePrefab: {fileID: 0}
   spawnBulletPosition: {fileID: 6522486129203822587}
   spells:
   - {fileID: 0}
@@ -2871,25 +2869,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7478390241683647026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96dde86d85f83f2418cfdb0eb8c1e41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 852f6f3c9675e7648ae14adbb74ce7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetOffset: {x: 0, y: 0, z: 0}
+  Type: 0
   Offset: {x: 0, y: 0.8, z: 0}
---- !u!114 &840331726542462986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7478390241683647026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c133686aace1747adac7d4e33e252c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
---- !u!114 &8047051123743997973
+  TargetOffset: {x: 0, y: 0.8, z: 0}
+  maxHealth: 100
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6501085583160568173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

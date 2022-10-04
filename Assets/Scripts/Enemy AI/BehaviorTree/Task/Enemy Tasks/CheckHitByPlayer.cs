@@ -16,22 +16,16 @@ namespace BehaviorTree.EnemyTask
 
         public override NodeState Evaluate()
         {
-            if (enemy.DamagedByGO != null && enemy.DamagedByGO.CompareTag("Player"))
+            if (enemy.HitByTarget != null && enemy.HitByTarget.CompareTag("Player"))
             {
-                if (enemy.DamagedByGO.TryGetComponent<Target>(out Target target))
-                {
-                    enemy.CurrentTarget = target;
-                    enemy.DamagedByGO = null;
-                    state = NodeState.SUCCESS;
-                    return state;
-                }
-                state = NodeState.FAILURE;
+                enemy.CurrentTarget = enemy.HitByTarget;
+                enemy.HitByTarget = null;
+                state = NodeState.SUCCESS;
                 return state;
-
+                
             }
             state = NodeState.FAILURE;
             return state;
-
 
         }
     }

@@ -13,6 +13,12 @@ namespace BehaviorTree
             _root = SetupTree();
         }
 
+        public void Start()
+        {
+            if (_root != null)
+                _root.Start();
+        }
+
         public void Evaluate()
         {
             if (_root != null)

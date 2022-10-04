@@ -12,17 +12,17 @@ namespace BehaviorTree.EnemyTask
         protected float currentAttackDelay;
         protected float attackDelay;
         protected float preAttackDelay;
-        protected float damage;
         protected Enemy enemy;
+        protected float damage;
 
-        public TaskAttack(Animator animator, NavMeshAgent agent, float attackDelay, float preAttackDelay, float damage, Enemy enemy)
+        public TaskAttack(MeleeEnemy enemy)
         {
-            this.animator = animator;
-            this.agent = agent;
-            this.currentAttackDelay = preAttackDelay;
-            this.attackDelay = attackDelay;
-            this.preAttackDelay = preAttackDelay;
-            this.damage = damage;
+            this.animator = enemy.Animator;
+            this.agent = enemy.Agent;
+            this.currentAttackDelay = enemy.PreAttackDelay;
+            this.attackDelay = enemy.AttackDelay;
+            this.preAttackDelay = enemy.PreAttackDelay;
+            this.damage = enemy.Damage;
             this.enemy = enemy;
         }
 
