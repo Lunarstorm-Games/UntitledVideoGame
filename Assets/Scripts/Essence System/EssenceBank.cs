@@ -16,30 +16,25 @@ namespace Assets.scripts.Monobehaviour.Essence
 
         public float EssenceAmount => Bank.EssenceAmount;
         public static EssenceBank Instance { get; private set; }
-        [SaveField] public float testValue=0f;
+        
         void Start()
         {
-
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(this);
-            }
             base.Start();
         }
 
         // Update is called once per frame
         void Update()
         {
-            Debug.Log("playing");
         }
 
         public void AddEssence(int amount)
         {
             Bank.EssenceAmount += amount;
+        }
+
+        void OnDestroy()
+        {
+           base.OnDestroy();
         }
 
         public void SpendEssence(int amount)
