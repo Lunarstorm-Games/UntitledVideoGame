@@ -52,6 +52,7 @@ public class TrapBuildingManager : MonoBehaviour
     public void PlaceObject()
     {
         pendingObject.GetComponent<MeshRenderer>().material = materials[2];
+        pendingObject.transform.GetChild(0).gameObject.SetActive(false);
         pendingObject = null;
     }
 

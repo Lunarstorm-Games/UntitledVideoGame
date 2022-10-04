@@ -3774,7 +3774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201686145}
   - component: {fileID: 1201686144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TrapBuildingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3794,7 +3794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2099548951888355484, guid: 20c9c532744a6854494be42165367f99, type: 3}
+  - {fileID: 6035716326096688732, guid: 8375d533b6e7f4784a89042a2e5562e6, type: 3}
   - {fileID: 7928942865719664192, guid: ae3715281445aab4fbb0a5c03f5492ac, type: 3}
   - {fileID: 3057263098018474165, guid: b9bc9245c94dd424b9b8c7339ba532b3, type: 3}
   canPlace: 1
@@ -4424,7 +4424,7 @@ GameObject:
   - component: {fileID: 1545022975}
   - component: {fileID: 1545022974}
   - component: {fileID: 1545022973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5404,7 +5404,7 @@ GameObject:
   - component: {fileID: 1972505145}
   - component: {fileID: 1972505144}
   - component: {fileID: 1972505143}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Water Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
