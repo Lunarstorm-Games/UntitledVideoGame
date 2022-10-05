@@ -779,28 +779,28 @@ MonoBehaviour:
   TargetsType: 11
   TargetOffset: {x: 0, y: 0, z: 0}
   Health: 100
-  Speed: 3
-  AggroRange: 8
-  AttackRange: 1.5
-  AttackDelay: 3
-  PreAttackDelay: 3
-  EssenceDropAmount: 10
+  currentHealth: 0
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  Speed: 4
+  AggroRange: 8
+  AttackRange: 1.5
+  AttackDelay: 3
+  PreAttackDelay: 3
   OnPreAttackFinish:
     m_PersistentCalls:
       m_Calls: []
   OnAttackFinish:
     m_PersistentCalls:
       m_Calls: []
+  currentTarget: {fileID: 0}
+  EssenceDropAmount: 10
   EssenceSource:
     rid: 7853769208530731008
-  currentTarget: {fileID: 0}
-  Damage: 40
   Weapon: {fileID: 8458013588621867277}
   references:
     version: 2
