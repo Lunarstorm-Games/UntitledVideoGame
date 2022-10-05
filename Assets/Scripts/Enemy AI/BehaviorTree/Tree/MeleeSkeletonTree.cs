@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 namespace BehaviorTree
 {
-    public class MeleeSkeletonTree : Tree
+    public class MeleeSkeletonTree : BehaviourTree
     {
         protected MeleeSkeleton enemy;
 

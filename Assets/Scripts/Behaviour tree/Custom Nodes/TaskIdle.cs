@@ -8,7 +8,7 @@ using UnityEngine.AI;
         protected Animator animator;
         protected NavMeshAgent agent;
 
-        public TaskIdle(AttackEntity npc)
+        public TaskIdle(Guard npc)
         {
             //this.animator = npc.Animator;
             //this.agent = npc.Agent;

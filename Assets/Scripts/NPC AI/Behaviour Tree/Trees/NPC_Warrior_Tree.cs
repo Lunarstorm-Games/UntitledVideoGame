@@ -1,10 +1,9 @@
-using BehaviorTree.NPCTask;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BehaviorTree
-{
+
     public class NPC_Warrior_Tree : BehaviourTree
     {
         protected NPC_Warrior npc;
@@ -18,8 +17,8 @@ namespace BehaviorTree
         {
             Node root = new Selector(new List<Node>
             {
-                new CheckDeath(npc),
-                new TaskIdle(npc),
+                //new CheckDeath(npc),
+                //new TaskIdle(npc),
                 //new Sequence(new List<Node>
                 //{
                     
@@ -30,4 +29,4 @@ namespace BehaviorTree
             return root;
         }
     }
-}
+

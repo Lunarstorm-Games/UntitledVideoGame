@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 
-namespace BehaviorTree
-{
     public class Sequence : Node
     {
         public Sequence() : base() { }
@@ -35,4 +33,4 @@ namespace BehaviorTree
 
     }
 
-}
+

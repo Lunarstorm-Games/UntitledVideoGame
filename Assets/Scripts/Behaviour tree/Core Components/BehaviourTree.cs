@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BehaviorTree
-{
-    public abstract class Tree
+    public abstract class BehaviourTree
     {
         private Node _root = null;
 
@@ -30,4 +28,4 @@ namespace BehaviorTree
 
     }
 
-}
+

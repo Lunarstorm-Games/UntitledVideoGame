@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class SkeletonMageTree : Tree
+    public class SkeletonMageTree : BehaviourTree
     {
         protected SkeletonMage enemy;
         public SkeletonMageTree(SkeletonMage enemy)

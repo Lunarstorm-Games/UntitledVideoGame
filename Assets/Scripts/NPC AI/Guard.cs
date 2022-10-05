@@ -1,12 +1,11 @@
-using System;
+using Assets.scripts.Logic;
 using System.Collections;
 using System.Collections.Generic;
-using Assets.scripts.Logic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public class Enemy : Entity, IDamageable
+public class Guard : NPC, IDamageable
 {
     public Entity CurrentTarget
     {
@@ -18,12 +17,10 @@ public class Enemy : Entity, IDamageable
         }
         set { currentTarget = value; }
     }
-    public Entity HitByTarget { get; set; }
     public bool Death { get; protected set; }
     public float CurrentAttackDelay { get; set; }
     public Animator Animator { get; protected set; }
     public NavMeshAgent Agent { get; protected set; }
-    public BehaviourTree Tree { get; protected set; }
 
     [Header("Stats")]
     [SerializeField] public float Health = 30f;
@@ -43,21 +40,15 @@ public class Enemy : Entity, IDamageable
     [SerializeReference] public EssenceSourceLogic EssenceSource = new();
     [SerializeField] protected Entity currentTarget;
     protected float currentHealth = 0f;
-    
 
 
     public virtual void Awake()
     {
         Animator = GetComponent<Animator>();
-        Agent = GetComponent<NavMeshAgent>();  
+        Agent = GetComponent<NavMeshAgent>();
 
         Agent.speed = Speed;
         currentHealth = Health;
-    }
-
-    public virtual void DropEssence()
-    {
-        //EssenceSource.DropEssence();
     }
 
     public virtual void TakeDamage(float damage, Entity entity)
@@ -69,15 +60,10 @@ public class Enemy : Entity, IDamageable
             OnDeath?.Invoke();
             Death = true;
         }
-        else
-        {
-            HitByTarget = entity;
-        }
     }
 
     public virtual void DeathAnimEvent()
     {
-        DropEssence();
         Destroy(this.gameObject);
     }
 

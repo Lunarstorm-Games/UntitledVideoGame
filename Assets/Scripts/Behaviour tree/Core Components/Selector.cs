@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-namespace BehaviorTree
-{
+
     public class Selector : Node
     {
         public Selector() : base() { }
@@ -32,4 +31,4 @@ namespace BehaviorTree
 
     }
 
-}
+
