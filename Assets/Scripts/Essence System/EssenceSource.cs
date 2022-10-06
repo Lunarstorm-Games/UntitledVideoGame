@@ -18,7 +18,5 @@ namespace Assets.scripts.Logic
             if (HasDroppedEssence) return;
             EssenceBank.Instance.AddEssence(EssenceValue);
         }
-
-
     }
 }

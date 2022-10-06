@@ -15,7 +15,19 @@ namespace Assets.scripts.Monobehaviour.Essence
 
         public float EssenceAmount => Bank.EssenceAmount;
         public static EssenceBank Instance { get; private set; }
-        
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+
         void Start()
         {
             base.Start();

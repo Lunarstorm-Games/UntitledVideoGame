@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Player : Entity, IDamageable
 {
     [SerializeField] private Animator animator;
     [SerializeField] private HealthBarUI healthBar;
-    [SerializeField] private float maxHealth = 100;
-    public ManaBar manaBar;
-    public float maxMana;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private ManaBar manaBar;
+    [SerializeField] private float maxMana;
     public UnityEvent OnDeath;
     private float currentHealth;
     private float currentMana;
@@ -18,6 +19,8 @@ public class Player : Entity, IDamageable
     public static Player Instance { get; private set; }
     private void Awake()
     {
+        maxHealth = healthBar.GetComponent<Slider>().maxValue;
+        maxMana = manaBar.GetComponent<Slider>().maxValue;
         // If there is an instance, and it's not me, delete myself.
         if (Instance != null && Instance != this)
         {
@@ -53,7 +56,6 @@ public class Player : Entity, IDamageable
     public void UseMana(int mana)
     {
         currentMana -= mana;
-        Debug.Log(currentMana);
         manaBar.SetMana(currentMana);
     }
 }

@@ -778,7 +778,7 @@ MonoBehaviour:
   Type: 2
   TargetsType: 11
   TargetOffset: {x: 0, y: 0, z: 0}
-  Health: 100
+  Health: 1
   Speed: 3
   AggroRange: 8
   AttackRange: 1.5
@@ -808,7 +808,7 @@ MonoBehaviour:
     - rid: 7853769208530731008
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 0
+        EssenceValue: 10
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0
