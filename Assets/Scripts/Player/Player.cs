@@ -23,7 +23,7 @@ public class Player : Entity, IDamageable
 
     [SerializeField] private float maxHealth = 100;
     //[SerializeField] private Animator animator;
-    [SerializeField] private HealthBarUI healthBar;
+    // [SerializeField] private HealthBarUI healthBar;
     [SerializeField] public UnityEvent OnDeath;
 
     protected float currentHealth;
@@ -32,13 +32,13 @@ public class Player : Entity, IDamageable
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar?.SetMaxHealth(currentHealth);
+        // healthBar?.SetMaxHealth(currentHealth);
     }
 
     public void TakeDamage(float damage, Entity origin)
     {
         currentHealth -= damage;
-        healthBar?.SetHealth(currentHealth);
+        // healthBar?.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
         {

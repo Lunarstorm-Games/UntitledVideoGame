@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   health: 30
   damage: 10
   speed: 3
@@ -729,6 +730,15 @@ MonoBehaviour:
   attackDelay: 3
   preAttackDelay: 1
   essenceDropAmount: 10
+  EssenceSource:
+    rid: 1000
+  references:
+    version: 2
+    RefIds:
+    - rid: 1000
+      type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
+      data:
+        EssenceValue: 10
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

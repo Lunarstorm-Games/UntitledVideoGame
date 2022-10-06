@@ -1,7 +1,6 @@
 using Assets.Code.Scripts.Models.Essence;
-using Assets.scripts.Models;
-using Assets.Scripts.SaveSystem;
 using UnityEngine;
+using Assets.Scripts.SaveSystem;
 
 namespace Assets.scripts.Monobehaviour.Essence
 {
@@ -22,11 +21,6 @@ namespace Assets.scripts.Monobehaviour.Essence
             base.Start();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        }
-
         public void AddEssence(int amount)
         {
             Bank.EssenceAmount += amount;
@@ -36,13 +30,16 @@ namespace Assets.scripts.Monobehaviour.Essence
         {
            base.OnDestroy();
         }
-
-        public void SpendEssence(int amount)
+        
+        public bool SpendEssence(int amount)
         {
-            if (Bank.EssenceAmount > amount)
+            if (Bank.EssenceAmount >= amount)
             {
                 Bank.EssenceAmount-=amount;
+                return true;
             }
+
+            return false;
         }
     }
 }
