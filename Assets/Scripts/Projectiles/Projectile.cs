@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     public virtual void OnTriggerEnter(Collider other)
     {
         // Can't shoot yourself
-        if (other.gameObject == shooter)
+        if (other.gameObject == shooter.gameObject)
             return;
 
         if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)

@@ -9,6 +9,23 @@ using UnityEngine.Events;
 
 public class Enemy : Entity, IDamageable
 {
+    public Entity CurrentTarget
+    {
+        get
+        {
+            if (currentTarget != null && currentTarget.gameObject.activeInHierarchy)
+                return currentTarget;
+            return null;
+        }
+        set { currentTarget = value; }
+    }
+    public Entity HitByTarget { get; set; }
+    public bool Death { get; protected set; }
+    public float CurrentAttackDelay { get; set; }
+    public Animator Animator { get; protected set; }
+    public NavMeshAgent Agent { get; protected set; }
+
+    [Header("Stats")]
     [SerializeField] public float Health = 30f;
     [SerializeField] public float Speed = 3f;
     [SerializeField] public float AggroRange = 6f;
@@ -16,18 +33,16 @@ public class Enemy : Entity, IDamageable
     [SerializeField] public float AttackDelay = 3f;
     [SerializeField] public float PreAttackDelay = 1f;
     [SerializeField] public int EssenceDropAmount = 10;
-    [SerializeReference] public EssenceSourceLogic EssenceSource = new();
+
+    [Header("Events")]
     [SerializeField] public UnityEvent OnDamageTaken;
     [SerializeField] public UnityEvent OnDeath;
+    [SerializeField] public UnityEvent OnPreAttackFinish;
+    [SerializeField] public UnityEvent OnAttackFinish;
 
-    [HideInInspector] public Entity CurrentTarget;
-    [HideInInspector] public Entity HitByTarget;
-    [HideInInspector] public Animator Animator;
-    [HideInInspector] public NavMeshAgent Agent;
-    [HideInInspector] public bool Death;
-
+    [SerializeReference] public EssenceSourceLogic EssenceSource = new();
+    [SerializeField] protected Entity currentTarget;
     protected float currentHealth = 0f;
-    
 
 
     public virtual void Awake()
@@ -36,7 +51,6 @@ public class Enemy : Entity, IDamageable
         Agent = GetComponent<NavMeshAgent>();  
 
         Agent.speed = Speed;
-        Agent.stoppingDistance = AttackRange * 0.85f;
         currentHealth = Health;
     }
 
@@ -53,13 +67,9 @@ public class Enemy : Entity, IDamageable
         {
             OnDeath?.Invoke();
             Death = true;
-            GetComponent<Collider>().enabled = false;
-            Agent.isStopped = true;
-            Animator.SetTrigger("Death");
         }
         else
         {
-
             HitByTarget = entity;
         }
     }
@@ -68,5 +78,15 @@ public class Enemy : Entity, IDamageable
     {
         DropEssence();
         Destroy(this.gameObject);
+    }
+
+    public virtual void FinishedPreAttackAnimEvent()
+    {
+        OnPreAttackFinish?.Invoke();
+    }
+
+    public virtual void FinishedAttackAnimEvent()
+    {
+        OnAttackFinish?.Invoke();
     }
 }

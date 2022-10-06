@@ -21,6 +21,11 @@ namespace BehaviorTree
                 new CheckDeath(enemy),
                 new Sequence(new List<Node>
                 {
+                    new CheckTargetIsPlayer(enemy),
+                    new TaskGoToTarget(enemy),
+                }),
+                new Sequence(new List<Node>
+                {
                     new CheckHitByPlayer(enemy),
                     new TaskGoToTarget(enemy),
                 }),
@@ -31,15 +36,11 @@ namespace BehaviorTree
                 }),
                 new Sequence(new List<Node>
                 {
-                    new CheckPlayerInAggroRange(enemy),
+                    new CheckTargetInAggroRange(enemy),
                     new TaskGoToTarget(enemy),
                 }),
-                new Sequence(new List<Node>
-                {
-                    new CheckFoundTarget(enemy),
-                    new TaskGoToTarget(enemy),
-                }),
-            });  
+                new GoToTreeTarget(enemy),
+            });
 
             return root;
         }
