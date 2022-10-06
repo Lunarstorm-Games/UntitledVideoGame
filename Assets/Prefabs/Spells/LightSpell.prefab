@@ -48,13 +48,13 @@ MonoBehaviour:
   Description: A single target light ball that traves fowrad and deals damage to
     the first enemy hit.
   Icon: {fileID: 21300000, guid: eefde705ca28f2f4f8f1a81ee23c3045, type: 3}
-  StartDamage: 10
+  StartDamage: 40
   SpellSpeed: 20
   UpgradeCost: 100
   ImpactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
     type: 3}
-  Level: 1
+  DamageLevel: 1
   CurrentDamage: 0
   CurrentSpeed: 0
-  DamageGrowthAmount: 5
+  DamageGrowthAmount: 20
   SpeedGrowthAmount: 5
