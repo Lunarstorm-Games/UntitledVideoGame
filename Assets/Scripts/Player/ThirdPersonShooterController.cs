@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
+    private SpellInventory spellInventory;
+
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
@@ -22,6 +24,9 @@ public class ThirdPersonShooterController : MonoBehaviour
         _starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         _thirdPersonController = GetComponent<ThirdPersonController>();
         _animator = GetComponent<Animator>();
+
+        spellInventory = GetComponent<SpellInventory>();
+        projectilePrefab = spellInventory.spells[0];
     }
 
     private void Update()
@@ -63,10 +68,28 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),0f,Time.deltaTime * 10f));
         }
+
+        if (Input.inputString != "")
+        {
+            int number;
+            bool isNumberKey = Int32.TryParse(Input.inputString, out number);
+            if (isNumberKey)
+            {
+                if (number != 0 && spellInventory.spells[number - 1])
+                        projectilePrefab = spellInventory.spells[number - 1];
+                else if (spellInventory.spells[10])
+                        projectilePrefab = spellInventory.spells[10];
+            }
+        }
     }
     
     public void SetIsPormptOpen(bool status)
     {
         isPromptOpen = status;
+    }
+
+    private void ChangeSpell()
+    {
+
     }
 }
