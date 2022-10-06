@@ -49,6 +49,11 @@ public class Projectile : MonoBehaviour
         damage = newDamage;
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
     protected virtual void DestroyProjectile(float delay = 0f)
     {
         if (hitSound != null)
@@ -56,8 +61,8 @@ public class Projectile : MonoBehaviour
         
         if (impactEffect != null)
         {
-            //VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
-            //Destroy(impactEffectObject.gameObject, 1);
+            VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
+            Destroy(impactEffectObject.gameObject, 1);
         }
         
        Destroy(gameObject, delay);
