@@ -1,3 +1,4 @@
+using System;
 using Assets.Code.Scripts.Models.Essence;
 using UnityEngine;
 using Assets.Scripts.SaveSystem;
@@ -15,12 +16,20 @@ namespace Assets.scripts.Monobehaviour.Essence
 
         public float EssenceAmount => Bank.EssenceAmount;
         public static EssenceBank Instance { get; private set; }
-        
-        void Start()
-        {
-            base.Start();
-        }
 
+        private void Awake()
+        {
+            // If there is an instance, and it's not me, delete myself.
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+        
         public void AddEssence(int amount)
         {
             Bank.EssenceAmount += amount;

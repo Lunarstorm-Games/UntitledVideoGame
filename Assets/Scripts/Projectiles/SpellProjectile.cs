@@ -13,7 +13,6 @@ public class SpellProjectile : Projectile
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-        base.ProjectileImpact();
     }
 
     public override void Start()

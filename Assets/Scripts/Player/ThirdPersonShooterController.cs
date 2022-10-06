@@ -64,7 +64,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir,Vector3.up));
             projectile.SetDamage(spells[0].GetComponent<LightSpell>().CurrentDamage);
             projectile.SetSpeed(spells[0].GetComponent<LightSpell>().CurrentSpeed);
-            projectile.Initialize(this.GetComponent<Entity>(), aimDir);
+            projectile.Initialize(GetComponent<Entity>(), aimDir);
             _starterAssetsInputs.attack = false;
         }
         else

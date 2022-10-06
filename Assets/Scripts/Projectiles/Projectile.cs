@@ -27,15 +27,16 @@ public class Projectile : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log("before");
         // Can't shoot yourself
         if (other.gameObject == shooter.gameObject)
             return;
-
+        Debug.Log("after");
         if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)
         {
             target.TakeDamage(damage, shooter);
         }
-        //ProjectileImpact();
+        ProjectileImpact();
     }
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
