@@ -44,6 +44,11 @@ public class Projectile : MonoBehaviour
         this.direction = direction;
     }
 
+    public void SetDamage(float newDamage)
+    {
+        damage = newDamage;
+    }
+
     protected virtual void DestroyProjectile(float delay = 0f)
     {
         Destroy(gameObject, delay);

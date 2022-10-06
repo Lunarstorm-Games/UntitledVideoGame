@@ -42,7 +42,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void DropEssence()
     {
-        //EssenceSource.DropEssence();
+        EssenceSource.DropEssence();
     }
 
     public virtual void TakeDamage(float damage, Entity entity)

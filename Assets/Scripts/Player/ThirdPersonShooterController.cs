@@ -14,6 +14,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform spawnBulletPosition;
+    [SerializeField] private SpellBase[] spells;
+    private float lightSpellDamage;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
