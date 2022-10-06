@@ -23,8 +23,7 @@ namespace BehaviorTree.EnemyTask
         {
             this.animator = enemy.Animator;
             this.agent = enemy.Agent;
-            this.currentAttackDelay = enemy.PreAttackDelay;
-            this.preAttackDelay = enemy.PreAttackDelay;
+            this.currentAttackDelay = enemy.AttackDelay;
             this.attackDelay = enemy.AttackDelay;
             this.enemy = enemy;
             this.projectilePrefab = enemy.Projectile;
@@ -46,8 +45,9 @@ namespace BehaviorTree.EnemyTask
                 animator.SetTrigger("Attacking");
 
                 Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
-                Vector3 shootDir = (enemy.CurrentTarget.Offset - projectileSpawnPos.position).normalized;
-                projectile.transform.LookAt(enemy.CurrentTarget.Offset);
+                Vector3 TargetOffset = enemy.CurrentTarget.SetTargetOffset();
+                Vector3 shootDir = (TargetOffset - projectileSpawnPos.position).normalized;
+                projectile.transform.LookAt(TargetOffset);
                 projectile.Initialize(enemy, shootDir);
             }
             state = NodeState.RUNNING;

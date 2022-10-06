@@ -2593,7 +2593,6 @@ GameObject:
   - component: {fileID: 7478390241683647038}
   - component: {fileID: 4207321055489993421}
   - component: {fileID: 4143355195471934057}
-  - component: {fileID: 8394953864672448381}
   - component: {fileID: 6501085583160568173}
   m_Layer: 8
   m_Name: PlayerArmature
@@ -2652,13 +2651,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.8
-  m_Radius: 0.28
+  m_Height: 2.3
+  m_Radius: 0.58
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.93, z: 0}
+  m_Center: {x: 0, y: 1.14, z: 0}
 --- !u!114 &7478390241683647033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,8 +2856,11 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 9
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: -2338750469617564991, guid: bbb575ee0018eda40be587595580859b,
+    type: 3}
   spawnBulletPosition: {fileID: 6522486129203822587}
+  spells:
+  - {fileID: 0}
 --- !u!114 &4143355195471934057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2872,28 +2874,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  Offset: {x: 0, y: 0.8, z: 0}
+  TargetsType: 0
   TargetOffset: {x: 0, y: 0.8, z: 0}
-  maxHealth: 100
+  animator: {fileID: 4207321055489993458}
   healthBar: {fileID: 0}
+  maxHealth: 100
+  manaBar: {fileID: 0}
+  maxMana: 100
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8394953864672448381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7478390241683647026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57148f87228b5e74aa85b9b7e5e986b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spells:
-  - {fileID: -2338750469617564991, guid: bbb575ee0018eda40be587595580859b, type: 3}
-  - {fileID: -6779019948163241492, guid: 135de912fcac1ff41bbf10dea96c1300, type: 3}
 --- !u!114 &6501085583160568173
 MonoBehaviour:
   m_ObjectHideFlags: 0
