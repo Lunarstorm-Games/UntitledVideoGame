@@ -15,7 +15,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform spawnBulletPosition;
     [SerializeField] private SpellBase[] spells;
-    private float lightSpellDamage;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
@@ -63,6 +62,8 @@ public class ThirdPersonShooterController : MonoBehaviour
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir,Vector3.up));
+            projectile.SetDamage(spells[0].GetComponent<LightSpell>().CurrentDamage);
+            projectile.SetSpeed(spells[0].GetComponent<LightSpell>().CurrentSpeed);
             projectile.Initialize(this.GetComponent<Entity>(), aimDir);
             _starterAssetsInputs.attack = false;
         }

@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     public virtual void OnTriggerEnter(Collider other)
     {
         // Can't shoot yourself
-        if (other.gameObject == shooter)
+        if (other.gameObject == shooter.gameObject)
             return;
 
         if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)
@@ -47,6 +47,11 @@ public class Projectile : MonoBehaviour
     public void SetDamage(float newDamage)
     {
         damage = newDamage;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 
     protected virtual void DestroyProjectile(float delay = 0f)

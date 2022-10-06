@@ -2861,7 +2861,7 @@ MonoBehaviour:
     type: 3}
   spawnBulletPosition: {fileID: 6522486129203822587}
   spells:
-  - {fileID: 0}
+  - {fileID: 6175777423667517971, guid: 4793d0e8a848f8b44a87bff6d35077ef, type: 3}
 --- !u!114 &4143355195471934057
 MonoBehaviour:
   m_ObjectHideFlags: 0
