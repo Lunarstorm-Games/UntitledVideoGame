@@ -18,6 +18,8 @@ namespace Assets.scripts.Monobehaviour.Essence
         
         void Start()
         {
+            if (Instance == null) Instance = this;
+            else Destroy(Instance);
             base.Start();
         }
 

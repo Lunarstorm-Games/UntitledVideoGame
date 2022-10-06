@@ -6,7 +6,7 @@ namespace Assets.scripts.Logic
 {
     public class EssenceSourceLogic
     {
-        [SerializeField,Min(0)]
+        [SerializeField, Min(0)]
         public int EssenceValue;
 
         private bool HasDroppedEssence = false;
@@ -16,7 +16,10 @@ namespace Assets.scripts.Logic
         public void DropEssence()
         {
             if (HasDroppedEssence) return;
-            EssenceBank.Instance.AddEssence(EssenceValue);
+            if (EssenceBank.Instance is not null)
+            {
+                EssenceBank.Instance.AddEssence(EssenceValue);
+            }
         }
 
 
