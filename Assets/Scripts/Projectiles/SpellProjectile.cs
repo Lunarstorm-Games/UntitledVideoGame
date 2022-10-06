@@ -29,4 +29,9 @@ public class SpellProjectile : Projectile
     {
         base.DestroyProjectile(delay);
     }
+
+    protected override void ProjectileImpact()
+    {
+        base.ProjectileImpact();
+    }
 }

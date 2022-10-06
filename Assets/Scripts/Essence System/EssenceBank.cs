@@ -1,3 +1,4 @@
+using System;
 using Assets.Code.Scripts.Models.Essence;
 using UnityEngine;
 using Assets.Scripts.SaveSystem;
@@ -18,6 +19,7 @@ namespace Assets.scripts.Monobehaviour.Essence
 
         private void Awake()
         {
+            // If there is an instance, and it's not me, delete myself.
             if (Instance != null && Instance != this)
             {
                 Destroy(this);
@@ -27,12 +29,7 @@ namespace Assets.scripts.Monobehaviour.Essence
                 Instance = this;
             }
         }
-
-        void Start()
-        {
-            base.Start();
-        }
-
+        
         public void AddEssence(int amount)
         {
             Bank.EssenceAmount += amount;

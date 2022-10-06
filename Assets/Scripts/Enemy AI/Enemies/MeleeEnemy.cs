@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeleeEnemy : Enemy
 {
-    [SerializeField] public float Damage;
     [SerializeField] public MeleeWeapon Weapon;
     public override void Awake()
     {

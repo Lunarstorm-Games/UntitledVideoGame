@@ -12,7 +12,6 @@ namespace BehaviorTree.EnemyTask
         protected float attackDelay;
         protected float preAttackDelay;
         protected Enemy enemy;
-        protected float damage;
         protected MeleeWeapon weapon;
 
         public TaskAttack(MeleeEnemy enemy)
@@ -21,7 +20,6 @@ namespace BehaviorTree.EnemyTask
             this.agent = enemy.Agent;
             this.attackDelay = enemy.AttackDelay;
             this.preAttackDelay = enemy.PreAttackDelay;
-            this.damage = enemy.Damage;
             this.enemy = enemy;
             this.weapon = enemy.Weapon;
 
@@ -32,7 +30,7 @@ namespace BehaviorTree.EnemyTask
         public override NodeState Evaluate()
         {
             Vector3 dir = enemy.CurrentTarget.transform.position - enemy.transform.position;
-            dir.y = 0;
+            dir.y = 0f;
             enemy.transform.rotation = Quaternion.LookRotation(dir);
 
             animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed * Time.deltaTime);
