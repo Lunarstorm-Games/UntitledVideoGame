@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace BehaviorTree.EnemyTask
 {
-    public class CheckFoundTarget : Node
+    public class CheckFindTarget : Node
     {
         protected Enemy enemy;
-        public CheckFoundTarget(Enemy enemy)
+        public CheckFindTarget(Enemy enemy)
         {
             this.enemy = enemy;
         }
 
         public override NodeState Evaluate()
         {
-            
-            if (enemy.CurrentTarget == null || !enemy.CurrentTarget.gameObject.activeInHierarchy)
+            if (enemy.CurrentTarget == null)
             {
                 Entity[] targetInterests = GameObject.FindObjectsOfType<Entity>();
                 if (targetInterests.Length > 0)
@@ -25,9 +25,9 @@ namespace BehaviorTree.EnemyTask
 
                     foreach (Entity target in targetInterests)
                     {
-                        if (target.Type == TargetType.Enemy)
+                        if (!enemy.TargetsType.ToString().Contains(target.Type.ToString()))
                             continue;
-
+                        
                         Vector3 diff = target.transform.position - enemy.transform.position;
                         float curDistance = diff.sqrMagnitude;
                         if (curDistance < distance)
