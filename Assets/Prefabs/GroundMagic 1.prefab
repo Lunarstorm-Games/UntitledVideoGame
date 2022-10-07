@@ -5083,6 +5083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trap: {fileID: 7653420622493048598}
   damage: 300
+  duration: 5
+  GameObject: {fileID: 6035716326096688732}
 --- !u!1 &6223662669441759430
 GameObject:
   m_ObjectHideFlags: 0
@@ -14944,6 +14946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trap: {fileID: 7653420622493048598}
   damage: 0
+  duration: 2
+  GameObject: {fileID: 0}
 --- !u!1 &8447728528764705560
 GameObject:
   m_ObjectHideFlags: 0

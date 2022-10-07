@@ -39,6 +39,8 @@ public class WaveSpawner : MonoBehaviour
     [Space]
     public int SpawnPerFixedUpdate = 3;
 
+    [ReadOnly] public bool IsActivated;
+
 
 
     [SerializeField] private float roundTime = 0;
@@ -48,8 +50,7 @@ public class WaveSpawner : MonoBehaviour
     {
         AddSpawnPoints();
         //MoveSpawnPointsToNavmesh();
-        StartCoroutine(TrickleCoroutine());
-        StartCoroutine(LargeWaveCoroutine());
+       
     }
 
     // Update is called once per frame
@@ -57,6 +58,18 @@ public class WaveSpawner : MonoBehaviour
     {
         roundTime += Time.deltaTime;
         MaxEnemyStrengh = MaxEnemyStrengthCurve.Evaluate(XStep);
+
+        
+    }
+    /// <summary>
+    /// starts waves
+    /// </summary>
+    public void StartWaves()
+    {
+        if (IsActivated) return;
+        IsActivated = true;
+        StartCoroutine(TrickleCoroutine());
+        StartCoroutine(LargeWaveCoroutine());
     }
 
     private void MoveSpawnPointsToNavmesh()

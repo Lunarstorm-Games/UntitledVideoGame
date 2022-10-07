@@ -8,6 +8,7 @@ public class ActivateTrap : MonoBehaviour
     [SerializeField] private GameObject trap;
     [SerializeField] protected float damage;
     [SerializeField] public float duration = 2f;
+    [SerializeField] public GameObject GameObject;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +19,7 @@ public class ActivateTrap : MonoBehaviour
             {
                 target.TakeDamage(damage, null);
             }
-            Destroy(trap,duration);
+            Destroy(gameObject,duration);
         }
     }           
 }
