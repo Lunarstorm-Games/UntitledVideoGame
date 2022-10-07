@@ -9,6 +9,7 @@ public abstract class SpellBase : MonoBehaviour
 
     public float StartDamage;
     public float SpellSpeed;
+    public float Range;
     public int UpgradeCost;
 
     public VisualEffect ImpactEffect;

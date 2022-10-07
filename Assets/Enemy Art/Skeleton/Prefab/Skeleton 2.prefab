@@ -721,17 +721,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385157fb4f3314f4397eebfebd9fff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  health: 30
-  damage: 10
-  speed: 3
-  aggroRange: 6
-  attackRange: 2.4
-  attackDelay: 3
-  preAttackDelay: 1
-  essenceDropAmount: 10
+  Type: 0
+  TargetsType: 0
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Health: 50
+  Speed: 3
+  AggroRange: 6
+  AttackRange: 2.4
+  AttackDelay: 3
+  PreAttackDelay: 1
+  EssenceDropAmount: 10
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPreAttackFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackFinish:
+    m_PersistentCalls:
+      m_Calls: []
   EssenceSource:
     rid: 1000
+  currentTarget: {fileID: 0}
+  Weapon: {fileID: 0}
   references:
     version: 2
     RefIds:

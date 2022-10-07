@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2979669985259451393
+--- !u!1 &4414518341394353027
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2831449058229072329}
-  - component: {fileID: 6175777423667517971}
+  - component: {fileID: 4414518341394353026}
+  - component: {fileID: 4414518341394353029}
   m_Layer: 0
-  m_Name: LightSpell
+  m_Name: FireballSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2831449058229072329
+--- !u!4 &4414518341394353026
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2979669985259451393}
+  m_GameObject: {fileID: 4414518341394353027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,30 +32,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6175777423667517971
+--- !u!114 &4414518341394353029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2979669985259451393}
+  m_GameObject: {fileID: 4414518341394353027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d794cece4d44e29b6354d117e61803e, type: 3}
+  m_Script: {fileID: 11500000, guid: ddba63c65cd540c987febfe58bf4a1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Light Spell
-  Description: A single target light ball that traves fowrad and deals damage to
-    the first enemy hit.
-  Icon: {fileID: 21300000, guid: eefde705ca28f2f4f8f1a81ee23c3045, type: 3}
-  StartDamage: 10
-  SpellSpeed: 20
-  Range: 5
+  Name: Fireball Spell
+  Description: An fire spell, that hits enemies in an area around the impact zone.
+  Icon: {fileID: 0}
+  StartDamage: 25
+  SpellSpeed: 14
+  Range: 3
   UpgradeCost: 100
-  ImpactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
+  ImpactEffect: {fileID: 8310478900511335466, guid: 65952721163e0e24e92468b780836459,
     type: 3}
+  StartAOERadius: 5
   DamageLevel: 1
   CurrentDamage: 0
   CurrentSpeed: 0
-  DamageGrowthAmount: 5
-  SpeedGrowthAmount: 5
+  CurrentAOE: 0
+  DamageGrowthAmount: 10
+  SpeedGrowthAmount: 2
+  AOEGrowthAmount: 1

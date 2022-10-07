@@ -37,6 +37,11 @@ public class AOEProjectile : Projectile
     {
         base.ProjectileImpact();
     }
+    
+    public void SetAOE(float newAOE)
+    {
+        AOERadius = newAOE;
+    }
 
     private void AOEDamage(Vector3 center, float radius)
     {

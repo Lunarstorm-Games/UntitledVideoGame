@@ -4,11 +4,14 @@ using UnityEngine.VFX;
 
 public class LightSpell : SpellBase
 {
-    public int DamageLevel = 1;
     public float CurrentDamage;
     public float CurrentSpeed;
     public float DamageGrowthAmount;
     public float SpeedGrowthAmount;
+    
+    [Header("Info Only Attributes")]
+    public int DamageLevel = 1;
+    public int SpeedLevel = 1;
 
     void Awake()
     {
@@ -24,6 +27,7 @@ public class LightSpell : SpellBase
 
     public void UpgradeProjectileSpeed()
     {
+        SpeedLevel += 1;
         CurrentSpeed += SpeedGrowthAmount;
     }
 }
