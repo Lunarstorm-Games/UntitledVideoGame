@@ -58,7 +58,7 @@ public class CameraSwitch : MonoBehaviour
             lockCursor = !lockCursor;
             
             PlayerControlsLock();
+            CursorLock();
         }
-        CursorLock();
     }
 }

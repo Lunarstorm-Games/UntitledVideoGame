@@ -21,7 +21,5 @@ namespace Assets.scripts.Logic
                 EssenceBank.Instance.AddEssence(EssenceValue);
             }
         }
-
-
     }
 }

@@ -27,15 +27,16 @@ public class Projectile : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log("before");
         // Can't shoot yourself
-        if (other.gameObject == shooter)
+        if (other.gameObject == shooter.gameObject)
             return;
-
+        Debug.Log("after");
         if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)
         {
             target.TakeDamage(damage, shooter);
         }
-        DestroyProjectile();
+        ProjectileImpact();
     }
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
@@ -49,17 +50,29 @@ public class Projectile : MonoBehaviour
         damage = newDamage;
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
     protected virtual void DestroyProjectile(float delay = 0f)
     {
+        Destroy(gameObject, delay);
+    }
+
+    protected virtual void ProjectileImpact()
+    {
         if (hitSound != null)
+        {
             //SoundManager.Instance.PlaySoundAtLocation();
-        
+        }
+
         if (impactEffect != null)
         {
-            //VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
-            //Destroy(impactEffectObject.gameObject, 1);
+            VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
+            Destroy(impactEffectObject.gameObject, 1);
         }
-        
-       Destroy(gameObject, delay);
+
+        Destroy(gameObject);
     }
 }

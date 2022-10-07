@@ -40,7 +40,7 @@ public class UpgradeSpellPanel : MonoBehaviour
         thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
         essenceAmount = transform.Find("TopPanel").transform.Find("EssenceAmount").GetComponent<TextMeshProUGUI>();
         SetLeftPaneData();
-        essenceBank = GameObject.Find("WaveController").GetComponent<EssenceBank>();
+        essenceBank = EssenceBank.Instance;
         warning = transform.Find("Warning");
 
         // SPELL PANEL OBJECTS

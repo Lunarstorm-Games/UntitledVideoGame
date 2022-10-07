@@ -30,7 +30,7 @@ namespace BehaviorTree.EnemyTask
         public override NodeState Evaluate()
         {
             Vector3 dir = enemy.CurrentTarget.transform.position - enemy.transform.position;
-            dir.y = 0;
+            dir.y = 0f;
             enemy.transform.rotation = Quaternion.LookRotation(dir);
 
             animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed * Time.deltaTime);
