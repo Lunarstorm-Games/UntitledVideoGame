@@ -778,7 +778,7 @@ MonoBehaviour:
   Type: 2
   TargetsType: 11
   TargetOffset: {x: 0, y: 0, z: 0}
-  Health: 30
+  Health: 50
   Speed: 3
   AggroRange: 8
   AttackRange: 1.5
