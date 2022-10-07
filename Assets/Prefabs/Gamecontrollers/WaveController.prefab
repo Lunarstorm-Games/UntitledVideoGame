@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3082025982956329296}
   - component: {fileID: 3930463125713136012}
-  - component: {fileID: 2765983916607540260}
   m_Layer: 0
   m_Name: WaveController
   m_TagString: Untagged
@@ -234,28 +233,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   SpawnPerFixedUpdate: 1000
+  IsActivated: 0
   roundTime: 0
---- !u!114 &2765983916607540260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801134170696960070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1f90461129ea849b342de2e0915556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bank:
-    rid: 2107764297687629825
-  references:
-    version: 2
-    RefIds:
-    - rid: 2107764297687629825
-      type: {class: EssenceBankModel, ns: Assets.Code.Scripts.Models.Essence, asm: Assembly-CSharp}
-      data:
-        EssenceAmount: 0
 --- !u!1 &4267196845895648570
 GameObject:
   m_ObjectHideFlags: 0

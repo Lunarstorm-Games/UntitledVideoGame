@@ -8,11 +8,10 @@ public class SaveController : MonoBehaviour
 {
     public string FileName = "save1";
 
-    public string folder;
     // Start is called before the first frame update
     void Start()
     {
-        folder = Application.persistentDataPath;
+       
     }
 
     // Update is called once per frame
@@ -24,11 +23,11 @@ public class SaveController : MonoBehaviour
     [ContextMenu("SaveState")]
     public void SaveState()
     {
-        SaveManager.Instance.SaveStateToFile(Path.Combine(folder,FileName));
+        SaveManager.Instance.SaveStateToFile(FileName);
     }
     [ContextMenu("LoadState")]
     public void LoadState()
     {
-        SaveManager.Instance.LoadSave(Path.Combine(folder, FileName));
+        SaveManager.Instance.LoadSave(FileName);
     }
 }

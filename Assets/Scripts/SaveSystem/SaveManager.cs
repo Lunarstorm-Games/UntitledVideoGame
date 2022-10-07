@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Unity.VisualScripting;
@@ -14,7 +15,7 @@ namespace Assets.Scripts.SaveSystem
 
         private Hashtable _states = new Hashtable();
         private ISerialize _serializer = new JsonSerializer();
-
+        public readonly string directory = Application.persistentDataPath;
         public static SaveManager Instance
         {
             get
@@ -44,9 +45,10 @@ namespace Assets.Scripts.SaveSystem
             return _states.ContainsKey(guid);
         }
 
-        public void SaveStateToFile(string filePath)
+        public void SaveStateToFile(string fileName)
         {
             Hashtable statesToSave = new Hashtable();
+            var path = Path.Combine(directory, fileName);
             FindPersistableGameObjects();
             foreach (DictionaryEntry dictionaryEntry in _states)
             {
@@ -80,7 +82,7 @@ namespace Assets.Scripts.SaveSystem
                 }
             }
 
-            _serializer.Serialize(statesToSave, filePath);
+            _serializer.Serialize(statesToSave, path);
         }
 
         private void FindPersistableGameObjects()
@@ -93,11 +95,12 @@ namespace Assets.Scripts.SaveSystem
             }
         }
 
-        public void LoadSave(string filePath)
+        public void LoadSave(string fileName)
         {
 
-            var data = _serializer.DeSerialize(filePath);
-         
+            var path = Path.Combine(directory, fileName);
+            var data = _serializer.DeSerialize(path);
+            FindPersistableGameObjects();
             foreach (DictionaryEntry dictionaryEntry in data)
             {
                 var dict = dictionaryEntry.Value as Dictionary<string, object>;
@@ -190,6 +193,13 @@ namespace Assets.Scripts.SaveSystem
                     DictionaryToObject(childDict, propObject);
                 }
             }
+        }
+        public bool SaveExists(string fileName)
+        {
+           
+            var files = Directory.GetFiles(directory, fileName + ".*");
+            return files.Length > 0;
+            
         }
 
         public void RemoveObject(PersistableMonoBehaviour persistableMonoBehaviour)
