@@ -4955,7 +4955,7 @@ GameObject:
   - component: {fileID: 1389055933967953742}
   - component: {fileID: 787572292577959344}
   m_Layer: 0
-  m_Name: GroundMagic 1
+  m_Name: GroundMagic
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5081,10 +5081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fa667c4d0ef4864a9bac2fe314cfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trap: {fileID: 7653420622493048598}
-  damage: 300
-  duration: 5
-  GameObject: {fileID: 6035716326096688732}
+  _trapModel: {fileID: 11400000, guid: ceab3ef8804117c4782498302206db04, type: 2}
+  trap: {fileID: 6035716326096688732}
 --- !u!1 &6223662669441759430
 GameObject:
   m_ObjectHideFlags: 0
@@ -14944,10 +14942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fa667c4d0ef4864a9bac2fe314cfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trap: {fileID: 7653420622493048598}
-  damage: 0
-  duration: 2
-  GameObject: {fileID: 0}
+  _trapModel: {fileID: 0}
+  trap: {fileID: 0}
 --- !u!1 &8447728528764705560
 GameObject:
   m_ObjectHideFlags: 0

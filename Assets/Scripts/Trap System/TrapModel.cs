@@ -1,1 +1,1 @@
-using System.Collections;using System.Collections.Generic;using UnityEngine;public class TrapModel : MonoBehaviour{   [SerializeField] public float damage;}
+using System.Collections;using System.Collections.Generic;using UnityEngine;[CreateAssetMenu(fileName = "New Trap", menuName = "Trap")]public class TrapModel : ScriptableObject{   [SerializeField] public float damage;   [SerializeField] public float duration;   [SerializeField] public bool isPlaced;   [SerializeField] public bool isActive;   [SerializeField] public GameObject trapAsset;}

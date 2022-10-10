@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrapBuildingManager : MonoBehaviour
@@ -53,6 +54,7 @@ public class TrapBuildingManager : MonoBehaviour
     {
         pendingObject.GetComponent<MeshRenderer>().material = materials[2];
         pendingObject.transform.GetChild(0).gameObject.SetActive(false);
+        pendingObject.name = pendingObject.name + " Placed";
         pendingObject = null;
     }
 
