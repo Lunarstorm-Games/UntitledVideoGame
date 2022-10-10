@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78813eece34764d6f892cd00dc3b9a1b, type: 3}
   m_Name: GroundMagic
   m_EditorClassIdentifier: 
-  damage: 0
-  duration: 0
-  isPlaced: 0
+  damage: 200
+  duration: 5
+  isPlaced: 1
   isActive: 0
+  trapAsset: {fileID: 6035716326096688732, guid: 8375d533b6e7f4784a89042a2e5562e6,
+    type: 3}

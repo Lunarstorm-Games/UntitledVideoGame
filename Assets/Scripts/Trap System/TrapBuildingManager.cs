@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CartoonFX;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,18 +13,17 @@ public class TrapBuildingManager : MonoBehaviour
     private RaycastHit hit;
     public bool canPlace;
     [SerializeField] private Material[] materials;
-    [SerializeField]private float rotateAmount;
-
-    [SerializeField]
-    private LayerMask layerMask;
+    [SerializeField] private float rotateAmount;
     
+    [SerializeField] private LayerMask layerMask;
+
     // Update is called once per frame
     void Update()
     {
         if (pendingObject != null)
         {
             pendingObject.transform.position = pos;
-            
+
             if (Input.GetMouseButtonDown(0) && canPlace)
             {
                 Debug.Log("Object Placed");
@@ -34,6 +34,7 @@ public class TrapBuildingManager : MonoBehaviour
             {
                 RotateObject();
             }
+
             UpdateMaterials();
         }
     }
@@ -43,7 +44,9 @@ public class TrapBuildingManager : MonoBehaviour
         if (canPlace)
         {
             pendingObject.GetComponent<MeshRenderer>().material = materials[0];
+            
         }
+
         if (!canPlace)
         {
             pendingObject.GetComponent<MeshRenderer>().material = materials[1];
@@ -53,7 +56,7 @@ public class TrapBuildingManager : MonoBehaviour
     public void PlaceObject()
     {
         pendingObject.GetComponent<MeshRenderer>().material = materials[2];
-        pendingObject.transform.GetChild(0).gameObject.SetActive(false);
+        //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
         pendingObject.name = pendingObject.name + " Placed";
         pendingObject = null;
     }
@@ -66,11 +69,10 @@ public class TrapBuildingManager : MonoBehaviour
     private void FixedUpdate()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-        if(Physics.Raycast(ray,out hit,1000,layerMask))
+
+        if (Physics.Raycast(ray, out hit, 1000, layerMask))
         {
             pos = hit.point;
-
         }
     }
 
