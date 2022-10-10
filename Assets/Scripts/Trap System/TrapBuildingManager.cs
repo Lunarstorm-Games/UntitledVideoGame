@@ -1,22 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.scripts.Monobehaviour.Essence;
 using CartoonFX;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrapBuildingManager : MonoBehaviour
 {
     public GameObject[] objects;
+    public int[] essenceCost;
     private GameObject pendingObject;
     private Vector3 pos;
     private RaycastHit hit;
     public bool canPlace;
+    private EssenceBank essenceBank;
+    [SerializeField] private Transform warning;
     [SerializeField] private Material[] materials;
     [SerializeField] private float rotateAmount;
-    
     [SerializeField] private LayerMask layerMask;
-
+    private void Awake()
+    {
+        essenceBank = EssenceBank.Instance;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -35,10 +42,15 @@ public class TrapBuildingManager : MonoBehaviour
                 RotateObject();
             }
 
+            if (Input.GetMouseButtonDown(1))
+            {
+                Destroy(pendingObject);
+            }
+
             UpdateMaterials();
         }
     }
-
+    
     void UpdateMaterials()
     {
         if (canPlace)
@@ -55,10 +67,17 @@ public class TrapBuildingManager : MonoBehaviour
 
     public void PlaceObject()
     {
-        pendingObject.GetComponent<MeshRenderer>().material = materials[2];
-        //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
-        pendingObject.name = pendingObject.name + " Placed";
-        pendingObject = null;
+        if (essenceBank.SpendEssence(essenceCost[0]))
+        {
+            pendingObject.GetComponent<MeshRenderer>().material = materials[2];
+            //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
+            pendingObject.name = pendingObject.name + " Placed";
+            pendingObject = null;
+        }
+        else
+        {
+            
+        }
     }
 
     public void RotateObject()
