@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AOEProjectile : Projectile
 {
-    [SerializeField] private float AOERadius;
+    public float AOERadius;
+    public int AOELevel;
 
     public override void Initialize(Entity shooter, Vector3 direction)
     {
@@ -38,9 +39,10 @@ public class AOEProjectile : Projectile
         base.ProjectileImpact();
     }
     
-    public void SetAOE(float newAOE)
+    public void UpgradeAOE(float newAOE)
     {
-        AOERadius = newAOE;
+        AOERadius += newAOE;
+        AOELevel += 1;
     }
 
     private void AOEDamage(Vector3 center, float radius)

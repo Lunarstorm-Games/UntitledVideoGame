@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
-using Spell_System;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,7 +14,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform spawnBulletPosition;
-    [SerializeField] private SpellBase[] spells;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
@@ -64,19 +62,6 @@ public class ThirdPersonShooterController : MonoBehaviour
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir,Vector3.up));
-            switch (projectilePrefab.name)
-            {
-                case "BasicSpellProjectile":
-                    projectile.SetDamage(spells[0].GetComponent<LightSpell>().CurrentDamage);
-                    projectile.SetSpeed(spells[0].GetComponent<LightSpell>().CurrentSpeed);
-                    break;
-                
-                case "FireballProjectile":
-                    projectile.SetDamage(spells[1].GetComponent<FireballSpell>().CurrentDamage);
-                    projectile.SetSpeed(spells[1].GetComponent<FireballSpell>().CurrentSpeed);
-                    projectile.GetComponent<AOEProjectile>().SetAOE(spells[1].GetComponent<FireballSpell>().AOELevel);
-                    break;
-            }
             projectile.Initialize(GetComponent<Entity>(), aimDir);
             _starterAssetsInputs.attack = false;
         }

@@ -2595,6 +2595,8 @@ GameObject:
   - component: {fileID: 4143355195471934057}
   - component: {fileID: 1680537851718145224}
   - component: {fileID: 6501085583160568173}
+  - component: {fileID: 1894003599}
+  - component: {fileID: 1894003589}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2697,7 +2699,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 1537
   CinemachineCameraTarget: {fileID: 2971970552429335401}
   pauseMenuUI: {fileID: 0}
   TopClamp: 70
@@ -2856,12 +2858,12 @@ MonoBehaviour:
   _virtualCamera: {fileID: 0}
   aimColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 1033
   projectilePrefab: {fileID: -2338750469617564991, guid: bbb575ee0018eda40be587595580859b,
     type: 3}
   spawnBulletPosition: {fileID: 6522486129203822587}
   spells:
-  - {fileID: 6175777423667517971, guid: 4793d0e8a848f8b44a87bff6d35077ef, type: 3}
+  - {fileID: 11400000, guid: 9d48d11eee0c00f4da8218976a814faf, type: 2}
 --- !u!114 &4143355195471934057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,3 +2918,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   ui: {fileID: 0}
+--- !u!54 &1894003599
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478390241683647026}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1894003589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478390241683647026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ff2ff26b47b4147b6cf7b6a25941b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam1: {fileID: 0}
+  _trapBuildingManager: {fileID: 0}
+  cameraRig: {fileID: 0}
+  crossHair: {fileID: 0}
+  trapUI: {fileID: 0}
+  controls: {fileID: 7478390241683647038}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,14 @@ using UnityEngine.VFX;
 
 public class Projectile : MonoBehaviour
 {
-                     
-    [SerializeField] protected float speed;
-    [SerializeField] protected float damage;
-    [SerializeField] protected float range;
+    public float speed;
+    public float damage;
+    public float range;
     [SerializeField] protected VisualEffect impactEffect;
     [SerializeField] protected AudioClip hitSound;
+    
+    public int DamageLevel = 1;
+    public int SpeedLevel = 1;
 
     protected Entity shooter;
     protected Vector3 direction;
@@ -45,14 +48,16 @@ public class Projectile : MonoBehaviour
         this.direction = direction;
     }
 
-    public void SetDamage(float newDamage)
+    public void UpgradeDamage(float newDamage)
     {
-        damage = newDamage;
+        DamageLevel += 1;
+        damage += newDamage;
     }
 
-    public void SetSpeed(float newSpeed)
+    public void UpgradeSpeed(float newSpeed)
     {
-        speed = newSpeed;
+        SpeedLevel += 1;
+        speed += newSpeed;
     }
 
     protected virtual void DestroyProjectile(float delay = 0f)

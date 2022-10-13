@@ -14,9 +14,10 @@ public class UpgradeSpellPanel : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private LightSpell lightSpell;
     [SerializeField] private Button[] buttons;
+    [SerializeField] private SpellUpgrade[] spellUpgrades;
     private EssenceBank essenceBank;
+    private Projectile[] spells;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
     private Transform building;
@@ -38,10 +39,11 @@ public class UpgradeSpellPanel : MonoBehaviour
     {
         buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
         thirdPersonShooter = starterAssetsInputs.GetComponent<ThirdPersonShooterController>();
+        spells = starterAssetsInputs.GetComponent<SpellInventory>().spells;
         essenceAmount = transform.Find("TopPanel").transform.Find("EssenceAmount").GetComponent<TextMeshProUGUI>();
-        SetLeftPaneData();
         essenceBank = EssenceBank.Instance;
         warning = transform.Find("Warning");
+        SetLeftPaneData();
 
         // SPELL PANEL OBJECTS
         rightPanel = gameObject.transform.Find("RightPanel").transform;
@@ -70,8 +72,16 @@ public class UpgradeSpellPanel : MonoBehaviour
 
     private void SetLeftPaneData()
     {
-        buttons[0].transform.Find("Icon").GetComponent<Image>().sprite = lightSpell.Icon;
-        buttons[0].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = lightSpell.DamageLevel.ToString();
+        buttons[0].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[0].Icon;
+        buttons[0].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[0].DamageLevel.ToString();        
+        buttons[1].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[1].Icon;
+        buttons[1].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[0].SpeedLevel.ToString();
+        buttons[2].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[2].Icon;
+        buttons[2].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[1].DamageLevel.ToString();
+        buttons[3].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[3].Icon;
+        buttons[3].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[1].SpeedLevel.ToString();
+        buttons[4].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[4].Icon;
+        buttons[4].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[1].GetComponent<AOEProjectile>().AOELevel.ToString();
     }
     
     private void SetSpellPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, float _currentStat, float _futureStat, int _upgradeCost)
@@ -91,8 +101,29 @@ public class UpgradeSpellPanel : MonoBehaviour
         switch (spell)
         {
             case "light dmg":
-                SetSpellPanelData(lightSpell.Icon, lightSpell.Name + " Damage", lightSpell.Description, lightSpell.DamageLevel, 
-                    lightSpell.CurrentDamage, (lightSpell.CurrentDamage + lightSpell.DamageGrowthAmount), lightSpell.UpgradeCost);
+                SetSpellPanelData(spellUpgrades[0].Icon, spellUpgrades[0].Name, spellUpgrades[0].Description, spells[0].DamageLevel, 
+                    spells[0].damage, (spells[0].damage + spellUpgrades[0].Value), spellUpgrades[0].UpgradeCost);
+                break;
+            
+            case "light speed":
+                SetSpellPanelData(spellUpgrades[1].Icon, spellUpgrades[1].Name, spellUpgrades[1].Description, spells[0].SpeedLevel, 
+                    spells[0].speed, (spells[0].speed + spellUpgrades[1].Value), spellUpgrades[1].UpgradeCost);
+                break;
+            
+            case "fire dmg":
+                SetSpellPanelData(spellUpgrades[2].Icon, spellUpgrades[2].Name, spellUpgrades[2].Description, spells[1].DamageLevel, 
+                    spells[1].damage, (spells[1].damage + spellUpgrades[2].Value), spellUpgrades[2].UpgradeCost);
+                break;
+            
+            case "fire speed":
+                SetSpellPanelData(spellUpgrades[3].Icon, spellUpgrades[3].Name, spellUpgrades[3].Description, spells[1].SpeedLevel, 
+                    spells[1].speed, (spells[1].speed + spellUpgrades[3].Value), spellUpgrades[3].UpgradeCost);
+                break;
+            
+            case "fire aoe":
+                SetSpellPanelData(spellUpgrades[4].Icon, spellUpgrades[4].Name, spellUpgrades[4].Description, spells[1].GetComponent<AOEProjectile>().AOELevel, 
+                    spells[1].GetComponent<AOEProjectile>().AOERadius, (spells[1].GetComponent<AOEProjectile>().AOERadius + spellUpgrades[4].Value), 
+                    spellUpgrades[4].UpgradeCost);
                 break;
             
             default:
@@ -175,9 +206,9 @@ public class UpgradeSpellPanel : MonoBehaviour
         switch (upgradeName.text)
         {
           case "Light Spell Damage":
-              if (essenceBank.SpendEssence(lightSpell.UpgradeCost))
+              if (essenceBank.SpendEssence(spellUpgrades[0].UpgradeCost))
               {
-                  lightSpell.UpgradeDamage();
+                  spells[0].UpgradeDamage(spellUpgrades[0].Value);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
@@ -186,6 +217,66 @@ public class UpgradeSpellPanel : MonoBehaviour
               else
               {
                   ShowWarning("You do not have enough essence to increase the damage of your Light Spell");
+              }
+              break;
+          
+          case "Light Spell Speed":
+              if (essenceBank.SpendEssence(spellUpgrades[1].UpgradeCost))
+              {
+                  spells[0].UpgradeSpeed(spellUpgrades[1].Value);
+                  SetEssence(essenceBank.EssenceAmount);
+                  SetLeftPaneData();
+                  HideSpellPanel();
+                  ShowSpellPanel("light speed");
+              }
+              else
+              {
+                  ShowWarning("You do not have enough essence to increase the speed of your Light Spell");
+              }
+              break;
+          
+          case "Fireball Damage":
+              if (essenceBank.SpendEssence(spellUpgrades[2].UpgradeCost))
+              {
+                  spells[1].UpgradeDamage(spellUpgrades[2].Value);
+                  SetEssence(essenceBank.EssenceAmount);
+                  SetLeftPaneData();
+                  HideSpellPanel();
+                  ShowSpellPanel("fire dmg");
+              }
+              else
+              {
+                  ShowWarning("You do not have enough essence to increase the damage of your Fireball Spell");
+              }
+              break;
+          
+          case "Fireball Speed":
+              if (essenceBank.SpendEssence(spellUpgrades[3].UpgradeCost))
+              {
+                  spells[1].UpgradeSpeed(spellUpgrades[3].Value);
+                  SetEssence(essenceBank.EssenceAmount);
+                  SetLeftPaneData();
+                  HideSpellPanel();
+                  ShowSpellPanel("fire speed");
+              }
+              else
+              {
+                  ShowWarning("You do not have enough essence to increase the damage of your Fireball Spell");
+              }
+              break;
+          
+          case "Fireball Damage Area":
+              if (essenceBank.SpendEssence(spellUpgrades[4].UpgradeCost))
+              {
+                  spells[1].GetComponent<AOEProjectile>().UpgradeAOE(spellUpgrades[4].Value);
+                  SetEssence(essenceBank.EssenceAmount);
+                  SetLeftPaneData();
+                  HideSpellPanel();
+                  ShowSpellPanel("fire aoe");
+              }
+              else
+              {
+                  ShowWarning("You do not have enough essence to increase the damage of your Fireball Spell");
               }
               break;
           
