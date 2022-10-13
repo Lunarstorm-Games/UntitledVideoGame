@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 
 public class EtoAction : MonoBehaviour
 {
-    public enum PopUpAction { Build, Upgrade };
+    private enum PopUpAction { Build, Upgrade };
 
     [SerializeField] private PopUpAction action;
     [SerializeField] private AreYouSureBuildPrompt areYouSureBuildPrompt;

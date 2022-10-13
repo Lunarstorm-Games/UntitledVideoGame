@@ -20,9 +20,7 @@ namespace Assets.Scripts
         public float PreAttackTimer = 300;
         private bool AttackHasStarted = false;
         public bool SkipPreAttackTimer = false;
-
-
-
+        
         public string skipInputName = "startAttack";
         private bool timeLoopStarted = false;
 
