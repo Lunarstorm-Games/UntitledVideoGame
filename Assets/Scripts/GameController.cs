@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UniStorm;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace Assets.Scripts
         public static GameController instance;
         [ReadOnly] public string LevelName;
         [ReadOnly] public string SaveDirectory;
+        public WeatherType WeatherType;
         public GameObject TimerUi;
         public GameObject WaveController;
         public float PreAttackTimer = 300;
@@ -63,6 +65,7 @@ namespace Assets.Scripts
                 SaveManager.Instance.LoadSave(LevelName);
             }
             if (SkipPreAttackTimer) PreAttackTimer = 1;
+            UniStorm.UniStormManager.Instance.ChangeWeatherInstantly(WeatherType);
         }
 
         [ContextMenu("StartTimeloop")]
