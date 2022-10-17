@@ -119,7 +119,10 @@ MonoBehaviour:
   impactEffect: {fileID: 8310478900511335466, guid: 65952721163e0e24e92468b780836459,
     type: 3}
   hitSound: {fileID: 0}
+  DamageLevel: 1
+  SpeedLevel: 1
   AOERadius: 5
+  AOELevel: 1
 --- !u!54 &-1450108528857507897
 Rigidbody:
   m_ObjectHideFlags: 0
