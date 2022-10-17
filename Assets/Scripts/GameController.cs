@@ -22,7 +22,9 @@ namespace Assets.Scripts
         public float PreAttackTimer = 300;
         private bool AttackHasStarted = false;
         public bool SkipPreAttackTimer = false;
-        
+        public string time ;
+
+
         public string skipInputName = "startAttack";
         private bool timeLoopStarted = false;
 
@@ -42,21 +44,24 @@ namespace Assets.Scripts
         void Update()
         {
             UpdateTimer();
-            if (Input.GetButtonUp(skipInputName)) PreAttackTimer = 0;
+            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) UniStormManager.Instance.SetTime(19, 00);
         }
 
         private void UpdateTimer()
         {
-            if (PreAttackTimer > 0) PreAttackTimer -= Time.deltaTime;
-            else PreAttackTimer = 0;
-            TimerUi.GetComponent<TextMeshProUGUI>().text = ((int)PreAttackTimer).ToString();
-            if (PreAttackTimer == 0)
+            int hour = UniStormSystem.Instance.Hour;
+            int minutes = UniStormSystem.Instance.Minute;
+            
+            TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2,'0')}";
+            if (hour == 19 &&!AttackHasStarted)
             {
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
-                TimerUi.SetActive(false);
+                //TimerUi.SetActive(false);
+                AttackHasStarted = true;
             }
 
         }
+
 
         private void InitializeLevel()
         {
@@ -66,6 +71,7 @@ namespace Assets.Scripts
             }
             if (SkipPreAttackTimer) PreAttackTimer = 1;
             UniStorm.UniStormManager.Instance.ChangeWeatherInstantly(WeatherType);
+           
         }
 
         [ContextMenu("StartTimeloop")]
