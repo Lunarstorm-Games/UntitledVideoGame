@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1778710487}
-  m_IndirectSpecularColor: {r: 0.18952745, g: 0.21606156, b: 0.24555275, a: 1}
+  m_IndirectSpecularColor: {r: 0.08147199, g: 0.1240883, b: 0.20707472, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1830,6 +1830,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1890,6 +1895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -1918,6 +1928,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3565,6 +3580,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -3625,6 +3645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -3655,6 +3680,11 @@ PrefabInstance:
       propertyPath: LightsModule.intensityCurve.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08d218a4c80b6e44b158d8c87b5458b, type: 3}
 --- !u!1001 &238874499
@@ -3668,6 +3698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
@@ -3729,6 +3764,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -3759,6 +3799,11 @@ PrefabInstance:
       propertyPath: LightsModule.intensityCurve.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08d218a4c80b6e44b158d8c87b5458b, type: 3}
 --- !u!1001 &345621260
@@ -3772,6 +3817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
@@ -3833,6 +3883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -3863,6 +3918,11 @@ PrefabInstance:
       propertyPath: LightsModule.intensityCurve.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08d218a4c80b6e44b158d8c87b5458b, type: 3}
 --- !u!1001 &381153040
@@ -3876,6 +3936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
@@ -3937,6 +4002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -3965,6 +4035,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12097,6 +12172,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -12157,6 +12237,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -12185,6 +12270,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22978,6 +23068,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -23038,6 +23133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -23066,6 +23166,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25597,6 +25702,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -25657,6 +25767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -25685,6 +25800,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -33048,6 +33168,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -33108,6 +33233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -33136,6 +33266,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -40359,6 +40494,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -40419,6 +40559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -40447,6 +40592,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -42120,6 +42270,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -42180,6 +42335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -42208,6 +42368,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -43979,6 +44144,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -44039,6 +44209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -44067,6 +44242,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -57475,6 +57655,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -57535,6 +57720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -57563,6 +57753,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -81010,6 +81205,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -81070,6 +81270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -81098,6 +81303,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -83203,6 +83413,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -83263,6 +83478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -83291,6 +83511,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -83383,7 +83608,7 @@ PrefabInstance:
     - target: {fileID: 114887935237855064, guid: 7fb12e0433ce0054e9058d52760b33a8,
         type: 3}
       propertyPath: TabNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114887935237855064, guid: 7fb12e0433ce0054e9058d52760b33a8,
         type: 3}
@@ -83448,7 +83673,7 @@ PrefabInstance:
     - target: {fileID: 114887935237855064, guid: 7fb12e0433ce0054e9058d52760b33a8,
         type: 3}
       propertyPath: LightningStrikes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114887935237855064, guid: 7fb12e0433ce0054e9058d52760b33a8,
         type: 3}
@@ -86850,6 +87075,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -86910,6 +87140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -86940,6 +87175,11 @@ PrefabInstance:
       propertyPath: LightsModule.intensityCurve.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08d218a4c80b6e44b158d8c87b5458b, type: 3}
 --- !u!1001 &2058721645
@@ -86953,6 +87193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
@@ -87014,6 +87259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -87042,6 +87292,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -90587,6 +90842,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.56
       objectReference: {fileID: 0}
+    - target: {fileID: 3853312499083712295, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307230155231200881, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: m_RootOrder
@@ -90647,6 +90907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7992984099858021980, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.color
@@ -90675,6 +90940,11 @@ PrefabInstance:
     - target: {fileID: 8129486994195773366, guid: f08d218a4c80b6e44b158d8c87b5458b,
         type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153480092640528735, guid: f08d218a4c80b6e44b158d8c87b5458b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
