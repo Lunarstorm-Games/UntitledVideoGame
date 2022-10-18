@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
+    private SpellInventory spellInventory;
+
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
@@ -16,12 +18,16 @@ public class ThirdPersonShooterController : MonoBehaviour
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
     private bool isPromptOpen = false;
+    private string currentSelectedSpell;
 
     private void Awake()
     {
         _starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         _thirdPersonController = GetComponent<ThirdPersonController>();
         _animator = GetComponent<Animator>();
+
+        spellInventory = GetComponent<SpellInventory>();
+        projectilePrefab = spellInventory.spells[0];
     }
 
     private void Update()
@@ -56,17 +62,35 @@ public class ThirdPersonShooterController : MonoBehaviour
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir,Vector3.up));
-            projectile.Initialize(this.GetComponent<Entity>(), aimDir);
+            projectile.Initialize(GetComponent<Entity>(), aimDir);
             _starterAssetsInputs.attack = false;
         }
         else
         {
             _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),0f,Time.deltaTime * 10f));
         }
+
+        if (Input.inputString != "")
+        {
+            int number;
+            bool isNumberKey = Int32.TryParse(Input.inputString, out number);
+            if (isNumberKey)
+            {
+                if (number != 0 && spellInventory.spells[number - 1])
+                        projectilePrefab = spellInventory.spells[number - 1];
+                else if (spellInventory.spells[10])
+                        projectilePrefab = spellInventory.spells[10];
+            }
+        }
     }
     
     public void SetIsPormptOpen(bool status)
     {
         isPromptOpen = status;
+    }
+
+    private void ChangeSpell()
+    {
+
     }
 }

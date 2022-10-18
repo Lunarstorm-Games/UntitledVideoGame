@@ -17,12 +17,10 @@ public class PauseMenu : MonoBehaviour
         {
             if (IsGamePaused)
             {
-                Debug.Log("Resumed");
                 Resume();
             }
             else
             {
-                Debug.Log("Paused");
                 Pause();
             }
         }
@@ -33,9 +31,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUIl.SetActive(false);
         Time.timeScale = 1f;
         IsGamePaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         controls.actions.Enable();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Pause()

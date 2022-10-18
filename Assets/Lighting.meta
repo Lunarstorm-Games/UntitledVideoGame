@@ -1,7 +1,12 @@
 fileFormatVersion: 2
-guid: 8d73cea90f608e8428b857c583a5d2ae
+<<<<<<<< HEAD:Assets/Lighting.meta
+guid: 58727a6b44b4d422abe1f13c9e56d5a1
 folderAsset: yes
 DefaultImporter:
+========
+guid: 636b54b6fc189c343b99bdb374930541
+PrefabImporter:
+>>>>>>>> add-player-resources:Assets/Prefabs/UI/ManaBar.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

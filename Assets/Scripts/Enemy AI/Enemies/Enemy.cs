@@ -54,10 +54,10 @@ public class Enemy : Entity, IDamageable
         Agent.speed = Speed;
         currentHealth = Health;
     }
-
+    [Obsolete]
     public virtual void DropEssence()
     {
-        //EssenceSource.DropEssence();
+        
     }
 
     public virtual void TakeDamage(float damage, Entity entity)
@@ -77,7 +77,7 @@ public class Enemy : Entity, IDamageable
 
     public virtual void DeathAnimEvent()
     {
-        DropEssence();
+        
         Destroy(this.gameObject);
     }
 
@@ -89,5 +89,9 @@ public class Enemy : Entity, IDamageable
     public virtual void FinishedAttackAnimEvent()
     {
         OnAttackFinish?.Invoke();
+    }
+    protected void OnDestroy()
+    {
+        EssenceSource.DropEssence();
     }
 }
