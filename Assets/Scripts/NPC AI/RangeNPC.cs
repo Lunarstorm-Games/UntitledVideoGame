@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RangeNPC : Guard
 {
+    [Header("Weapon Component")]
     [SerializeField] public Transform ProjectileSpawnPos;
     [SerializeField] public Projectile Projectile;
 }

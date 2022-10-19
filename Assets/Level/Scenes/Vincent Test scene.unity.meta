@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: e933f54887c2a0a43b005feba35a9871
+<<<<<<<< HEAD:Assets/Level/Scenes/Playtest Scenes/Playtest 1.unity.meta
+guid: 470f85f95b6688242913bb095bd07cde
+========
+guid: e75d89dc3308ed54dbc5288bbd7f0fc6
+folderAsset: yes
+>>>>>>>> Enemies:Assets/Code/Scripts/Enemy AI/Interfaces.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

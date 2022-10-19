@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : Entity
+public class NPC : EntityAI
 {
-    public BehaviourTree Tree { get; protected set; }
+
 }

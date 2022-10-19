@@ -1,4 +1,5 @@
 
+using BehaviorTree.EnemyTask;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,38 @@ using UnityEngine;
         {
             Node root = new Selector(new List<Node>
             {
-                //new CheckDeath(npc),
-                //new TaskIdle(npc),
-                //new Sequence(new List<Node>
-                //{
+                new CheckDeath(npc),
+
+                new Sequence(new List<Node>
+                {
+                    new CheckTargetInAttackRange(npc),
+                    new TaskAttack(npc, npc.Weapon),
+                }),
+                new Sequence(new List<Node>
+                {
+                    new CheckTargetInAggroRange(npc),
+                    new TaskGoToTarget(npc),
+                }),
+
+                new Wait(15, new TaskRandomPatroll(npc)),             
+                new TaskIdle(npc),
+               
+
+
+
+                new Repeater(new List<Node>
+                {
                     
-                //}),
+                }),
                 
+                
+
+
+                
+                new Sequence(new List<Node>
+                {
+                    
+                }),
             });
 
             return root;

@@ -1415,25 +1415,25 @@ MonoBehaviour:
   Type: 1
   TargetsType: 4
   TargetOffset: {x: 0, y: 0.8, z: 0}
+  Killable: 1
   Health: 200
-  Speed: 3
-  AggroRange: 6
-  AttackRange: 2.4
-  AttackDelay: 3
-  PreAttackDelay: 1
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  Speed: 3
+  AggroRange: 6
+  AttackRange: 1.5
+  AttackDelay: 3
+  PreAttackDelay: 3
   OnPreAttackFinish:
     m_PersistentCalls:
       m_Calls: []
   OnAttackFinish:
     m_PersistentCalls:
       m_Calls: []
-  currentTarget: {fileID: 0}
   Weapon: {fileID: 5907171713917026683}
 --- !u!1 &5298743060680182453
 GameObject:

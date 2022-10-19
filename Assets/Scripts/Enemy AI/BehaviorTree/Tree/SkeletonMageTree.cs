@@ -32,7 +32,7 @@ namespace BehaviorTree
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskRangeAttack(enemy),
+                    new TaskRangeAttack(enemy, enemy.Projectile, enemy.ProjectileSpawnPos),
                 }),
                 new Sequence(new List<Node>
                 {
