@@ -33,5 +33,6 @@ public class SpellProjectile : Projectile
     protected override void ProjectileImpact()
     {
         base.ProjectileImpact();
+        Destroy(gameObject);
     }
 }

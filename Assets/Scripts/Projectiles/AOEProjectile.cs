@@ -37,6 +37,7 @@ public class AOEProjectile : Projectile
     protected override void ProjectileImpact()
     {
         base.ProjectileImpact();
+        Destroy(gameObject);
     }
     
     public void UpgradeAOE(float newAOE)
