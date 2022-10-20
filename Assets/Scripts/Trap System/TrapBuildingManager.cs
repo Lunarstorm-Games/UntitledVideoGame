@@ -97,6 +97,10 @@ public class TrapBuildingManager : MonoBehaviour
 
     public void SelectObject(int index)
     {
+        if (pendingObject != null)
+        {
+            Destroy(pendingObject);
+        }
         pendingObject = Instantiate(objects[index], pos, Quaternion.identity);
     }
 }
