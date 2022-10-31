@@ -17,12 +17,4 @@ public class NPC_Warrior : MeleeNPC
     {
         Tree.Evaluate();
     }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(this.transform.position, 15);
-        Gizmos.DrawWireSphere(new Vector3(Random.Range(-15, 15), this.transform.position.y, Random.Range(-15, 15)), 2f);
-        
-    }
 }

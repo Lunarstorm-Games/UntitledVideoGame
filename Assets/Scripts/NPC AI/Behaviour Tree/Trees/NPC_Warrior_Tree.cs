@@ -31,7 +31,7 @@ using UnityEngine;
                     new TaskGoToTarget(npc),
                 }),
 
-                new Wait(15, new TaskRandomPatroll(npc)),             
+                new Wait(3, new TaskRandomPatroll(npc)),             
                 new TaskIdle(npc),
                
 
