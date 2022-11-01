@@ -78,6 +78,6 @@ public class Projectile : MonoBehaviour
             Destroy(impactEffectObject.gameObject, 1);
         }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
