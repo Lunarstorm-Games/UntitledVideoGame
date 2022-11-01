@@ -724,19 +724,19 @@ MonoBehaviour:
   Type: 2
   TargetsType: 0
   TargetOffset: {x: 0, y: 0, z: 0}
-  Health: 50
-  Speed: 3
-  AggroRange: 6
-  AttackRange: 8
-  AttackDelay: 3
-  PreAttackDelay: 1
-  EssenceDropAmount: 10
+  Killable: 1
+  Health: 80
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  Speed: 3
+  AggroRange: 6
+  AttackRange: 8
+  AttackDelay: 3
+  PreAttackDelay: 1
   OnPreAttackFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -745,7 +745,6 @@ MonoBehaviour:
       m_Calls: []
   EssenceSource:
     rid: 7853769204235501568
-  currentTarget: {fileID: 0}
   ProjectileSpawnPos: {fileID: 3979479768972305576}
   Projectile: {fileID: -138429658249881365, guid: 6c5d5632228cbb741b3c5c75d6e5e5ee,
     type: 3}
@@ -755,7 +754,7 @@ MonoBehaviour:
     - rid: 7853769204235501568
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 0
+        EssenceValue: 20
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

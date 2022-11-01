@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class SkeletonMageTree : Tree
+    public class SkeletonMageTree : BehaviourTree
     {
         protected SkeletonMage enemy;
         public SkeletonMageTree(SkeletonMage enemy)
@@ -32,7 +32,7 @@ namespace BehaviorTree
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskRangeAttack(enemy),
+                    new TaskRangeAttack(enemy, enemy.Projectile, enemy.ProjectileSpawnPos),
                 }),
                 new Sequence(new List<Node>
                 {

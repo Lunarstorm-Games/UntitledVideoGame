@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Behaviour tree.meta
+guid: d14af293af05217498b664322667a26d
+folderAsset: yes
+========
 guid: ff74808caa1007e4e909c4e13f47b8b9
+>>>>>>>> main:Assets/Level/Scenes/Main scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

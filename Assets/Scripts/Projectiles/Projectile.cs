@@ -28,17 +28,23 @@ public class Projectile : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    public virtual void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("before");
-        // Can't shoot yourself
-        if (other.gameObject == shooter.gameObject)
-            return;
-        Debug.Log("after");
-        if (other.TryGetComponent(out IDamageable target) && other.GetComponent<Entity>().Type != shooter.Type)
+
+        if (collider.TryGetComponent<Entity>(out Entity entity))
         {
-            target.TakeDamage(damage, shooter);
+            if (entity == shooter)
+                return;
+
+            if (!shooter.ValidTarget(entity.Type))
+                return;
+
+            if (collider.TryGetComponent<IDamageable>(out IDamageable target))
+            {
+                target.TakeDamage(damage, shooter);
+            }
         }
+        
         ProjectileImpact();
     }
 
@@ -78,6 +84,6 @@ public class Projectile : MonoBehaviour
             Destroy(impactEffectObject.gameObject, 1);
         }
 
-        Destroy(gameObject);
+        DestroyProjectile();
     }
 }

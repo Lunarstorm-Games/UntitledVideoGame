@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395068ee6e7448548a6e360d022d97ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   hitEffect: {fileID: 0}
   hitSound: {fileID: 0}
 --- !u!65 &6430764485655758052
@@ -111,5 +111,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.18078215, y: 0.9989629, z: 0.27303955}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: -0.41918826, z: 0.005585924}

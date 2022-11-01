@@ -1,26 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Player : Entity, IDamageable
 {
-    [SerializeField] private Animator animator;
     [SerializeField] private HealthBarUI healthBar;
-    [SerializeField] private float maxHealth;
+
+    [Header("Mana System")]
     [SerializeField] private ManaBar manaBar;
-    [SerializeField] private float maxMana;
-    public UnityEvent OnDeath;
-    private float currentHealth;
+    [SerializeField] private float Mana;
+
     private float currentMana;
     
     public static Player Instance { get; private set; }
-    private void Awake()
+    public override void Awake()
     {
-        maxHealth = healthBar.GetComponent<Slider>().maxValue;
-        maxMana = manaBar.GetComponent<Slider>().maxValue;
+        base.Awake();
+
         // If there is an instance, and it's not me, delete myself.
         if (Instance != null && Instance != this)
         {
@@ -35,24 +33,33 @@ public class Player : Entity, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        currentMana = maxMana;
-        manaBar.SetMaxMana(maxMana);
+        currentHealth = Health;
+        healthBar.SetMaxHealth(Health);
+        currentMana = Mana;
+        manaBar.SetMaxMana(Mana);
     }
 
-    public void TakeDamage(float damage, Entity origin)
+    public override void TakeDamage(float damage, Entity origin)
     {
+        if (!Killable)
+            return;
+
         currentHealth -= damage;
         healthBar?.SetHealth(currentHealth);
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !Death)
         {
+            Death = true;
             OnDeath?.Invoke();
-            //animator.SetTrigger("Death");
+            Animator.SetTrigger("Death");
         }
     }
-    
+
+    public override void DeathAnimEvent()
+    {
+        //Revive System
+    }
+
     public void UseMana(int mana)
     {
         currentMana -= mana;

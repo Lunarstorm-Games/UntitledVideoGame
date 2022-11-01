@@ -129,10 +129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  damage: 10
+  damage: 20
   range: 4
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
+  DamageLevel: 1
+  SpeedLevel: 1
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0

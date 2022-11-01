@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.SaveSystem
 {
-    public class PersistableMonoBehaviour :MonoBehaviour
+    public class PersistableMonoBehaviour : MonoBehaviour
     {
         public string Id = null;
         [SaveField]
@@ -43,14 +43,17 @@ namespace Assets.Scripts.SaveSystem
             if (string.IsNullOrWhiteSpace(Id))
             {
                 Id = Guid.NewGuid().ToString();
+#if UNITY_EDITOR
+
                 EditorUtility.SetDirty(this);
+#endif
             }
             if (!SaveManager.Instance.HasObject(Id))
             {
                 SaveManager.Instance.RegisterObject(this);
             }
         }
-        
+
 
 
         protected void OnDestroy()
@@ -67,10 +70,10 @@ namespace Assets.Scripts.SaveSystem
         [ContextMenu("Generate Id")]
         public void GenerateId()
         {
-            Id= Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
         }
 
 
-       
+
     }
 }

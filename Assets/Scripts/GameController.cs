@@ -45,15 +45,16 @@ namespace Assets.Scripts
         {
             UpdateTimer();
             if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) UniStormManager.Instance.SetTime(19, 00);
+            
         }
 
         private void UpdateTimer()
         {
             int hour = UniStormSystem.Instance.Hour;
             int minutes = UniStormSystem.Instance.Minute;
-            
-            TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2,'0')}";
-            if (hour == 19 &&!AttackHasStarted)
+
+            TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
+            if (hour == 19 && !AttackHasStarted)
             {
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
                 //TimerUi.SetActive(false);
