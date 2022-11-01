@@ -780,7 +780,7 @@ MonoBehaviour:
   TargetsType: 11
   TargetOffset: {x: 0, y: 0, z: 0}
   Killable: 1
-  Health: 50
+  Health: 30
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -807,7 +807,7 @@ MonoBehaviour:
     - rid: 7853769208530731008
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 100
+        EssenceValue: 10
 --- !u!54 &1777075299912445076
 Rigidbody:
   m_ObjectHideFlags: 0
