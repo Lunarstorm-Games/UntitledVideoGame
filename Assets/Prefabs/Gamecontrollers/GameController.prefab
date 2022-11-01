@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8057871459104474365}
   - component: {fileID: -6578126638984372074}
+  - component: {fileID: 1939829690645849997}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -47,11 +48,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: 
   SaveDirectory: 
+  WeatherType: {fileID: 0}
   TimerUi: {fileID: 6468561090229098990, guid: 66af8238b29f1dc4bbe7d64df4a02b88, type: 3}
   WaveController: {fileID: 3891569744914088197}
   PreAttackTimer: 300
   SkipPreAttackTimer: 0
+  time: 
   skipInputName: startAttack
+--- !u!114 &1939829690645849997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827182341608145072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1f90461129ea849b342de2e0915556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 6561dfbd-ed31-4866-ad85-caf11b726c6e
+  prefabPath: 
+  Bank:
+    rid: 4542284876385353729
+  references:
+    version: 2
+    RefIds:
+    - rid: 4542284876385353729
+      type: {class: EssenceBankModel, ns: Assets.Code.Scripts.Models.Essence, asm: Assembly-CSharp}
+      data:
+        EssenceAmount: 0
 --- !u!1001 &4404398768096725315
 PrefabInstance:
   m_ObjectHideFlags: 0
