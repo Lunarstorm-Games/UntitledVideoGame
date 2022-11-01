@@ -12,12 +12,14 @@ public class BuildingRaycast : MonoBehaviour
     // UI ELEMENTS
     private GameObject etoBuildPopUp;
     private GameObject etoUpgradePopUp;
+    private GameObject etoUpgradeTrapPopUp;
     private bool isPromptOpen = false;
 
     void Awake()
     {
         etoBuildPopUp = ui.Find("EtoBuildPopUp").gameObject;
         etoUpgradePopUp = ui.Find("EtoUpgradePopUp").gameObject;
+        etoUpgradeTrapPopUp = ui.Find("EtoUpgradeTrapPopUp").gameObject;
     }
 
     void Update()
@@ -41,14 +43,22 @@ public class BuildingRaycast : MonoBehaviour
                     etoUpgradePopUp.GetComponent<EtoAction>().SetBuilding(hit.transform.parent);
                     return;
                 }
+                if (hit.transform.CompareTag("TrapWorkshop"))
+                {
+                    ShowEtoUpgradeTrapPopUp(true);
+                    etoUpgradeTrapPopUp.GetComponent<EtoAction>().SetBuilding(hit.transform.parent);
+                    return;
+                }
             }
             ShowEtoBuildPopUp(false);
             ShowEtoUpgradePopUp(false);
+            ShowEtoUpgradeTrapPopUp(false);
         }
         else
         {
             ShowEtoBuildPopUp(false);
             ShowEtoUpgradePopUp(false);
+            ShowEtoUpgradeTrapPopUp(false);
         }
     }
 
@@ -60,6 +70,11 @@ public class BuildingRaycast : MonoBehaviour
     void ShowEtoUpgradePopUp(bool status)
     {
         etoUpgradePopUp.SetActive(status);
+    }
+    
+    void ShowEtoUpgradeTrapPopUp(bool status)
+    {
+        etoUpgradeTrapPopUp.SetActive(status);
     }
 
     public void SetIsPormptOpen(bool status)

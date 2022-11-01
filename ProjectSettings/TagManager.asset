@@ -8,6 +8,9 @@ TagManager:
   - BuildingSpot
   - Enemy
   - MagicWorkshop
+  - Fire
+  - Object
+  - TrapWorkshop
   layers:
   - Default
   - TransparentFX

@@ -9,11 +9,12 @@ using UnityEngine.Serialization;
 
 public class EtoAction : MonoBehaviour
 {
-    private enum PopUpAction { Build, Upgrade };
+    private enum PopUpAction { Build, SpellUpgrade, TrapUpgrade };
 
     [SerializeField] private PopUpAction action;
     [SerializeField] private AreYouSureBuildPrompt areYouSureBuildPrompt;
     [SerializeField] private UpgradeSpellPanel upgradeSpellPanel;
+    [SerializeField] private UpgradeTrapPanel upgradeTrapPanel;
 
     private Transform buildSpot;
     private Transform building;
@@ -29,9 +30,14 @@ public class EtoAction : MonoBehaviour
                     areYouSureBuildPrompt.ShowPrompt();
                     break;
                 
-                case PopUpAction.Upgrade:
+                case PopUpAction.SpellUpgrade:
                     upgradeSpellPanel.SetBuilding(building);
                     upgradeSpellPanel.ShowPanel();
+                    break;
+                
+                case PopUpAction.TrapUpgrade:
+                    upgradeTrapPanel.SetBuilding(building);
+                    upgradeTrapPanel.ShowPanel();
                     break;
             }
         }
