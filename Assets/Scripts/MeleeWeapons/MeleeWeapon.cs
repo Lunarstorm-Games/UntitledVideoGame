@@ -13,28 +13,21 @@ public class MeleeWeapon : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.name, collider.gameObject);
         if (collider.TryGetComponent<Entity>(out Entity entity))
         {
             if (entity == holder)
                 return;
 
-            if (!holder.ValidTarget(holder.TargetsType, entity.Type))
+            if (!holder.ValidTarget(entity.Type))
                 return;
 
             if (collider.TryGetComponent<IDamageable>(out IDamageable target))
             {
+                Debug.Log("Hit: " + target, collider.gameObject);
                 target.TakeDamage(damage, holder);
             }
         }
     }
-
-   
-
-    //public virtual void OnTriggerExit(Collider collider)
-    //{
-
-    //}
 
     public virtual void Initialize(Entity holder)
     {

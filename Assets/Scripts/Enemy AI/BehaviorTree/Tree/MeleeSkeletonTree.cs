@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 namespace BehaviorTree
 {
-    public class MeleeSkeletonTree : Tree
+    public class MeleeSkeletonTree : BehaviourTree
     {
         protected MeleeSkeleton enemy;
 
@@ -28,7 +28,7 @@ namespace BehaviorTree
                 new Sequence(new List<Node>
                 {
                     new CheckTargetInAttackRange(enemy),
-                    new TaskAttack(enemy),
+                    new TaskAttack(enemy, enemy.Weapon),
                 }),
                 new Sequence(new List<Node>
                 {
