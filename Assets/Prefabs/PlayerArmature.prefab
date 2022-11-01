@@ -2877,7 +2877,7 @@ MonoBehaviour:
   Type: 0
   TargetsType: 4
   TargetOffset: {x: 0, y: 0.8, z: 0}
-  Killable: 1
+  Killable: 0
   Health: 100
   OnDamageTaken:
     m_PersistentCalls:
