@@ -14,6 +14,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform spawnBulletPosition;
+    private float maxRayDistance = 999f;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
@@ -28,6 +29,7 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         spellInventory = GetComponent<SpellInventory>();
         projectilePrefab = spellInventory.spells[0];
+        
     }
 
     private void Update()
@@ -35,10 +37,15 @@ public class ThirdPersonShooterController : MonoBehaviour
         Vector3 mouseWorldPosition = Vector3.zero;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, maxRayDistance, aimColliderLayerMask))
         {
             mouseWorldPosition = raycastHit.point;
         }
+        else
+        {
+            mouseWorldPosition = ray.origin + ray.direction * maxRayDistance;
+        }
+        
         
         if (_starterAssetsInputs.aim && !isPromptOpen)
         {
