@@ -23,7 +23,6 @@ public class MeleeWeapon : MonoBehaviour
 
             if (collider.TryGetComponent<IDamageable>(out IDamageable target))
             {
-                Debug.Log("Hit: " + target, collider.gameObject);
                 target.TakeDamage(damage, holder);
             }
         }
