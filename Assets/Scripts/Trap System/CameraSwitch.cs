@@ -11,13 +11,15 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] public GameObject crossHair;
     [SerializeField] public GameObject trapUI;
     public PlayerInput controls;
-    
+
     private bool lockCursor = true;
     private bool lockPlayerControls = true;
+    private SpellUI spellUI;
     
     // Start is called before the first frame update
     void Start()
     {
+        spellUI = GameObject.Find("UI").GetComponentInChildren<SpellUI>();
         cam1.enabled = true;
     }
 
@@ -57,6 +59,7 @@ public class CameraSwitch : MonoBehaviour
             trapUI.SetActive(!trapUI.activeSelf);
             lockCursor = !lockCursor;
             
+            spellUI.gameObject.SetActive(!spellUI.gameObject.activeSelf);
             PlayerControlsLock();
             CursorLock();
         }

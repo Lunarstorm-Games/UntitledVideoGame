@@ -14,6 +14,7 @@ public class UpgradeSpellPanel : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private SpellUI spellUI;
     [SerializeField] private Button[] buttons;
     [SerializeField] private SpellUpgrade[] spellUpgrades;
     private EssenceBank essenceBank;
@@ -24,7 +25,7 @@ public class UpgradeSpellPanel : MonoBehaviour
     private Transform rightPanel = new RectTransform();
     private TextMeshProUGUI essenceAmount;
     private Transform warning;
-    
+
     // SPELL PANEL DATA
     private Image icon;
     private TextMeshProUGUI upgradeName;
@@ -34,7 +35,7 @@ public class UpgradeSpellPanel : MonoBehaviour
     private TextMeshProUGUI currentStat;
     private TextMeshProUGUI nextStat;
     private TextMeshProUGUI upgradeCost;
-    
+
     void Awake()
     {
         buildingRaycast = starterAssetsInputs.GetComponent<BuildingRaycast>();
@@ -154,6 +155,7 @@ public class UpgradeSpellPanel : MonoBehaviour
     {
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
+        spellUI.gameObject.SetActive(false);
         playerInput.actions.Disable();
         gameObject.SetActive(true);
         SetEssence(essenceBank.EssenceAmount);
@@ -166,6 +168,7 @@ public class UpgradeSpellPanel : MonoBehaviour
         HideSpellPanel();
         HideWarningQuick();
         gameObject.SetActive(false);
+        spellUI.gameObject.SetActive(true);
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
         playerInput.actions.Enable();

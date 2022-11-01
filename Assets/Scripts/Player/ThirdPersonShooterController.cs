@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using StarterAssets;
+using TheraBytes.BetterUi;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
-    private SpellInventory spellInventory;
-
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
@@ -19,7 +18,9 @@ public class ThirdPersonShooterController : MonoBehaviour
     private Animator _animator;
     private bool isPromptOpen = false;
     private string currentSelectedSpell;
-
+    private SpellInventory spellInventory;
+    private SpellUI spellUI;
+    
     private void Awake()
     {
         _starterAssetsInputs = GetComponent<StarterAssetsInputs>();
@@ -28,6 +29,8 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         spellInventory = GetComponent<SpellInventory>();
         projectilePrefab = spellInventory.spells[0];
+
+        spellUI = GameObject.Find("UI").GetComponentInChildren<SpellUI>();
     }
 
     private void Update()
@@ -77,7 +80,10 @@ public class ThirdPersonShooterController : MonoBehaviour
             if (isNumberKey)
             {
                 if (number != 0 && spellInventory.spells[number - 1])
-                        projectilePrefab = spellInventory.spells[number - 1];
+                {
+                    projectilePrefab = spellInventory.spells[number - 1];
+                    spellUI.SetActiveSpell(number);
+                }
                 else if (spellInventory.spells[10])
                         projectilePrefab = spellInventory.spells[10];
             }
@@ -87,10 +93,5 @@ public class ThirdPersonShooterController : MonoBehaviour
     public void SetIsPormptOpen(bool status)
     {
         isPromptOpen = status;
-    }
-
-    private void ChangeSpell()
-    {
-
     }
 }

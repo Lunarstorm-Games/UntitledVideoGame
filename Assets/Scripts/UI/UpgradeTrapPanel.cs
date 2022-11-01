@@ -10,6 +10,7 @@ public class UpgradeTrapPanel : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
+    [SerializeField] private SpellUI spellUI;
     private ThirdPersonShooterController thirdPersonShooter;
     private BuildingRaycast buildingRaycast;
     private EssenceBank essenceBank;
@@ -104,6 +105,7 @@ public class UpgradeTrapPanel : MonoBehaviour
     
     public void ShowPanel()
     {
+        spellUI.gameObject.SetActive(false);
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
         playerInput.actions.Disable();
@@ -116,6 +118,7 @@ public class UpgradeTrapPanel : MonoBehaviour
     public void HidePanel()
     {
         gameObject.SetActive(false);
+        spellUI.gameObject.SetActive(true);
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
         playerInput.actions.Enable();
