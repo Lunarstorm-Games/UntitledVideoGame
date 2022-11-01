@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1778710487}
-  m_IndirectSpecularColor: {r: 0.17124383, g: 0.21042272, b: 0.25576633, a: 1}
+  m_IndirectSpecularColor: {r: 0.16195324, g: 0.21109642, b: 0.27118936, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25967,61 +25967,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 812561415}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &751520223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 169058, guid: 1e90e95b47816f541b663890e3c2118b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1667044613}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &751520224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751520223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0abdc23a292664faf6dfa88ba15062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 0
-  TargetsType: 0
-  TargetOffset: {x: 0, y: 0, z: 0}
-  Killable: 1
-  Health: 30
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1322288691}
-        m_TargetAssemblyTypeName: Assets.Scripts.GameController, Assembly-CSharp
-        m_MethodName: StartTimeLoop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!136 &751520228
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751520223}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 3.36239
-  m_Direction: 1
-  m_Center: {x: -0.12971339, y: 0.74, z: -0.074553356}
 --- !u!1001 &766730148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44858,7 +44803,7 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 285.9
+      value: 289.4
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -70267,6 +70212,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1731033754583995851, guid: 1e90e95b47816f541b663890e3c2118b,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1322288691}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e90e95b47816f541b663890e3c2118b, type: 3}
 --- !u!43 &1667438361

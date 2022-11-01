@@ -2877,7 +2877,7 @@ PrefabInstance:
     - target: {fileID: 1894003589, guid: 393257435a4a4c74db7262c28c1fad54, type: 3}
       propertyPath: _trapBuildingManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1058550279}
     - target: {fileID: 4143355195471934057, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
       propertyPath: manaBar
@@ -3051,6 +3051,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29a7f57f099497f49aa5ed735f10a352, type: 3}
+--- !u!1 &1058550279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4934723280170907725, guid: 29a7f57f099497f49aa5ed735f10a352,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058550278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106720276
 GameObject:
   m_ObjectHideFlags: 0
