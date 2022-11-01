@@ -40,6 +40,7 @@ public class EntityAI : Entity
 
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = Speed;
+        Agent.stoppingDistance = AttackRange - 0.2f;
     }
 
     public virtual void FinishedPreAttackAnimEvent()
