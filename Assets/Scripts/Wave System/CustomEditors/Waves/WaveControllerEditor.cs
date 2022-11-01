@@ -6,6 +6,7 @@ using UnityEngine.Assertions.Must;
 
 namespace Assets.scripts.CustomEditors.Waves
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(WaveSpawner))]
     public class WaveControllerEditor : Editor
     {
@@ -45,4 +46,5 @@ Spawnpoints are added by duplicating the spawnpoint transform and placing it whe
             serializedObject.ApplyModifiedProperties();
         }
     }
+#endif
 }

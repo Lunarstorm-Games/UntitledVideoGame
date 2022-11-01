@@ -7,6 +7,7 @@ namespace Assets.Scripts.Utility
     {
 
     }
+#if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer
     {
@@ -25,4 +26,5 @@ namespace Assets.Scripts.Utility
             GUI.enabled = true;
         }
     }
+#endif
 }
