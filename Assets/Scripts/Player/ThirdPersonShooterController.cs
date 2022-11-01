@@ -13,6 +13,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform spawnBulletPosition;
+    private float maxRayDistance = 999f;
     private StarterAssetsInputs _starterAssetsInputs;
     private ThirdPersonController _thirdPersonController;
     private Animator _animator;
@@ -20,7 +21,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private string currentSelectedSpell;
     private SpellInventory spellInventory;
     private SpellUI spellUI;
-    
+
     private void Awake()
     {
         _starterAssetsInputs = GetComponent<StarterAssetsInputs>();
@@ -38,20 +39,25 @@ public class ThirdPersonShooterController : MonoBehaviour
         Vector3 mouseWorldPosition = Vector3.zero;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, maxRayDistance, aimColliderLayerMask))
         {
             mouseWorldPosition = raycastHit.point;
         }
-        
+        else
+        {
+            mouseWorldPosition = ray.origin + ray.direction * maxRayDistance;
+        }
+
+
         if (_starterAssetsInputs.aim && !isPromptOpen)
         {
             _virtualCamera.gameObject.SetActive(true);
             _thirdPersonController.SetRotateOnMove(false);
-            
+
             Vector3 worldAimTarget = mouseWorldPosition;
             worldAimTarget.y = transform.position.y;
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-            
+
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
         }
         else
@@ -59,18 +65,18 @@ public class ThirdPersonShooterController : MonoBehaviour
             _virtualCamera.gameObject.SetActive(false);
             _thirdPersonController.SetRotateOnMove(true);
         }
-        
+
         if (_starterAssetsInputs.attack && !isPromptOpen)
         {
-            _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
+            _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir,Vector3.up));
+            Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             projectile.Initialize(GetComponent<Entity>(), aimDir);
             _starterAssetsInputs.attack = false;
         }
         else
         {
-            _animator.SetLayerWeight(1,Mathf.Lerp(_animator.GetLayerWeight(1),0f,Time.deltaTime * 10f));
+            _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
         }
 
         if (Input.inputString != "")
@@ -85,11 +91,11 @@ public class ThirdPersonShooterController : MonoBehaviour
                     spellUI.SetActiveSpell(number);
                 }
                 else if (spellInventory.spells[10])
-                        projectilePrefab = spellInventory.spells[10];
+                    projectilePrefab = spellInventory.spells[10];
             }
         }
     }
-    
+
     public void SetIsPormptOpen(bool status)
     {
         isPromptOpen = status;
