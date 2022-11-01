@@ -21,11 +21,6 @@ namespace BehaviorTree
                 new CheckDeath(enemy),
                 new Sequence(new List<Node>
                 {
-                    new CheckTargetIsPlayer(enemy),
-                    new TaskGoToTarget(enemy),
-                }),
-                new Sequence(new List<Node>
-                {
                     new CheckHitByPlayer(enemy),
                     new TaskGoToTarget(enemy),
                 }),
@@ -33,6 +28,11 @@ namespace BehaviorTree
                 {
                     new CheckTargetInAttackRange(enemy),
                     new TaskRangeAttack(enemy, enemy.Projectile, enemy.ProjectileSpawnPos),
+                }),
+                new Sequence(new List<Node>
+                {
+                    new CheckTargetIsPlayer(enemy),
+                    new TaskGoToTarget(enemy),
                 }),
                 new Sequence(new List<Node>
                 {

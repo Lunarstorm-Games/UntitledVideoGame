@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  damage: 20
+  damage: 8
   range: 4
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
@@ -194,6 +194,9 @@ VisualEffect:
       - m_Value: {x: 2, y: 0, z: 0, w: 1}
         m_Name: Color
         m_Overridden: 1
+      - m_Value: {x: 0.5566038, y: 0, z: 0.03560732, w: 1}
+        m_Name: SecondaryColor
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -203,7 +206,38 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 0.20784314, g: 0, b: 0.0019607844, a: 0.30980393}
+          key1: {r: 0.5754717, g: 0.15236923, b: 0.13391477, a: 0.29411766}
+          key2: {r: 0.3647059, g: 0.007843138, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 11565
+          ctime1: 34502
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 2
+        m_Name: Gradient
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
