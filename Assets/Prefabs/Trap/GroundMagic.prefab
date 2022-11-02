@@ -5069,10 +5069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0951d647df485427e9449bc78df31480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPlacePrefab: {fileID: 3280519133390621005, guid: 2af59396ac4576249a9e9ffdc8865e53,
-    type: 3}
-  cantPlacePrefab: {fileID: 3280519133390621005, guid: d3046529045848542ac31a31646a8e57,
-    type: 3}
 --- !u!114 &787572292577959344
 MonoBehaviour:
   m_ObjectHideFlags: 0
