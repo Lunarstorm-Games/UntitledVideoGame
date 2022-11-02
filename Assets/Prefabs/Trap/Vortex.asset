@@ -17,6 +17,6 @@ MonoBehaviour:
   slowRate: 1
   isPlaced: 0
   isActive: 0
-  essenceCost: 0
+  essenceCost: 100
   trapAsset: {fileID: 6035716326096688732, guid: 37df0ff44c32a5a4a9de4be385d5da36,
     type: 3}

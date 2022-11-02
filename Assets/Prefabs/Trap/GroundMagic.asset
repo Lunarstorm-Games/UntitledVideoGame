@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 200
   duration: 5
+  slowRate: 0
   isPlaced: 1
   isActive: 0
+  essenceCost: 200
   trapAsset: {fileID: 6035716326096688732, guid: 8375d533b6e7f4784a89042a2e5562e6,
     type: 3}
