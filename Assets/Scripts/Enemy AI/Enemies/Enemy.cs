@@ -2,12 +2,13 @@ using BehaviorTree;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Interfaces;
 using Assets.scripts.Logic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public class Enemy : Entity, IDamageable
+public class Enemy : Entity, IDamageable, ISlowable
 {
     public Entity CurrentTarget
     {
@@ -92,5 +93,10 @@ public class Enemy : Entity, IDamageable
     protected void OnDestroy()
     {
         EssenceSource.DropEssence();
+    }
+
+    public virtual void Slow(float slowRate, Entity origin)
+    {
+        Speed -= slowRate;
     }
 }
