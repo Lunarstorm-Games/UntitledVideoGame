@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Interfaces;
 using UnityEngine;
 
 public class ActivateTrap : MonoBehaviour
@@ -19,6 +20,11 @@ public class ActivateTrap : MonoBehaviour
                 if (other.TryGetComponent(out IDamageable target))
                 {
                     target.TakeDamage(_trapModel.damage, null);
+                }
+
+                if (other.TryGetComponent(out ISlowable targetSlow))
+                {
+                    targetSlow.Slow(_trapModel.slowRate, null); 
                 }
 
                 Destroy(gameObject, _trapModel.duration);

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public class EntityAI : Entity
+public class EntityAI : Entity, ISlowable
 {
     [Header("Stats", order = 1)]
     [SerializeField] public float Speed = 3f;
@@ -51,5 +52,10 @@ public class EntityAI : Entity
     public virtual void FinishedAttackAnimEvent()
     {
         OnAttackFinish?.Invoke();
+    }
+
+    public void Slow(float slowRate, Entity origin)
+    {
+        Agent.speed -= slowRate;
     }
 }
