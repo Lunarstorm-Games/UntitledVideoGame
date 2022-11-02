@@ -20,6 +20,8 @@ public class TrapBuildingManager : MonoBehaviour
     [SerializeField] private Material[] materials;
     [SerializeField] private float rotateAmount;
     [SerializeField] private LayerMask layerMask;
+    public bool selected;
+
     private void Awake()
     {
         essenceBank = EssenceBank.Instance;
@@ -56,7 +58,6 @@ public class TrapBuildingManager : MonoBehaviour
         if (canPlace)
         {
             pendingObject.GetComponent<MeshRenderer>().material = materials[0];
-            
         }
 
         if (!canPlace)
@@ -67,17 +68,24 @@ public class TrapBuildingManager : MonoBehaviour
 
     public void PlaceObject()
     {
-        if (essenceBank.SpendEssence(essenceCost[0]))
+        if (!selected)
         {
-            pendingObject.GetComponent<MeshRenderer>().material = materials[2];
-            //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
-            pendingObject.name = pendingObject.name + " Placed";
-            pendingObject = null;
+            int essenceCost = this.essenceCost[0];
+            if (pendingObject.name == "Vortex(Clone)")
+            {
+                essenceCost = this.essenceCost[1];
+            }
+            if (essenceBank.SpendEssence(essenceCost))
+            {
+                pendingObject.GetComponent<MeshRenderer>().material = materials[2];
+                //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
+                pendingObject.name = pendingObject.name + " Placed";
+                pendingObject = null;
+            }
+
+            return;
         }
-        else
-        {
-            
-        }
+        Destroy(pendingObject);
     }
 
     public void RotateObject()
@@ -97,6 +105,10 @@ public class TrapBuildingManager : MonoBehaviour
 
     public void SelectObject(int index)
     {
+        if (pendingObject != null)
+        {
+            Destroy(pendingObject);
+        }
         pendingObject = Instantiate(objects[index], pos, Quaternion.identity);
     }
 }
