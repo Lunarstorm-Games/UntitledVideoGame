@@ -118,6 +118,7 @@ MonoBehaviour:
   impactEffect: {fileID: 8310478900511335466, guid: 65952721163e0e24e92468b780836459,
     type: 3}
   hitSound: {fileID: 0}
+  mana: 20
   DamageLevel: 1
   SpeedLevel: 1
   AOERadius: 5

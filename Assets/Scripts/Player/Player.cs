@@ -11,8 +11,8 @@ public class Player : Entity, IDamageable
     [Header("Mana System")]
     [SerializeField] private ManaBar manaBar;
     [SerializeField] private float Mana;
-
-    private float currentMana;
+    [SerializeField] private float manaRechargeRate = 3.5f;
+    [SerializeField] public float currentMana;
     
     public static Player Instance { get; private set; }
     public override void Awake()
@@ -39,6 +39,11 @@ public class Player : Entity, IDamageable
         manaBar.SetMaxMana(Mana);
     }
 
+    void Update()
+    {
+        RegenerateMana();
+    }
+
     public override void TakeDamage(float damage, Entity origin)
     {
         if (!Killable)
@@ -60,9 +65,19 @@ public class Player : Entity, IDamageable
         //Revive System
     }
 
-    public void UseMana(int mana)
+    public void UseMana(float mana)
     {
         currentMana -= mana;
         manaBar.SetMana(currentMana);
+    }
+
+    public void RegenerateMana()
+    {
+        if (currentMana < Mana)
+        {
+            currentMana += manaRechargeRate * Time.deltaTime * 10f;
+            manaBar.SetMana(currentMana);
+
+        }
     }
 }
