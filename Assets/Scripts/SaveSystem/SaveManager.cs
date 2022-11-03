@@ -45,6 +45,12 @@ namespace Assets.Scripts.SaveSystem
             return _states.ContainsKey(guid);
         }
 
+        public void ClearSave(string fileName)
+        {
+            var path = Path.Combine(directory, fileName);
+            _serializer.DeleteFile(path);
+        }
+
         public void SaveStateToFile(string fileName)
         {
             Hashtable statesToSave = new Hashtable();

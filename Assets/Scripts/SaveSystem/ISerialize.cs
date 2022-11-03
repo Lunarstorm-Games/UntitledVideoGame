@@ -7,6 +7,7 @@ namespace Assets.Scripts.SaveSystem
     {
         public void Serialize(Hashtable data, string filepath);
         public Hashtable DeSerialize(string filepath);
+        public void DeleteFile(string filepath);
    
     }
 }

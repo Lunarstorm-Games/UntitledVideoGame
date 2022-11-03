@@ -75,6 +75,12 @@ namespace Assets.Scripts
            
         }
 
+        [ContextMenu("Clearsave")]
+        public void ClearSave()
+        {
+            SaveManager.Instance.ClearSave(SceneManager.GetActiveScene().name);
+        }
+
         [ContextMenu("StartTimeloop")]
         public void StartTimeLoop()
         {

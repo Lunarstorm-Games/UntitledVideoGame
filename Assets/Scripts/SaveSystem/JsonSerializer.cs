@@ -22,9 +22,7 @@ namespace Assets.Scripts.SaveSystem
         }
         public void Serialize(Hashtable data, string filepath)
         {
-
             File.WriteAllText(filepath + ".json", JsonConvert.SerializeObject(data));
-
         }
 
         public Hashtable DeSerialize(string filepath)
@@ -34,6 +32,10 @@ namespace Assets.Scripts.SaveSystem
       
             return root as Hashtable;
         }
-      
+
+        public void DeleteFile(string filepath)
+        {
+            File.Delete(filepath+".json");
+        }
     }
 }
