@@ -21,11 +21,14 @@ public class TaskRangeAttack : Node
     {
         this.animator = entity.Animator;
         this.agent = entity.Agent;
-        this.currentAttackDelay = entity.AttackDelay;
         this.attackDelay = entity.AttackDelay;
+        this.preAttackDelay = entity.PreAttackDelay;
         this.entity = entity;
         this.projectilePrefab = projectile;
         this.projectileSpawnPos = projectileSpawnPos;
+
+        this.entity.OnPreAttackFinish.AddListener(FinishedPreAttackAnimEvent);
+        this.entity.OnAttackFinish.AddListener(FinishedAttackAnimEvent);
     }
 
     public override NodeState Evaluate()
@@ -36,20 +39,37 @@ public class TaskRangeAttack : Node
 
         animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
 
-        currentAttackDelay -= Time.deltaTime;
-        if (currentAttackDelay <= 0f)
+        entity.CurrentAttackDelay -= Time.deltaTime;
+        if (entity.CurrentAttackDelay <= 0f && !animator.GetBool("PreAttack"))
         {
-            currentAttackDelay = attackDelay;
-            animator.SetTrigger("Attacking");
+            animator.SetFloat("PreAttackDelay", 1f / preAttackDelay);
+            animator.SetBool("PreAttack", true);
 
-            Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
-            Vector3 TargetOffset = entity.CurrentTarget.GetTargetOffset();
-            Vector3 shootDir = (TargetOffset - projectileSpawnPos.position).normalized;
-            projectile.transform.LookAt(TargetOffset);
-            projectile.Initialize(entity, shootDir);
+            
         }
         state = NodeState.RUNNING;
         return state;
+    }
+
+    public virtual void FinishedPreAttackAnimEvent()
+    {
+        animator.SetBool("Attacking", true);
+        agent.isStopped = true;
+
+        Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
+        Vector3 TargetOffset = entity.CurrentTarget.GetTargetOffset();
+        Vector3 shootDir = (TargetOffset - projectileSpawnPos.position).normalized;
+        projectile.transform.LookAt(TargetOffset);
+        projectile.Initialize(entity, shootDir);
+
+    }
+
+    public virtual void FinishedAttackAnimEvent()
+    {
+        entity.CurrentAttackDelay = attackDelay;
+        animator.SetBool("Attacking", false);
+        animator.SetBool("PreAttack", false);
+        agent.isStopped = false;
     }
 }
 
