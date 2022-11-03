@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Light Spell Damage
   Description: Increase the damage of the powerful single target light spell.
   Icon: {fileID: 21300000, guid: eefde705ca28f2f4f8f1a81ee23c3045, type: 3}
-  UpgradeCost: 100
+  UpgradeCost: 200
   type: 0
   Value: 10

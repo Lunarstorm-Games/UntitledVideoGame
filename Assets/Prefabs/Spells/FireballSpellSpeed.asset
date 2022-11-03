@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: Increase the speed of the fireball projectile, which can hit multiple
     enemies in an area.
   Icon: {fileID: 21300006, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
-  UpgradeCost: 150
+  UpgradeCost: 300
   type: 1
   Value: 2

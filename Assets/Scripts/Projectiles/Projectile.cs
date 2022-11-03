@@ -74,11 +74,6 @@ public class Projectile : MonoBehaviour
 
     protected virtual void ProjectileImpact()
     {
-        if (hitSound != null)
-        {
-            //SoundManager.Instance.PlaySoundAtLocation();
-        }
-
         if (impactEffect != null)
         {
             VisualEffect impactEffectObject = Instantiate(impactEffect, this.transform.position, Quaternion.identity);
