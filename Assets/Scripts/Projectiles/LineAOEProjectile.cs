@@ -6,11 +6,6 @@ using UnityEngine.VFX;
 
 public class LineAOEProjectile : Projectile
 {
-    public override void Initialize(Entity shooter, Vector3 direction)
-    {
-        base.Initialize(shooter, direction);
-    }
-
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);

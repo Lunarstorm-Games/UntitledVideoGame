@@ -133,6 +133,7 @@ MonoBehaviour:
   range: 0.5
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
+  mana: 25
   DamageLevel: 1
   SpeedLevel: 1
 --- !u!1 &6277903147677345483

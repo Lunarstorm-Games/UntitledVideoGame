@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public float range;
     [SerializeField] protected VisualEffect impactEffect;
     [SerializeField] protected AudioClip hitSound;
+    [SerializeField] public float mana;
     
     public int DamageLevel = 1;
     public int SpeedLevel = 1;

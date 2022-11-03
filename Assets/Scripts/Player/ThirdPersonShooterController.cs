@@ -66,13 +66,20 @@ public class ThirdPersonShooterController : MonoBehaviour
             _thirdPersonController.SetRotateOnMove(true);
         }
 
+
+
         if (_starterAssetsInputs.attack && !isPromptOpen)
         {
-            _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
-            Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-            projectile.Initialize(GetComponent<Entity>(), aimDir);
-            _starterAssetsInputs.attack = false;
+            if (Player.Instance.currentMana >= projectilePrefab.mana)
+            {
+                _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
+                Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+                Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                projectile.Initialize(GetComponent<Entity>(), aimDir);
+
+                Player.Instance.UseMana(projectile.mana);
+                _starterAssetsInputs.attack = false;
+            }
         }
         else
         {

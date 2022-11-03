@@ -6,11 +6,6 @@ public class AcceleratingProjectile : Projectile
 {
     [SerializeField] private Vector3 velocity;
 
-    public override void Initialize(Entity origin, Vector3 direction)
-    {
-        base.Initialize(origin, direction);
-    }
-
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);

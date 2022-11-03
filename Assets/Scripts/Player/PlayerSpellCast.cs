@@ -34,6 +34,5 @@ public class PlayerSpellCast : MonoBehaviour
         }
 
         GameObject spellProjectile = Instantiate(basicSpellProjectile, transform.position, spellRotation);
-        
     }
 }
