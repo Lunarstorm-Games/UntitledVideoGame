@@ -37,15 +37,14 @@ public class CameraSwitch : MonoBehaviour
 
     void PlayerControlsLock()
     {
-        if (lockPlayerControls)
+        var cameraRig = GameObject.Find("Camera Rig");
+        if (cameraRig && cameraRig.activeSelf)
         {
             controls.actions.Disable();
-            lockPlayerControls = false;
         }
         else
         {
             controls.actions.Enable();
-            lockPlayerControls = true;
         }
     }
 
