@@ -28,30 +28,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        var cameraRig = GameObject.Find("Camera Rig");
-        if (cameraRig)
-        {
-            if (cameraRig.activeSelf)
-            { 
-                pauseMenuUIl.SetActive(false);
-                Time.timeScale = 1f;
-                controls.actions.Disable();
-                IsGamePaused = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            else
-            {
-                controls.actions.Enable();
-            }   
-        }
-        else
-        {
             pauseMenuUIl.SetActive(false);
             Time.timeScale = 1f;
             controls.actions.Enable();
             IsGamePaused = false;
-            Cursor.lockState = CursorLockMode.Locked;   
-        }
+            Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Pause()
