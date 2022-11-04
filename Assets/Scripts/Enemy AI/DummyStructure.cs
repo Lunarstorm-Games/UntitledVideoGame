@@ -7,14 +7,13 @@ public class DummyStructure : Entity, IDamageable
 {
     [SerializeField] private float maxHealth = 100;
 
-    protected float currentHealth;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage, Entity origin)
+    public override void TakeDamage(float damage, Entity origin)
     {
         currentHealth -= damage;
 
