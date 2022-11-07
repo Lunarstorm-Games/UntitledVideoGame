@@ -9,14 +9,12 @@ using UnityEngine;
 
 public class TrapBuildingManager : MonoBehaviour
 {
-    public GameObject[] objects;
-    public int[] essenceCost;
+    public TrapModel[] traps;
     private GameObject pendingObject;
     private Vector3 pos;
     private RaycastHit hit;
     public bool canPlace;
     private EssenceBank essenceBank;
-    [SerializeField] private Transform warning;
     [SerializeField] private Material[] materials;
     [SerializeField] private float rotateAmount;
     [SerializeField] private LayerMask layerMask;
@@ -68,12 +66,10 @@ public class TrapBuildingManager : MonoBehaviour
 
     public void PlaceObject()
     {
-        if (!selected)
-        {
-            int essenceCost = this.essenceCost[0];
+        int essenceCost = (int) traps[0].essenceCost;
             if (pendingObject.name == "Vortex(Clone)")
             {
-                essenceCost = this.essenceCost[1];
+                essenceCost = (int) traps[1].essenceCost;
             }
             if (essenceBank.SpendEssence(essenceCost))
             {
@@ -82,10 +78,6 @@ public class TrapBuildingManager : MonoBehaviour
                 pendingObject.name = pendingObject.name + " Placed";
                 pendingObject = null;
             }
-
-            return;
-        }
-        Destroy(pendingObject);
     }
 
     public void RotateObject()
@@ -109,6 +101,14 @@ public class TrapBuildingManager : MonoBehaviour
         {
             Destroy(pendingObject);
         }
-        pendingObject = Instantiate(objects[index], pos, Quaternion.identity);
+        pendingObject = Instantiate(traps[index].trapGameObject, pos, Quaternion.identity);
+    }
+
+    public void DestroyGameObject()
+    {
+        if (pendingObject == null)
+        {
+            Destroy(pendingObject);   
+        }
     }
 }
