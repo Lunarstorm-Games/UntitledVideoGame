@@ -15,16 +15,14 @@ public class TrapBuildingManager : MonoBehaviour
     private RaycastHit hit;
     public bool canPlace;
     private EssenceBank essenceBank;
-    [SerializeField] private Material[] materials;
     [SerializeField] private float rotateAmount;
     [SerializeField] private LayerMask layerMask;
-    public bool selected;
 
     private void Awake()
     {
         essenceBank = EssenceBank.Instance;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (pendingObject != null)
@@ -33,7 +31,6 @@ public class TrapBuildingManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && canPlace)
             {
-                Debug.Log("Object Placed");
                 PlaceObject();
             }
 
@@ -42,29 +39,11 @@ public class TrapBuildingManager : MonoBehaviour
                 RotateObject();
             }
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                Destroy(pendingObject);
-            }
-
-            UpdateMaterials();
+            UnselectTrap(pendingObject);
         }
     }
     
-    void UpdateMaterials()
-    {
-        if (canPlace)
-        {
-            pendingObject.GetComponent<MeshRenderer>().material = materials[0];
-        }
-
-        if (!canPlace)
-        {
-            pendingObject.GetComponent<MeshRenderer>().material = materials[1];
-        }
-    }
-
-    public void PlaceObject()
+    private void PlaceObject()
     {
         int essenceCost = (int) traps[0].essenceCost;
             if (pendingObject.name == "Vortex(Clone)")
@@ -73,12 +52,9 @@ public class TrapBuildingManager : MonoBehaviour
             }
             if (essenceBank.SpendEssence(essenceCost))
             {
-                pendingObject.GetComponent<MeshRenderer>().material = materials[2];
-                //pendingObject.transform.GetChild(0).gameObject.SetActive(false);
-                pendingObject.name = pendingObject.name + " Placed";
                 pendingObject = null;
             }
-    }
+    }s
 
     public void RotateObject()
     {
@@ -87,14 +63,14 @@ public class TrapBuildingManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit, 1000, layerMask))
         {
             pos = hit.point;
         }
     }
-
+    
     public void SelectObject(int index)
     {
         if (pendingObject != null)
@@ -104,11 +80,12 @@ public class TrapBuildingManager : MonoBehaviour
         pendingObject = Instantiate(traps[index].trapGameObject, pos, Quaternion.identity);
     }
 
-    public void DestroyGameObject()
+    private void UnselectTrap(GameObject pendingObject)
     {
-        if (pendingObject == null)
+        if (Input.GetMouseButtonDown(1))
         {
-            Destroy(pendingObject);   
+            Destroy(pendingObject);
         }
     }
+    
 }
