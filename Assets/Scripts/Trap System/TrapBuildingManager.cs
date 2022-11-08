@@ -54,7 +54,7 @@ public class TrapBuildingManager : MonoBehaviour
             {
                 pendingObject = null;
             }
-    }s
+    }
 
     public void RotateObject()
     {
