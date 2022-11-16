@@ -13,6 +13,7 @@ public class EntityAI : Entity, ISlowable
     [SerializeField] public float AttackRange = 2.4f;
     [SerializeField] public float AttackDelay = 3f;
     [SerializeField] public float PreAttackDelay = 1f;
+    [SerializeField] public float Damage = 10f;
    
     [Header("Attack System", order = 3)]
     [SerializeField] public UnityEvent OnPreAttackFinish;

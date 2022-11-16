@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class MeleeWeapon : MonoBehaviour
 {
-    [SerializeField] protected float damage;
+    
     [SerializeField] protected ParticleSystem hitEffect;
     [SerializeField] protected AudioClip hitSound;
 
+    protected float damage;
     protected Entity holder;
 
     public virtual void OnTriggerEnter(Collider collider)
@@ -28,8 +29,9 @@ public class MeleeWeapon : MonoBehaviour
         }
     }
 
-    public virtual void Initialize(Entity holder)
+    public virtual void Initialize(EntityAI holder)
     {
         this.holder = holder;
+        this.damage = holder.Damage;
     }
 }
