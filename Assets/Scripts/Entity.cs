@@ -11,15 +11,18 @@ public enum EntityType
     NPC,
     Enemy,
     Structure,
+    MainObjective,
 }
 
 [System.Flags]
 public enum TargetInterests
 {
+    None = 0,
     Player = 1,
     NPC = 2,
     Enemy = 4,
     Structure = 8,
+    MainObjective = 16,
 }
 
 public class Entity : MonoBehaviour, IDamageable

@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
-  TargetsType: 9
+  TargetsType: 25
   TargetOffset: {x: 0, y: 0, z: 0}
   Killable: 1
   Health: 100
