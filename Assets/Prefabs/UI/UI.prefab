@@ -2609,8 +2609,8 @@ MonoBehaviour:
   m_fontSizeBase: 36.000004
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
-  m_fontSizeMax: 28.645838
+  m_fontSizeMin: 10.203642
+  m_fontSizeMax: 27.031248
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2941,8 +2941,8 @@ MonoBehaviour:
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
-  m_fontSizeMax: 28.645838
+  m_fontSizeMin: 10.203642
+  m_fontSizeMax: 27.031248
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -3068,6 +3068,7 @@ GameObject:
   - component: {fileID: 1135061758940401361}
   - component: {fileID: 1135061758940401360}
   - component: {fileID: 1135061758940401359}
+  - component: {fileID: 8867747820159745072}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -3198,6 +3199,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8867747820159745072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135061758940401358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2205f85660cf75428128cbee2a1a8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135061758966454470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,8 +3308,8 @@ MonoBehaviour:
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
-  m_fontSizeMax: 28.645838
+  m_fontSizeMin: 10.203642
+  m_fontSizeMax: 27.031248
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -3676,7 +3689,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
+  m_fontSizeMin: 10.203642
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -9116,7 +9129,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
+  m_fontSizeMin: 10.203642
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -10450,7 +10463,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10.813109
+  m_fontSizeMin: 10.203642
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
