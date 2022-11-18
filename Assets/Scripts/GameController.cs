@@ -50,8 +50,8 @@ namespace Assets.Scripts
 
         private void UpdateTimer()
         {
-            int hour = UniStormSystem.Instance.Hour;
-            int minutes = UniStormSystem.Instance.Minute;
+            int hour = UniStormSystem.Instance?.Hour??0;
+            int minutes = UniStormSystem.Instance?.Minute??0;
 
             TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
             if (hour == 19 && !AttackHasStarted)
