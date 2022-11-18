@@ -10,7 +10,7 @@ public class BuildModeController : MonoBehaviour
     public List<BuildableStructure> BuildableStructures;
     public float interactDistance = 20f;
     private GameObject etoBuildPopUp;
-    private IInteractable interactable;
+    private BuildingSpotHighlight interactable;
     private bool isPromptOpen = false;
     // Start is called before the first frame update
     void Start()
@@ -22,10 +22,11 @@ public class BuildModeController : MonoBehaviour
     void Update()
     {
         GetInteractable();
-        
-        if (Input.GetAxis("Interact") > 0)
+
+        if (Input.GetAxis("Interact") > 0 && interactable != null)
         {
             interactable.Interact(gameObject);
+            UIController.Instance.BuildingInterface.BuildableStructures = interactable.AllowedBuildings.Select(x => x.gameObject).ToList() ;
         }
     }
 
@@ -36,23 +37,24 @@ public class BuildModeController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, interactDistance, rayCollider))
         {
-            if (!isPromptOpen)
-            {
-                var interactableObject = hit.transform.gameObject.GetComponents<MonoBehaviour>().OfType<IInteractable>().FirstOrDefault(); ;
 
-                if (interactable != interactableObject) interactable = interactableObject;
-                return;
-            }
-            interactable = null;
+            var interactableObject = hit.transform.gameObject.GetComponents<BuildingSpotHighlight>().FirstOrDefault(); ;
+
+            if (interactable != interactableObject) interactable = interactableObject;
+            return;
+
+
         }
-       
+        interactable = null;
+
     }
-    public void BuildStructure(GameObject prefab)
+    public void BuildStructure(BuildableStructure prefab)
     {
         var buildSpot = interactable as BuildingSpotHighlight;
-        if (buildSpot != null)
+        // the menu should be based on the buildable structures
+        if (buildSpot != null && buildSpot.AllowedBuildings.Any(x=>x.gameObject.name ==prefab.name))
         {
-            buildSpot.BuildStructure(prefab);
+            buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
         }
     }
 }

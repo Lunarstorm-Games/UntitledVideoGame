@@ -1262,14 +1262,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 776374965716378819, guid: 08cf26de5bbbea24daa1ab504d977744,
-          type: 3}
+      - m_Target: {fileID: 6428277033651223908}
         m_TargetAssemblyTypeName: BuildingUIController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: BuildObjecct
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 776374965716378819, guid: 08cf26de5bbbea24daa1ab504d977744,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

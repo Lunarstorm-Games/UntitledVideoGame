@@ -7,7 +7,9 @@ using UnityEngine.InputSystem;
 public class BuildingUIController : MonoBehaviour
 {
     GameObject player;
-    public BuildModeController buildMode; 
+    public BuildModeController buildMode;
+    //show these things in the menu
+    public List<GameObject> BuildableStructures = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,6 @@ public class BuildingUIController : MonoBehaviour
     }
     public void BuildObjecct(GameObject gameObject)
     {
-        buildMode.BuildStructure(gameObject);
+        buildMode.BuildStructure(gameObject.GetComponent<BuildableStructure>());
     }
 }

@@ -8,6 +8,7 @@ public class BuildingSpotHighlight : MonoBehaviour, IInteractable
 {
     public List<BuildableStructure> AllowedBuildings = new List<BuildableStructure>();
     private BuildingUIController BuildingUi;
+    private GameObject CurrentBuilding = null;
     public void Interact(GameObject source)
     {
         BuildingUi.OpenWindow();
@@ -22,12 +23,15 @@ public class BuildingSpotHighlight : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    internal void BuildStructure(GameObject prefab)
+    internal void BuildStructure(BuildableStructure prefab)
     {
-        
-        Instantiate(prefab,transform,)
+        if (CurrentBuilding == null)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            CurrentBuilding = Instantiate(prefab.gameObject,transform.position,transform.rotation, transform);
+        }
     }
 }

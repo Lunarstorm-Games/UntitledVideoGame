@@ -76,7 +76,7 @@ public class Player : Entity, IDamageable
     public void UseMana(float mana)
     {
         currentMana -= mana;
-        manaBar.SetMana(currentMana);
+        manaBar?.SetMana(currentMana);
     }
 
     public void RegenerateMana()
