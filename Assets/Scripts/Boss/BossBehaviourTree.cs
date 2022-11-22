@@ -17,7 +17,7 @@ namespace BehaviorTree
         {
             Node root = new Selector(new List<Node>
             {
-                new CheckDeath(boss),
+                new BossNodeTest(boss),
                 
             });
 
