@@ -17,6 +17,7 @@ namespace Assets.Scripts
         public static GameController instance;
         [ReadOnly] public string LevelName;
         [ReadOnly] public string SaveDirectory;
+        public BuildModeController BuildModeController;
         public WeatherType WeatherType;
         public GameObject TimerUi;
         public GameObject WaveController;

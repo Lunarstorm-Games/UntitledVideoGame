@@ -2620,6 +2620,7 @@ Transform:
   - {fileID: 6522486129846693339}
   - {fileID: 6522486128552328805}
   - {fileID: 6522486129203822587}
+  - {fileID: 7697443112036730976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2888,6 +2889,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   Mana: 100
+  manaRechargeRate: 3.5
+  currentMana: 0
 --- !u!114 &1680537851718145224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,3 +2956,54 @@ MonoBehaviour:
   crossHair: {fileID: 0}
   trapUI: {fileID: 0}
   controls: {fileID: 7478390241683647038}
+--- !u!1 &8330500662999820123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7697443112036730976}
+  - component: {fileID: 8042532259827468973}
+  m_Layer: 8
+  m_Name: BuildMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7697443112036730976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330500662999820123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7819169115196453000}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8042532259827468973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330500662999820123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569ca51a12b561c4cbc6cd8c580d2c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCollider:
+    serializedVersion: 2
+    m_Bits: 64
+  BuildableStructures:
+  - {fileID: 1698266910889977546, guid: 08cf26de5bbbea24daa1ab504d977744, type: 3}
+  - {fileID: -1764289696849655095, guid: 297b13d4a56a41045bfbc0183bc3a061, type: 3}
+  interactDistance: 20
