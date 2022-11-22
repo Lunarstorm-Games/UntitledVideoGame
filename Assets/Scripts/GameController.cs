@@ -50,7 +50,6 @@ namespace Assets.Scripts
 
         private void UpdateTimer()
         {
-            Debug.Log("Update Timer");
             int hour = UniStormSystem.Instance.Hour;
             int minutes = UniStormSystem.Instance.Minute;
 
