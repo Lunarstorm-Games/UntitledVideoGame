@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
     public BuildingUIController BuildingInterface { get; private set; }
     void Start()
     {
-        if (instance == null) instance = this;
+        if (instance == null &&!instance) instance = this;
         else if (instance != this)
         {
             Debug.LogWarning("Multiple instances of UIController present.");
@@ -23,5 +23,9 @@ public class UIController : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnDestroy()
+    {
+        instance = null;
     }
 }

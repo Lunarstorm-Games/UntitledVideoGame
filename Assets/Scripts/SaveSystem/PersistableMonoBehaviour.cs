@@ -6,12 +6,25 @@ using UnityEngine;
 
 namespace Assets.Scripts.SaveSystem
 {
-    public class PersistableMonoBehaviour : MonoBehaviour
+    public abstract class PersistableMonoBehaviour : MonoBehaviour
     {
         public string Id = null;
         [SaveField]
         public string prefabPath;
-
+        [SaveField]
+        public string objectName;
+        [SaveField]
+        public Vector3 localScale
+        {
+            get
+            {
+                return transform.localScale;
+            }
+            set
+            {
+                transform.localScale = value;
+            }
+        }
         [SaveField]
         public Vector3 position
         {
@@ -40,6 +53,7 @@ namespace Assets.Scripts.SaveSystem
 
         protected void Start()
         {
+            objectName = gameObject.name;
             if (string.IsNullOrWhiteSpace(Id))
             {
                 Id = Guid.NewGuid().ToString();
@@ -72,6 +86,8 @@ namespace Assets.Scripts.SaveSystem
         {
             Id = Guid.NewGuid().ToString();
         }
+        public abstract void OnLoad();
+
 
 
 

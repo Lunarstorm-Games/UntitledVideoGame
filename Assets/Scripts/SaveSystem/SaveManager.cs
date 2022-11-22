@@ -135,6 +135,11 @@ namespace Assets.Scripts.SaveSystem
 
 
             }
+            foreach( DictionaryEntry keyValuePair in _states)
+            {
+                var persistable = keyValuePair.Value as PersistableMonoBehaviour;
+               persistable.OnLoad();
+            }
         }
 
         /// <summary>

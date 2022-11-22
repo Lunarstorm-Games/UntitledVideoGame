@@ -3,6 +3,7 @@ using Assets.Scripts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UniStorm;
 using UnityEngine;
@@ -90,6 +91,12 @@ namespace Assets.Scripts
                 SaveManager.Instance.SaveStateToFile(LevelName);
                 SceneManager.LoadScene(LevelName);
             }
+        }
+        [ContextMenu("GenerateIdsForPersistable")]
+        public void GenerateIdsForPersistable()
+        {
+            ClearSave();
+            GameObject.FindObjectsOfType<PersistableMonoBehaviour>().ToList().ForEach(x => x.GenerateId());
         }
 
     }
