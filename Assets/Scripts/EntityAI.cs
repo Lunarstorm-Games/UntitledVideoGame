@@ -33,7 +33,7 @@ public class EntityAI : Entity, ISlowable
         set { currentTarget = value; }
     }
     public BehaviourTree Tree { get; protected set; }
-    protected Entity currentTarget;
+    [SerializeField] protected Entity currentTarget;
 
 
     public override void Awake()

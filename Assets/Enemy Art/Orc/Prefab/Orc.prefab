@@ -884,7 +884,6 @@ GameObject:
   - component: {fileID: 9500000}
   - component: {fileID: 1209047138457339974}
   - component: {fileID: 4497024487681520042}
-  - component: {fileID: 5105182580203589955}
   - component: {fileID: 5637566554622403604}
   m_Layer: 0
   m_Name: Orc
@@ -965,6 +964,7 @@ MonoBehaviour:
   OnAttackFinish:
     m_PersistentCalls:
       m_Calls: []
+  currentTarget: {fileID: 0}
   EssenceSource:
     rid: 4388239239351894016
   Weapon: {fileID: 3775433401548215682}
@@ -988,22 +988,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 115.45, y: 189.96, z: 166.58}
   m_Center: {x: 0, y: 41, z: 20.5}
---- !u!54 &5105182580203589955
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100050}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &5637566554622403604
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1013,16 +997,16 @@ NavMeshAgent:
   m_GameObject: {fileID: 100050}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 150
+  m_Radius: 75
   m_Speed: 3
   m_Acceleration: 6
   avoidancePriority: 50
   m_AngularSpeed: 200
   m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 200
   m_BaseOffset: 59.56
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1

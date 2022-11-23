@@ -23,7 +23,7 @@ public class TaskGoToTarget : Node
 
         agent.SetDestination(entity.CurrentTarget.transform.position);
 
-        animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
+        animator.SetFloat("Speed", 1f);
 
         state = NodeState.RUNNING;
         return state;
