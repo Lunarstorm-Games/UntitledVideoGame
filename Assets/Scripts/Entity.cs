@@ -51,12 +51,20 @@ public class Entity : MonoBehaviour, IDamageable
         Animator = GetComponent<Animator>();
         currentHealth = Health;
     }
-
+    /// <summary>
+    /// gets the transform.position with offset of the object.
+    /// </summary>
+    /// <returns></returns>
     public Vector3 GetTargetOffset()
     {
         Offset = transform.position;
         Offset += TargetOffset;
         return Offset;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(GetTargetOffset(), 0.1f);
     }
 
     public virtual void TakeDamage(float damage, Entity origin)

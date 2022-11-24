@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7571357378697803474}
   m_Layer: 6
   m_Name: WallSpot
-  m_TagString: Untagged
+  m_TagString: BuildingSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,3 +115,4 @@ MonoBehaviour:
   objectName: 
   AllowedBuildings:
   - {fileID: -1764289696849655095, guid: 297b13d4a56a41045bfbc0183bc3a061, type: 3}
+  hasBuilding: 0

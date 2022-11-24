@@ -84,6 +84,9 @@ namespace Assets.Scripts.SaveSystem
         [ContextMenu("Generate Id")]
         public void GenerateId()
         {
+#if UNITY_EDITOR
+            EditorUtility.SetDirty(this);
+#endif
             Id = Guid.NewGuid().ToString();
         }
         public abstract void OnLoad();

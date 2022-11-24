@@ -58,6 +58,7 @@ namespace Assets.Scripts
             TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
             if (hour == 19 && !AttackHasStarted)
             {
+                BuildModeController.Disable();
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
                 //TimerUi.SetActive(false);
                 AttackHasStarted = true;
