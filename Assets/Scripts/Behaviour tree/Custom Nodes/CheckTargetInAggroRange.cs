@@ -22,7 +22,7 @@ public class CheckTargetInAggroRange : Node
         {
             if (collider.TryGetComponent<Entity>(out Entity target))
             {
-                if (entity.ValidTarget(target.Type))
+                if (entity.ValidTarget(target.EntityType))
                 {
                     entity.CurrentTarget = target;
                     state = NodeState.SUCCESS;

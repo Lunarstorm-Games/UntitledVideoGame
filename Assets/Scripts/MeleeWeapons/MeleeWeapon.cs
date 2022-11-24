@@ -19,7 +19,7 @@ public class MeleeWeapon : MonoBehaviour
             if (entity == holder)
                 return;
 
-            if (!holder.ValidTarget(entity.Type))
+            if (!holder.ValidTarget(entity.EntityType))
                 return;
 
             if (collider.TryGetComponent<IDamageable>(out IDamageable target))

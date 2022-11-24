@@ -941,11 +941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d839f522e96d941a1ddcd507627699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
-  TargetsType: 25
-  TargetOffset: {x: 0, y: 0, z: 0}
+  EntityType: 4
+  TargetInterests: 25
+  TargetSpots: []
   Killable: 1
-  Health: 100
+  MaxHealth: 400
+  currentHealth: 0
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -996,7 +997,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100050}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: 1479372276
   m_Radius: 75
   m_Speed: 3
   m_Acceleration: 6

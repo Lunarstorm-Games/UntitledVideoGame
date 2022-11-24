@@ -33,7 +33,7 @@ public class TaskRangeAttack : Node
 
     public override NodeState Evaluate()
     {
-        Vector3 dir = entity.CurrentTarget.transform.position - entity.transform.position;
+        Vector3 dir = entity.TargetSpot.position - entity.transform.position;
         dir.y = 0;
         entity.transform.rotation = Quaternion.LookRotation(dir);
 
@@ -57,9 +57,9 @@ public class TaskRangeAttack : Node
         agent.isStopped = true;
 
         Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
-        Vector3 TargetOffset = entity.CurrentTarget.GetTargetOffset();
-        Vector3 shootDir = (TargetOffset - projectileSpawnPos.position).normalized;
-        projectile.transform.LookAt(TargetOffset);
+        Vector3 TargetPos = entity.TargetSpot.position;
+        Vector3 shootDir = (TargetPos - projectileSpawnPos.position).normalized;
+        projectile.transform.LookAt(TargetPos);
         projectile.Initialize(entity, shootDir);
 
     }

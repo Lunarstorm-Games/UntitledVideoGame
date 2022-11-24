@@ -20,11 +20,12 @@ public class BossNodeTest : Node
 
     public override NodeState Evaluate()
     {
-        if (tree != null && tree.gameObject.activeInHierarchy && boss.ValidTarget(tree.Type))
+        if (tree != null && tree.gameObject.activeInHierarchy && boss.ValidTarget(tree.EntityType))
         {
             animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
             boss.CurrentTarget = tree;
             agent.isStopped = false;
+            
             agent.SetDestination(boss.CurrentTarget.transform.position);
 
             state = NodeState.RUNNING;

@@ -33,8 +33,8 @@ public class Player : Entity, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = Health;
-        healthBar.SetMaxHealth(Health);
+        currentHealth = MaxHealth;
+        healthBar.SetMaxHealth(MaxHealth);
         currentMana = Mana;
         manaBar.SetMaxMana(Mana);
     }

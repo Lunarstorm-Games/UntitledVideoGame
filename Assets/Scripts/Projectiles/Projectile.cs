@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
             if (entity == shooter)
                 return;
 
-            if (!shooter.ValidTarget(entity.Type))
+            if (!shooter.ValidTarget(entity.EntityType))
                 return;
 
             if (collider.TryGetComponent<IDamageable>(out IDamageable target))

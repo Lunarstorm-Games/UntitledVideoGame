@@ -10,8 +10,8 @@ public class TreeOfLife : Entity
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = Health;
-        healthBar.SetMaxHealth(Health);
+        currentHealth = MaxHealth;
+        healthBar.SetMaxHealth(MaxHealth);
     }
 
     public override void TakeDamage(float damage, Entity origin)
