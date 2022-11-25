@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Utility;
 using UnityEngine;
 
 public class BuildModeController : MonoBehaviour
@@ -11,7 +12,7 @@ public class BuildModeController : MonoBehaviour
     public List<BuildableStructure> BuildableStructures;
     public float interactDistance = 20f;
     private GameObject etoBuildPopUp;
-    private BuildingSpotHighlight interactable;
+    [ReadOnly] public BuildingSpotHighlight interactable;
     private bool isPromptOpen = false;
     // Start is called before the first frame update
     void Start()
@@ -22,12 +23,16 @@ public class BuildModeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInteractable();
+        if (!UIController.Instance.BuildingInterface.gameObject.activeInHierarchy)
+        {
+
+            GetInteractable();
+        }
 
         if (Input.GetAxis("Interact") > 0 && interactable != null)
         {
             interactable.Interact(gameObject);
-            UIController.Instance.BuildingInterface.BuildableStructures = interactable.AllowedBuildings.Select(x => x.gameObject).ToList() ;
+            UIController.Instance.BuildingInterface.BuildableStructures = interactable.AllowedBuildings.Select(x => x.gameObject).ToList();
         }
     }
 
@@ -49,11 +54,20 @@ public class BuildModeController : MonoBehaviour
         interactable = null;
 
     }
+
+    void OnDrawGizmos()
+    {
+        if (interactable is not null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawSphere(interactable.transform.position, 1);
+        }
+    }
     public void BuildStructure(BuildableStructure prefab)
     {
         var buildSpot = interactable as BuildingSpotHighlight;
         // the menu should be based on the buildable structures
-        if (buildSpot != null && buildSpot.AllowedBuildings.Any(x=>x.gameObject.name ==prefab.name))
+        if (buildSpot != null && buildSpot.AllowedBuildings.Any(x => x.gameObject.name == prefab.name))
         {
             buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
         }
@@ -61,7 +75,8 @@ public class BuildModeController : MonoBehaviour
 
     internal void Disable()
     {
-        foreach(var buildingSpot in GameObject.FindGameObjectsWithTag("BuildingSpot")){
+        foreach (var buildingSpot in GameObject.FindGameObjectsWithTag("BuildingSpot"))
+        {
             buildingSpot.SetActive(false);
         }
         gameObject.SetActive(false);
