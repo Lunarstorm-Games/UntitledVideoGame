@@ -5,17 +5,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public enum EntityType
-{
-    Player,
-    NPC,
-    Enemy,
-    Structure,
-    MainObjective,
-}
 
 [System.Flags]
-public enum TargetInterests
+public enum EntityType
 {
     None = 0,
     Player = 1,
@@ -28,14 +20,17 @@ public enum TargetInterests
 public class Entity : MonoBehaviour, IDamageable
 {
     [Header("Target System", order = 0)]
-    [SerializeField] public EntityType Type;
-    [SerializeField] public TargetInterests TargetsType;
-    [Tooltip("Position for enemies to shoot at")]
-    [SerializeField] private Vector3 TargetOffset = Vector3.zero;
+    [SerializeField] public EntityType EntityType;
+    [Tooltip("Selecting the first target will make it the highest priority")]
+    [SerializeField] public EntityType TargetInterests;
+    [Tooltip("Position on this entity that can be targeted")]
+    [SerializeField] public List<Transform> TargetSpots;
+    
 
     [Header("Health System", order = 1)]
     [SerializeField] public bool Killable = true;
-    [SerializeField] public float Health = 30f;
+    [SerializeField] public float MaxHealth = 100f;
+    [SerializeField] protected float currentHealth = 0f;
     [SerializeField] public UnityEvent OnDamageTaken;
     [SerializeField] public UnityEvent OnDeath;
 
@@ -43,23 +38,19 @@ public class Entity : MonoBehaviour, IDamageable
     public bool Death { get; protected set; }
 
 
-    private Vector3 Offset;
-    protected float currentHealth = 0f;
-
-
-
-
     public virtual void Awake()
     {
         Animator = GetComponent<Animator>();
-        currentHealth = Health;
+        currentHealth = MaxHealth;
     }
 
-    public Vector3 GetTargetOffset()
+    public Transform GetEntityTargetSpot()
     {
-        Offset = transform.position;
-        Offset += TargetOffset;
-        return Offset;
+        if (TargetSpots.Count == 0 || TargetSpots == null) 
+            return this.transform;
+
+        int index = UnityEngine.Random.Range(0, TargetSpots.Count);
+        return TargetSpots[index];
     }
 
     public virtual void TakeDamage(float damage, Entity origin)
@@ -83,7 +74,7 @@ public class Entity : MonoBehaviour, IDamageable
 
     public bool ValidTarget(EntityType target)
     {
-        return TargetsType.ToString().Contains(target.ToString());
+        return TargetInterests.ToString().Contains(target.ToString());
     }
 }
 

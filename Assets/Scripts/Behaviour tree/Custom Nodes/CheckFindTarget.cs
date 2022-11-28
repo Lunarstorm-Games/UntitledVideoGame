@@ -25,7 +25,7 @@ namespace BehaviorTreeVincent.EnemyTask
 
                     foreach (Entity target in targetInterests)
                     {
-                        if (!enemy.TargetsType.ToString().Contains(target.Type.ToString()))
+                        if (!enemy.ValidTarget(target.EntityType))
                             continue;
                         
                         Vector3 diff = target.transform.position - enemy.transform.position;

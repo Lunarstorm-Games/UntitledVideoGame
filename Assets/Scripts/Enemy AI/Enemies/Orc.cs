@@ -15,5 +15,6 @@ public class Orc : MeleeEnemy
     public virtual void Update()
     {
         Tree.Evaluate();
+        
     }
 }

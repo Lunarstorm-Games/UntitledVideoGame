@@ -21,12 +21,13 @@ public class GoToTreeTarget : Node
 
     public override NodeState Evaluate()
     {
-        if (tree != null && tree.gameObject.activeInHierarchy && enemy.ValidTarget(tree.Type))
+        if (tree != null && tree.gameObject.activeInHierarchy && enemy.ValidTarget(tree.EntityType))
         {
             animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
             enemy.CurrentTarget = tree;
             agent.isStopped = false;
-            agent.SetDestination(enemy.CurrentTarget.transform.position);
+            enemy.TargetSpot = enemy.CurrentTarget.GetEntityTargetSpot();
+            agent.SetDestination(enemy.TargetSpot.position);
 
             state = NodeState.RUNNING;
             return state;

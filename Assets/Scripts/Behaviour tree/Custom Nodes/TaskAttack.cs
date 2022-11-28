@@ -28,7 +28,7 @@ public class TaskAttack : Node
 
     public override NodeState Evaluate()
     {
-        Vector3 dir = entity.CurrentTarget.transform.position - entity.transform.position;
+        Vector3 dir = entity.TargetSpot.position - entity.transform.position;
         dir.y = 0f;
         entity.transform.rotation = Quaternion.LookRotation(dir);
 

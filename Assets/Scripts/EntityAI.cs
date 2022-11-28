@@ -31,16 +31,35 @@ public class EntityAI : Entity, ISlowable
                 return currentTarget;
             return null;
         }
-        set { currentTarget = value; }
+        set 
+        {
+            if (currentTarget != value)
+            {
+                targetSpot = null;
+                currentTarget = value;
+            }
+        }
+    }
+    public Transform TargetSpot { 
+        get 
+        { 
+            return targetSpot; 
+        } 
+        set 
+        { 
+            if (targetSpot == null) targetSpot = value; 
+        } 
     }
     public BehaviourTree Tree { get; protected set; }
+    
     [SerializeField] protected Entity currentTarget;
+    [SerializeField] protected Transform targetSpot;
+
 
 
     public override void Awake()
     {
         base.Awake();
-
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = Speed;
         Agent.stoppingDistance = AttackRange - 0.2f;

@@ -21,8 +21,8 @@ public class TaskGoToTarget : Node
         if (!animator.GetBool("Attacking"))
             agent.isStopped = false;
 
-        agent.SetDestination(entity.CurrentTarget.transform.position);
-
+        entity.TargetSpot = entity.CurrentTarget.GetEntityTargetSpot();
+        agent.SetDestination(entity.TargetSpot.position);
         animator.SetFloat("Speed", 1f);
 
         state = NodeState.RUNNING;
