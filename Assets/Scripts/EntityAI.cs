@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Interfaces;
+using BehaviorTreeVincent;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;

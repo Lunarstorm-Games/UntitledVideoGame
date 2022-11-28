@@ -11,6 +11,7 @@ TagManager:
   - Fire
   - Object
   - TrapWorkshop
+  - MainObjective
   layers:
   - Default
   - TransparentFX

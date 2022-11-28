@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-namespace BehaviorTree.EnemyTask
+namespace BehaviorTreeVincent.EnemyTask
 {
     public class CheckFindTarget : Node
     {

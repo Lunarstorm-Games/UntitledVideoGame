@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace BehaviorTreeVincent
+{
     public abstract class BehaviourTree
     {
         private Node _root = null;
@@ -20,6 +22,7 @@ using UnityEngine;
         protected abstract Node SetupTree();
 
 
-    }
+    } 
+}
 
 

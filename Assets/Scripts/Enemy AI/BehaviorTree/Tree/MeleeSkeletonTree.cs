@@ -1,10 +1,9 @@
-using BehaviorTree.EnemyTask;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace BehaviorTree
+namespace BehaviorTreeVincent
 {
     public class MeleeSkeletonTree : BehaviourTree
     {

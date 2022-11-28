@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace BehaviorTree
+namespace BehaviorTreeVincent
 {
     public class OrcTree : BehaviourTree
     {
