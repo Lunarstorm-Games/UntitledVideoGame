@@ -16,8 +16,6 @@ public class TreeOfLife : Entity
 
     public override void TakeDamage(float damage, Entity origin)
     {
-        if (!Killable)
-            return;
 
         currentHealth -= damage;
         healthBar?.SetHealth(currentHealth);
@@ -25,7 +23,6 @@ public class TreeOfLife : Entity
         if (currentHealth <= 0 && !Death)
         {
             Death = true;
-            OnDeath?.Invoke();
         }
     }
 

@@ -7,42 +7,44 @@ using UnityEngine.AI;
 
 public class WalkToMainObjective : Action
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float stoppingDistance;
+    [SerializeField] private SharedFloat speed;
+    [SerializeField] private SharedFloat stoppingDistance;
+    [SerializeField] private SharedEntity target;
     
-    private GameObject test;
-    private float oldSpeed;
-    private float oldStoppingDistance;
+    private Entity mainObjective;
     private NavMeshAgent agent;
-    
+    private Entity unit;
 
 
 
     public override void OnAwake()
     {
+        unit = GetComponent<Entity>();
         agent = GetComponent<NavMeshAgent>();
-        test = GameObject.FindGameObjectWithTag("MainObjective");
+        mainObjective = GameObject.FindGameObjectWithTag("MainObjective").GetComponent<Entity>();
     }
 
     public override void OnStart()
     {
         if (agent == null) return;
 
-        if (test == null) return;
+        if (mainObjective == null) return;
 
-        oldSpeed = agent.speed;
-        oldStoppingDistance = agent.stoppingDistance;
+        if (!unit.IsValidTarget(mainObjective.EntityType)) return;
 
-        agent.speed = speed;
-        agent.stoppingDistance = stoppingDistance;
+        target.SetValue(mainObjective);
 
-        agent.SetDestination(test.transform.position);
+        agent.isStopped = false;
+        agent.speed = speed.Value;
+        agent.stoppingDistance = stoppingDistance.Value;
+
+        Transform targetSpot = mainObjective.GetEntityTargetSpot();
+        agent.SetDestination(targetSpot.position);
     }
 
     public override void OnEnd()
     {
-        agent.speed = oldSpeed;
-        agent.stoppingDistance = oldStoppingDistance;
+        agent.isStopped = true;
     }
 
 
@@ -54,7 +56,7 @@ public class WalkToMainObjective : Action
             Debug.LogWarning("NavAgent is null");
             return TaskStatus.Failure;
         }
-        if (test == null)
+        if (mainObjective == null)
         {
             Debug.LogWarning("Target is null");
             return TaskStatus.Failure;

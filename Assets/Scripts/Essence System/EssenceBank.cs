@@ -34,11 +34,6 @@ namespace Assets.scripts.Monobehaviour.Essence
         {
             Bank.EssenceAmount += amount;
         }
-
-        void OnDestroy()
-        {
-           base.OnDestroy();
-        }
         
         public bool SpendEssence(int amount)
         {

@@ -8,75 +8,34 @@ using UnityEngine.Events;
 
 public class EntityAI : Entity, ISlowable
 {
-    [Header("Stats", order = 1)]
-    [SerializeField] public float Speed = 3f;
-    [SerializeField] public float AggroRange = 6f;
-    [SerializeField] public float AttackRange = 2.4f;
-    [SerializeField] public float AttackDelay = 3f;
-    [SerializeField] public float PreAttackDelay = 1f;
-    [SerializeField] public float Damage = 10f;
-   
-    [Header("Attack System", order = 3)]
-    [SerializeField] public UnityEvent OnPreAttackFinish;
-    [SerializeField] public UnityEvent OnAttackFinish;
+    [SerializeField] protected float speed = 3f;
+    [SerializeField] protected float aggroRange = 6f;
+    [SerializeField] protected float attackRange = 2.4f;
+    [SerializeField] protected float attackDelay = 3f;
+    [SerializeField] protected float preAttackDelay = 1f;
+    [SerializeField] protected float damage = 10f;
+    [SerializeField] protected float stoppingDistance = 2f;
 
+    public float Speed { get => speed; set => speed = value; }
+    public float AggroRange { get => aggroRange; set => aggroRange = value; }
+    public float AttackRange { get => attackRange; set => attackRange = value; }
+    public float AttackDelay { get => attackDelay; set => attackDelay = value; }
+    public float PreAttackDelay { get => preAttackDelay; set => preAttackDelay = value; }
+    public float Damage { get => damage; set => damage = value; }
+    public float StoppingDistance { get => stoppingDistance; set => stoppingDistance = value; }
 
-    public NavMeshAgent Agent { get; protected set; }
-    public float CurrentAttackDelay { get; set; }
-    public Entity CurrentTarget
-    {
-        get
-        {
-            if (currentTarget != null && currentTarget.gameObject.activeInHierarchy)
-                return currentTarget;
-            return null;
-        }
-        set 
-        {
-            if (currentTarget != value)
-            {
-                targetSpot = null;
-                currentTarget = value;
-            }
-        }
-    }
-    public Transform TargetSpot { 
-        get 
-        { 
-            return targetSpot; 
-        } 
-        set 
-        { 
-            if (targetSpot == null) targetSpot = value; 
-        } 
-    }
-    public BehaviourTree Tree { get; protected set; }
-    
-    [SerializeField] protected Entity currentTarget;
-    [SerializeField] protected Transform targetSpot;
+    public Entity CurrentTarget { get; protected set; }
 
-
+    private NavMeshAgent agent;
 
     public override void Awake()
     {
         base.Awake();
-        Agent = GetComponent<NavMeshAgent>();
-        Agent.speed = Speed;
-        Agent.stoppingDistance = AttackRange - 0.2f;
-    }
-
-    public virtual void FinishedPreAttackAnimEvent()
-    {
-        OnPreAttackFinish?.Invoke();
-    }
-
-    public virtual void FinishedAttackAnimEvent()
-    {
-        OnAttackFinish?.Invoke();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     public void Slow(float slowRate, Entity origin)
     {
-        Agent.speed -= slowRate;
+        agent.speed -= slowRate;
     }
 }

@@ -21,14 +21,10 @@ public class Enemy : EntityAI
 
     public override void TakeDamage(float damage, Entity entity)
     {
-        if (!Killable)
-            return;
-
         currentHealth -= damage;
 
         if (currentHealth <= 0 && !Death)
         {
-            OnDeath?.Invoke();
             Death = true;
         }
         else

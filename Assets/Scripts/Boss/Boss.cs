@@ -35,12 +35,5 @@ public class Boss : Entity
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = Speed;
         Agent.stoppingDistance = AttackRange - 0.2f;
-        Tree = new BossBehaviourTree(this);
-        Tree.Initialize();
-    }
-
-    public virtual void Update()
-    {
-        Tree.Evaluate();
     }
 }

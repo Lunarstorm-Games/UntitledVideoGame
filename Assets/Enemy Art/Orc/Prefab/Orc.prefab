@@ -679,7 +679,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400010}
-  - component: {fileID: 3775433401548215682}
   - component: {fileID: 3946236805235466398}
   m_Layer: 0
   m_Name: Axe
@@ -703,20 +702,6 @@ Transform:
   m_Father: {fileID: 400024}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 158.951, y: 71.939, z: 269.671}
---- !u!114 &3775433401548215682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395068ee6e7448548a6e360d022d97ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  hitSound: {fileID: 0}
 --- !u!65 &3946236805235466398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -943,34 +928,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d839f522e96d941a1ddcd507627699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityType: 4
-  TargetInterests: 25
-  TargetSpots: []
-  Killable: 1
-  MaxHealth: 400
+  entityType: 4
+  targetInterests: 1
+  targetSpots: []
+  maxHealth: 100
   currentHealth: 0
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  Speed: 3
-  AggroRange: 6
-  AttackRange: 2.4
-  AttackDelay: 3
-  PreAttackDelay: 3
-  Damage: 50
-  OnPreAttackFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAttackFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  currentTarget: {fileID: 0}
+  death: 0
+  speed: 3
+  aggroRange: 6
+  attackRange: 2.4
+  attackDelay: 3
+  preAttackDelay: 1
+  damage: 10
+  stoppingDistance: 2
   EssenceSource:
     rid: 4388239239351894016
-  Weapon: {fileID: 3775433401548215682}
   references:
     version: 2
     RefIds:
@@ -1057,17 +1029,36 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(614.200562,19.7959175)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-108.818047,130.612244)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-2.85713387,121.428566)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-67.22803,145.714264)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator.SetFloatParameter","NodeData":{"Offset":"(-220.722244,196.73468)"},"ID":4,"Name":"Set
-        Float Parameter","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":0},"SharedStringparamaterName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Speed"},"SharedFloatfloatValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"BooleansetOnce":false},{"Type":"WalkToMainObjective","NodeData":{"Offset":"(10.7316742,200)"},"ID":5,"Name":"Walk
-        To Main Objective","Instant":true,"Singlespeed":6,"SinglestoppingDistance":1}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(207.874222,158.163208)"},"ID":6,"Name":"Idle","Instant":true}]}]},"DetachedTasks":[{"Type":"BehaviorDesigner.Runtime.Tasks.GetFieldValue","NodeData":{"Offset":"(93.2703247,98.8656158)"},"ID":7,"Name":"Get
-        Field Value","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":1},"SharedStringcomponentName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Orc"},"SharedStringfieldName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Speed"},"SharedVariablefieldValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"SinglemValue":0}}],"Variables":[{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PreAttackDelay","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Health","IsShared":true,"SinglemValue":0}]}'
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(583.588257,19.7959175)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(230,200)"},"ID":1,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-1091.36011,198.574432)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-69.75862,133.7959)"},"ID":3,"Name":"IsDeath","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"Orc/Death","PropertyMappingOwner":0,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator.SetTrigger","NodeData":{"Offset":"(82.0659256,127.9906)"},"ID":4,"Name":"Set
+        Trigger","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":1},"SharedStringparamaterName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Death"}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-660,350)"},"ID":5,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAggroRange","NodeData":{"Offset":"(-98.27444,141.254013)"},"ID":6,"Name":"In
+        Aggro Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},"SharedFloat_aggroRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"Orc/AggroRange","PropertyMappingOwner":2,"SinglemValue":0}},{"Type":"ChaseTarget","NodeData":{"Offset":"(183.6221,167.712585)"},"ID":7,"Name":"Chase
+        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":3,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":4,"SinglemValue":0},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-167.755814,246.889725)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-115.613037,120.801453)"},"ID":9,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":5,"SinglemValue":0}},{"Type":"BaseMeleeAttack","NodeData":{"Offset":"(56.5775146,117.754272)"},"ID":10,"Name":"Base
+        Melee Attack","Instant":true}]},{"Type":"WalkToMainObjective","NodeData":{"Offset":"(230,230)"},"ID":11,"Name":"Walk
+        To Main Objective","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":6,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":7,"SinglemValue":0},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."}},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(524.200562,158.163208)"},"ID":12,"Name":"Idle","Instant":true}]},"Variables":[{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"Orc/Death","PropertyMappingOwner":8,"BooleanmValue":false},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":9},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"Orc/AggroRange","PropertyMappingOwner":10,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":11,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":12,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":13,"SinglemValue":0}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
         unityObjects:
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 100050}
+        - {fileID: 1209047138457339974}
+        - {fileID: 100050}
+        - {fileID: 100050}
         - {fileID: 100050}
         - {fileID: 100050}
         byteData: 

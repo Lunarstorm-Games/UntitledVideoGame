@@ -4,14 +4,26 @@ using BehaviorDesigner.Runtime.Tasks;
 
 public class ValidTarget : Conditional
 {
-	public override TaskStatus OnUpdate()
+	[SerializeField] private SharedEntity _target;
+    [SerializeField] private EntityType _targetInterests;
+
+	public override void OnAwake()
 	{
-		return TargetsType.ToString().Contains(target.ToString());
-		return TaskStatus.Success;
+		_targetInterests = GetComponent<Entity>().TargetInterests;
 	}
 
-	public bool ValidTarget(EntityType type)
-    {
-		return TargetsType.ToString().Contains(type.ToString());
+	public override TaskStatus OnUpdate()
+	{
+		if (IsValid(_target.Value.EntityType))
+			return TaskStatus.Success;
+		else
+			return TaskStatus.Failure;
 	}
+
+	public bool IsValid(EntityType type)
+	{
+		return _targetInterests.ToString().Contains(type.ToString());
+	}
+
+
 }

@@ -13,6 +13,8 @@ public class Player : Entity, IDamageable
     [SerializeField] private float Mana;
     [SerializeField] private float manaRechargeRate = 3.5f;
     [SerializeField] public float currentMana;
+    [SerializeField] public UnityEvent OnDeath;
+    [SerializeField] public Animator Animator;
     
     public static Player Instance { get; private set; }
     public override void Awake()
@@ -46,8 +48,6 @@ public class Player : Entity, IDamageable
 
     public override void TakeDamage(float damage, Entity origin)
     {
-        if (!Killable)
-            return;
 
         currentHealth -= damage;
         healthBar?.SetHealth(currentHealth);
@@ -58,11 +58,6 @@ public class Player : Entity, IDamageable
             OnDeath?.Invoke();
             Animator.SetTrigger("Death");
         }
-    }
-
-    public override void DeathAnimEvent()
-    {
-        //Revive System
     }
 
     public void UseMana(float mana)

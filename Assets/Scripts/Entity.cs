@@ -19,28 +19,26 @@ public enum EntityType
 
 public class Entity : MonoBehaviour, IDamageable
 {
-    [Header("Target System", order = 0)]
-    [SerializeField] public EntityType EntityType;
+    [SerializeField] protected EntityType entityType;
     [Tooltip("Selecting the first target will make it the highest priority")]
-    [SerializeField] public EntityType TargetInterests;
+    [SerializeField] protected EntityType targetInterests;
     [Tooltip("Position on this entity that can be targeted")]
-    [SerializeField] public List<Transform> TargetSpots;
-    
+    [SerializeField] protected List<Transform> targetSpots;
 
-    [Header("Health System", order = 1)]
-    [SerializeField] public bool Killable = true;
-    [SerializeField] public float MaxHealth = 100f;
+
+    [SerializeField] protected float maxHealth = 100f;
     [SerializeField] protected float currentHealth = 0f;
-    [SerializeField] public UnityEvent OnDamageTaken;
-    [SerializeField] public UnityEvent OnDeath;
+    [SerializeField] protected bool death;
 
-    public Animator Animator { get; protected set; }
-    public bool Death { get; protected set; }
-
+    public EntityType EntityType { get => entityType; set => entityType = value; }
+    public EntityType TargetInterests { get => targetInterests; set => targetInterests = value; }
+    public List<Transform> TargetSpots { get => targetSpots; set => targetSpots = value; }
+    public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+    public bool Death { get => death; set => death = value; }
 
     public virtual void Awake()
     {
-        Animator = GetComponent<Animator>();
         currentHealth = MaxHealth;
     }
 
@@ -55,26 +53,17 @@ public class Entity : MonoBehaviour, IDamageable
 
     public virtual void TakeDamage(float damage, Entity origin)
     {
-        if (!Killable) 
-            return;
-
         currentHealth -= damage;
 
         if (currentHealth <= 0 && !Death)
         {
             Death = true;
-            OnDeath?.Invoke();
         }
     }
 
-    public virtual void DeathAnimEvent()
+    public bool IsValidTarget(EntityType type)
     {
-        Destroy(this.gameObject);
-    }
-
-    public bool ValidTarget(EntityType target)
-    {
-        return TargetInterests.ToString().Contains(target.ToString());
+        return targetInterests.ToString().Contains(type.ToString());
     }
 }
 

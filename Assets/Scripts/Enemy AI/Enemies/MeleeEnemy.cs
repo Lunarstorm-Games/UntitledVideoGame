@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class MeleeEnemy : Enemy
 {
-    [Header("Weapon Component")]
-    [SerializeField] public MeleeWeapon Weapon;
+
 }
