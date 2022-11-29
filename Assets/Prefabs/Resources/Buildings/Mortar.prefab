@@ -92,6 +92,8 @@ MonoBehaviour:
   initialProjectileInstances: 10
   range: 100
   secondsBetweenShots: 5
+  minRange: 10
+  HeightAboveEnemy: 15
 --- !u!114 &-4878653392343238943
 MonoBehaviour:
   m_ObjectHideFlags: 0

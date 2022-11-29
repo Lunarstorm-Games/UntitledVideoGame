@@ -8,8 +8,8 @@ public class Mortar : Turret
     /// <summary>
     /// minimum range of mortar
     /// </summary>
-    float minRange = 20;
-    float HeightAboveEnemy = 15;
+    public float minRange = 20;
+    public float HeightAboveEnemy = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,9 @@ public class Mortar : Turret
         Gizmos.color = new Color(255, 252, 0, 0.12f);
 
         Gizmos.DrawSphere(transform.position, range);
+        Gizmos.color = new Color(255, 0, 255, 0.12f);
+
+        Gizmos.DrawSphere(transform.position, minRange);
 
        
     }
