@@ -27,6 +27,7 @@ public class Projectile : MonoBehaviour
     public virtual void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
     public virtual void OnTriggerEnter(Collider collider)
@@ -37,7 +38,7 @@ public class Projectile : MonoBehaviour
             if (entity == shooter)
                 return;
 
-            if (!shooter.ValidTarget(entity.Type))
+            if (!shooter.ValidTarget(entity.Type)) 
                 return;
 
             if (collider.TryGetComponent<IDamageable>(out IDamageable target))

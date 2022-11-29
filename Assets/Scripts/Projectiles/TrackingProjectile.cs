@@ -12,11 +12,17 @@ namespace Assets.Scripts.Projectiles
         private Enemy target;
         public override void Update()
         {
-            
+            if (target)
+            {
+
+            direction = (target.transform.position - transform.position).normalized;
            
             var step = speed * Time.deltaTime; // calculate distance to move
            
             transform.position = Vector3.MoveTowards(transform.position, target.GetTargetOffset(), step);
+            }
+            else { base.Update(); }
+
             
         }
         public void SetTarget(Enemy target)
