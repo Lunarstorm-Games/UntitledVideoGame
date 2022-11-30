@@ -6,10 +6,9 @@ public class BaseRangeAttack : Action
 {
 	[SerializeField] private SharedEntity unit;
 	[SerializeField] private SharedTransform targetSpot;
-	[SerializeField] private SharedFloat attackSpeed, attackDelay;
+	[SerializeField] private SharedFloat attackSpeed, attackDelay, currentAttackDelay;
 
 	private Animator animator;
-	private float currentAttackDelay;
 
 	public override void OnAwake()
 	{
@@ -23,11 +22,12 @@ public class BaseRangeAttack : Action
 		dir.y = 0f;
 		unit.Value.transform.rotation = Quaternion.LookRotation(dir);
 
-		currentAttackDelay -= Time.deltaTime;
-		if (currentAttackDelay < 0f)
+		currentAttackDelay.Value -= Time.deltaTime;
+		if (currentAttackDelay.Value < 0f)
 		{
+
 			animator.SetTrigger("Attack");
-			currentAttackDelay = attackDelay.Value;
+			currentAttackDelay.SetValue(attackDelay.Value);
 			return TaskStatus.Success;
 		}
 		else
