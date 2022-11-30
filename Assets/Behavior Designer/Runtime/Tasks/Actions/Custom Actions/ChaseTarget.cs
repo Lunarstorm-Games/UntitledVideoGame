@@ -7,11 +7,12 @@ public class ChaseTarget : Action
 {
     [SerializeField] private SharedFloat speed;
     [SerializeField] private SharedFloat stoppingDistance;
+    [SerializeField] private SharedTransform targetSpot;
     [SerializeField] private SharedEntity _target;
 
     private NavMeshAgent agent;
     private Entity unit;
-
+    private Animator animator;
 
 
 
@@ -19,6 +20,7 @@ public class ChaseTarget : Action
     {
         agent = GetComponent<NavMeshAgent>();
         unit = GetComponent<Entity>();
+        animator = GetComponent<Animator>();
     }
 
     public override void OnStart()
@@ -31,9 +33,11 @@ public class ChaseTarget : Action
         agent.speed = speed.Value;
         agent.stoppingDistance = stoppingDistance.Value;
 
-        Transform targetSpot = _target.Value.GetEntityTargetSpot();
+        targetSpot.SetValue(_target.Value.GetEntityTargetSpot());
 
-        agent.SetDestination(targetSpot.position);
+        agent.SetDestination(targetSpot.Value.position);
+
+        animator.SetFloat("Speed", 1f);
     }
 
     public override void OnEnd()

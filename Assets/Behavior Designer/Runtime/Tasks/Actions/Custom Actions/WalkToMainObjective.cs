@@ -9,11 +9,13 @@ public class WalkToMainObjective : Action
 {
     [SerializeField] private SharedFloat speed;
     [SerializeField] private SharedFloat stoppingDistance;
+    [SerializeField] private SharedTransform targetSpot;
     [SerializeField] private SharedEntity target;
     
     private Entity mainObjective;
     private NavMeshAgent agent;
     private Entity unit;
+    private Animator animator;
 
 
 
@@ -21,6 +23,7 @@ public class WalkToMainObjective : Action
     {
         unit = GetComponent<Entity>();
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         mainObjective = GameObject.FindGameObjectWithTag("MainObjective").GetComponent<Entity>();
     }
 
@@ -38,8 +41,11 @@ public class WalkToMainObjective : Action
         agent.speed = speed.Value;
         agent.stoppingDistance = stoppingDistance.Value;
 
-        Transform targetSpot = mainObjective.GetEntityTargetSpot();
-        agent.SetDestination(targetSpot.position);
+        targetSpot.SetValue(mainObjective.GetEntityTargetSpot());
+
+        agent.SetDestination(targetSpot.Value.position);
+
+        animator.SetFloat("Speed", 1f);
     }
 
     public override void OnEnd()

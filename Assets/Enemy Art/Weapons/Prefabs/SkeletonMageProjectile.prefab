@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252805924365581705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.05813944, y: 0.56342375, z: 0.03979445, w: 0.8231585}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
@@ -128,13 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8d8b7cea616d64bb7e34bda9ef7ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  damage: 8
-  range: 4
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
+  mana: 0
   DamageLevel: 1
   SpeedLevel: 1
+  speed: 4
+  damage: 10
+  range: 4
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0

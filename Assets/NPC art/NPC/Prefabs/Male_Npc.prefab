@@ -1496,6 +1496,7 @@ GameObject:
   - component: {fileID: 398221772387988977}
   - component: {fileID: 7504381800882057938}
   - component: {fileID: 2309525416745672981}
+  - component: {fileID: 1732062365847045807}
   m_Layer: 0
   m_Name: Male_Npc
   m_TagString: Untagged
@@ -1663,29 +1664,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0ba053a6fbf9a40bfaa5a4bc0063fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 1
-  TargetsType: 4
-  TargetOffset: {x: 0, y: 0.8, z: 0}
-  Killable: 1
-  Health: 200
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  Speed: 3
-  AggroRange: 6
-  AttackRange: 1.3
-  AttackDelay: 2
-  PreAttackDelay: 2
-  OnPreAttackFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAttackFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  Weapon: {fileID: 5907171713917026683}
+  entityType: 2
+  targetInterests: 4
+  targetSpots: []
+  maxHealth: 100
+  currentHealth: 0
+  death: 0
+  speed: 4
+  aggroRange: 9
+  attackRange: 2.2
+  attackDelay: 2.5
+  attackSpeed: 0.5
+  damage: 10
+  stoppingDistance: 1.7
+--- !u!114 &1732062365847045807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218915195672700686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 1
+  restartWhenComplete: 0
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  mBehaviorSource:
+    behaviorName: Warrior_NPCBehavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(436.529419,-44.3217239)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2.19511986,170)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":1},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0,120.000031)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-710,190)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"EntityDeath","NodeData":{"Offset":"(0,120)"},"ID":4,"Name":"Entity
+        Death","Instant":true,"SharedBoolisDeath":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"NPC_Warrior/Death","PropertyMappingOwner":0,"BooleanmValue":false}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-462.682922,197.073135)"},"ID":5,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-70,120)"},"ID":6,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackRange","PropertyMappingOwner":1,"SinglemValue":0}},{"Type":"BaseMeleeAttack","NodeData":{"Offset":"(90,120)"},"ID":7,"Name":"Base
+        Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":2},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackSpeed","PropertyMappingOwner":3,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackDelay","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"NPC_Warrior/Damage","PropertyMappingOwner":5,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-140.24379,192.195114)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"InAggroRange","NodeData":{"Offset":"(-70,130)"},"ID":9,"Name":"In
+        Aggro Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},"SharedFloat_aggroRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"NPC_Warrior/AggroRange","PropertyMappingOwner":6,"SinglemValue":0}},{"Type":"ChaseTarget","NodeData":{"Offset":"(70,120)"},"ID":10,"Name":"Chase
+        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"NPC_Warrior/Speed","PropertyMappingOwner":7,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"NPC_Warrior/StoppingDistance","PropertyMappingOwner":8,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(256.8957,194.702637)"},"ID":11,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"RandomPatrol","NodeData":{"Offset":"(-56.15329,127.873474)"},"ID":12,"Name":"Random
+        Patrol","Instant":true,"SharedFloatpatrolRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PatrolRange","IsShared":true,"SinglemValue":15}},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(57.8712845,126.653877)"},"ID":13,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":3},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":8}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(464.87793,184.390228)"},"ID":14,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":9},{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"NPC_Warrior/Death","PropertyMappingOwner":10,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"NPC_Warrior/Speed","PropertyMappingOwner":11,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"NPC_Warrior/StoppingDistance","PropertyMappingOwner":12,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackRange","PropertyMappingOwner":13,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackSpeed","PropertyMappingOwner":14,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"NPC_Warrior/AttackDelay","PropertyMappingOwner":15,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"NPC_Warrior/Damage","PropertyMappingOwner":16,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"NPC_Warrior/AggroRange","PropertyMappingOwner":17,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PatrolRange","IsShared":true,"SinglemValue":15}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 2309525416745672981}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 2309525416745672981}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        - {fileID: 5218915195672700686}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.4
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &5298743060680182453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3694,32 +3753,47 @@ PrefabInstance:
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.0048071416
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0010979148
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0019812328
+      objectReference: {fileID: 0}
+    - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.12057802
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.006238754
+      objectReference: {fileID: 0}
+    - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9913583
+      objectReference: {fileID: 0}
+    - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.051292405
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 5.924
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 193.87
       objectReference: {fileID: 0}
     - target: {fileID: 910488707792614895, guid: 59a51e492123cc34985ba1a0d212451a,
         type: 3}
@@ -3739,15 +3813,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3220087636928349409}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5907171713917026683 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9028153495886185882, guid: 59a51e492123cc34985ba1a0d212451a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3220087636928349409}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395068ee6e7448548a6e360d022d97ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
