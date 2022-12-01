@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Assets.scripts.Models.WaveModels;
+using Assets.Scripts.Interfaces;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -44,11 +45,23 @@ public class WaveSpawner : MonoBehaviour
 
 
     [SerializeField] private float roundTime = 0;
+    [Space]
+    [Header("Object pooling")]
+
+    private Dictionary<string, List<GameObject>> inactiveObjectPool = new();
+    //private Dictionary<string, List<GameObject>> activeObjectPool = new();
+    public int initialPoolSize = 30;
+
     private string SpawnPointName = "SpawnPoint";
+    private void Awake()
+    {
+
+    }
     // Start is called before the first frame update
     void Start()
     {
         AddSpawnPoints();
+        InitializeObjectPool();
         //MoveSpawnPointsToNavmesh();
        
     }
@@ -61,6 +74,33 @@ public class WaveSpawner : MonoBehaviour
 
         
     }
+    void InitializeObjectPool()
+    {
+        var position = SpawnPoints.First().position;
+        foreach (var prefab in SpawnAblePrefabs)
+        {
+            var newList = new List<GameObject>();
+            
+            inactiveObjectPool.Add(prefab.Prefab.name, newList);
+
+            for (int i = 0; i < initialPoolSize; i++)
+            {
+                GameObject newObject = CreateNewEnemy(position, prefab);
+                newList.Add(newObject);
+                newObject.SetActive(false);
+            }
+        }
+    }
+
+    private GameObject CreateNewEnemy(Vector3 position, EnemySpawnSetting prefab)
+    {
+        var newObject = Instantiate(prefab.Prefab, position, Quaternion.identity);
+        var script = newObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+        script.PrefabName = prefab.Prefab.name;
+        script.OnSetInactive += OnSetEnemyInactive;
+        return newObject;
+    }
+
     /// <summary>
     /// starts waves
     /// </summary>
@@ -156,7 +196,9 @@ public class WaveSpawner : MonoBehaviour
             NavMeshHit hit;
             if (NavMesh.SamplePosition(spawnPoint.position, out hit, 100f, NavMesh.AllAreas))
             {
-                Instantiate(enemySpawnSetting.Prefab, hit.position, Quaternion.identity);
+                var newEnemy = GetObjectFromPool(enemySpawnSetting);
+                newEnemy.Initialize(hit.position, Quaternion.identity);
+                
                 i++;
             }
 
@@ -166,6 +208,19 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForFixedUpdate();
             }
         }
+
+    }
+    IPoolableObject GetObjectFromPool(EnemySpawnSetting spawnSetting)
+    {
+        var pooledGameObject=   inactiveObjectPool[spawnSetting.Prefab.name].FirstOrDefault();
+        if (pooledGameObject == null)
+        {
+            var position = SpawnPoints.First().transform.position;
+            pooledGameObject = CreateNewEnemy(position, spawnSetting);
+        }
+        inactiveObjectPool[spawnSetting.Prefab.name].Remove(pooledGameObject);
+       var result =  pooledGameObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+        return result;
 
     }
     /// <summary>
@@ -181,5 +236,11 @@ public class WaveSpawner : MonoBehaviour
                 SpawnPoints.Add(child);
             }
         }
+    }
+    void OnSetEnemyInactive(GameObject source)
+    {
+        var script = source.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+        inactiveObjectPool[script.PrefabName].Add(source);
+
     }
 }
