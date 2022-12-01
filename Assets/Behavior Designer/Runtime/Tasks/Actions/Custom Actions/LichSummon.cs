@@ -7,6 +7,7 @@ public class LichSummon : Action
 {
     [SerializeField] private SharedListEntity minions;
 	[SerializeField] private SharedFloat summonDelay;
+	[SerializeField] private SharedInt summonAmount;
 
 	private float currentSummonDelay;
 	private Animator animator;
@@ -27,7 +28,7 @@ public class LichSummon : Action
 		currentSummonDelay -= Time.deltaTime;
 		if (currentSummonDelay < 0f)
 		{
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < summonAmount.Value; i++)
 			{
 				GameObject.Instantiate(minions.Value[Random.Range(0, minions.Value.Count)], this.transform.position, Quaternion.identity);
 			}

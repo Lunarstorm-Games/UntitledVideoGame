@@ -8,13 +8,15 @@ public class Lich : RangeEnemy
     [Header("Entity specific fields")]
     [SerializeField] private float summonCooldown;
     [SerializeField] private bool canSummon;
-    [SerializeField] private List<Entity> minions; 
+    [SerializeField] private List<Entity> minions;
+    [SerializeField] private int summonAmount;
 
     private float summonCooldownTime;
 
     public float SummonCooldown { get => summonCooldown; set => summonCooldown = value; }
     public bool CanSummon { get => canSummon; set => canSummon = value; }
     public List<Entity> Minions { get => minions; set => minions = value; }
+    public int SummonAmount { get => summonAmount; set => summonAmount = value; }
 
     public override void Awake()
     {
