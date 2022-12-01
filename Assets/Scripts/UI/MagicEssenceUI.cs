@@ -16,6 +16,6 @@ public class MagicEssenceUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        magicEssence.text = EssenceBank.Instance.EssenceAmount.ToString();
+        magicEssence.text = EssenceBank.Instance?.EssenceAmount.ToString();
     }
 }

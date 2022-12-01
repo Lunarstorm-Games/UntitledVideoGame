@@ -45,5 +45,9 @@ namespace Assets.scripts.Monobehaviour.Essence
 
             return false;
         }
+
+        public override void OnLoad()
+        {
+        }
     }
 }

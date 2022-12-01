@@ -3,6 +3,7 @@ using Assets.Scripts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UniStorm;
 using UnityEngine;
@@ -16,6 +17,7 @@ namespace Assets.Scripts
         public static GameController instance;
         [ReadOnly] public string LevelName;
         [ReadOnly] public string SaveDirectory;
+        public BuildModeController BuildModeController;
         public WeatherType WeatherType;
         public GameObject TimerUi;
         public GameObject WaveController;
@@ -44,18 +46,20 @@ namespace Assets.Scripts
         void Update()
         {
             UpdateTimer();
-            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) UniStormManager.Instance.SetTime(19, 00);
+            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) 
+                UniStormManager.Instance.SetTime(19, 00);
             
         }
 
         private void UpdateTimer()
         {
-            int hour = UniStormSystem.Instance.Hour;
-            int minutes = UniStormSystem.Instance.Minute;
+            int hour = UniStormSystem.Instance?.Hour??0;
+            int minutes = UniStormSystem.Instance?.Minute??0;
 
             TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
             if (hour == 19 && !AttackHasStarted)
             {
+                BuildModeController.Disable();
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
                 //TimerUi.SetActive(false);
                 AttackHasStarted = true;
@@ -90,6 +94,12 @@ namespace Assets.Scripts
                 SaveManager.Instance.SaveStateToFile(LevelName);
                 SceneManager.LoadScene(LevelName);
             }
+        }
+        [ContextMenu("GenerateIdsForPersistable")]
+        public void GenerateIdsForPersistable()
+        {
+            ClearSave();
+            GameObject.FindObjectsOfType<PersistableMonoBehaviour>().ToList().ForEach(x => x.GenerateId());
         }
 
     }
