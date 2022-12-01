@@ -40,10 +40,12 @@ public class Entity : MonoBehaviour, IDamageable
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
     public bool Death { get => death; set => death = value; }
 
-    public virtual void Awake()
+    public virtual void OnEnable()
     {
+        death = false;
         currentHealth = MaxHealth;
     }
+
 
     public Transform GetEntityTargetSpot()
     {

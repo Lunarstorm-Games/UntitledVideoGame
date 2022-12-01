@@ -22,12 +22,12 @@ public class Player : Entity, IDamageable
     private ThirdPersonShooterController ThirdPersonShooterController;
     private StarterAssetsInputs starterAssetInputs;
     public static Player Instance { get; private set; }
-    public override void Awake()
+    public virtual void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         ThirdPersonShooterController = GetComponent<ThirdPersonShooterController>();
         starterAssetInputs = GetComponent<StarterAssetsInputs>();
-        base.Awake();
+        
 
         // If there is an instance, and it's not me, delete myself.
         if (Instance != null && Instance != this)

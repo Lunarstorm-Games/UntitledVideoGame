@@ -18,25 +18,21 @@ public class WalkToMainObjective : Action
     private Animator animator;
 
 
-
-    public override void OnAwake()
+    public override void OnStart()
     {
         unit = GetComponent<Entity>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         mainObjective = GameObject.FindGameObjectWithTag("MainObjective").GetComponent<Entity>();
-    }
 
-    public override void OnStart()
-    {
-        if (agent == null) return;
+        if (!agent) return;
 
         if (mainObjective == null) return;
 
         if (!unit.IsValidTarget(mainObjective.EntityType)) return;
 
         target.SetValue(mainObjective);
-
+        
         agent.isStopped = false;
         agent.speed = speed.Value;
         agent.stoppingDistance = stoppingDistance.Value;
@@ -50,14 +46,15 @@ public class WalkToMainObjective : Action
 
     public override void OnEnd()
     {
-        agent.isStopped = true;
+        if (agent)
+            agent.isStopped = true;
     }
 
 
 
     public override TaskStatus OnUpdate()
     {
-        if (agent == null)
+        if (!agent)
         {
             Debug.LogWarning("NavAgent is null");
             return TaskStatus.Failure;

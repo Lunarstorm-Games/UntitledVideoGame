@@ -10,7 +10,7 @@ public class InAttackRange : Conditional
 
     private Animator animator;
 
-    public override void OnAwake()
+    public override void OnStart()
     {
         animator = GetComponent<Animator>();
     }

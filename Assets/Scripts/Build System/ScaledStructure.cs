@@ -6,16 +6,5 @@ using UnityEngine;
 /// </summary>
 public class ScaledStructure : BuildableStructure
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //transform.parent
-        base.Start();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        base.Update();
-    }
 }

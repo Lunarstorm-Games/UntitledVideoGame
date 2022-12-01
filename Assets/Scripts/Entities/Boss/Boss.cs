@@ -27,9 +27,9 @@ public class Boss : Entity
     }
     protected Entity currentTarget;
 
-    public override void Awake()
+    public virtual void Awake()
     {
-        base.Awake();
+
 
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = Speed;

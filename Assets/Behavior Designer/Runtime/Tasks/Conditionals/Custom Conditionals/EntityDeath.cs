@@ -9,7 +9,7 @@ public class EntityDeath : Conditional
 	private Animator animator;
 	private NavMeshAgent agent;
 
-    public override void OnAwake()
+    public override void OnStart()
     {
         animator = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();

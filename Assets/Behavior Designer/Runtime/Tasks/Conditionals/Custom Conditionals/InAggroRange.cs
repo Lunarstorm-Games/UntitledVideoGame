@@ -9,7 +9,7 @@ public class InAggroRange : Conditional
 
     private Entity unit;
 
-    public override void OnAwake()
+    public override void OnStart()
     {
         unit = GetComponent<Entity>();
     }

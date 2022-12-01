@@ -11,7 +11,7 @@ public class BaseMeleeAttack : Action
 	private Animator animator;
 	private MeleeWeapon weapon;
 
-	public override void OnAwake()
+	public override void OnStart()
 	{
 		animator = GetComponent<Animator>();
 		animator.SetFloat("AttackSpeed", attackSpeed.Value);

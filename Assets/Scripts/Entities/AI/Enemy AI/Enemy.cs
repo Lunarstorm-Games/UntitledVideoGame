@@ -48,19 +48,24 @@ public class Enemy : EntityAI, IPoolableObject
             HitByTarget = entity;
         }
     }
-    private void OnEnable()
-    {
-        
-    }
-    private void OnDisable()
-    {
-        
-        EssenceSource.DropEssence();
-        OnSetInactive(gameObject);
-    }
 
     protected void OnDestroy()
     {
-        Debug.LogWarning("Pooled enemy should not be destroyed");
+        Debug.LogWarning("Pooled enemy should not be destroyed", this.gameObject);
+    }
+
+    public override void DeathAnimEvent()
+    {
+        EssenceSource.DropEssence();
+        if (OnSetInactive!=null)
+        {
+            OnSetInactive(gameObject);
+
+            var collider = GetComponent(typeof(Collider)) as Collider;
+            collider.enabled = true;
+            gameObject.SetActive(false);
+        }
+        else
+            Destroy(gameObject);
     }
 }

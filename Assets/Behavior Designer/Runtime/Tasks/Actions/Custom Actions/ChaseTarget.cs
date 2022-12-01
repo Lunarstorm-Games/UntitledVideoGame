@@ -14,17 +14,12 @@ public class ChaseTarget : Action
     private Entity unit;
     private Animator animator;
 
-
-
-    public override void OnAwake()
+    public override void OnStart()
     {
         agent = GetComponent<NavMeshAgent>();
         unit = GetComponent<Entity>();
         animator = GetComponent<Animator>();
-    }
 
-    public override void OnStart()
-    {
         if (agent == null) return;
 
         if (_target.Value == null) return;

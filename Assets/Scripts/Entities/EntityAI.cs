@@ -30,9 +30,8 @@ public class EntityAI : Entity, ISlowable
 
     private NavMeshAgent agent;
 
-    public override void Awake()
+    public virtual void Awake()
     {
-        base.Awake();
         agent = GetComponent<NavMeshAgent>();
     }
 

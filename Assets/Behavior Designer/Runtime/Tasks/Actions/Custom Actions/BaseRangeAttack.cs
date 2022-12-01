@@ -10,7 +10,7 @@ public class BaseRangeAttack : Action
 
 	private Animator animator;
 
-	public override void OnAwake()
+	public override void OnStart()
 	{
 		animator = GetComponent<Animator>();
 		animator.SetFloat("AttackSpeed", attackSpeed.Value);
