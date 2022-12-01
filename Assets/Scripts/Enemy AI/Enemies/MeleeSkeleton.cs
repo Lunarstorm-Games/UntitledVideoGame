@@ -10,6 +10,10 @@ public class MeleeSkeleton : MeleeEnemy
     public override void Awake()
     {
         base.Awake();
+        
+    }
+    private void OnEnable()
+    {
         Tree = new MeleeSkeletonTree(this);
         Tree.Initialize();
     }

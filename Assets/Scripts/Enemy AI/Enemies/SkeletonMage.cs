@@ -9,6 +9,10 @@ public class SkeletonMage : RangeEnemy
     public override void Awake()
     {
         base.Awake();
+        
+    }
+    private void OnEnable()
+    {
         Tree = new SkeletonMageTree(this);
         Tree.Initialize();
     }
