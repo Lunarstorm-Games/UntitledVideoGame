@@ -19,8 +19,8 @@ public class WaveSpawner : MonoBehaviour
     public List<EnemySpawnSetting> SpawnAblePrefabs = new List<EnemySpawnSetting>();
     public bool DebugInfo = false;
     [Space]
-    
-    
+
+
     public float MaxEnemyStrengh = 1f;
     public AnimationCurve MaxEnemyStrengthCurve = new AnimationCurve();
     [Space]
@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
         AddSpawnPoints();
         InitializeObjectPool();
         //MoveSpawnPointsToNavmesh();
-       
+
     }
 
     // Update is called once per frame
@@ -72,21 +72,23 @@ public class WaveSpawner : MonoBehaviour
         roundTime += Time.deltaTime;
         MaxEnemyStrengh = MaxEnemyStrengthCurve.Evaluate(XStep);
 
-        
+
     }
+
+
     void InitializeObjectPool()
     {
         var position = SpawnPoints.First().position;
         foreach (var prefab in SpawnAblePrefabs)
         {
             var newList = new List<GameObject>();
-            
+
             inactiveObjectPool.Add(prefab.Prefab.name, newList);
 
             for (int i = 0; i < initialPoolSize; i++)
             {
-                var newObject = Instantiate(prefab.Prefab,position,Quaternion.identity);
-                var script= newObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+                var newObject = Instantiate(prefab.Prefab, position, Quaternion.identity);
+                var script = newObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
                 script.PrefabName = prefab.Prefab.name;
                 script.OnSetInactive += OnSetEnemyInactive;
                 newObject.SetActive(false);
@@ -168,14 +170,18 @@ public class WaveSpawner : MonoBehaviour
     {
         var spawnableEnemies = SpawnAblePrefabs.Where(x => x.StrengthRating <= MaxEnemyStrengh).ToList();
 
-        var currentWaveStrength = 0f;
         var random = new System.Random();
         var enemiesToSpawn = new List<EnemySpawnSetting>();
-        while (currentWaveStrength < targetWaveStrength)
+        var dividedStrength = targetWaveStrength / spawnableEnemies.Count;
+        float currentWaveStrength = 0f;
+        foreach (var enemy in spawnableEnemies)
         {
-            var enemy = spawnableEnemies[random.Next(spawnableEnemies.Count)];
-            enemiesToSpawn.Add(enemy);
-            currentWaveStrength += enemy.StrengthRating;
+            currentWaveStrength = 0f;
+            while (currentWaveStrength < dividedStrength)
+            {
+               enemiesToSpawn.Add(enemy);
+                currentWaveStrength += enemy.StrengthRating;
+            }
         }
 
         return enemiesToSpawn;
@@ -191,7 +197,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 var newEnemy = GetObjectFromPool(enemySpawnSetting);
                 newEnemy.Initialize(hit.position, Quaternion.identity);
-                
+
                 i++;
             }
 
@@ -205,16 +211,18 @@ public class WaveSpawner : MonoBehaviour
     }
     IPoolableObject GetObjectFromPool(EnemySpawnSetting spawnSetting)
     {
-        var pooledGameObject=   inactiveObjectPool[spawnSetting.Prefab.name].FirstOrDefault();
+        var pooledGameObject = inactiveObjectPool[spawnSetting.Prefab.name].FirstOrDefault();
         if (pooledGameObject == null)
         {
-            pooledGameObject= Instantiate(spawnSetting.Prefab);
+            pooledGameObject = Instantiate(spawnSetting.Prefab);
+            
         }
         inactiveObjectPool[spawnSetting.Prefab.name].Remove(pooledGameObject);
-       var result =  pooledGameObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+        var result = pooledGameObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
         return result;
 
     }
+    
     /// <summary>
     /// editor button
     /// </summary>
