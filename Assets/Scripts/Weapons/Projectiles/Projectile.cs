@@ -6,11 +6,11 @@ using UnityEngine.VFX;
 
 public class Projectile : Weapon
 {
-    
+
     [SerializeField] protected VisualEffect impactEffect;
     [SerializeField] protected AudioClip hitSound;
     [SerializeField] public float mana;
-    
+
     public int DamageLevel = 1;
     public int SpeedLevel = 1;
 
@@ -36,13 +36,7 @@ public class Projectile : Weapon
 
         if (collider.TryGetComponent<Entity>(out Entity entity))
         {
-            if (entity == shooter)
-                return;
-
-            if (!shooter.ValidTarget(entity.Type)) 
-                return;
-
-            if (collider.TryGetComponent<IDamageable>(out IDamageable target))
+            if (entity != shooter)
             {
                 if (shooter.IsValidTarget(entity.EntityType))
                 {
@@ -51,9 +45,9 @@ public class Projectile : Weapon
                         target.TakeDamage(damage, shooter);
                     }
                 }
-            }  
+            }
         }
-        
+
         ProjectileImpact();
     }
 
