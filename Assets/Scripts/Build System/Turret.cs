@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Turret : Entity
+public class Turret : Defense
 {
     public GameObject projectilePrefab;
     private List<BufferedSpellProjectile> ProjectileBuffer = new List<BufferedSpellProjectile>();
