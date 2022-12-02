@@ -6,11 +6,11 @@ using UnityEngine.VFX;
 
 public class Projectile : Weapon
 {
-    
+
     [SerializeField] protected VisualEffect impactEffect;
     [SerializeField] protected AudioClip hitSound;
     [SerializeField] public float mana;
-    
+
     public int DamageLevel = 1;
     public int SpeedLevel = 1;
 
@@ -28,6 +28,7 @@ public class Projectile : Weapon
     public virtual void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
     public virtual void OnTriggerEnter(Collider collider)
@@ -44,9 +45,9 @@ public class Projectile : Weapon
                         target.TakeDamage(damage, shooter);
                     }
                 }
-            }  
+            }
         }
-        
+
         ProjectileImpact();
     }
 
