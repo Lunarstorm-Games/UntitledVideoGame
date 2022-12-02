@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: ae49f1673162a4f18b09f7d8b49e7020, type: 2}
+--- !u!1 &3022961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1135061757795687102, guid: be4135a8d94f8944f80c7235d56b33ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 913513092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &17584428
 Mesh:
   m_ObjectHideFlags: 0
@@ -49339,6 +49345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5916173019279426779, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
+      propertyPath: etoBuildPopUp
+      value: 
+      objectReference: {fileID: 3022961}
+    - target: {fileID: 5916173019279426779, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
       propertyPath: interactDistance
       value: 40
       objectReference: {fileID: 0}
@@ -51391,7 +51402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1266620
+  m_Name: pb_Mesh1668926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
