@@ -116,7 +116,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/Archer
   objectName: 
-  EssenceCost: 0
+  EssenceCost: 500
   health: 300
 --- !u!114 &6589577843268223474
 MonoBehaviour:
@@ -130,17 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bb5ec78971df54ca76e41c715d47cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 3
-  TargetsType: 4
-  TargetOffset: {x: 0, y: 0, z: 0}
-  Killable: 1
-  Health: 30
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
+  entityType: 0
+  targetInterests: 0
+  targetSpots: []
+  maxHealth: 100
+  currentHealth: 0
+  death: 0
   projectilePrefab: {fileID: 1252805924365581705, guid: 656997cd490b31f47bc7c7f630ca93ea,
     type: 3}
   ShootingOrigin: {fileID: 7935018145380688956}

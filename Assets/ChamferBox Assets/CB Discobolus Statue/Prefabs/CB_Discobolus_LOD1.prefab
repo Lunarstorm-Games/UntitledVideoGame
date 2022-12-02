@@ -140,7 +140,7 @@ MonoBehaviour:
   - {fileID: 2815647317439117747}
   - {fileID: 9115376778897303603}
   - {fileID: 4639077250537136780}
-  maxHealth: 100
+  maxHealth: 2000
   currentHealth: 0
   death: 0
   healthBar: {fileID: 0}

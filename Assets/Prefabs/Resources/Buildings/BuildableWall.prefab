@@ -114,7 +114,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/BuildableWall
   objectName: 
-  EssenceCost: 0
+  EssenceCost: 300
   health: 300
 --- !u!208 &-1090776185943015370
 NavMeshObstacle:
