@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 29369470}
   - component: {fileID: 29369469}
   m_Layer: 10
-  m_Name: Cube (1)
+  m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3683,7 +3683,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh327166
+  m_Name: pb_Mesh476380
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5343,9 +5343,9 @@ GameObject:
   - component: {fileID: 596801333}
   - component: {fileID: 596801332}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: MainObjectiveSpots
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29077,31 +29077,16 @@ GameObject:
   - component: {fileID: 782434266}
   - component: {fileID: 782434265}
   - component: {fileID: 782434264}
-  - component: {fileID: 782434263}
   - component: {fileID: 782434269}
   - component: {fileID: 782434270}
   - component: {fileID: 782434271}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: MainObjective
   m_TagString: MainObjective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &782434263
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782434262}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2045496792}
 --- !u!33 &782434264
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -29785,10 +29770,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 4
+  m_Radius: 2.26
   m_Height: 15
   m_Direction: 1
-  m_Center: {x: 0.0000038295984, y: 0, z: 9.313226e-10}
+  m_Center: {x: 0.0000038295984, y: -5.78, z: 9.313226e-10}
 --- !u!54 &782434271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34206,9 +34191,9 @@ GameObject:
   - component: {fileID: 1123281908}
   - component: {fileID: 1123281907}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: MainObjectiveSpots
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34220,7 +34205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123281905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2647388, y: -7.500001, z: 0.2802714}
+  m_LocalPosition: {x: -2.11, y: -7.500001, z: 0.2802714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39587,9 +39572,9 @@ GameObject:
   - component: {fileID: 1468434558}
   - component: {fileID: 1468434557}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: MainObjectiveSpots
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39601,7 +39586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468434555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11499667, y: -7.5000005, z: 2.1264524}
+  m_LocalPosition: {x: -0.11499667, y: -7.5000005, z: 1.949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49906,7 +49891,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh327436
+  m_Name: pb_Mesh476662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -50602,9 +50587,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2129394100}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: MainObjectiveSpots
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -50616,7 +50601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129394099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23707199, y: -7.499998, z: -2.084481}
+  m_LocalPosition: {x: -0.23707199, y: -7.499998, z: -1.962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

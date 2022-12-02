@@ -10,7 +10,7 @@ public class RandomPatrol : Action
     private NavMeshAgent agent;
     private Vector3 startPos;
 
-	public override void OnAwake()
+	public override void OnStart()
 	{
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
