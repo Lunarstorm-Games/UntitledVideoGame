@@ -52,7 +52,6 @@ public class BuildModeController : MonoBehaviour
         }
         interactable = null;
         etoBuildPopUp.SetActive(false);
-
     }
 
     void OnDrawGizmos()
