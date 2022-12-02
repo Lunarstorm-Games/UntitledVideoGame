@@ -12,14 +12,10 @@ public class BuildModeController : MonoBehaviour
     [SerializeField] private LayerMask rayCollider;
     public List<BuildableStructure> BuildableStructures;
     public float interactDistance = 20f;
-    private GameObject etoBuildPopUp;
+    [SerializeField] private GameObject etoBuildPopUp;
     [ReadOnly] public BuildingSpotHighlight interactable;
     private bool isPromptOpen = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        etoBuildPopUp = UIController.Instance.transform.Find("EtoBuildPopUp").gameObject;
-    }
+
 
     // Update is called once per frame
     void Update()
