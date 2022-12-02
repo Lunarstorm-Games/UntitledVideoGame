@@ -15,6 +15,7 @@ public enum EntityType
     Enemy = 4,
     Structure = 8,
     MainObjective = 16,
+    ArcherTower = 32,
 }
 
 public class Entity : MonoBehaviour, IDamageable
