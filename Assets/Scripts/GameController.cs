@@ -46,7 +46,8 @@ namespace Assets.Scripts
         void Update()
         {
             UpdateTimer();
-            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) UniStormManager.Instance.SetTime(19, 00);
+            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) 
+                UniStormManager.Instance.SetTime(19, 00);
             
         }
 
