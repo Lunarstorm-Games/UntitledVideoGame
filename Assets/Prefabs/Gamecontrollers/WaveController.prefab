@@ -59,6 +59,15 @@ MonoBehaviour:
       type: 3}
     StrengthRating: 5
     SpawnBias: 10
+  - Prefab: {fileID: 100010, guid: 406486edf02d8d74da3b2ca225e21254, type: 3}
+    StrengthRating: 10
+    SpawnBias: 10
+  - Prefab: {fileID: 100048, guid: 7ed3e345f07e89940ae0c1e00eeb7d1d, type: 3}
+    StrengthRating: 15
+    SpawnBias: 10
+  - Prefab: {fileID: 185802, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 3}
+    StrengthRating: 8
+    SpawnBias: 10
   DebugInfo: 0
   MaxEnemyStrengh: 1
   MaxEnemyStrengthCurve:
@@ -86,7 +95,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   SecondsPerLargeWave: 30
-  WaveStrengthMultiplier: 30
+  WaveStrengthMultiplier: 15
   LargeWaveAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -177,7 +186,7 @@ MonoBehaviour:
   SpawnPerFixedUpdate: 1000
   IsActivated: 0
   roundTime: 0
-  initialPoolSize: 20
+  initialPoolSize: 50
 --- !u!1 &4267196845895648570
 GameObject:
   m_ObjectHideFlags: 0
