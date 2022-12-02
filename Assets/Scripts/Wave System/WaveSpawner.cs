@@ -87,15 +87,22 @@ public class WaveSpawner : MonoBehaviour
 
             for (int i = 0; i < initialPoolSize; i++)
             {
-                var newObject = Instantiate(prefab.Prefab, position, Quaternion.identity);
-                var script = newObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
-                script.PrefabName = prefab.Prefab.name;
-                script.OnSetInactive += OnSetEnemyInactive;
-                newObject.SetActive(false);
+                GameObject newObject = CreateNewEnemy(position, prefab);
                 newList.Add(newObject);
+                newObject.SetActive(false);
             }
         }
     }
+
+    private GameObject CreateNewEnemy(Vector3 position, EnemySpawnSetting prefab)
+    {
+        var newObject = Instantiate(prefab.Prefab, position, Quaternion.identity);
+        var script = newObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
+        script.PrefabName = prefab.Prefab.name;
+        script.OnSetInactive += OnSetEnemyInactive;
+        return newObject;
+    }
+
     /// <summary>
     /// starts waves
     /// </summary>
@@ -214,8 +221,8 @@ public class WaveSpawner : MonoBehaviour
         var pooledGameObject = inactiveObjectPool[spawnSetting.Prefab.name].FirstOrDefault();
         if (pooledGameObject == null)
         {
-            pooledGameObject = Instantiate(spawnSetting.Prefab);
-            
+            var position = SpawnPoints.First().transform.position;
+            pooledGameObject = CreateNewEnemy(position, spawnSetting);
         }
         inactiveObjectPool[spawnSetting.Prefab.name].Remove(pooledGameObject);
         var result = pooledGameObject.GetComponent(typeof(IPoolableObject)) as IPoolableObject;
