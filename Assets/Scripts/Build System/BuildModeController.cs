@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.scripts.Monobehaviour.Essence;
 using Assets.Scripts.Utility;
 using UnityEngine;
 
@@ -68,7 +69,12 @@ public class BuildModeController : MonoBehaviour
         // the menu should be based on the buildable structures
         if (buildSpot != null && buildSpot.AllowedBuildings.Any(x => x.gameObject.name == prefab.name))
         {
-            buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
+            if (EssenceBank.Instance?.EssenceAmount > prefab.EssenceCost)
+            {
+
+                EssenceBank.Instance?.SpendEssence(prefab.EssenceCost);
+                buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
+            }
         }
     }
 

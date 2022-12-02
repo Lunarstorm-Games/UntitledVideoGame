@@ -117,7 +117,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/Archer
   objectName: 
-  EssenceCost: 0
+  EssenceCost: 500
   health: 300
 --- !u!114 &6589577843268223474
 MonoBehaviour:
