@@ -923,7 +923,7 @@ MonoBehaviour:
   projectileSpawnPos: {fileID: 14410935353177697}
   projectile: {fileID: 8399579256986506948, guid: 99dfd1d757048544392e85b13ca84b88,
     type: 3}
-  summonCooldown: 10
+  summonCooldown: 25
   canSummon: 0
   minions:
   - {fileID: -3670659280146546288, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 3}
