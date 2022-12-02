@@ -730,7 +730,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   death: 0
-  speed: 4
+  speed: 3
   aggroRange: 7
   attackRange: 1.8
   attackDelay: 2

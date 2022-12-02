@@ -2317,13 +2317,13 @@ MonoBehaviour:
   targetInterests: 27
   targetSpots:
   - {fileID: 437356}
-  maxHealth: 100
+  maxHealth: 65
   currentHealth: 0
   death: 0
   speed: 5
   aggroRange: 6
   attackRange: 1
-  attackDelay: 2
+  attackDelay: 1.5
   attackSpeed: 1
   damage: 10
   stoppingDistance: 0.9
@@ -2335,7 +2335,7 @@ MonoBehaviour:
     - rid: 4388239194310311936
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 5
+        EssenceValue: 10
 --- !u!195 &786471618689003941
 NavMeshAgent:
   m_ObjectHideFlags: 0

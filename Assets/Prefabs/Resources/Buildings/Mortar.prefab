@@ -67,7 +67,7 @@ MonoBehaviour:
   targetInterests: 4
   targetSpots:
   - {fileID: 1078096873766745354}
-  maxHealth: 100
+  maxHealth: 300
   currentHealth: 0
   death: 0
   projectilePrefab: {fileID: 1252805924365581705, guid: cf704fdfe1fd8c746aced707d8c8130b,
@@ -94,7 +94,6 @@ MonoBehaviour:
   prefabPath: Buildings/Mortar
   objectName: 
   EssenceCost: 1000
-  health: 100
 --- !u!54 &3488287101094726266
 Rigidbody:
   m_ObjectHideFlags: 0

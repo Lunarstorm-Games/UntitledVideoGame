@@ -181,7 +181,6 @@ MonoBehaviour:
   prefabPath: Buildings/BuildableWall
   objectName: 
   EssenceCost: 300
-  health: 300
 --- !u!114 &2758069974215604992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +199,7 @@ MonoBehaviour:
   - {fileID: 7327013871368868848}
   - {fileID: 817832701853195999}
   - {fileID: 3355862634737315036}
-  maxHealth: 100
+  maxHealth: 1000
   currentHealth: 0
   death: 0
 --- !u!54 &2337035234480276005
