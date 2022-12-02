@@ -1,10 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Level/Scenes/SpellProjectileTest.unity.meta
-guid: 28457d8fad5d9e140bf01203b31d8b94
-========
-guid: 0f6cb79a68227f4488633001a7f30dec
+guid: e5f648ab0ec9a434d91544b6f51eee5d
 folderAsset: yes
->>>>>>>> Enemies:Assets/Code/Scripts/Enemy AI/Enemies.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
