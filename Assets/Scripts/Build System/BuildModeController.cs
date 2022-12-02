@@ -25,7 +25,6 @@ public class BuildModeController : MonoBehaviour
     {
         if (!UIController.Instance.BuildingInterface.gameObject.activeInHierarchy)
         {
-
             GetInteractable();
         }
 
@@ -43,15 +42,16 @@ public class BuildModeController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, interactDistance, rayCollider))
         {
-
             var interactableObject = hit.transform.gameObject.GetComponents<BuildingSpotHighlight>().FirstOrDefault(); ;
 
             if (interactable != interactableObject) interactable = interactableObject;
-            return;
+            etoBuildPopUp.SetActive(true);
 
+            return;
 
         }
         interactable = null;
+        etoBuildPopUp.SetActive(false);
 
     }
 
@@ -79,6 +79,7 @@ public class BuildModeController : MonoBehaviour
         {
             buildingSpot.SetActive(false);
         }
+        etoBuildPopUp.SetActive(false);
         gameObject.SetActive(false);
     }
 }

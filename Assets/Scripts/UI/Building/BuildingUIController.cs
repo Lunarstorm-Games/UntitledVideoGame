@@ -16,12 +16,6 @@ public class BuildingUIController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player"); 
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OpenWindow()
     {
         //Cursor.lockState = CursorLockMode.None;
