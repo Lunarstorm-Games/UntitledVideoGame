@@ -22,7 +22,8 @@ public class BuildingSpotHighlight : PersistableMonoBehaviour, IInteractable
     {
         if (CurrentBuilding == null)
         {
-            EssenceBank.Instance?.SpendEssence(prefab.EssenceCost);
+
+            
             GetComponent<MeshRenderer>().enabled = false;
             if (prefab.gameObject.name == "BuildableWall")
             {
