@@ -15,6 +15,22 @@ public class MainMenu : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
     }
 
+    public void PlayDaniel()
+    {
+        SceneManager.LoadScene("Main scene", LoadSceneMode.Single);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
+    }
+    
+    public void PlayOnur()
+    {
+        SceneManager.LoadScene("LevelExample", LoadSceneMode.Single);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
+    }
+
     public void QuitGame()
     {
         Application.Quit();
