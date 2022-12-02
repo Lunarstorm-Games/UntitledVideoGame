@@ -57,13 +57,13 @@ MonoBehaviour:
     SpawnBias: 10
   - Prefab: {fileID: 1948329710155509286, guid: 8c5a978d8b3d2be4cbeb47047170e688,
       type: 3}
-    StrengthRating: 5
+    StrengthRating: 6
     SpawnBias: 10
-  - Prefab: {fileID: 100010, guid: 406486edf02d8d74da3b2ca225e21254, type: 3}
-    StrengthRating: 10
+  - Prefab: {fileID: 100050, guid: aad05534a7ba0dd49b8c54ce188308ec, type: 3}
+    StrengthRating: 12
     SpawnBias: 10
   - Prefab: {fileID: 100048, guid: 7ed3e345f07e89940ae0c1e00eeb7d1d, type: 3}
-    StrengthRating: 15
+    StrengthRating: 18
     SpawnBias: 10
   - Prefab: {fileID: 185802, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 3}
     StrengthRating: 8
