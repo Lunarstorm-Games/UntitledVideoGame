@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,15 +9,11 @@ public class MemoryBoardUIController : MonoBehaviour
     public PlayerInput playerInput;
     public GameObject memoryBoardPopUp;
     public GameObject memoryBoardUI;
-    public GameObject closeButtton;
-    void Start()
-    {
-        
-    }
+    public GameObject pauseMenu;
 
-    
     void Update()
     {
+        CheckPause();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         
@@ -24,17 +21,13 @@ public class MemoryBoardUIController : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("MemoryBoard"))
             {
-                if (memoryBoardUI.activeSelf == false)
+                if (memoryBoardUI.activeSelf == false && pauseMenu.activeSelf == false)
                 {
                     ShowMemoryBoardPopUp();
                 }
                 if (Input.GetKey(KeyCode.E))
                 {
                     ShowPanel();
-                }
-                if(Input.GetKey(KeyCode.Escape))
-                {
-                    HidePanel();
                 }
             }
         }else
@@ -68,5 +61,14 @@ public class MemoryBoardUIController : MonoBehaviour
     public void HideMemoryBoardPopUp()
     {
         memoryBoardPopUp.SetActive(false);
+    }
+    
+    public void CheckPause()
+    {
+        if (pauseMenu.activeSelf)
+        {
+            memoryBoardUI.SetActive(false);
+            memoryBoardPopUp.SetActive(false);
+        }
     }
 }
