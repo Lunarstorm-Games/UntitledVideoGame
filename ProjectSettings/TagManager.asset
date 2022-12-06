@@ -11,6 +11,7 @@ TagManager:
   - MagicWorkshop
   - Object
   - Fire
+  - MemoryBoard
   layers:
   - Default
   - TransparentFX
