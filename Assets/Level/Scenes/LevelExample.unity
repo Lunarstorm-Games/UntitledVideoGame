@@ -50734,7 +50734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1209185129
 RectTransform:
   m_ObjectHideFlags: 0
@@ -79435,7 +79435,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 14.233981
+  m_fontSizeMin: 10
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
