@@ -17,6 +17,7 @@ public class WaveSpawner : MonoBehaviour
     private List<Transform> SpawnPoints;
     [SerializeField]
     public List<EnemySpawnSetting> SpawnAblePrefabs = new List<EnemySpawnSetting>();
+    public List<String> SpawnedEnemies = new List<String>();
     public bool DebugInfo = false;
     [Space]
 
@@ -204,6 +205,12 @@ public class WaveSpawner : MonoBehaviour
             {
                 var newEnemy = GetObjectFromPool(enemySpawnSetting);
                 newEnemy.Initialize(hit.position, Quaternion.identity);
+                if (!SpawnedEnemies.Contains(newEnemy.PrefabName))
+                {
+                    SpawnedEnemies.Add(newEnemy.PrefabName);    
+                }
+                
+                
 
                 i++;
             }
