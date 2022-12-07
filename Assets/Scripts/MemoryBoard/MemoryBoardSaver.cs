@@ -39,4 +39,29 @@ public static class MemoryBoardSaver
             return null;
         }
     }
+    
+    public static void DeleteEnemyTrackerHistory()
+    {
+        string path = Application.persistentDataPath + "/enemyTracker.dat";
+        if(File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
+    
+    public static bool CheckIfEnemyTrackerHistoryExists()
+    {
+        string path = Application.persistentDataPath + "/enemyTracker.dat";
+        if(File.Exists(path))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+
+    
 }

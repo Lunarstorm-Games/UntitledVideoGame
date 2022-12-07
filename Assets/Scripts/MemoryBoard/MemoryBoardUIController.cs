@@ -140,12 +140,25 @@ public class MemoryBoardUIController : MonoBehaviour
     
     public void LoadMemoryBoard()
     {
-        MemoryBoardData data = MemoryBoardSaver.LoadEnemyTrackerHistory();
-        MeleeSkeletonTracker.text = data.meleeSkeletonHistory;
-        MageSkeletonTracker.text = data.mageSkeletonHistory;
-        BruteSkeletonTracker.text = data.bruteSkeletonHistory;
-        GoblinTracker.text = data.goblinHistory;
-        OrcTracker.text = data.orcHistory;
-        LichTracker.text = data.lichHistory;
+        if (MemoryBoardSaver.CheckIfEnemyTrackerHistoryExists())
+        {
+            MemoryBoardData data = MemoryBoardSaver.LoadEnemyTrackerHistory();
+            MeleeSkeletonTracker.text = data.meleeSkeletonHistory;
+            MageSkeletonTracker.text = data.mageSkeletonHistory;
+            BruteSkeletonTracker.text = data.bruteSkeletonHistory;
+            GoblinTracker.text = data.goblinHistory;
+            OrcTracker.text = data.orcHistory;
+            LichTracker.text = data.lichHistory;    
+        }
+        else
+        {
+            MeleeSkeletonTracker.text = "???";
+            MageSkeletonTracker.text = "???";
+            BruteSkeletonTracker.text = "???";
+            GoblinTracker.text = "???";
+            OrcTracker.text = "???";
+            LichTracker.text = "???";
+        }
+        
     }
 }
