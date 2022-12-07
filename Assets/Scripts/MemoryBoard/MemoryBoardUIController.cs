@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.scripts.Models.WaveModels;
+using TMPro;
+using UniStorm;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,9 +13,14 @@ public class MemoryBoardUIController : MonoBehaviour
     public GameObject memoryBoardPopUp;
     public GameObject memoryBoardUI;
     public GameObject pauseMenu;
+    public GameObject EnemyTracker;
+    public WaveSpawner waveSpawner;
+    public List<EnemySpawnSetting> EnemyVariants = new List<EnemySpawnSetting>();
+    
 
     void Update()
     {
+        TrackEnemyAppearance();
         CheckPause();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -69,6 +77,23 @@ public class MemoryBoardUIController : MonoBehaviour
         {
             memoryBoardUI.SetActive(false);
             memoryBoardPopUp.SetActive(false);
+        }
+    }
+    
+    public void TrackEnemyAppearance()
+    {
+        int hour = UniStormSystem.Instance?.Hour??0;
+        int minutes = UniStormSystem.Instance?.Minute??0;
+        
+        foreach (var enemy in waveSpawner.SpawnedEnemies)
+        {
+            EnemyVariants.Add(enemy);
+        }
+        
+        foreach (var enemy in EnemyVariants)
+        {
+            if(!EnemyTracker.GetComponent<TextMeshProUGUI>().text.Contains(enemy.Prefab.gameObject.name))
+                EnemyTracker.GetComponent<TextMeshProUGUI>().text += $"{enemy.Prefab.gameObject.name} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}\n";
         }
     }
 }
