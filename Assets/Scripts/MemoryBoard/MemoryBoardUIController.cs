@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
+using Assets.Scripts.Interfaces;
 using Assets.scripts.Models.WaveModels;
 using TMPro;
 using UniStorm;
@@ -13,10 +15,23 @@ public class MemoryBoardUIController : MonoBehaviour
     public GameObject memoryBoardPopUp;
     public GameObject memoryBoardUI;
     public GameObject pauseMenu;
-    public GameObject EnemyTracker;
+    public TextMeshProUGUI MeleeSkeletonTracker;
+    public TextMeshProUGUI MageSkeletonTracker;
+    public TextMeshProUGUI BruteSkeletonTracker;
+    public TextMeshProUGUI GoblinTracker;
+    public TextMeshProUGUI OrcTracker;
+    public TextMeshProUGUI LichTracker;
     public WaveSpawner waveSpawner;
-    public List<EnemySpawnSetting> EnemyVariants = new List<EnemySpawnSetting>();
-    
+
+    private void Awake()
+    {
+        MeleeSkeletonTracker.text = "???";
+        MageSkeletonTracker.text = "???";
+        BruteSkeletonTracker.text = "???";
+        GoblinTracker.text = "???";
+        OrcTracker.text = "???";
+        LichTracker.text = "???";
+    }
 
     void Update()
     {
@@ -47,6 +62,7 @@ public class MemoryBoardUIController : MonoBehaviour
     public void ShowPanel()
     {
         memoryBoardUI.SetActive(true);
+        LoadMemoryBoard();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         memoryBoardPopUp.SetActive(false);
@@ -87,13 +103,49 @@ public class MemoryBoardUIController : MonoBehaviour
         
         foreach (var enemy in waveSpawner.SpawnedEnemies)
         {
-            EnemyVariants.Add(enemy);
+           
+                if(enemy.Equals("Melee Skeleton") && !MeleeSkeletonTracker.text.Contains(enemy))
+                {
+                    MeleeSkeletonTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (enemy == "Mage Skeleton" && !MageSkeletonTracker.text.Contains(enemy))
+                {
+                    MageSkeletonTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (enemy == "Brute Skeleton" && !BruteSkeletonTracker.text.Contains(enemy))
+                {
+                    BruteSkeletonTracker.text =
+                        $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (enemy == "Goblin" && !GoblinTracker.text.Contains(enemy))
+                {
+                    GoblinTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (enemy == "Orc" && !OrcTracker.text.Contains(enemy))
+                {
+                    OrcTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (enemy == "Lich" && !LichTracker.text.Contains(enemy))
+                {
+                    LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }    
+                MemoryBoardSaver.SaveEnemyTrackerHistory(this);
         }
-        
-        foreach (var enemy in EnemyVariants)
-        {
-            if(!EnemyTracker.GetComponent<TextMeshProUGUI>().text.Contains(enemy.Prefab.gameObject.name))
-                EnemyTracker.GetComponent<TextMeshProUGUI>().text += $"{enemy.Prefab.gameObject.name} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}\n";
-        }
+    }
+    
+    public void LoadMemoryBoard()
+    {
+        MemoryBoardData data = MemoryBoardSaver.LoadEnemyTrackerHistory();
+        MeleeSkeletonTracker.text = data.meleeSkeletonHistory;
+        MageSkeletonTracker.text = data.mageSkeletonHistory;
+        BruteSkeletonTracker.text = data.bruteSkeletonHistory;
+        GoblinTracker.text = data.goblinHistory;
+        OrcTracker.text = data.orcHistory;
+        LichTracker.text = data.lichHistory;
     }
 }
