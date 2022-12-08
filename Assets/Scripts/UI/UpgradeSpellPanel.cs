@@ -212,6 +212,7 @@ public class UpgradeSpellPanel : MonoBehaviour
               if (essenceBank.SpendEssence(spellUpgrades[0].UpgradeCost))
               {
                   spells[0].UpgradeDamage(spellUpgrades[0].Value);
+                  spellUpgrades[0].UpgradeCost = Mathf.RoundToInt(spellUpgrades[0].UpgradeCost * 1.3f);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
@@ -227,10 +228,12 @@ public class UpgradeSpellPanel : MonoBehaviour
               if (essenceBank.SpendEssence(spellUpgrades[1].UpgradeCost))
               {
                   spells[0].UpgradeSpeed(spellUpgrades[1].Value);
+                  spellUpgrades[1].UpgradeCost = Mathf.RoundToInt(spellUpgrades[1].UpgradeCost * 1.3f);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
                   ShowSpellPanel("light speed");
+                  
               }
               else
               {
@@ -242,6 +245,7 @@ public class UpgradeSpellPanel : MonoBehaviour
               if (essenceBank.SpendEssence(spellUpgrades[2].UpgradeCost))
               {
                   spells[1].UpgradeDamage(spellUpgrades[2].Value);
+                  spellUpgrades[2].UpgradeCost = Mathf.RoundToInt(spellUpgrades[2].UpgradeCost * 1.3f);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
@@ -257,6 +261,7 @@ public class UpgradeSpellPanel : MonoBehaviour
               if (essenceBank.SpendEssence(spellUpgrades[3].UpgradeCost))
               {
                   spells[1].UpgradeSpeed(spellUpgrades[3].Value);
+                  spellUpgrades[3].UpgradeCost = Mathf.RoundToInt(spellUpgrades[3].UpgradeCost * 1.3f);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
@@ -272,6 +277,7 @@ public class UpgradeSpellPanel : MonoBehaviour
               if (essenceBank.SpendEssence(spellUpgrades[4].UpgradeCost))
               {
                   spells[1].GetComponent<AOEProjectile>().UpgradeAOE(spellUpgrades[4].Value);
+                  spellUpgrades[4].UpgradeCost = Mathf.RoundToInt(spellUpgrades[4].UpgradeCost * 1.3f);
                   SetEssence(essenceBank.EssenceAmount);
                   SetLeftPaneData();
                   HideSpellPanel();
