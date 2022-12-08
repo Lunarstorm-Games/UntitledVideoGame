@@ -156,6 +156,7 @@ public class UpgradeSpellPanel : MonoBehaviour
         starterAssetsInputs.SetCursorState(false);
         starterAssetsInputs.cursorInputForLook = false;
         spellUI.gameObject.SetActive(false);
+        Cursor.visible = true;
         playerInput.actions.Disable();
         gameObject.SetActive(true);
         SetEssence(essenceBank.EssenceAmount);
@@ -172,6 +173,7 @@ public class UpgradeSpellPanel : MonoBehaviour
         starterAssetsInputs.SetCursorState(true);
         starterAssetsInputs.cursorInputForLook = true;
         playerInput.actions.Enable();
+        Cursor.visible = false;
         buildingRaycast.SetIsPormptOpen(false);
         thirdPersonShooter.SetIsPormptOpen(false);
     }
