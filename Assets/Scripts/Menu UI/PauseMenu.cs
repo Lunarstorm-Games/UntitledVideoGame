@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        MemoryBoardSaver.DeleteEnemyTrackerHistory();
         Application.Quit();
     }
 }
