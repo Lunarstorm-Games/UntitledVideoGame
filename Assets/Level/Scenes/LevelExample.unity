@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -50765,7 +50765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.163086, y: -28.638397}
+  m_AnchoredPosition: {x: 5.163086, y: -28.638428}
   m_SizeDelta: {x: -629.6741, y: -32.723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209185130
@@ -75819,6 +75819,18 @@ MonoBehaviour:
   OrcTracker: {fileID: 2064683597}
   LichTracker: {fileID: 1756403689}
   waveSpawner: {fileID: 1737974872}
+--- !u!114 &1979340023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4207321055489993421, guid: 393257435a4a4c74db7262c28c1fad54,
+    type: 3}
+  m_PrefabInstance: {fileID: 2027170901}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707000338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8beb0ea9d7a479b8a23bce24134a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1979551510
 GameObject:
   m_ObjectHideFlags: 0
@@ -76130,6 +76142,17 @@ PrefabInstance:
       propertyPath: _trapBuildingManager
       value: 
       objectReference: {fileID: 1202269529}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.data[2]
+      value: 
+      objectReference: {fileID: 1516860295110639368, guid: cfd6a190e1692184386bb7a1d86d340f,
+        type: 3}
     - target: {fileID: 4143355195471934057, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
       propertyPath: manaBar
@@ -77890,6 +77913,71 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 378374025}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 3c78963e-acfe-4040-98ac-156598d23ea4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: e70ce1fe-b60a-4881-9828-195bf133e882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Player/Aim[/Mouse/rightButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Player/Attack[/Mouse/leftButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1979340023}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ThirdPersonShooterController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478390241683647038, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7819169115196453000, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
       propertyPath: m_RootOrder
@@ -79435,7 +79523,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
+  m_fontSizeMin: 21.233013
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -83150,7 +83238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: -9.483032}
+  m_AnchoredPosition: {x: 0, y: -9.483032}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142690952

@@ -21,6 +21,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private string currentSelectedSpell;
     private SpellInventory spellInventory;
     private SpellUI spellUI;
+    private Vector3 mouseWorldPosition;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mouseWorldPosition = Vector3.zero;
+        mouseWorldPosition = Vector3.zero;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, maxRayDistance, aimColliderLayerMask))
@@ -47,27 +48,14 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             mouseWorldPosition = ray.origin + ray.direction * maxRayDistance;
         }
+        CastSpell();
+        Aim();
+        ChangeSpell();
+    }
 
-
-        if (_starterAssetsInputs.aim && !isPromptOpen)
-        {
-            _virtualCamera.gameObject.SetActive(true);
-            _thirdPersonController.SetRotateOnMove(false);
-
-            Vector3 worldAimTarget = mouseWorldPosition;
-            worldAimTarget.y = transform.position.y;
-            Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-
-            transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-        }
-        else
-        {
-            _virtualCamera.gameObject.SetActive(false);
-            _thirdPersonController.SetRotateOnMove(true);
-        }
-
-
-
+    // cast the active spell
+    void CastSpell()
+    {
         if (_starterAssetsInputs.attack && !isPromptOpen)
         {
             if (Player.Instance.currentMana >= projectilePrefab.mana)
@@ -85,7 +73,11 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
         }
+    }
 
+    // Changing the active spell with keys
+    void ChangeSpell()
+    {
         if (Input.inputString != "")
         {
             int number;
@@ -100,6 +92,27 @@ public class ThirdPersonShooterController : MonoBehaviour
                 else if (spellInventory.spells[10])
                     projectilePrefab = spellInventory.spells[10];
             }
+        }
+    }
+
+    // Aiming wiht the player
+    void Aim()
+    {
+        if (_starterAssetsInputs.aim && !isPromptOpen)
+        {
+            _virtualCamera.gameObject.SetActive(true);
+            _thirdPersonController.SetRotateOnMove(false);
+
+            Vector3 worldAimTarget = mouseWorldPosition;
+            worldAimTarget.y = transform.position.y;
+            Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+
+            transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+        }
+        else
+        {
+            _virtualCamera.gameObject.SetActive(false);
+            _thirdPersonController.SetRotateOnMove(true);
         }
     }
 
