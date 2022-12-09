@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bb5ec78971df54ca76e41c715d47cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityType: 8
+  entityType: 32
   targetInterests: 4
   targetSpots:
   - {fileID: 8044881512009396664}
