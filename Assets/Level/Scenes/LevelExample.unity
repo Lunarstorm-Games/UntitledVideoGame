@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -42591,6 +42591,11 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 12.200001
       objectReference: {fileID: 0}
+    - target: {fileID: 1720529372812774079, guid: be4135a8d94f8944f80c7235d56b33ae,
+        type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1673636992}
     - target: {fileID: 1733826019198599036, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}
       propertyPath: playerInput
@@ -66507,6 +66512,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1645503461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1673636992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5675725582407445198, guid: be4135a8d94f8944f80c7235d56b33ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 913513092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1678451633
 GameObject:
   m_ObjectHideFlags: 0
@@ -77298,6 +77315,17 @@ PrefabInstance:
       propertyPath: _trapBuildingManager
       value: 
       objectReference: {fileID: 1202269529}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.data[2]
+      value: 
+      objectReference: {fileID: 1516860295110639368, guid: cfd6a190e1692184386bb7a1d86d340f,
+        type: 3}
     - target: {fileID: 4143355195471934057, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
       propertyPath: manaBar
@@ -80603,7 +80631,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
+  m_fontSizeMin: 21.233013
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
