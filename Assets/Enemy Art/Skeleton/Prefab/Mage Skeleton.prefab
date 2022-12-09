@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 4
-  targetInterests: 27
+  targetInterests: 59
   targetSpots:
   - {fileID: 6966274363075660198}
   maxHealth: 80
