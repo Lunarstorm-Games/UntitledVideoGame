@@ -69,12 +69,12 @@ public class Projectile : Weapon
         speed += newSpeed;
     }
 
-    protected virtual void DestroyProjectile(float delay = 0f)
+    public virtual void DestroyProjectile(float delay = 0f)
     {
         Destroy(gameObject, delay);
     }
 
-    protected virtual void ProjectileImpact()
+    public virtual void ProjectileImpact()
     {
         if (impactEffect != null)
         {
