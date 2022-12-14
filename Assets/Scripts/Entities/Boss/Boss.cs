@@ -27,11 +27,14 @@ public class Boss : Entity
     [SerializeField] protected Transform projectileSpawnPos;
     [SerializeField] protected Projectile projectile;
     [SerializeField] protected int fireball_amount = 3;
+    [SerializeField] protected float fireball_attackRange = 10f;
 
     [Header("Lunge Attack")]
     [SerializeField] protected float lunge_damage = 20f;
     [SerializeField] protected float lunge_attackSpeed = 1f;
     [SerializeField] protected float lunge_attackDelay = 10f;
+    [SerializeField] protected float lunge_attackRange = 4f;
+
 
     public Transform TargetSpot { get; set; }
     public Entity CurrentTarget { get; set; }
@@ -51,6 +54,15 @@ public class Boss : Entity
     public Transform ProjectileSpawnPos { get => projectileSpawnPos; set => projectileSpawnPos = value; }
     public Projectile Projectile { get => projectile; set => projectile = value; }
     public int Fireball_amount { get => fireball_amount; set => fireball_amount = value; }
+    public float Lunge_attackRange { get => lunge_attackRange; set => lunge_attackRange = value; }
+    public float Fireball_attackRange { get => fireball_attackRange; set => fireball_attackRange = value; }
+    public float PlayerRange { get { return Vector3.Distance(transform.position, Player.Instance.transform.position); } }
+
+    public void Start()
+    {
+        CurrentTarget = Player.Instance;
+        TargetSpot = Player.Instance.GetEntityTargetSpot();
+    }
 
     public void FireballProjectile()
     {

@@ -7,8 +7,16 @@ public class InAttackRange : Conditional
 {
     [SerializeField] private SharedEntity _target;
     [SerializeField] private SharedFloat _attackRange;
+    [SerializeField] private SharedFloat speedAnimParam;
+
 
     private Animator animator;
+    private float speedTransitionTime = 0.0f;
+
+    public override void OnEnd()
+    {
+        speedTransitionTime = 0.0f;
+    }
 
     public override void OnStart()
     {
@@ -17,6 +25,9 @@ public class InAttackRange : Conditional
 
     public override TaskStatus OnUpdate()
 	{
+        if (_target == null) return TaskStatus.Failure;
+
+
         Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, _attackRange.Value);
         foreach (Collider collider in hitColliders)
         {
@@ -25,11 +36,16 @@ public class InAttackRange : Conditional
             {
                 if (_target.Value == target)
                 {
-                    animator.SetFloat("Speed", 0f);
+                    Debug.Log("range attack");
+                    float anim_speed = Mathf.Lerp(speedAnimParam.Value, 0f, speedTransitionTime);
+                    speedTransitionTime += 0.8f * Time.deltaTime;
+                    speedAnimParam.Value = anim_speed;
+                    animator.SetFloat("Speed", anim_speed);
                     return TaskStatus.Success;
                 }
             }
         }
         return TaskStatus.Failure;
     }
+
 }

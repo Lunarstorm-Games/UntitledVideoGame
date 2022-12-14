@@ -46,9 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayCollider:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   BuildableStructures: []
-  interactDistance: 20
+  interactDistance: 40
+  etoBuildPopUp: {fileID: 0}
   interactable: {fileID: 0}
 --- !u!1 &2971970552429335401
 GameObject:
@@ -2647,6 +2648,7 @@ GameObject:
   - component: {fileID: 6501085583160568173}
   - component: {fileID: 1894003599}
   - component: {fileID: 1894003589}
+  - component: {fileID: 1979340022}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2663,7 +2665,7 @@ Transform:
   m_GameObject: {fileID: 7478390241683647026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 517.27924, y: 127.007, z: 516.435}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2971970552429335406}
@@ -2967,6 +2969,7 @@ MonoBehaviour:
   spells:
   - {fileID: -2338750469617564991, guid: bbb575ee0018eda40be587595580859b, type: 3}
   - {fileID: -6779019948163241492, guid: 135de912fcac1ff41bbf10dea96c1300, type: 3}
+  - {fileID: 1516860295110639368, guid: cfd6a190e1692184386bb7a1d86d340f, type: 3}
 --- !u!114 &6501085583160568173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3017,3 +3020,26 @@ MonoBehaviour:
   crossHair: {fileID: 0}
   trapUI: {fileID: 0}
   controls: {fileID: 7478390241683647038}
+--- !u!114 &1979340022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478390241683647026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5744c71a53d28548897617e6a9b2779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 7478390241683647038}
+  memoryBoardPopUp: {fileID: 0}
+  memoryBoardUI: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  MeleeSkeletonTracker: {fileID: 0}
+  MageSkeletonTracker: {fileID: 0}
+  BruteSkeletonTracker: {fileID: 0}
+  GoblinTracker: {fileID: 0}
+  OrcTracker: {fileID: 0}
+  LichTracker: {fileID: 0}
+  waveSpawner: {fileID: 0}

@@ -28,13 +28,9 @@ public class DragonRangeAttack : Action
 		animator.SetTrigger("FireballAttack");
 		currentShotAmount = fireballAmount.Value;
 		animDuration = animator.runtimeAnimatorController.animationClips.FirstOrDefault(clip => clip.name == "Fly Flame Attack").length / attackSpeed.Value;
-		Debug.Log("anim length: " + animDuration);
 		animDuration -= 1f / attackSpeed.Value;
 		currentFireRateTime = (1f / attackSpeed.Value) * attackSpeed.Value;
-		Debug.Log(currentFireRateTime);
-		Debug.Log(animDuration);
 		fireRate = animDuration / fireballAmount.Value;
-		Debug.Log(fireRate);
 	}
 
 	public override TaskStatus OnUpdate()
