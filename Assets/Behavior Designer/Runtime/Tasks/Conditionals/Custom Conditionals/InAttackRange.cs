@@ -7,16 +7,9 @@ public class InAttackRange : Conditional
 {
     [SerializeField] private SharedEntity _target;
     [SerializeField] private SharedFloat _attackRange;
-    [SerializeField] private SharedFloat speedAnimParam;
-
 
     private Animator animator;
-    private float speedTransitionTime = 0.0f;
 
-    public override void OnEnd()
-    {
-        speedTransitionTime = 0.0f;
-    }
 
     public override void OnStart()
     {
@@ -36,11 +29,7 @@ public class InAttackRange : Conditional
             {
                 if (_target.Value == target)
                 {
-                    Debug.Log("range attack");
-                    float anim_speed = Mathf.Lerp(speedAnimParam.Value, 0f, speedTransitionTime);
-                    speedTransitionTime += 0.8f * Time.deltaTime;
-                    speedAnimParam.Value = anim_speed;
-                    animator.SetFloat("Speed", anim_speed);
+                    animator.SetFloat("Speed", 0f);
                     return TaskStatus.Success;
                 }
             }

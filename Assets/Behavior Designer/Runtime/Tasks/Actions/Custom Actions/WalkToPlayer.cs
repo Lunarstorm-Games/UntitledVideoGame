@@ -10,6 +10,7 @@ public class WalkToPlayer : Action
     [SerializeField] private SharedTransform targetSpot;
     [SerializeField] private SharedEntity target;
     [SerializeField] private SharedFloat speedAnimParam;
+    [SerializeField] private SharedFloat test;
 
     private Entity player;
     private NavMeshAgent agent;
@@ -52,6 +53,7 @@ public class WalkToPlayer : Action
 
     public override TaskStatus OnUpdate()
     {
+        Debug.Log(test.Value);
         if (!agent)
         {
             Debug.LogWarning("NavAgent is null");

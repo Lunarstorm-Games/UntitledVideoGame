@@ -4,20 +4,27 @@ using BehaviorDesigner.Runtime.Tasks;
 
 public class InRange : Conditional
 {
-    public SharedEntity firstEntity;
-    public SharedEntity secondEntity;
-    public SharedFloat range;
+    public SharedFloat playerRange;
+    public SharedFloat compareTo;
+    public SharedBool compareHigher;
 
     public override TaskStatus OnUpdate()
     {
-        if (firstEntity == null) return TaskStatus.Failure;
-
-        if (secondEntity == null) return TaskStatus.Failure;
-
-        if (Vector3.Distance(firstEntity.Value.transform.position, secondEntity.Value.transform.position) > range.Value)
+        if (compareHigher.Value)
         {
-            return TaskStatus.Failure;
+            if (playerRange.Value > compareTo.Value)
+            {
+                return TaskStatus.Success;
+            }
+            else return TaskStatus.Failure;
         }
-        return TaskStatus.Success;
+        else
+        {
+            if (playerRange.Value < compareTo.Value)
+            {
+                return TaskStatus.Success;
+            }
+            else return TaskStatus.Failure;
+        }
     }
 }
