@@ -20,12 +20,31 @@ MonoBehaviour:
     screenBlendMode: 0
     sunTransform: {fileID: 0}
     radialBlurIterations: 2
-    sunColor: {r: 1, g: 1, b: 1, a: 1}
-    sunThreshold: {r: 0.87, g: 0.74, b: 0.65, a: 1}
-    sunShaftBlurRadius: 2.5
-    sunShaftIntensity: 1.15
-    maxRadius: 0.75
+    sunColor: {r: 0.52190304, g: 0.39528015, b: 0.32097152, a: 1}
+    sunThreshold: {r: 0.5568628, g: 0.5372549, b: 0.48235294, a: 1}
+    sunShaftBlurRadius: 3
+    sunShaftIntensity: 1
+    maxRadius: 0.5
     useDepthTexture: 1
+--- !u!114 &-229908085898525867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfcf1b1d40e1c44a268782a45f08e8, type: 3}
+  m_Name: Blit
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 1000
+    blitMaterial: {fileID: 2100000, guid: 0bd1a33f280c804468cc889af69c54cd, type: 2}
+    blitMaterialPassIndex: -1
+    destination: 0
+    textureId: _BlitPassTexture
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,7 +65,8 @@ MonoBehaviour:
   - {fileID: 8187952939175910528}
   - {fileID: -354182244931222148}
   - {fileID: 4434039707349825850}
-  m_RendererFeatureMap: 
+  - {fileID: -229908085898525867}
+  m_RendererFeatureMap: 55430761d033cffc
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -105,14 +125,14 @@ MonoBehaviour:
     Fade: 0.33
     CloudShadowTexture: {fileID: 0}
     ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    CloudTextureScale: 0.1
-    BottomThreshold: 0
+    CloudTextureScale: 0.001
+    BottomThreshold: 0.5
     TopThreshold: 1
-    ShadowIntensity: 1
+    ShadowIntensity: 0
     ScreenSpaceShadowsMaterial: {fileID: 0}
-    ShadowDirection: {x: 0, y: 0, z: 0}
-    m_CurrentCloudHeight: 0
-    CloudSpeed: 0
+    ShadowDirection: {x: -0.34202018, y: -0.36925527, z: -0.86410254}
+    m_CurrentCloudHeight: 200
+    CloudSpeed: 5
     NormalY: 0
 --- !u!114 &4434039707349825850
 MonoBehaviour:
@@ -128,17 +148,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    isEnabled: 1
+    isEnabled: 0
     renderPassEvent: 500
     resolution: 1
     screenBlendMode: 0
     sunTransform: {fileID: 0}
-    radialBlurIterations: 2
-    sunColor: {r: 1, g: 1, b: 1, a: 1}
-    sunThreshold: {r: 0.87, g: 0.74, b: 0.65, a: 1}
-    sunShaftBlurRadius: 2.5
-    sunShaftIntensity: 1.15
-    maxRadius: 0.75
+    radialBlurIterations: 3
+    sunColor: {r: 0.31764707, g: 0.32156864, b: 0.32156864, a: 1}
+    sunThreshold: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 1}
+    sunShaftBlurRadius: 3.32
+    sunShaftIntensity: 1
+    maxRadius: 0.3
     useDepthTexture: 1
 --- !u!114 &8187952939175910528
 MonoBehaviour:

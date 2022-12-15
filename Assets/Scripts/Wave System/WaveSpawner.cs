@@ -74,6 +74,14 @@ public class WaveSpawner : MonoBehaviour
 
 
     }
+    private void OnDrawGizmos()
+    {
+        foreach (var item in SpawnPoints)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawCube(item.position, Vector3.one);
+        }
+    }
 
 
     void InitializeObjectPool()

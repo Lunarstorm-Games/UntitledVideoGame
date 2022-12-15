@@ -20,7 +20,7 @@ public class BuildModeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UIController.Instance.BuildingInterface.gameObject.activeInHierarchy)
+        if (!UIController.Instance?.BuildingInterface.gameObject.activeInHierarchy??false)
         {
             GetInteractable();
         }

@@ -12,6 +12,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
+    [RequireComponent(typeof(TimeLoopEffectManager))]
     public class GameController : MonoBehaviour
     {
         public static GameController instance;
@@ -25,20 +26,24 @@ namespace Assets.Scripts
         private bool AttackHasStarted = false;
         public bool SkipPreAttackTimer = false;
         public string time ;
-
+        private TimeLoopEffectManager TimeLoopEffectManager;
 
         public string skipInputName = "startAttack";
         private bool timeLoopStarted = false;
-
+        private void Awake()
+        {
+            SaveDirectory = Application.persistentDataPath;
+            TimeLoopEffectManager = GetComponent<TimeLoopEffectManager>();
+        }
         // Start is called before the first frame update
         void Start()
         {
 
+            Time.timeScale = 1;
             if (!instance) instance = this;
             else Destroy(gameObject);
-            SaveDirectory = Application.persistentDataPath;
+            
             LevelName = SceneManager.GetActiveScene().name;
-
             InitializeLevel();
         }
 
@@ -46,8 +51,12 @@ namespace Assets.Scripts
         void Update()
         {
             UpdateTimer();
-            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted) 
+            if (Input.GetButtonUp(skipInputName) && !AttackHasStarted)
+            {
+
                 UniStormManager.Instance.SetTime(19, 00);
+                TimeLoopEffectManager.StartCapture();
+            }
             
         }
 
@@ -90,11 +99,23 @@ namespace Assets.Scripts
         {
             if (!timeLoopStarted)
             {
+                TimeLoopEffectManager.StopCapture();
                 timeLoopStarted = true;
+
                 SaveManager.Instance.SaveStateToFile(LevelName);
-                SceneManager.LoadScene(LevelName);
+                var loadingTask= SceneManager.LoadSceneAsync(LevelName);
+                loadingTask.allowSceneActivation = false;
+                TimeLoopEffectManager.StartTimeloopEffect(()=>
+                {
+                    loadingTask.allowSceneActivation = true;
+                    
+                });
+
+               
+
             }
         }
+     
         [ContextMenu("GenerateIdsForPersistable")]
         public void GenerateIdsForPersistable()
         {
