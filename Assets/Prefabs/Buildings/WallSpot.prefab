@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7571357378697803477}
   - component: {fileID: 7571357378697803478}
   - component: {fileID: 7571357378697803474}
+  - component: {fileID: 8417503731424225443}
   m_Layer: 6
   m_Name: WallSpot
   m_TagString: BuildingSpot
@@ -116,3 +117,19 @@ MonoBehaviour:
   AllowedBuildings:
   - {fileID: -1764289696849655095, guid: 297b13d4a56a41045bfbc0183bc3a061, type: 3}
   hasBuilding: 0
+--- !u!114 &8417503731424225443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571357378697803479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
