@@ -94,13 +94,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2739a0dae8d2f2a4d994f6af982b6e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RecordingFrameRate: 1
   DeleteOnStart: 0
-  slowDownTime: 3
-  replayTimeBetweenFrames: 0.1
-  recordingCamera: {fileID: 0}
-  RT_TimeLoop: {fileID: 8400000, guid: a754cd3894ce3a74bb2ff75821ec8591, type: 2}
   lastScreenshot: {fileID: 0}
+  recordingCamera: {fileID: 0}
+  RecordingFrameRate: 2
+  RT_TimeLoop: {fileID: 8400000, guid: a754cd3894ce3a74bb2ff75821ec8591, type: 2}
+  slowDownTime: 3
+  MaxScreenshots: 5000
+  ItsRewindTime: 1
+  TargetRewindDuration: 10
 --- !u!82 &8042652706245047752
 AudioSource:
   m_ObjectHideFlags: 0

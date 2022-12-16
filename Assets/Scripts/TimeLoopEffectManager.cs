@@ -26,12 +26,12 @@ namespace Assets.Scripts
         [ReadOnly] public Texture2D lastScreenshot;
         public Camera recordingCamera;
         public int RecordingFrameRate = 15;
-        public float replayTimeBetweenFrames = 0.1f;
+        private float replayTimeBetweenFrames = 0.03333333333f;
         public RenderTexture RT_TimeLoop;
         public float slowDownTime = 3f;
         public int MaxScreenshots = 10000;
         public bool ItsRewindTime = true;
-
+        public float TargetRewindDuration = 10f;
         public void StartCapture()
         {
             CaptureStarted = true;
@@ -39,13 +39,32 @@ namespace Assets.Scripts
 
         public void StartTimeloopEffect(Action afterCompleteCallback)
         {
+            if(ItsRewindTime) audioSource.Play();
             Time.timeScale = 0;
             UIController.Instance.gameObject.SetActive(false);
 
             blitRenderer.SetActive(true);
-            if(ItsRewindTime) audioSource.Play();
-
+            CalculateFrameDelta();
             StartCoroutine(PlaybackCoroutine(afterCompleteCallback));
+        }
+        void ResizeRenderTexture(RenderTexture renderTexture, int width, int height)
+        {
+            if (renderTexture)
+            {
+                renderTexture.Release();
+                renderTexture.width = width;
+                renderTexture.height = height;
+            }
+
+            recordingCamera.targetTexture = renderTexture;
+
+        }
+
+        private void CalculateFrameDelta()
+        {
+            var delta = TargetRewindDuration / capturedFrames.Count;
+            if(delta< 0.03333333333f) replayTimeBetweenFrames = delta;
+
         }
 
         public void StopCapture()
@@ -58,6 +77,7 @@ namespace Assets.Scripts
         {
             Folder = Application.temporaryCachePath + "/timeloopEffect";
             audioSource = GetComponent<AudioSource>();
+            ResizeRenderTexture(RT_TimeLoop,Screen.width,Screen.height);
         }
 
         private void ExtractScriptableRendererData()
@@ -98,24 +118,52 @@ namespace Assets.Scripts
             afterCompleteCallback();
         }
 
-        private Texture2D RenderedTextureFromCamera()
+        private void RenderedTextureFromCamera()
         {
-            var screenTexture = new RenderTexture(Screen.width, Screen.height, 16);
-            recordingCamera.targetTexture = screenTexture;
-            RenderTexture.active = screenTexture;
-            recordingCamera.Render();
+            
+            //RenderTexture.active = RT_TimeLoop;
 
-            var renderedTexture = new Texture2D(Screen.width, Screen.height);
-            renderedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-            renderedTexture.Apply();
+            Texture2D renderedTexture = null;
 
-            RenderTexture.active = null;
 
-            lastScreenshot = renderedTexture;
-            return renderedTexture;
+            AsyncGPUReadback.Request(RT_TimeLoop, 0, TextureFormat.RGBA32,(AsyncGPUReadbackRequest request) =>
+            {
+
+                OnCompleteReadback(request,out renderedTexture);
+
+                if (capturedFrames.Count >= MaxScreenshots)
+                {
+
+                    capturedFrames.RemoveAt(0);
+                }
+
+                capturedFrames.Add(renderedTexture);
+                lastScreenshot = renderedTexture;
+            });
+            //renderedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            //renderedTexture.Apply();
+
+            //RenderTexture.active = null;
         }
 
-     
+        private void OnCompleteReadback(AsyncGPUReadbackRequest asyncGPUReadbackRequest,out  Texture2D texture)
+        {
+            texture = null;
+            if (asyncGPUReadbackRequest.hasError)
+            {
+                Debug.LogError("Error Capturing Screenshot: With AsyncGPUReadbackRequest.");
+                return;
+            }
+            var rawData = asyncGPUReadbackRequest.GetData<byte>();
+            // Grab screen dimensions
+            var width = Screen.width;
+            var height = Screen.height;
+            texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
+            texture.SetPixelData(rawData,0);
+            texture.Apply();
+            
+        }
+
 
         private void Start()
         {
@@ -141,14 +189,8 @@ namespace Assets.Scripts
                     //capturedFrames.Add(ScreenCapture.CaptureScreenshotAsTexture());
                     //capturedFrames.Add(SaveCameraView(Camera.main));
                     frameTime = 0;
-                    var renderedTexture = RenderedTextureFromCamera();
-                    if (capturedFrames.Count >= MaxScreenshots)
-                    {
-
-                        capturedFrames.RemoveAt(0);
-                    }
-
-                    capturedFrames.Add(renderedTexture);
+                    RenderedTextureFromCamera();
+                    
                 }
 
                 frameTime += Time.deltaTime;
