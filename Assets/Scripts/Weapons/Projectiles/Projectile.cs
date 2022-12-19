@@ -33,14 +33,14 @@ public class Projectile : Weapon
 
     public virtual void OnTriggerEnter(Collider collider)
     {
-
-        if (collider.TryGetComponent<Entity>(out Entity entity))
+        Debug.Log(collider.name, collider.gameObject);
+        if (collider.transform.root.TryGetComponent<Entity>(out Entity entity))
         {
             if (entity != shooter)
             {
                 if (shooter.IsValidTarget(entity.EntityType))
                 {
-                    if (collider.TryGetComponent<IDamageable>(out IDamageable target))
+                    if (collider.transform.root.TryGetComponent<IDamageable>(out IDamageable target))
                     {
                         target.TakeDamage(damage, shooter);
                     }

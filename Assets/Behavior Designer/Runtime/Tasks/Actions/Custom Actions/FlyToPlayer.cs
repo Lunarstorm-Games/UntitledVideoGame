@@ -9,12 +9,11 @@ public class FlyToPlayer : Action
     [SerializeField] private SharedFloat stoppingDistance;
     [SerializeField] private SharedTransform targetSpot;
     [SerializeField] private SharedEntity target;
+    [SerializeField] private SharedEntity unit;
 
     private Entity player;
     private NavMeshAgent agent;
-    private Entity unit;
     private Animator animator;
-    private float speedTransitionTime = 0.0f;
 
 
     public override void OnStart()
@@ -28,7 +27,7 @@ public class FlyToPlayer : Action
 
         if (player == null) return;
 
-        if (!unit.IsValidTarget(player.EntityType)) return;
+        if (!unit.Value.IsValidTarget(player.EntityType)) return;
 
         target.SetValue(player);
 
@@ -41,13 +40,6 @@ public class FlyToPlayer : Action
         agent.SetDestination(targetSpot.Value.position);
 
         
-    }
-
-    public override void OnEnd()
-    {
-        speedTransitionTime = 0.0f;
-        if (agent)
-            agent.isStopped = true;
     }
 
 
@@ -65,9 +57,11 @@ public class FlyToPlayer : Action
             return TaskStatus.Failure;
         }
 
-        float anim_speed = Mathf.Lerp(0f, 1f, speedTransitionTime);
-        speedTransitionTime += 0.8f * Time.deltaTime;
-        animator.SetFloat("Speed", anim_speed);
+        agent.SetDestination(targetSpot.Value.position);
+
+        //float anim_speed = Mathf.Lerp(0f, 1f, speedTransitionTime);
+        //speedTransitionTime += 0.8f * Time.deltaTime;
+        animator.SetFloat("Speed", 1f);
 
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)

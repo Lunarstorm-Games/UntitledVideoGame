@@ -13,7 +13,7 @@ public class DragonBiteAttack : Action
 	private Animator animator;
 	private MeleeWeapon weapon;
 
-	public override void OnStart()
+    public override void OnStart()
 	{
 		animator = GetComponent<Animator>();
 		animator.SetFloat("LungeAttackSpeed", attackSpeed.Value);

@@ -13,11 +13,11 @@ public class DragonTest : Action
 
 	public override void OnStart()
 	{
-		unit.Value.GetComponent<Boss>().CurrentTarget = Player.Instance;
-		target.SetValue(Player.Instance);
-		spot = Player.Instance.GetEntityTargetSpot();
-		unit.Value.GetComponent<Boss>().TargetSpot = spot;
-		targetspot.SetValue(spot);
+		//unit.Value.GetComponent<Boss>().CurrentTarget = Player.Instance;
+		//target.SetValue(Player.Instance);
+		//spot = Player.Instance.GetEntityTargetSpot();
+		//unit.Value.GetComponent<Boss>().TargetSpot = spot;
+		//targetspot.SetValue(spot);
 	}
 
 	public override TaskStatus OnUpdate()

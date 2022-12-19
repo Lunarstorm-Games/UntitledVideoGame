@@ -4,8 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Boss : Entity
+public class DragonBoss : Entity
 {
+    [SerializeField] protected HealthBarUI healthBar;
+
+    [Header("States")]
+    [Tooltip("Delay between switching from flying to ground state.")]
+    [SerializeField] protected float switchCooldown;
+    [SerializeField] protected bool canSwitch;
+
     [Header("Flying State")]
     [SerializeField] protected float fly_speed = 4f;
     [SerializeField] protected float fly_stoppingDistance = 7f;
@@ -35,6 +42,12 @@ public class Boss : Entity
     [SerializeField] protected float lunge_attackDelay = 10f;
     [SerializeField] protected float lunge_attackRange = 4f;
 
+    [Header("Bite Attack")]
+    [SerializeField] protected float bite_damage = 20f;
+    [SerializeField] protected float bite_attackSpeed = 1f;
+    [SerializeField] protected float bite_attackDelay = 10f;
+    [SerializeField] protected float bite_attackRange = 4f;
+
 
     public Transform TargetSpot { get; set; }
     public Entity CurrentTarget { get; set; }
@@ -57,11 +70,44 @@ public class Boss : Entity
     public float Lunge_attackRange { get => lunge_attackRange; set => lunge_attackRange = value; }
     public float Fireball_attackRange { get => fireball_attackRange; set => fireball_attackRange = value; }
     public float PlayerRange { get { return Vector3.Distance(transform.position, Player.Instance.transform.position); } }
+    public float Bite_damage { get => bite_damage; set => bite_damage = value; }
+    public float Bite_attackSpeed { get => bite_attackSpeed; set => bite_attackSpeed = value; }
+    public float Bite_attackDelay { get => bite_attackDelay; set => bite_attackDelay = value; }
+    public float Bite_attackRange { get => bite_attackRange; set => bite_attackRange = value; }
+    public bool CanSwitch { get => canSwitch; set => canSwitch = value; }
+
+
+    private float switchCooldownTime;
+
+    public void Awake()
+    {
+        switchCooldownTime = switchCooldown;
+    }
 
     public void Start()
     {
         CurrentTarget = Player.Instance;
         TargetSpot = Player.Instance.GetEntityTargetSpot();
+        currentHealth = MaxHealth;
+        healthBar.SetMaxHealth(MaxHealth);
+
+    }
+
+    public void Update()
+    {
+        SwitchStateCooldown();
+    }
+
+    public override void TakeDamage(float damage, Entity origin)
+    {
+
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0 && !Death)
+        {
+            Death = true;
+        }
     }
 
     public void FireballProjectile()
@@ -73,5 +119,18 @@ public class Boss : Entity
         projectileClone.damage = fireball_damage;
         projectileClone.speed = fireball_speed;
         projectileClone.Initialize(this, shootDir);
+    }
+
+    private void SwitchStateCooldown()
+    {
+        if (switchCooldownTime < 0f && !canSwitch)
+        {
+            switchCooldownTime = switchCooldown;
+            canSwitch = true;
+        }
+        else
+        {
+            switchCooldownTime -= Time.deltaTime;
+        }
     }
 }

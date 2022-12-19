@@ -135,7 +135,7 @@ MonoBehaviour:
   SpeedLevel: 1
   speed: 4
   damage: 10
-  range: 4
+  range: 10
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0

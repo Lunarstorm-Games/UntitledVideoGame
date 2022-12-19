@@ -9,19 +9,15 @@ public class WalkToPlayer : Action
     [SerializeField] private SharedFloat stoppingDistance;
     [SerializeField] private SharedTransform targetSpot;
     [SerializeField] private SharedEntity target;
-    [SerializeField] private SharedFloat speedAnimParam;
-    [SerializeField] private SharedFloat test;
+    [SerializeField] private SharedEntity unit;
 
     private Entity player;
     private NavMeshAgent agent;
-    private Entity unit;
     private Animator animator;
-    private float speedTransitionTime = 0.0f;
 
 
     public override void OnStart()
     {
-        unit = GetComponent<Entity>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = Player.Instance;
@@ -30,7 +26,7 @@ public class WalkToPlayer : Action
 
         if (player == null) return;
 
-        if (!unit.IsValidTarget(player.EntityType)) return;
+        if (!unit.Value.IsValidTarget(player.EntityType)) return;
 
         target.SetValue(player);
 
@@ -43,17 +39,9 @@ public class WalkToPlayer : Action
         
     }
 
-    public override void OnEnd()
-    {
-        speedTransitionTime = 0.0f;
-        if (agent)
-            agent.isStopped = true;
-    }
-
 
     public override TaskStatus OnUpdate()
     {
-        Debug.Log(test.Value);
         if (!agent)
         {
             Debug.LogWarning("NavAgent is null");
@@ -68,10 +56,10 @@ public class WalkToPlayer : Action
         agent.SetDestination(targetSpot.Value.position);
 
 
-        float anim_speed = Mathf.Lerp(speedAnimParam.Value, 1f, speedTransitionTime);
-        speedTransitionTime += 0.8f * Time.deltaTime;
-        speedAnimParam.Value = anim_speed;
-        animator.SetFloat("Speed", anim_speed);
+        //float anim_speed = Mathf.Lerp(speedAnimParam.Value, 1f, speedTransitionTime);
+        //speedTransitionTime += 0.8f * Time.deltaTime;
+        //speedAnimParam.Value = anim_speed;
+        animator.SetFloat("Speed", 1f);
 
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)

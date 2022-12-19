@@ -69,6 +69,7 @@ public class DragonJumpAttack : Action
 
 	public override void OnEnd()
 	{
+		animator.ResetTrigger("LungeAttack");
 		currentAnimDuration = animDuration;
 		performedAttack = false;
 		agent.isStopped = true;
