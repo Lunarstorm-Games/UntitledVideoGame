@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1450108528857507897}
   - component: {fileID: 992681357236714346}
   m_Layer: 12
-  m_Name: DragonFireballProjectile
+  m_Name: WizardBossMissileProjectile
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

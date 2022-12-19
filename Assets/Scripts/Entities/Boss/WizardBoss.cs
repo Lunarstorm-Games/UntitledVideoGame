@@ -18,8 +18,8 @@ public class WizardBoss : MonoBehaviour
     [Tooltip("Determines time between fireball shots")]
     [SerializeField] protected float thunder_attackSpeed = 1f;
     [SerializeField] protected float thunder_attackDelay = 10f;
-    [SerializeField] protected Transform projectileSpawnPos;
-    [SerializeField] protected Projectile projectile;
+    [SerializeField] protected Transform thunder_projectileSpawnPos;
+    [SerializeField] protected Projectile thunder_projectile;
     [SerializeField] protected int thunder_amount = 5;
     [SerializeField] protected float thunder_attackRange = 10f;
 
@@ -30,6 +30,8 @@ public class WizardBoss : MonoBehaviour
     [SerializeField] protected float missile_attackDelay = 10f;
     [SerializeField] protected float missile_attackRange = 12f;
     [SerializeField] protected int missile_amount = 6;
+    [SerializeField] protected Transform missile_projectileSpawnPos;
+    [SerializeField] protected Projectile missile_projectile;
 
 
     // Start is called before the first frame update

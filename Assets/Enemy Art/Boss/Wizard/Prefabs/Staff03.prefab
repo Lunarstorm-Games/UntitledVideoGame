@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33155085055879986}
   - component: {fileID: 23634091840844412}
   m_Layer: 0
-  m_Name: Staff03PolyArt
+  m_Name: Staff03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
