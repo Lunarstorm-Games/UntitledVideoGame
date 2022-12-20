@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -42576,6 +42576,11 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 14.391265
       objectReference: {fileID: 0}
+    - target: {fileID: 1361127782799509460, guid: be4135a8d94f8944f80c7235d56b33ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1567284335014821404, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}
       propertyPath: playerInput
@@ -59849,6 +59854,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!20 &1444537991 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7394029617273694916, guid: f6d148d888ffbf54b9afe9936dfaec1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077913892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1447783206
 GameObject:
   m_ObjectHideFlags: 0
@@ -67896,6 +67907,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9006831394140118290, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: recordingCamera
+      value: 
+      objectReference: {fileID: 1444537991}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69da384621836e54d899cb5f761dcdda, type: 3}
 --- !u!4 &1737974871 stripped
@@ -80085,7 +80101,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205990
+  m_Name: pb_Mesh51568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -80631,7 +80647,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 21.233013
+  m_fontSizeMin: 10.970388
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -81507,7 +81523,7 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.212296
+      value: -13.712296
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}

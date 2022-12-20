@@ -101,7 +101,7 @@ MonoBehaviour:
   RT_TimeLoop: {fileID: 8400000, guid: a754cd3894ce3a74bb2ff75821ec8591, type: 2}
   slowDownTime: 3
   MaxScreenshots: 5000
-  ItsRewindTime: 1
+  ItsRewindTime: 0
   TargetRewindDuration: 10
 --- !u!82 &8042652706245047752
 AudioSource:
