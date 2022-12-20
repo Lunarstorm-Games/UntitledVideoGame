@@ -10,7 +10,6 @@ public class WizardBossMagicMissileProjectile : Projectile
 
     public override void Start()
     {
-        target = Player.Instance;
         base.Start();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;

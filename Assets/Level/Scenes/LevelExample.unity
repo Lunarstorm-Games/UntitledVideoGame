@@ -55466,7 +55466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: 771b78fd80ca3ba468f2c8a7d84578ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.030186
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: 771b78fd80ca3ba468f2c8a7d84578ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55496,6 +55496,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 158777972157443074, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
         type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[0]
@@ -55503,24 +55508,9 @@ PrefabInstance:
       objectReference: {fileID: 1236312108}
     - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
         type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1236312108}
+      objectReference: {fileID: 1236312112}
     - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
         type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[5]
@@ -55530,192 +55520,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[7]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[8]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[9]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[10]
-      value: 
       objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[11]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[12]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[13]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[14]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[15]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[16]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[17]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[18]
-      value: 
-      objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[19]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[20]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[21]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[22]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[23]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[24]
-      value: 
-      objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[25]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[26]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[27]
-      value: 
-      objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[28]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[29]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[30]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[31]
-      value: 
-      objectReference: {fileID: 1236312112}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[32]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[33]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[34]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[35]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[36]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[37]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[38]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[39]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[40]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[41]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[42]
-      value: 
-      objectReference: {fileID: 1236312108}
-    - target: {fileID: 9038864513577579612, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
-        type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[43]
-      value: 
-      objectReference: {fileID: 1236312108}
     - target: {fileID: 9162100316418566249, guid: 771b78fd80ca3ba468f2c8a7d84578ac,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -80027,7 +79832,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 21.233013
+  m_fontSizeMin: 10
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
