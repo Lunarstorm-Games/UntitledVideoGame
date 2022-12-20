@@ -649,16 +649,76 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(-1196.4231,-1099.96863)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2.630371,144.737122)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0.000244140625,130)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-1020,569.9999)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-220,129.999878)"},"ID":4,"Name":"Can
+        Switch States?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"CanSwitchState","IsShared":true,"PropertyMapping":"Boss/CanSwitch","PropertyMappingOwner":0,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InRange","NodeData":{"Offset":"(-90,129.999878)"},"ID":5,"Name":"<
+        40m","Instant":false,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"Boss/PlayerRange","PropertyMappingOwner":1,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":40},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(40,129.999878)"},"ID":6,"Name":"Flying?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Flying","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"InAttackRange","NodeData":{"Offset":"(170,129.999878)"},"ID":7,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballAttackRange","IsShared":true,"PropertyMapping":"Boss/Fireball_attackRange","PropertyMappingOwner":2,"SinglemValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InFireballAttack","IsShared":true,"BooleanmValue":false}},{"Type":"DragonRangeAttack","NodeData":{"Offset":"(320,129.999878)"},"ID":8,"Name":"Dragon
+        Range Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":3},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireBallAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Fireball_attackSpeed","SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballAttackDelay","IsShared":true,"PropertyMapping":"Boss/Fireball_attackDelay","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballCurrentDelay","IsShared":true,"SinglemValue":0},"SharedIntfireballAmount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"FireballAmount","IsShared":true,"PropertyMapping":"Boss/Fireball_amount","PropertyMappingOwner":5,"Int32mValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InFireballAttack","IsShared":true,"BooleanmValue":false}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-410,300)"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-480,110)"},"ID":10,"Name":"Can
+        Switch States?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"CanSwitchState","IsShared":true,"PropertyMapping":"Boss/CanSwitch","PropertyMappingOwner":6,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InRange","NodeData":{"Offset":"(-350,110)"},"ID":11,"Name":"<
+        40m","Instant":false,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"Boss/PlayerRange","PropertyMappingOwner":7,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":40},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InRange","NodeData":{"Offset":"(-249.999756,110)"},"ID":12,"Name":">
+        15m","Instant":false,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"Boss/PlayerRange","PropertyMappingOwner":8,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":15},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-150,110)"},"ID":13,"Name":"Flying?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Flying","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InAttackRange","NodeData":{"Offset":"(-40.0002441,110)"},"ID":14,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeAttackRange","IsShared":true,"PropertyMapping":"Boss/Lunge_attackRange","PropertyMappingOwner":9,"SinglemValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InFireballAttack","IsShared":true,"BooleanmValue":false}},{"Type":"DragonJumpAttack","NodeData":{"Offset":"(90,110)"},"ID":15,"Name":"Dragon
+        Jump Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":10},"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundSpeed","IsShared":true,"PropertyMapping":"Boss/Ground_speed","PropertyMappingOwner":11,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundStoppingDistance","IsShared":true,"PropertyMapping":"Boss/Ground_stoppingDistance","PropertyMappingOwner":12,"SinglemValue":0},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Lunge_attackSpeed","PropertyMappingOwner":13,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeDamage","IsShared":true,"PropertyMapping":"Boss/Lunge_damage","PropertyMappingOwner":14,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-160,540)"},"ID":16,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-270,180)"},"ID":17,"Name":"Can
+        Switch States?","Instant":false,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"CanSwitchState","IsShared":true,"PropertyMapping":"Boss/CanSwitch","PropertyMappingOwner":15,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InRange","NodeData":{"Offset":"(-149.999756,180)"},"ID":18,"Name":"<
+        15m","Instant":false,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"Boss/PlayerRange","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":15},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-40,180)"},"ID":19,"Name":"Flying?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Flying","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"InAttackRange","NodeData":{"Offset":"(80,180)"},"ID":20,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackRange","IsShared":true,"PropertyMapping":"Boss/Bite_attackRange","PropertyMappingOwner":17,"SinglemValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InFireballAttack","IsShared":true,"BooleanmValue":false}},{"Type":"DragonBiteAttack","NodeData":{"Offset":"(210,180)"},"ID":21,"Name":"Dragon
+        Bite Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":18},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Bite_attackSpeed","PropertyMappingOwner":19,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackDelay","IsShared":true,"PropertyMapping":"Boss/Bite_attackDelay","PropertyMappingOwner":20,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteDamage","IsShared":true,"PropertyMapping":"Boss/Bite_damage","PropertyMappingOwner":21,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteCurrentDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(70,260)"},"ID":22,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-130,130)"},"ID":23,"Name":"Can
+        Switch States?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"CanSwitchState","IsShared":true,"PropertyMapping":"Boss/CanSwitch","PropertyMappingOwner":22,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(0,130)"},"ID":24,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-40,140.000122)"},"ID":25,"Name":"Flying?","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Flying","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"FlyToPlayer","NodeData":{"Offset":"(70,140.000122)"},"ID":26,"Name":"Fly
+        To Player","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FlySpeed","IsShared":true,"PropertyMapping":"Boss/Fly_speed","SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FlyStoppingDistance","IsShared":true,"PropertyMapping":"Boss/Fly_stoppingDistance","PropertyMappingOwner":23,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":24}}]},{"Type":"WalkToPlayer","NodeData":{"Offset":"(130,130)"},"ID":27,"Name":"Walk
+        To Player","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundSpeed","IsShared":true,"PropertyMapping":"Boss/Ground_speed","PropertyMappingOwner":25,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundStoppingDistance","IsShared":true,"PropertyMapping":"Boss/Ground_stoppingDistance","PropertyMappingOwner":26,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":27}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(240,260)"},"ID":28,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"Boss/PlayerRange","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Flying","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"CanSwitchState","IsShared":true,"PropertyMapping":"Boss/CanSwitch","PropertyMappingOwner":29,"BooleanmValue":false},{"Type":"SharedEntity","Name":"Target","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballAttackRange","IsShared":true,"PropertyMapping":"Boss/Fireball_attackRange","PropertyMappingOwner":30,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InFireballAttack","IsShared":true,"BooleanmValue":false},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":31},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireBallAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Fireball_attackSpeed","SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballAttackDelay","IsShared":true,"PropertyMapping":"Boss/Fireball_attackDelay","PropertyMappingOwner":32,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FireballCurrentDelay","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"FireballAmount","IsShared":true,"PropertyMapping":"Boss/Fireball_amount","PropertyMappingOwner":33,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeAttackRange","IsShared":true,"PropertyMapping":"Boss/Lunge_attackRange","PropertyMappingOwner":34,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundSpeed","IsShared":true,"PropertyMapping":"Boss/Ground_speed","PropertyMappingOwner":35,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"GroundStoppingDistance","IsShared":true,"PropertyMapping":"Boss/Ground_stoppingDistance","PropertyMappingOwner":36,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Lunge_attackSpeed","PropertyMappingOwner":37,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"LungeDamage","IsShared":true,"PropertyMapping":"Boss/Lunge_damage","PropertyMappingOwner":38,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackRange","IsShared":true,"PropertyMapping":"Boss/Bite_attackRange","PropertyMappingOwner":39,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackSpeed","IsShared":true,"PropertyMapping":"Boss/Bite_attackSpeed","PropertyMappingOwner":40,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteAttackDelay","IsShared":true,"PropertyMapping":"Boss/Bite_attackDelay","PropertyMappingOwner":41,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteDamage","IsShared":true,"PropertyMapping":"Boss/Bite_damage","PropertyMappingOwner":42,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"BiteCurrentDelay","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FlySpeed","IsShared":true,"PropertyMapping":"Boss/Fly_speed","SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FlyStoppingDistance","IsShared":true,"PropertyMapping":"Boss/Fly_stoppingDistance","PropertyMappingOwner":43,"SinglemValue":0}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
-        unityObjects: []
+        unityObjects:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
         byteData: 
         byteDataArray: 
-      Version: 
+      Version: 1.7.4
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
 --- !u!1 &1251583507443948
@@ -2724,18 +2784,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7052329783452821103}
-  m_LocalRotation: {x: -0, y: 0.50027186, z: -0, w: 0.86586845}
-  m_LocalPosition: {x: 0, y: 0, z: 0.24207497}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0050000004, y: 0.005, z: 0.0050000004}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3872131311733861435}
   m_Father: {fileID: 4463868907105534}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.11462402, y: 3.3396559}
+  m_AnchoredPosition: {x: 0, y: 3.0000029}
   m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7103584518621113816
@@ -2808,12 +2868,12 @@ ParentConstraint:
   m_GameObject: {fileID: 7052329783452821103}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 5.28, z: 2.34}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationAtRest: {x: 0, y: 3.0000021, z: 0}
+  m_RotationAtRest: {x: 0, y: 180, z: 0}
   m_TranslationOffsets:
-  - {x: -2.8708143, y: 3.864664, z: 0}
+  - {x: 0, y: 0, z: 6.000005}
   m_RotationOffsets:
-  - {x: -12.407434, y: -90, z: 0}
+  - {x: -89.96574, y: 0, z: -180}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -3000,7 +3060,7 @@ PrefabInstance:
     - target: {fileID: 8404636086311695478, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8404636086311695478, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}

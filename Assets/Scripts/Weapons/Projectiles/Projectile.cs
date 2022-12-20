@@ -33,7 +33,7 @@ public class Projectile : Weapon
 
     public virtual void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.name, collider.gameObject);
+        Debug.Log(this.gameObject + " - " + collider.name, collider.gameObject);
         if (collider.transform.root.TryGetComponent<Entity>(out Entity entity))
         {
             if (entity != shooter)

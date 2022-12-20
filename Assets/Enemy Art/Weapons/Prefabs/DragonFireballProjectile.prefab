@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9074186228458563069}
   - component: {fileID: -1450108528857507897}
   - component: {fileID: 992681357236714346}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: DragonFireballProjectile
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6461486515272001089}
   - component: {fileID: 5648084301173534979}
   - component: {fileID: 5132594019114284057}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

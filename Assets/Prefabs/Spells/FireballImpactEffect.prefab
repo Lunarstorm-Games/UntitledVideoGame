@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1448119119124754851}
   - component: {fileID: 8310478900511335466}
   - component: {fileID: 2924215337398334979}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireballImpactEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

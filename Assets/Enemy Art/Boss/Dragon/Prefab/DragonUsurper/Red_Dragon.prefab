@@ -1226,7 +1226,7 @@ GameObject:
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &485588
 Transform:
   m_ObjectHideFlags: 0
@@ -4888,12 +4888,12 @@ PrefabInstance:
     - target: {fileID: 4483756353873424420, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4483756353873424420, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4483756353873424420, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}

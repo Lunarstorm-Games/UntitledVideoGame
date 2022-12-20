@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7571357378697803478}
   - component: {fileID: 7571357378697803474}
   - component: {fileID: 6838250066283118008}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: WallSpot
   m_TagString: BuildingSpot
   m_Icon: {fileID: 0}
