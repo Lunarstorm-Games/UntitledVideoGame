@@ -72,14 +72,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AtmosphereThickness: 1.0000455
+    - _AtmosphereThickness: 1.007196
     - _Exposure: 1.3
     - _SunBrightness: 1.5
     - _SunDisk: 2
     - _SunSize: 0.04
     m_Colors:
     - _GroundColor: {r: 0.36899996, g: 0.34899998, b: 0.34099993, a: 1}
-    - _NightSkyTint: {r: 0.75765944, g: 0.75765944, b: 0.75765944, a: 1}
-    - _SkyTint: {r: 0.69017875, g: 0.63419443, b: 0.5140216, a: 1}
+    - _NightSkyTint: {r: 0.74386775, g: 0.74386775, b: 0.74386775, a: 1}
+    - _SkyTint: {r: 0.72081226, g: 0.6265483, b: 0.46319783, a: 1}
     - _SunColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []
