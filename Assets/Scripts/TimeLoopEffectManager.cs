@@ -156,8 +156,8 @@ namespace Assets.Scripts
             }
             var rawData = asyncGPUReadbackRequest.GetData<byte>();
             // Grab screen dimensions
-            var width = Screen.width;
-            var height = Screen.height;
+            var width = RT_TimeLoop.width;
+            var height = RT_TimeLoop.height;
             texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
             texture.SetPixelData(rawData,0);
             texture.Apply();
