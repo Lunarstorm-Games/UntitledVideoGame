@@ -733,10 +733,10 @@ MonoBehaviour:
   death: 0
   speed: 2.5
   aggroRange: 12
-  attackRange: 8
+  attackRange: 10
   attackDelay: 3
-  attackSpeed: 1
-  damage: 30
+  attackSpeed: 1.5
+  damage: 10
   stoppingDistance: 7
   EssenceSource:
     rid: 7853769204235501568
@@ -749,7 +749,7 @@ MonoBehaviour:
     - rid: 7853769204235501568
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 30
+        EssenceValue: 20
 --- !u!54 &2056983469908052663
 Rigidbody:
   m_ObjectHideFlags: 0

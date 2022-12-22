@@ -34,7 +34,7 @@ public class WalkToMainObjective : Action
             targetWaypoint = waypoint?.Value.GetComponent<WaypointNode>();
            
         }
-        else if(waypoint.Value !=null)
+        else if(targetWaypoint !=null)
         {
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
