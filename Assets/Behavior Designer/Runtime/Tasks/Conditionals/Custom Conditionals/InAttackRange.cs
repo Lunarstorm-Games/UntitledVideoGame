@@ -7,7 +7,6 @@ public class InAttackRange : Conditional
 {
     [SerializeField] private SharedEntity _target;
     [SerializeField] private SharedFloat _attackRange;
-    [SerializeField] private SharedBool inAttack;
 
     private Animator animator;
     private float speedTransitionTime;
@@ -24,8 +23,6 @@ public class InAttackRange : Conditional
     public override TaskStatus OnUpdate()
 	{
         if (_target == null) return TaskStatus.Failure;
-
-        if (inAttack.Value) return TaskStatus.Running;
 
         Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, _attackRange.Value);
         foreach (Collider collider in hitColliders)

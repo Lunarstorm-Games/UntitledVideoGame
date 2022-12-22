@@ -19,6 +19,7 @@ public class RandomPatrol : Action
 
 	public override TaskStatus OnUpdate()
 	{
+        
 		if (agent.hasPath && agent.remainingDistance <= agent.stoppingDistance + 0.1f)
         {
             agent.ResetPath();

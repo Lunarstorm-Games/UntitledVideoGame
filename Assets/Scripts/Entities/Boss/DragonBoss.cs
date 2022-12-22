@@ -48,6 +48,10 @@ public class DragonBoss : Entity
     [SerializeField] protected float bite_attackDelay = 10f;
     [SerializeField] protected float bite_attackRange = 4f;
 
+    [Header("Second Phase")]
+    [SerializeField] protected GameObject evilWizard_Prefab;
+    [SerializeField] protected Transform spawnPos;
+
 
     public Transform TargetSpot { get; set; }
     public Entity CurrentTarget { get; set; }
@@ -75,7 +79,7 @@ public class DragonBoss : Entity
     public float Bite_attackDelay { get => bite_attackDelay; set => bite_attackDelay = value; }
     public float Bite_attackRange { get => bite_attackRange; set => bite_attackRange = value; }
     public bool CanSwitch { get => canSwitch; set => canSwitch = value; }
-
+    public float CurrentAttackDelay { get; set; }
 
     private float switchCooldownTime;
 
@@ -96,6 +100,7 @@ public class DragonBoss : Entity
     public void Update()
     {
         SwitchStateCooldown();
+        UpdateAttackDelay();
     }
 
     public override void TakeDamage(float damage, Entity origin)
@@ -121,6 +126,12 @@ public class DragonBoss : Entity
         projectileClone.Initialize(this, shootDir);
     }
 
+    public override void DeathAnimEvent()
+    {
+        Instantiate(evilWizard_Prefab, spawnPos.position, Quaternion.identity);
+        base.DeathAnimEvent();
+    }
+
     private void SwitchStateCooldown()
     {
         if (switchCooldownTime < 0f && !canSwitch)
@@ -131,6 +142,15 @@ public class DragonBoss : Entity
         else
         {
             switchCooldownTime -= Time.deltaTime;
+        }
+    }
+
+    public void UpdateAttackDelay()
+    {
+        if (CurrentAttackDelay > 0)
+        {
+            Debug.Log(CurrentAttackDelay);
+            CurrentAttackDelay -= Time.deltaTime;
         }
     }
 }

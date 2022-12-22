@@ -23,8 +23,6 @@ public class DragonRangeAttack : Action
 
     public override void OnStart()
 	{
-		targetSpot.SetValue(Player.Instance.GetEntityTargetSpot());
-
 		animator = GetComponent<Animator>();
 		animator.SetFloat("FireballAttackSpeed", attackSpeed.Value);
 		currentShotAmount = fireballAmount.Value;
@@ -40,8 +38,7 @@ public class DragonRangeAttack : Action
 		dir.y = 0f;
 		unit.Value.transform.rotation = Quaternion.LookRotation(dir);
 
-		currentAttackDelay.Value -= Time.deltaTime;
-		if (currentAttackDelay.Value < 0f)
+		if (currentAttackDelay.Value <= 0f)
 		{
 			if (!inAttack.Value)
 			{
@@ -62,8 +59,7 @@ public class DragonRangeAttack : Action
 				}
 			}
 		}
-	
-		return TaskStatus.Running;
+		return TaskStatus.Failure;
 	}
 
 	public override void OnEnd()

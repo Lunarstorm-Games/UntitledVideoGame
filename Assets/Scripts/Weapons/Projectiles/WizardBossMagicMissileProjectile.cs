@@ -23,12 +23,14 @@ public class WizardBossMagicMissileProjectile : Projectile
             return;
         }
 
-        agent.SetDestination(target.transform.position);
+        if (agent.enabled)
+        {
+            agent.SetDestination(target.transform.position);
+        }
     }
 
     public override void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(this.gameObject + " - " + collider.name, collider.gameObject);
         if (collider.transform.root.TryGetComponent<Entity>(out Entity entity))
         {
             if (entity != shooter)

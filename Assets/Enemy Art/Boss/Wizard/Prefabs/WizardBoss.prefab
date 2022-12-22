@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320604192358212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ball_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4380970558581844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ball_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4003765520667978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lowerarm_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4445520763426332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoulder_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4956035989012762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upperarm_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4032403635332444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment04_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520229749766662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: calf_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940250755107572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4314174009034210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4862907312941762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4358465402289130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4535485907957154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hand_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172371020033270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342114204683304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4496435902230166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 1681158810257731630}
   - component: {fileID: 686728571848635881}
   - component: {fileID: 9038864513577579612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WizardBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,23 +610,26 @@ MonoBehaviour:
   death: 0
   healthBar: {fileID: 4216841884440963330}
   speed: 4
-  stoppingDistance: 7
+  stoppingDistance: 11
   attackRange: 12
-  attackDelay: 10
   thunder_damage: 20
   thunder_speed: 7
-  thunderAOEDamage: 1
+  thunderAOEDamage: 2.5
   thunderAOETime: 4
+  thunderAOETickRate: 0.3
+  thunderAOERadius: 6
   thunder_attackSpeed: 1
-  thunder_projectileSpawnPos: {fileID: 0}
-  thunder_projectile: {fileID: 0}
-  thunder_amount: 5
+  thunder_projectile: {fileID: 5950141548723231574, guid: b4d5bfa6efddcae4697c90e861f03d15,
+    type: 3}
+  thunder_amount: 4
+  thunder_attackDelay: 5
   missile_damage: 20
   missile_speed: 7
-  missile_attackSpeed: 1
+  missile_attackSpeed: 2
   missile_amount: 6
-  missile_projectileSpawnPos: {fileID: 0}
-  missile_projectile: {fileID: 0}
+  missile_projectile: {fileID: 5953923905401354809, guid: 6d08fd38c79af9a4eb0e991dcff6bae4,
+    type: 3}
+  missile_attackDelay: 10
 --- !u!114 &9038864513577579612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,25 +658,40 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(-1196.4231,-1099.96863)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2.630371,144.737122)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0.000244140625,130)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-628.4231,262.031372)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"InRange","NodeData":{"Offset":"(-78.4230957,132.031372)"},"ID":4,"Name":"In
-        Range","Instant":true,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"WizardBoss/PlayerRange","PropertyMappingOwner":0,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":40},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(61.5769043,132.031372)"},"ID":5,"Name":"Teleport
-        to player","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":""},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-264.9903,261.461243)"},"ID":6,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-113.569214,138.602966)"},"ID":7,"Name":"In
-        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"WizardBoss/AttackRange","PropertyMappingOwner":1,"SinglemValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.RandomSelector","NodeData":{"Offset":"(86.4314,138.602966)"},"ID":8,"Name":"Random
-        Selector","Instant":true,"Int32seed":0,"BooleanuseSeed":false,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(-33.4230957,143.031372)"},"ID":9,"Name":"Attacks","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":""},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}}]}]},{"Type":"WalkToPlayer","NodeData":{"Offset":"(238.571381,261.42865)"},"ID":10,"Name":"Walk
-        To Player","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"WizardBoss/Speed","PropertyMappingOwner":2,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"WizardBoss/StoppingDistance","PropertyMappingOwner":3,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":4}},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(382.857056,260)"},"ID":11,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"WizardBoss/PlayerRange","PropertyMappingOwner":5,"SinglemValue":0},{"Type":"SharedEntity","Name":"Target","IsShared":true},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":6},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"WizardBoss/Speed","PropertyMappingOwner":7,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"WizardBoss/StoppingDistance","PropertyMappingOwner":8,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/AttackDelay","PropertyMappingOwner":9,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"WizardBoss/AttackRange","PropertyMappingOwner":10,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderDamage","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_damage","PropertyMappingOwner":11,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_speed","PropertyMappingOwner":12,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAOE_Damage","IsShared":true,"PropertyMapping":"WizardBoss/ThunderAOEDamage","PropertyMappingOwner":13,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAOE_Time","IsShared":true,"PropertyMapping":"WizardBoss/ThunderAOETime","PropertyMappingOwner":14,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_attackSpeed","PropertyMappingOwner":15,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ThunderAmount","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_amount","PropertyMappingOwner":16,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileDamage","IsShared":true,"PropertyMapping":"WizardBoss/Missile_damage","PropertyMappingOwner":17,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Missile_speed","PropertyMappingOwner":18,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Missile_attackSpeed","PropertyMappingOwner":19,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"MissileAmount","IsShared":true,"PropertyMapping":"WizardBoss/Missile_amount","PropertyMappingOwner":20,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(-1196.4231,-1099.96863)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2.630371,144.737122)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0.000244140625,130)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-628.4231,262.031372)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InRange","NodeData":{"Offset":"(-121.901367,132.031372)"},"ID":4,"Name":">
+        40m","Instant":true,"SharedFloatplayerRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"WizardBoss/PlayerRange","PropertyMappingOwner":0,"SinglemValue":0},"SharedFloatcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":40},"SharedBoolcompareHigher":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-7.7244873,135.2489)"},"ID":5,"Name":"In
+        Attack","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InAttack","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"TeleportNearPlayer","NodeData":{"Offset":"(120.794312,129.031372)"},"ID":6,"Name":"Teleport
+        Near Player","Instant":true,"SharedFloatwarpRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":15},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-260,260)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-83.5692139,138.602966)"},"ID":8,"Name":"In
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"WizardBoss/AttackRange","PropertyMappingOwner":1,"SinglemValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.RandomSelector","NodeData":{"Offset":"(86.4314,138.602966)"},"ID":9,"Name":"Random
+        Selector","Instant":true,"Int32seed":0,"BooleanuseSeed":false,"AbortTypeabortType":"None","Children":[{"Type":"WizardBossThunderAttack","NodeData":{"Offset":"(-130.770111,125.683716)"},"ID":10,"Name":"Wizard
+        Boss Thunder Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":2},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_attackSpeed","PropertyMappingOwner":3,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_AttackDelay","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/CurrentAttackDelay","PropertyMappingOwner":5,"SinglemValue":0},"SharedFloatfireRate":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatsummonRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":5},"SharedIntmissileAmount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ThunderAmount","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_amount","PropertyMappingOwner":6,"Int32mValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InAttack","IsShared":true,"BooleanmValue":false}},{"Type":"WizardBossMissileAttack","NodeData":{"Offset":"(110,130)"},"ID":11,"Name":"Wizard
+        Boss Missile Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":7},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Missile_attackSpeed","PropertyMappingOwner":8,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/Missile_AttackDelay","PropertyMappingOwner":9,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/CurrentAttackDelay","PropertyMappingOwner":10,"SinglemValue":0},"SharedFloatfireRate":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatsummonRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":3.47},"SharedIntmissileAmount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"MissileAmount","IsShared":true,"PropertyMapping":"WizardBoss/Missile_amount","PropertyMappingOwner":11,"Int32mValue":0},"SharedBoolinAttack":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InAttack","IsShared":true,"BooleanmValue":false}}]}]},{"Type":"WalkToPlayer","NodeData":{"Offset":"(238.571381,261.42865)"},"ID":12,"Name":"Walk
+        To Player","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"WizardBoss/Speed","PropertyMappingOwner":12,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"WizardBoss/StoppingDistance","PropertyMappingOwner":13,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true},"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":14}},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(382.857056,260)"},"ID":13,"Name":"Idle","Instant":true}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"PlayerRange","IsShared":true,"PropertyMapping":"WizardBoss/PlayerRange","PropertyMappingOwner":15,"SinglemValue":0},{"Type":"SharedEntity","Name":"Target","IsShared":true},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":16},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"WizardBoss/Speed","PropertyMappingOwner":17,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"WizardBoss/StoppingDistance","PropertyMappingOwner":18,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"WizardBoss/AttackRange","PropertyMappingOwner":19,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderDamage","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_damage","PropertyMappingOwner":20,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_speed","PropertyMappingOwner":21,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAOE_Damage","IsShared":true,"PropertyMapping":"WizardBoss/ThunderAOEDamage","PropertyMappingOwner":22,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAOE_Time","IsShared":true,"PropertyMapping":"WizardBoss/ThunderAOETime","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_attackSpeed","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"ThunderAmount","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_amount","PropertyMappingOwner":25,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileDamage","IsShared":true,"PropertyMapping":"WizardBoss/Missile_damage","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Missile_speed","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileAttackSpeed","IsShared":true,"PropertyMapping":"WizardBoss/Missile_attackSpeed","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"MissileAmount","IsShared":true,"PropertyMapping":"WizardBoss/Missile_amount","PropertyMappingOwner":29,"Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/CurrentAttackDelay","PropertyMappingOwner":30,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ThunderAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/Thunder_AttackDelay","PropertyMappingOwner":31,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"MissileAttackDelay","IsShared":true,"PropertyMapping":"WizardBoss/Missile_AttackDelay","PropertyMappingOwner":32,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"InAttack","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 0}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 686728571848635881}
         - {fileID: 1248815240492774}
         - {fileID: 1248815240492774}
         - {fileID: 1248815240492774}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
+        - {fileID: 1248815240492774}
+        - {fileID: 686728571848635881}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
+        - {fileID: 686728571848635881}
+        - {fileID: 1248815240492774}
+        - {fileID: 686728571848635881}
+        - {fileID: 1248815240492774}
+        - {fileID: 1248815240492774}
         - {fileID: 1248815240492774}
         - {fileID: 1248815240492774}
         - {fileID: 1248815240492774}
@@ -702,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4950077218311550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4026381658434038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: calf_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4538149133993792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4891742877980040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4115764668562436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4541236294193080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4490808176114590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4174251318201532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: clavicle_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4488670591638422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +1008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4668634257833992}
   - component: {fileID: 137784740806856926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WizardBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4097275633658936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4055459818060344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4468959124034452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: foot_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1235,7 +1253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4348068069394192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4511908815652068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4867374452800164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment04_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4001952010290576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lowerarm_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1363,7 +1381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4657764181533594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPad_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,7 +1412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947536512269606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spine_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,7 +1446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4526327558259332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: foot_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1460,7 +1478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320116383092368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: clavicle_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4488807031269268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574114619732062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoulder_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4346185688852772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: neck_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1590,7 +1608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028236156667768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1622,7 +1640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4175975651371826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1654,7 +1672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4564905643972246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,7 +1704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4203684948754502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1718,7 +1736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4575866383598108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hand_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1752,7 +1770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4697918775314360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1786,7 +1804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807004007391752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,7 +1835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4021562368577384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,7 +1867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4175034834190968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spine_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4999349742359384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4766417282772594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4336369715233868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1980,7 +1998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4793464087045716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4516751540192060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4272606637780764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172649719100430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPad_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2107,7 +2125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4180776772601168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2138,7 +2156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4509498705010092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2170,7 +2188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4889084271382816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2202,7 +2220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4132789259061042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thigh_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2234,7 +2252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4877178614144928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2266,7 +2284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4656728458258770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontGarment02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2298,7 +2316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436220867102086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4734252212888340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thigh_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2362,7 +2380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4867692348220310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearGarment01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,7 +2412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4932145922381672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2425,7 +2443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4981564567776352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2457,7 +2475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4189104496123580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upperarm_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2509,7 @@ GameObject:
   - component: {fileID: 2456541819221648897}
   - component: {fileID: 2482085898412082829}
   - component: {fileID: 2473635846517432259}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Staff03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2574,7 +2592,7 @@ GameObject:
   - component: {fileID: 3707492881999670916}
   - component: {fileID: 3677951177760262164}
   - component: {fileID: 3687974155841934228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Staff02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2657,7 +2675,7 @@ GameObject:
   - component: {fileID: 3960903402392692658}
   - component: {fileID: 3931326509639779362}
   - component: {fileID: 3939366149877749806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Staff01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2742,7 +2760,7 @@ GameObject:
   - component: {fileID: 1930756377581025813}
   - component: {fileID: 7734141294995496664}
   - component: {fileID: 1408948054806896508}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2757,7 +2775,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7052329783452821103}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00000035762815}
   m_LocalScale: {x: 0.0050000004, y: 0.005, z: 0.0050000004}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2867,7 +2885,7 @@ PrefabInstance:
     - target: {fileID: 295897519215672997, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2361799934336317286, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
@@ -2932,7 +2950,7 @@ PrefabInstance:
     - target: {fileID: 7097156128790023500, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8008606284777491148, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
@@ -2942,7 +2960,7 @@ PrefabInstance:
     - target: {fileID: 8008606284777491148, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8404636086311695478, guid: 0c1125f7555985141b7d643ffc8cb7ff,
         type: 3}

@@ -21,6 +21,7 @@ public class EntityDeath : Conditional
         {
 			agent.isStopped = true;
 			animator.SetTrigger("Death");
+			isDeath.Value = false;
 			return TaskStatus.Success;
 		}
 		return TaskStatus.Failure;
