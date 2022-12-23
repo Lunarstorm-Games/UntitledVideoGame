@@ -58,6 +58,7 @@ public class DragonRangeAttack : Action
 					return TaskStatus.Success;
 				}
 			}
+			return TaskStatus.Running;
 		}
 		return TaskStatus.Failure;
 	}

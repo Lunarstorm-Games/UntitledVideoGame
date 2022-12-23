@@ -33,7 +33,6 @@ public class DragonTakeOff : Action
 		
 		if (currentAnimDuration <= 0.8f)
         {
-			Debug.LogError("eND OF TAKEOFF");
 			animator.SetFloat("Flying", 1f);
 			return TaskStatus.Success;
 		}

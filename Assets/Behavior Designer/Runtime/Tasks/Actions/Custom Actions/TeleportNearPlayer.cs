@@ -18,10 +18,17 @@ public class TeleportNearPlayer : Action
 
 	public override TaskStatus OnUpdate()
 	{
+		if (agent == null)
+			return TaskStatus.Failure;
+
+		if (target.Value == null)
+			return TaskStatus.Failure;
+
+
 		Vector3 warpPoint = RandomPointOnCircleEdge(warpRange.Value);
 		warpPoint += target.Value.transform.position;
 
-		if (agent != null && agent.Warp(warpPoint))
+		if (agent.Warp(warpPoint))
 			return TaskStatus.Success;
 
 		return TaskStatus.Failure;

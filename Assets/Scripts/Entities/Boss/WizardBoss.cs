@@ -84,6 +84,12 @@ public class WizardBoss : Entity
         }
     }
 
+    public override void DeathAnimEvent()
+    {
+        base.DeathAnimEvent();
+        //Win screen or something
+    }
+
     public Projectile MissileProjectile(Vector3 spawnPos)
     {
         WizardBossMagicMissileProjectile projectileClone = Instantiate(missile_projectile, spawnPos, Quaternion.identity);

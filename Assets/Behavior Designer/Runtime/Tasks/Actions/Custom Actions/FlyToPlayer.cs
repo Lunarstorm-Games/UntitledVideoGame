@@ -59,14 +59,24 @@ public class FlyToPlayer : Action
 
         agent.SetDestination(targetSpot.Value.position);
 
-        //float anim_speed = Mathf.Lerp(0f, 1f, speedTransitionTime);
-        //speedTransitionTime += 0.8f * Time.deltaTime;
-        animator.SetFloat("Speed", 1f);
-
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)
                 if (agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    Vector3 dir = targetSpot.Value.position - unit.Value.transform.position;
+                    dir.y = 0f;
+                    unit.Value.transform.rotation = Quaternion.LookRotation(dir);
+                    animator.SetFloat("Speed", 0f);
                     return TaskStatus.Success;
+                }
+
+
+
+
+        //float anim_speed = Mathf.Lerp(speedAnimParam.Value, 1f, speedTransitionTime);
+        //speedTransitionTime += 0.8f * Time.deltaTime;
+        //speedAnimParam.Value = anim_speed;
+        animator.SetFloat("Speed", 1f);
 
         return TaskStatus.Running;
     }

@@ -28,11 +28,13 @@ public class DragonBoss : Entity
     [SerializeField] protected float fireTickDamage = 1f;
     [Tooltip("How long the fire stays")]
     [SerializeField] protected float fireTime = 4f;
+    [SerializeField] protected float fireAOETickRate = 2f;
+    [SerializeField] protected float fireAOERadius = 6f;
     [Tooltip("Determines time between fireball shots")]
     [SerializeField] protected float fireball_attackSpeed = 1f;
     [SerializeField] protected float fireball_attackDelay = 10f;
     [SerializeField] protected Transform projectileSpawnPos;
-    [SerializeField] protected Projectile projectile;
+    [SerializeField] protected DragonFireballProjectile projectile;
     [SerializeField] protected int fireball_amount = 3;
     [SerializeField] protected float fireball_attackRange = 10f;
 
@@ -63,13 +65,15 @@ public class DragonBoss : Entity
     public float Fireball_speed { get => fireball_speed; set => fireball_speed = value; }
     public float FireTickDamage { get => fireTickDamage; set => fireTickDamage = value; }
     public float FireTime { get => fireTime; set => fireTime = value; }
+    public float FireAOETickRate { get => fireAOETickRate; set => fireAOETickRate = value; }
+    public float FireAOERadius { get => fireAOERadius; set => fireAOERadius = value; }
     public float Fireball_attackSpeed { get => fireball_attackSpeed; set => fireball_attackSpeed = value; }
     public float Fireball_attackDelay { get => fireball_attackDelay; set => fireball_attackDelay = value; }
     public float Lunge_damage { get => lunge_damage; set => lunge_damage = value; }
     public float Lunge_attackSpeed { get => lunge_attackSpeed; set => lunge_attackSpeed = value; }
     public float Lunge_attackDelay { get => lunge_attackDelay; set => lunge_attackDelay = value; }
     public Transform ProjectileSpawnPos { get => projectileSpawnPos; set => projectileSpawnPos = value; }
-    public Projectile Projectile { get => projectile; set => projectile = value; }
+    public DragonFireballProjectile Projectile { get => projectile; set => projectile = value; }
     public int Fireball_amount { get => fireball_amount; set => fireball_amount = value; }
     public float Lunge_attackRange { get => lunge_attackRange; set => lunge_attackRange = value; }
     public float Fireball_attackRange { get => fireball_attackRange; set => fireball_attackRange = value; }
@@ -80,18 +84,15 @@ public class DragonBoss : Entity
     public float Bite_attackRange { get => bite_attackRange; set => bite_attackRange = value; }
     public bool CanSwitch { get => canSwitch; set => canSwitch = value; }
     public float CurrentAttackDelay { get; set; }
+    public float CurrentBiteAttackDelay { get; set; }
 
     private float switchCooldownTime;
-
-    public void Awake()
-    {
-        switchCooldownTime = switchCooldown;
-    }
 
     public void Start()
     {
         CurrentTarget = Player.Instance;
         TargetSpot = Player.Instance.GetEntityTargetSpot();
+        switchCooldownTime = switchCooldown;
         currentHealth = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
 
@@ -101,6 +102,7 @@ public class DragonBoss : Entity
     {
         SwitchStateCooldown();
         UpdateAttackDelay();
+        UpdateBiteAttackDelay();
     }
 
     public override void TakeDamage(float damage, Entity origin)
@@ -117,17 +119,22 @@ public class DragonBoss : Entity
 
     public void FireballProjectile()
     {
-        Projectile projectileClone = Instantiate(projectile, projectileSpawnPos.position, Quaternion.identity);
+        DragonFireballProjectile projectileClone = Instantiate(projectile, projectileSpawnPos.position, Quaternion.identity);
         Vector3 TargetPos = TargetSpot.position;
         Vector3 shootDir = (TargetPos - projectileSpawnPos.position).normalized;
         projectileClone.transform.LookAt(TargetPos);
         projectileClone.damage = fireball_damage;
         projectileClone.speed = fireball_speed;
+        projectileClone.AOE_Time = fireTime;
+        projectileClone.AOE_Damage = fireTickDamage;
+        projectileClone.FireAOETickRate = fireAOETickRate;
+        projectileClone.FireAOERadius = fireAOERadius;
         projectileClone.Initialize(this, shootDir);
     }
 
     public override void DeathAnimEvent()
     {
+        Debug.LogError("Event");
         Instantiate(evilWizard_Prefab, spawnPos.position, Quaternion.identity);
         base.DeathAnimEvent();
     }
@@ -151,6 +158,14 @@ public class DragonBoss : Entity
         {
             Debug.Log(CurrentAttackDelay);
             CurrentAttackDelay -= Time.deltaTime;
+        }
+    }
+
+    public void UpdateBiteAttackDelay()
+    {
+        if (CurrentBiteAttackDelay > 0)
+        {
+            CurrentBiteAttackDelay -= Time.deltaTime;
         }
     }
 }

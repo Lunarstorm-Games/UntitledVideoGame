@@ -17,7 +17,7 @@ public class WizardBossMagicMissileProjectile : Projectile
 
     public override void Update()
     {
-        if (target == null || agent == null)
+        if (target == null || agent == null || shooter == null)
         {
             DestroyProjectile();
             return;
