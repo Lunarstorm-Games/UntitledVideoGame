@@ -134,7 +134,6 @@ public class DragonBoss : Entity
 
     public override void DeathAnimEvent()
     {
-        Debug.LogError("Event");
         Instantiate(evilWizard_Prefab, spawnPos.position, Quaternion.identity);
         base.DeathAnimEvent();
     }
@@ -156,7 +155,6 @@ public class DragonBoss : Entity
     {
         if (CurrentAttackDelay > 0)
         {
-            Debug.Log(CurrentAttackDelay);
             CurrentAttackDelay -= Time.deltaTime;
         }
     }

@@ -38,10 +38,6 @@ public class WalkToMainObjective : Action
         agent.stoppingDistance = stoppingDistance.Value;
 
         targetSpot.SetValue(mainObjective.GetEntityTargetSpot());
-
-        agent.SetDestination(targetSpot.Value.position);
-
-        animator.SetFloat("Speed", 1f);
     }
 
     public override void OnEnd()
@@ -65,10 +61,14 @@ public class WalkToMainObjective : Action
             return TaskStatus.Failure;
         }
 
+        agent.SetDestination(targetSpot.Value.position);
+
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)
                 if (agent.remainingDistance <= agent.stoppingDistance)
                     return TaskStatus.Success;
+
+        animator.SetFloat("Speed", 1f);
 
         return TaskStatus.Running;
     }
