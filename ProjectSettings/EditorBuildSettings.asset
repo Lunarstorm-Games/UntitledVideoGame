@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/Scenes/ChangeVillageScene.unity
     guid: 46e76828f3683064e945c6868acc51f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level/Scenes/Main scene.unity
     guid: d14af293af05217498b664322667a26d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/Scenes/LevelExample.unity
     guid: 6ee6b4862e192aa4ca31683da204c720
   - enabled: 0
