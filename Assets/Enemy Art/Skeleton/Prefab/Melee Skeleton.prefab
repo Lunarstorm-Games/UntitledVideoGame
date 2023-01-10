@@ -728,15 +728,15 @@ MonoBehaviour:
   targetInterests: 27
   targetSpots:
   - {fileID: 2089451430087985064}
-  maxHealth: 100
+  maxHealth: 30
   currentHealth: 0
   death: 0
   speed: 3
   aggroRange: 9
   attackRange: 1.8
   attackDelay: 2
-  attackSpeed: 1
-  damage: 10
+  attackSpeed: 2
+  damage: 5
   stoppingDistance: 1.5
   EssenceSource:
     rid: 7853769208530731008
@@ -746,7 +746,7 @@ MonoBehaviour:
     - rid: 7853769208530731008
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 10
+        EssenceValue: 5
 --- !u!54 &1777075299912445076
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
         Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":14},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackSpeed","PropertyMappingOwner":15,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackDelay","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"MeleeSkeleton/Damage","PropertyMappingOwner":17,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(79.99997,110)"},"ID":22,"Name":"Chase
         Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"MeleeSkeleton/Speed","PropertyMappingOwner":18,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"MeleeSkeleton/StoppingDistance","PropertyMappingOwner":19,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."}}]}]}],"Variables":[{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":20},{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"MeleeSkeleton/Death","PropertyMappingOwner":21,"BooleanmValue":false},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"MeleeSkeleton/HitByTarget","PropertyMappingOwner":22},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"MeleeSkeleton/Speed","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"MeleeSkeleton/StoppingDistance","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackRange","PropertyMappingOwner":25,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackSpeed","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackDelay","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"MeleeSkeleton/Damage","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"MeleeSkeleton/AggroRange","PropertyMappingOwner":29,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
+        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"MeleeSkeleton/Death","PropertyMappingOwner":21,"BooleanmValue":false},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"MeleeSkeleton/HitByTarget","PropertyMappingOwner":22},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"MeleeSkeleton/Speed","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"MeleeSkeleton/StoppingDistance","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackRange","PropertyMappingOwner":25,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackSpeed","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"MeleeSkeleton/AttackDelay","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"MeleeSkeleton/Damage","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"MeleeSkeleton/AggroRange","PropertyMappingOwner":29,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"Waypoint","IsShared":true}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -851,8 +851,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

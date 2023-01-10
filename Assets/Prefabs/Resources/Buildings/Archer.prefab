@@ -117,7 +117,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/Archer
   objectName: 
-  EssenceCost: 1000
+  EssenceCost: 300
 --- !u!114 &6589577843268223474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 8044881512009396664}
   maxHealth: 300
   currentHealth: 0
-  death: 0
+  death: 1
   projectilePrefab: {fileID: 1252805924365581705, guid: 656997cd490b31f47bc7c7f630ca93ea,
     type: 3}
   ShootingOrigin: {fileID: 7935018145380688956}

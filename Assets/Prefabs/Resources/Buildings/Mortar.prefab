@@ -93,7 +93,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/Mortar
   objectName: 
-  EssenceCost: 1000
+  EssenceCost: 2000
 --- !u!54 &3488287101094726266
 Rigidbody:
   m_ObjectHideFlags: 0

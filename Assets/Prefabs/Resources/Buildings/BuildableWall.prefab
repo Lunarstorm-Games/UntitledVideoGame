@@ -180,7 +180,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/BuildableWall
   objectName: 
-  EssenceCost: 1500
+  EssenceCost: 600
 --- !u!114 &2758069974215604992
 MonoBehaviour:
   m_ObjectHideFlags: 0
