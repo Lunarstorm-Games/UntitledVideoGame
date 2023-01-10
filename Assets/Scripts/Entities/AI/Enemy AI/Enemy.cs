@@ -49,11 +49,6 @@ public class Enemy : EntityAI, IPoolableObject
         }
     }
 
-    protected void OnDestroy()
-    {
-        Debug.LogWarning("Pooled enemy should not be destroyed", this.gameObject);
-    }
-
     public override void DeathAnimEvent()
     {
         EssenceSource.DropEssence();

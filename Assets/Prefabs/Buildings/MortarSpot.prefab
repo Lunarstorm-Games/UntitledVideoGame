@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 2644925689707980656}
   - component: {fileID: 2644925689707980663}
   - component: {fileID: 2644925689707980659}
-  - component: {fileID: 3859322971663548757}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: MortarSpot
   m_TagString: BuildingSpot
   m_Icon: {fileID: 0}

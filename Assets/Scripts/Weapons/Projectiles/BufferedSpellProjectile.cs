@@ -34,7 +34,7 @@ namespace Assets.Scripts.Projectiles
             base.Update();
         }
 
-        protected override void DestroyProjectile(float delay = 0f)
+        public override void DestroyProjectile(float delay = 0f)
         {
 
             StartCoroutine(DestroyDelay(delay));
@@ -47,7 +47,7 @@ namespace Assets.Scripts.Projectiles
             gameObject.SetActive(false);
             OnCollision(this);
         }
-        protected override void ProjectileImpact()
+        public override void ProjectileImpact()
         {
             base.ProjectileImpact();
             gameObject.SetActive(false);
