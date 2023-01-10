@@ -1674,7 +1674,7 @@ MonoBehaviour:
   death: 0
   speed: 4
   aggroRange: 9
-  attackRange: 2.2
+  attackRange: 2.5
   attackDelay: 2
   attackSpeed: 1
   damage: 10

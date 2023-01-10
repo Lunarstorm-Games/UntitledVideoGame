@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Medium_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Long_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Medium_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Quiver_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Right_Hand_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_NPC_Skeleton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 7943283763410014760}
   - component: {fileID: 2056983469908052663}
   - component: {fileID: 1857144458222137560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mage Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -796,8 +796,8 @@ MonoBehaviour:
       variableStartIndex: 
       JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(436.529419,-44.3217239)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(10,170)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":1},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0,120.000031)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-710,190)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"EntityDeath","NodeData":{"Offset":"(0,120)"},"ID":4,"Name":"Entity
         Death","Instant":true,"SharedBoolisDeath":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"SkeletonMage/Death","PropertyMappingOwner":0,"BooleanmValue":false}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-169.999939,380)"},"ID":5,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-70,120)"},"ID":6,"Name":"In
-        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"SkeletonMage/AttackRange","PropertyMappingOwner":1,"SinglemValue":0}},{"Type":"BehaviorDesigner.Runtime.Tasks.SetPropertyValue","NodeData":{"Offset":"(73.196106,116.154785)"},"ID":7,"Name":"Set
+        Attack Range","Instant":true,"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"SkeletonMage/AttackRange","PropertyMappingOwner":1,"SinglemValue":0}},{"Type":"BehaviorDesigner.Runtime.Tasks.SetPropertyValue","NodeData":{"Offset":"(73.196106,116.154785)"},"ID":7,"Name":"Set
         Property Value","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":2},"SharedStringcomponentName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"SkeletonMage"},"SharedStringpropertyName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"TargetSpot"},"SharedVariablepropertyValue":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true}},{"Type":"BaseRangeAttack","NodeData":{"Offset":"(226.5061,120.800415)"},"ID":8,"Name":"Base
         Range Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":3},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"SkeletonMage/AttackSpeed","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"SkeletonMage/AttackDelay","PropertyMappingOwner":5,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(250,180)"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.SetSharedFloat","NodeData":{"Offset":"(-211.276611,127.446777)"},"ID":10,"Name":"Set
         Shared Float","Instant":true,"SharedFloattargetValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0},"SharedFloattargetVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}},{"Type":"InAggroRange","NodeData":{"Offset":"(-70,130)"},"ID":11,"Name":"In
@@ -810,12 +810,11 @@ MonoBehaviour:
         By Player","Instant":true,"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."},"SharedEntitytargetPlayer":{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"SkeletonMage/HitByTarget","PropertyMappingOwner":11}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.SetSharedEntity","NodeData":{"Offset":"(-60,150)"},"ID":18,"Name":"Set
         Shared Entity","Instant":true,"SharedEntitytargetValue":{"Type":"SharedEntity","Name":null},"SharedEntitytargetVariable":{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"SkeletonMage/HitByTarget","PropertyMappingOwner":12}},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(92.96293,139.999786)"},"ID":19,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-60.00003,110)"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-90.00003,130.000061)"},"ID":21,"Name":"In
-        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"SkeletonMage/AttackRange","PropertyMappingOwner":13,"SinglemValue":0}},{"Type":"BaseRangeAttack","NodeData":{"Offset":"(68.51838,132.221924)"},"ID":22,"Name":"Base
-        Range Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":14},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"SkeletonMage/AttackSpeed","PropertyMappingOwner":15,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"SkeletonMage/AttackDelay","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(79.99997,110)"},"ID":23,"Name":"Chase
-        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"SkeletonMage/Speed","PropertyMappingOwner":17,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"SkeletonMage/StoppingDistance","PropertyMappingOwner":18,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."}}]}]}],"Variables":[{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":19},{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"SkeletonMage/Death","PropertyMappingOwner":20,"BooleanmValue":false},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"SkeletonMage/HitByTarget","PropertyMappingOwner":21},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"SkeletonMage/Speed","PropertyMappingOwner":22,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"SkeletonMage/StoppingDistance","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"SkeletonMage/AttackRange","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"SkeletonMage/AttackSpeed","PropertyMappingOwner":25,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"SkeletonMage/AttackDelay","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"SkeletonMage/Damage","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"SkeletonMage/AggroRange","PropertyMappingOwner":28,"SinglemValue":0},null,{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
+        Attack Range","Instant":true,"SharedEntitytarget":{"Type":"SharedEntity","Name":null},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":null},"SharedFloatattackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0}},{"Type":"BaseRangeAttack","NodeData":{"Offset":"(68.51838,132.221924)"},"ID":22,"Name":"Base
+        Range Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":13},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"SkeletonMage/AttackSpeed","PropertyMappingOwner":14,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"SkeletonMage/AttackDelay","PropertyMappingOwner":15,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(79.99997,110)"},"ID":23,"Name":"Chase
+        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"SkeletonMage/Speed","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"SkeletonMage/StoppingDistance","PropertyMappingOwner":17,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."}}]}]}],"Variables":[{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":18},{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"SkeletonMage/Death","PropertyMappingOwner":19,"BooleanmValue":false},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"SkeletonMage/HitByTarget","PropertyMappingOwner":20},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"SkeletonMage/Speed","PropertyMappingOwner":21,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"SkeletonMage/StoppingDistance","PropertyMappingOwner":22,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"SkeletonMage/AttackRange","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"SkeletonMage/AttackSpeed","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"SkeletonMage/AttackDelay","PropertyMappingOwner":25,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"SkeletonMage/Damage","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"SkeletonMage/AggroRange","PropertyMappingOwner":27,"SinglemValue":0},null,{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -826,7 +825,6 @@ MonoBehaviour:
         - {fileID: 1948329710155509286}
         - {fileID: 1948329710155509286}
         - {fileID: 7943283763410014760}
-        - {fileID: 1948329710155509286}
         - {fileID: 1948329710155509286}
         - {fileID: 1948329710155509286}
         - {fileID: 1948329710155509286}
@@ -865,7 +863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1125,7 +1123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,7 +1155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1286,7 +1284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Large_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1317,7 +1315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_HeadTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1380,7 +1378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Left_Hand_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1479,7 +1477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1511,7 +1509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1543,7 +1541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,7 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,7 +1608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1705,7 +1703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1770,7 +1768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936740}
   - component: {fileID: 1948329710169105274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +1905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1970,7 +1968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2001,7 +1999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2064,7 +2062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2128,7 +2126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2160,7 +2158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Second_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2224,7 +2222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_RightToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2319,7 +2317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,7 +2349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Sheat_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,7 +2380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Small_Shield_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2414,7 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936704}
   - component: {fileID: 1948329710169105254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2552,7 +2550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936706}
   - component: {fileID: 1948329710169105248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2689,7 +2687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948329710155936708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Male_Spine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2727,7 +2725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936710}
   - component: {fileID: 1948329710169105252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2865,7 +2863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936712}
   - component: {fileID: 1948329710169105262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3003,7 +3001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936714}
   - component: {fileID: 1948329710169105256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LUpperLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3141,7 +3139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936716}
   - component: {fileID: 1948329710169105250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3279,7 +3277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936718}
   - component: {fileID: 1948329710169105260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_LHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3417,7 +3415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936720}
   - component: {fileID: 1948329710169105270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3555,7 +3553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936722}
   - component: {fileID: 1948329710169105264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3693,7 +3691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936724}
   - component: {fileID: 1948329710169105258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_Mandible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936726}
   - component: {fileID: 1948329710169105268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3969,7 +3967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936728}
   - component: {fileID: 1948329710169105278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4107,7 +4105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936730}
   - component: {fileID: 1948329710169105272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RUpperLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4245,7 +4243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936732}
   - component: {fileID: 1948329710169105266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4383,7 +4381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936734}
   - component: {fileID: 1948329710169105276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PT_Medieval_Skeleton_01_RHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4520,7 +4518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3979479768972305576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4551,7 +4549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6966274363075660198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TargetOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
