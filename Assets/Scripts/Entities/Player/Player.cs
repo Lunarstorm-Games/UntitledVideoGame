@@ -14,7 +14,7 @@ public class Player : Entity, IDamageable
     [Header("Mana System")]
     [SerializeField] private ManaBar manaBar;
     [SerializeField] private float Mana;
-    [SerializeField] private float manaRechargeRate = 3.5f;
+    [SerializeField] private float manaRechargeRate = 5.5f;
     [SerializeField] public float currentMana;
     [SerializeField] public UnityEvent OnDeath;
     
