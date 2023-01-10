@@ -20,6 +20,7 @@ namespace Assets.Scripts
         public BuildModeController BuildModeController;
         public WeatherType WeatherType;
         public GameObject TimerUi;
+        public GameObject EndBoss;
         public GameObject WaveController;
         public float PreAttackTimer = 300;
         private bool AttackHasStarted = false;
@@ -63,6 +64,10 @@ namespace Assets.Scripts
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
                 //TimerUi.SetActive(false);
                 AttackHasStarted = true;
+            }
+            if (hour == 20 && hour <= 20)
+            {
+                EndBoss.SetActive(true);
             }
 
         }

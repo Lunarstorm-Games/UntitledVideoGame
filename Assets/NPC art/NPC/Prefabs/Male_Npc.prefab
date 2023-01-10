@@ -1674,11 +1674,11 @@ MonoBehaviour:
   death: 0
   speed: 4
   aggroRange: 9
-  attackRange: 2.5
+  attackRange: 2.2
   attackDelay: 2
   attackSpeed: 1
   damage: 10
-  stoppingDistance: 1.7
+  stoppingDistance: 2
 --- !u!114 &1732062365847045807
 MonoBehaviour:
   m_ObjectHideFlags: 0

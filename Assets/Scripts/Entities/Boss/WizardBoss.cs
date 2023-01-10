@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WizardBoss : Entity
 {
@@ -87,7 +88,9 @@ public class WizardBoss : Entity
     public override void DeathAnimEvent()
     {
         base.DeathAnimEvent();
-        //Win screen or something
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(4);
     }
 
     public Projectile MissileProjectile(Vector3 spawnPos)

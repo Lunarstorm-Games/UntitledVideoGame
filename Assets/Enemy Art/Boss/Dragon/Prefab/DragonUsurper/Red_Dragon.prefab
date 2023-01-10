@@ -1442,7 +1442,7 @@ MonoBehaviour:
   canSwitch: 0
   fly_speed: 9
   fly_stoppingDistance: 11
-  ground_speed: 5.5
+  ground_speed: 6
   ground_stoppingDistance: 6.2
   fireball_damage: 20
   fireball_speed: 17
