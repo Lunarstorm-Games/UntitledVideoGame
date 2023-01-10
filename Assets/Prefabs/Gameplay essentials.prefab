@@ -520,6 +520,61 @@ PrefabInstance:
       propertyPath: BuildModeController
       value: 
       objectReference: {fileID: 2093677971434827506}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[1].StrengthRating
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[2].StrengthRating
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[3].StrengthRating
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[4].StrengthRating
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: SpawnAblePrefabs.Array.data[5].StrengthRating
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].time
+      value: 54.600063
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].value
+      value: 149.32643
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].inSlope
+      value: 2.7163212
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].inSlope
+      value: 2.7163212
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[0].outSlope
+      value: 2.7163212
+      objectReference: {fileID: 0}
+    - target: {fileID: 834395440604897487, guid: 69da384621836e54d899cb5f761dcdda,
+        type: 3}
+      propertyPath: MaxEnemyStrengthCurve.m_Curve.Array.data[1].outSlope
+      value: 2.7163212
+      objectReference: {fileID: 0}
     - target: {fileID: 1407372747119881798, guid: 69da384621836e54d899cb5f761dcdda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1286,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 1135061759191673725, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}
       propertyPath: m_fontSizeMin
-      value: 13.624516
+      value: 17.030645
       objectReference: {fileID: 0}
     - target: {fileID: 1567284335014821404, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}
@@ -1311,7 +1366,7 @@ PrefabInstance:
     - target: {fileID: 2419600188977633159, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}
       propertyPath: m_fontSizeMin
-      value: 13.624516
+      value: 17.030645
       objectReference: {fileID: 0}
     - target: {fileID: 4537270768485257692, guid: be4135a8d94f8944f80c7235d56b33ae,
         type: 3}

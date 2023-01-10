@@ -28,7 +28,7 @@ public class WalkToMainObjective : Action
         if (!agent) return;
 
 
-        if (waypoint.Value == null)
+        if (waypoint.Value == null && WaypointTree.Instance !=null)
         {
             waypoint.SetValue(WaypointTree.Instance?.GetClosestStartingPoint(unit.transform).gameObject);
             targetWaypoint = waypoint?.Value.GetComponent<WaypointNode>();
