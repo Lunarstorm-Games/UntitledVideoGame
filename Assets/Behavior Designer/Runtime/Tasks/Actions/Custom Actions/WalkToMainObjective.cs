@@ -91,14 +91,11 @@ public class WalkToMainObjective : Action
             return TaskStatus.Failure;
         }
 
-        agent.SetDestination(targetSpot.Value.position);
-
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)
                 if (agent.remainingDistance <= agent.stoppingDistance)
                     return TaskStatus.Success;
 
-        animator.SetFloat("Speed", 1f);
 
         return TaskStatus.Running;
     }
