@@ -135,7 +135,7 @@ MonoBehaviour:
   SpeedLevel: 1
   speed: 20
   damage: 50
-  range: 5
+  range: 2.5
   AOERadius: 20
 --- !u!1 &4767184517995063882
 GameObject:
