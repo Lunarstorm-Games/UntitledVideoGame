@@ -20,7 +20,7 @@ MonoBehaviour:
     screenBlendMode: 0
     sunTransform: {fileID: 0}
     radialBlurIterations: 2
-    sunColor: {r: 0.52190304, g: 0.39528015, b: 0.32097152, a: 1}
+    sunColor: {r: 0.51254135, g: 0.40087995, b: 0.33334237, a: 1}
     sunThreshold: {r: 0.5568628, g: 0.5372549, b: 0.48235294, a: 1}
     sunShaftBlurRadius: 3
     sunShaftIntensity: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfcf1b1d40e1c44a268782a45f08e8, type: 3}
   m_Name: Blit
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 1000
     blitMaterial: {fileID: 2100000, guid: 0bd1a33f280c804468cc889af69c54cd, type: 2}
@@ -66,7 +66,7 @@ MonoBehaviour:
   - {fileID: -354182244931222148}
   - {fileID: 4434039707349825850}
   - {fileID: -229908085898525867}
-  m_RendererFeatureMap: 55430761d033cffc
+  m_RendererFeatureMap: d0c303eac97c5136801c3209d173a1717cc51ff11fb115fb3a39900c9fdf883d55430761d033cffc
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -130,7 +130,7 @@ MonoBehaviour:
     TopThreshold: 1
     ShadowIntensity: 0
     ScreenSpaceShadowsMaterial: {fileID: 0}
-    ShadowDirection: {x: -0.34202018, y: -0.36925527, z: -0.86410254}
+    ShadowDirection: {x: -0.34202018, y: 0.099577226, z: -0.934402}
     m_CurrentCloudHeight: 200
     CloudSpeed: 5
     NormalY: 0

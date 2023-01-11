@@ -39,7 +39,7 @@ MonoBehaviour:
   settings:
     Event: 1000
     blitMaterial: {fileID: 2100000, guid: 0bd1a33f280c804468cc889af69c54cd, type: 2}
-    blitMaterialPassIndex: -1
+    blitMaterialPassIndex: 0
     destination: 0
     textureId: _BlitPassTexture
 --- !u!114 &11400000
