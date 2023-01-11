@@ -33,14 +33,14 @@ public class Projectile : Weapon
 
     public virtual void OnTriggerEnter(Collider collider)
     {
-
-        if (collider.TryGetComponent<Entity>(out Entity entity))
+        
+        if (collider.transform.root.TryGetComponent<Entity>(out Entity entity))
         {
             if (entity != shooter)
             {
                 if (shooter.IsValidTarget(entity.EntityType))
                 {
-                    if (collider.TryGetComponent<IDamageable>(out IDamageable target))
+                    if (collider.transform.root.TryGetComponent<IDamageable>(out IDamageable target))
                     {
                         target.TakeDamage(damage, shooter);
                     }
@@ -69,12 +69,12 @@ public class Projectile : Weapon
         speed += newSpeed;
     }
 
-    protected virtual void DestroyProjectile(float delay = 0f)
+    public virtual void DestroyProjectile(float delay = 0f)
     {
         Destroy(gameObject, delay);
     }
 
-    protected virtual void ProjectileImpact()
+    public virtual void ProjectileImpact()
     {
         if (impactEffect != null)
         {

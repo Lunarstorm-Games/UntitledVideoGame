@@ -1,8 +1,10 @@
+using System;
 using Assets.Scripts.Projectiles;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = System.Random;
 
 public class Turret : Defense
 {
@@ -12,9 +14,11 @@ public class Turret : Defense
     public Transform ShootingOrigin;
     public int initialProjectileInstances;
     public int range = 20;
+
     public float secondsBetweenShots = 1f;
+
     // Start is called before the first frame update
-  protected  void Start()
+    protected void Start()
     {
         for (int i = 0; i < initialProjectileInstances; i++)
         {
@@ -22,17 +26,17 @@ public class Turret : Defense
             ProjectileBuffer.Add(newProjectile.GetComponent<BufferedSpellProjectile>());
             newProjectile.gameObject.SetActive(false);
             newProjectile.GetComponent<BufferedSpellProjectile>().OnCollision += OnProjectileDestroy;
-
         }
+
         StartCoroutine(TargetingCoroutine());
     }
 
     // Update is called once per frame
 
-  protected  void Update()
+    protected void Update()
     {
-
     }
+
     void OnDrawGizmosSelected()
     {
         // Draw a yellow sphere at the transform's position
@@ -43,16 +47,17 @@ public class Turret : Defense
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(ShootingOrigin.position, 0.1f);
     }
+
     IEnumerator TargetingCoroutine()
     {
         while (gameObject.activeInHierarchy)
         {
-
             ShootProjectile();
             yield return new WaitForSeconds(secondsBetweenShots);
         }
     }
-   protected virtual void ShootProjectile()
+
+    protected virtual void ShootProjectile()
     {
         var target = GetClosestEnemy()?.GetComponent<Enemy>();
 
@@ -67,7 +72,6 @@ public class Turret : Defense
 
         projectile.Initialize(this, direction);
         projectile.transform.position = ShootingOrigin.position;
-
     }
 
     protected BufferedSpellProjectile GetProjectileFromBuffer()
@@ -81,6 +85,7 @@ public class Turret : Defense
         {
             ProjectileBuffer.Remove(projectile);
         }
+
         ActiveProjectiles.Add(projectile);
         return projectile;
     }
@@ -92,6 +97,8 @@ public class Turret : Defense
         GameObject closest = null;
         float distance = range;
         Vector3 position = ShootingOrigin.position;
+       
+
         foreach (GameObject go in gos)
         {
             Vector3 diff = go.transform.position - position;
@@ -106,17 +113,18 @@ public class Turret : Defense
                         distance = curDistance;
                     }
                 }
-
+        
             }
         }
         return closest;
     }
-    public  virtual void OnProjectileDestroy(BufferedSpellProjectile source)
+
+    public virtual void OnProjectileDestroy(BufferedSpellProjectile source)
     {
         ActiveProjectiles.Remove(source);
         ProjectileBuffer.Add(source);
-
     }
+
     public override void DeathAnimEvent()
     {
         gameObject.SetActive(false);

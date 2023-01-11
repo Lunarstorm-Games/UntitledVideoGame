@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8637476851120277832}
   - component: {fileID: -2123209139979659489}
   - component: {fileID: -6303434221358105900}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LightningBoltProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,14 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f02ea9232e73c4db174683720f1828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  damage: 10
-  range: 0.5
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
   mana: 25
   DamageLevel: 1
   SpeedLevel: 1
+  speed: 0
+  damage: 10
+  range: 0.5
 --- !u!1 &6277903147677345483
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3799801966034854651}
   - component: {fileID: 3017332245816162174}
   - component: {fileID: 124372401156777916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

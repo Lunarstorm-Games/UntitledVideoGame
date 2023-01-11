@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1698266910889977546}
   - component: {fileID: 6589577843268223474}
   - component: {fileID: 5529531282356294047}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   Id: 
   prefabPath: Buildings/Archer
   objectName: 
-  EssenceCost: 1000
+  EssenceCost: 300
 --- !u!114 &6589577843268223474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 8044881512009396664}
   maxHealth: 300
   currentHealth: 0
-  death: 0
+  death: 1
   projectilePrefab: {fileID: 1252805924365581705, guid: 656997cd490b31f47bc7c7f630ca93ea,
     type: 3}
   ShootingOrigin: {fileID: 7935018145380688956}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7935018145380688956}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,24 +14,67 @@ namespace Assets.Scripts
 {
     public class TimeLoopEffectManager : MonoBehaviour
     {
-        private readonly List<Texture2D> capturedFrames = new();
-        private ScriptableRendererData _scriptableRendererData;
-        private AudioSource audioSource;
-        private Blit blitRenderer;
-        private bool CaptureStarted;
         public bool DeleteOnStart = false;
-        private string Folder;
-        private float frameTime;
 
         [ReadOnly] public Texture2D lastScreenshot;
         public Camera recordingCamera;
         public int RecordingFrameRate = 15;
-        private float replayTimeBetweenFrames = 0.03333333333f;
         public RenderTexture RT_TimeLoop;
         public float slowDownTime = 3f;
         public int MaxScreenshots = 10000;
         public bool ItsRewindTime = true;
         public float TargetRewindDuration = 10f;
+        public Material blitMaterial;
+        private readonly List<Texture2D> capturedFrames = new();
+        private ScriptableRendererData _scriptableRendererData;
+        private AudioSource audioSource;
+        private Blit blitRenderer;
+        private bool CaptureStarted;
+        private string Folder;
+        private float frameTime;
+        private float replayTimeBetweenFrames = 0.03333333333f;
+
+        private void Awake()
+
+        {
+            Folder = Application.temporaryCachePath + "/timeloopEffect";
+            audioSource = GetComponent<AudioSource>();
+            ResizeRenderTexture(RT_TimeLoop,Screen.width,Screen.height);
+        }
+
+
+        private void Start()
+        {
+            ExtractScriptableRendererData();
+            StartCapture();
+            blitRenderer =
+                _scriptableRendererData.rendererFeatures.FirstOrDefault(x => x.GetType() == typeof(Blit)) as Blit;
+            blitRenderer.SetActive(false);
+
+            if (DeleteOnStart) Directory.Delete(Folder);
+            Directory.CreateDirectory(Folder);
+            //Camera.onPostRender += SaveCameraView;
+            //RenderPipelineManager.endFrameRendering += SaveCameraView;
+        }
+
+        private void Update()
+        {
+            if (CaptureStarted)
+            {
+                var targetDelta = 1f / RecordingFrameRate;
+                if (frameTime > targetDelta)
+                {
+                    //capturedFrames.Add(ScreenCapture.CaptureScreenshotAsTexture());
+                    //capturedFrames.Add(SaveCameraView(Camera.main));
+                    frameTime = 0;
+                    RenderedTextureFromCamera();
+                    
+                }
+
+                frameTime += Time.deltaTime;
+            }
+        }
+
         public void StartCapture()
         {
             CaptureStarted = true;
@@ -47,6 +90,7 @@ namespace Assets.Scripts
             CalculateFrameDelta();
             StartCoroutine(PlaybackCoroutine(afterCompleteCallback));
         }
+
         void ResizeRenderTexture(RenderTexture renderTexture, int width, int height)
         {
             if (renderTexture)
@@ -70,14 +114,6 @@ namespace Assets.Scripts
         public void StopCapture()
         {
             CaptureStarted = false;
-        }
-
-        private void Awake()
-
-        {
-            Folder = Application.temporaryCachePath + "/timeloopEffect";
-            audioSource = GetComponent<AudioSource>();
-            ResizeRenderTexture(RT_TimeLoop,Screen.width,Screen.height);
         }
 
         private void ExtractScriptableRendererData()
@@ -139,6 +175,7 @@ namespace Assets.Scripts
 
                 capturedFrames.Add(renderedTexture);
                 lastScreenshot = renderedTexture;
+                blitMaterial.SetTexture("_BaseMap",renderedTexture);
             });
             //renderedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
             //renderedTexture.Apply();
@@ -156,45 +193,12 @@ namespace Assets.Scripts
             }
             var rawData = asyncGPUReadbackRequest.GetData<byte>();
             // Grab screen dimensions
-            var width = Screen.width;
-            var height = Screen.height;
+            var width = RT_TimeLoop.width;
+            var height = RT_TimeLoop.height;
             texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
             texture.SetPixelData(rawData,0);
             texture.Apply();
             
-        }
-
-
-        private void Start()
-        {
-            ExtractScriptableRendererData();
-            StartCapture();
-            blitRenderer =
-                _scriptableRendererData.rendererFeatures.FirstOrDefault(x => x.GetType() == typeof(Blit)) as Blit;
-            blitRenderer.SetActive(false);
-
-            if (DeleteOnStart) Directory.Delete(Folder);
-            Directory.CreateDirectory(Folder);
-            //Camera.onPostRender += SaveCameraView;
-            //RenderPipelineManager.endFrameRendering += SaveCameraView;
-        }
-
-        private void Update()
-        {
-            if (CaptureStarted)
-            {
-                var targetDelta = 1f / RecordingFrameRate;
-                if (frameTime > targetDelta)
-                {
-                    //capturedFrames.Add(ScreenCapture.CaptureScreenshotAsTexture());
-                    //capturedFrames.Add(SaveCameraView(Camera.main));
-                    frameTime = 0;
-                    RenderedTextureFromCamera();
-                    
-                }
-
-                frameTime += Time.deltaTime;
-            }
         }
     }
 }

@@ -23,12 +23,12 @@ public class LineAOEProjectile : Projectile
         base.Update();
     }
 
-    protected override void DestroyProjectile(float delay = 0f)
+    public override void DestroyProjectile(float delay = 0f)
     {
         base.DestroyProjectile(delay);
     }
 
-    protected override void ProjectileImpact()
+    public override void ProjectileImpact()
     {
         base.ProjectileImpact();
     }
