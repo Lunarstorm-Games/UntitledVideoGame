@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EarthElemental : MonoBehaviour
+public class EarthElemental : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Earth Elemental specific stats")]
+    [Tooltip("Mutliplies the damage value for target in front")]
+    [SerializeField] protected float FrontlineDamageMultiplier = 1.2f;
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmos()
     {
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
