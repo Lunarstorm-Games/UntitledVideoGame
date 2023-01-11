@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.scripts.Monobehaviour.Essence;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +11,8 @@ public class BuildingUIController : MonoBehaviour
 {
     GameObject player;
     public BuildModeController buildMode;
+
+    public TextMeshProUGUI essencetext;
     //show these things in the menu
     public List<GameObject> BuildableStructures = new List<GameObject>();
     // Start is called before the first frame update
@@ -29,6 +34,7 @@ public class BuildingUIController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Confined;
         gameObject.SetActive(true);
+        essencetext.text = EssenceBank.Instance?.EssenceAmount.ToString()??"0";
     }
     public void CloseWindow()
     {
@@ -40,8 +46,14 @@ public class BuildingUIController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
     }
+
     public void BuildObjecct(GameObject gameObject)
     {
         buildMode.BuildStructure(gameObject.GetComponent<BuildableStructure>());
+    }
+
+    private void Update()
+    { 
+        essencetext.text = EssenceBank.Instance?.EssenceAmount.ToString()??"0";
     }
 }

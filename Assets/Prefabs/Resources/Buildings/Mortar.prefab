@@ -77,7 +77,7 @@ MonoBehaviour:
   range: 100
   secondsBetweenShots: 5
   minRange: 10
-  HeightAboveEnemy: 15
+  HeightAboveEnemy: 25
 --- !u!114 &-4878653392343238943
 MonoBehaviour:
   m_ObjectHideFlags: 0
