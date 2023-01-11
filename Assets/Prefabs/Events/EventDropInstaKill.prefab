@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19025d103e9641b0b83de4067c7fb849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hour: 23
+  Hour: 1
   Minutes: 30
   Meteor: {fileID: 5070218118724091602, guid: 926f380d2e3e36045bcc9e4161034d45, type: 3}
+  StartingPosition: {x: 658.07, y: 164.31, z: 240.8}
+  TargetPosition: {x: 659, y: 114.6, z: 285}
   Item: {fileID: 2735404929241131311, guid: 315a8b07b0332074e928bdf340a2bb84, type: 3}

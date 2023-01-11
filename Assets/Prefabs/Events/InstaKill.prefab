@@ -318,5 +318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4a93a730cc4a92bba68ecbac654a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Enemy Wipe
+  HasEffectIcon: 0
   RotationSpeed: 0.9
   Effect: 0
+  PopUp: {fileID: 0}
+  EffectIcon: {fileID: 0}

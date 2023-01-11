@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using TMPro;
 using UniStorm;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
+    public TextMeshProUGUI PopUp;
+    public Image EffectIcon;
     public DropEvent[] DropEvents;
 
     private Dictionary<string, DropEvent> eventsAndTimes = new Dictionary<string, DropEvent>();
@@ -16,6 +20,8 @@ public class EventManager : MonoBehaviour
         {
             foreach (var de in DropEvents)
             {
+                de.Item.GetComponentInChildren<DropItem>().EffectIconImage = EffectIcon;
+                de.Item.GetComponentInChildren<DropItem>().PopUp = PopUp;
                 string tempTime = de.Hour + ":" + de.Minutes;
                 eventsAndTimes.Add(tempTime, de);
             }

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DropEvent : MonoBehaviour
 {
@@ -7,13 +10,17 @@ public class DropEvent : MonoBehaviour
     public int Hour;
     public int Minutes;
 
-    [Header("Drop Prefab")] public DropMeteor Meteor;
+    [Header("Drop Prefab & Data")] 
+    public DropMeteor Meteor;
+    public Vector3 StartingPosition;
+    public Vector3 TargetPosition;
 
     [Header("Drop Item")] public GameObject Item;
 
     public void StartEvent()
     {
-        Instantiate(Meteor);
+        Meteor.TargetPos = TargetPosition;
         Meteor.Item = Item;
+        Instantiate(Meteor, StartingPosition, Quaternion.identity);
     }
 }
