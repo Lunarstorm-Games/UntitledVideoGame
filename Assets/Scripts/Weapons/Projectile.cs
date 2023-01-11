@@ -40,9 +40,13 @@ public class Projectile : Weapon
             {
                 if (shooter.IsValidTarget(entity.EntityType))
                 {
-                    if (collider.transform.root.TryGetComponent<IDamageable>(out IDamageable target))
+                    if(collider.TryGetComponent<IDamageable>(out IDamageable target1))
                     {
-                        target.TakeDamage(damage, shooter);
+                        target1.TakeDamage(damage, shooter);
+                    }
+                    else if (collider.transform.root.TryGetComponent<IDamageable>(out IDamageable target2))
+                    {
+                        target2.TakeDamage(damage, shooter);
                     }
                 }
             }

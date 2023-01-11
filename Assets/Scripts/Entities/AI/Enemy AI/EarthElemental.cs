@@ -5,8 +5,10 @@ using UnityEngine;
 public class EarthElemental : Enemy
 {
     [Header("Earth Elemental specific stats")]
-    [Tooltip("Mutliplies the damage value for target in front")]
-    [SerializeField] protected float FrontlineDamageMultiplier = 1.2f;
+    [Tooltip("Mutliplies the damage value for targets in front")]
+    [SerializeField] protected float frontlineDamageMultiplier = 1.2f;
+
+    public float FrontlineDamageMultiplier { get => frontlineDamageMultiplier; set => frontlineDamageMultiplier = value; }
 
     private void OnDrawGizmos()
     {
