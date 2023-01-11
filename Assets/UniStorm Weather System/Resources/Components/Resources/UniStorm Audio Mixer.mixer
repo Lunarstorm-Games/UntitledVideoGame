@@ -7,7 +7,8 @@ AudioMixerController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UniStorm Audio Mixer
-  m_OutputGroup: {fileID: 0}
+  m_OutputGroup: {fileID: 4766371942465725276, guid: f68e2c15dcc0c3143a0de9aade621af0,
+    type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
@@ -81,7 +82,7 @@ AudioMixerSnapshotController:
   m_FloatValues:
     dffcb6409431a5943942507e92322dd5: 0
     88984671940a1434b84d77f044f7ba0f: 0
-    b8f93aca991118a4c8a77123a3971f2f: 0
+    b8f93aca991118a4c8a77123a3971f2f: -0.27209902
     020d1ffdefa855c4b81135afd429c367: 1
     69511c8e6d9ad3e47a44ba2e7492872d: 0
   m_TransitionOverrides: {}
