@@ -6,19 +6,18 @@ public class EarthElementalAttackAction : Action
 {
 	[SerializeField] private SharedEntity unit;
 	[SerializeField] private SharedTransform targetSpot;
-	[SerializeField] private SharedFloat attackSpeed, attackRange, attackDelay, damage, frontlineDamageMultiplier, currentAttackDelay;
+	[SerializeField] private SharedFloat attackSpeed, attackRange, attackDelay, damage, currentAttackDelay;
 
 	private Animator animator;
-	private EarthElementalAttack weapon;
+	private MeleeWeapon weapon;
 
 	public override void OnStart()
 	{
 		animator = GetComponent<Animator>();
 		animator.SetFloat("AttackSpeed", attackSpeed.Value);
-		weapon = gameObject.GetComponentInChildren<EarthElementalAttack>();
+		weapon = gameObject.GetComponentInChildren<MeleeWeapon>();
 		gameObject.GetComponentInChildren<SphereCollider>().radius = attackRange.Value;
 		weapon.Initialize(unit.Value, damage.Value);
-		weapon.DamageMultiplier = frontlineDamageMultiplier.Value;
 	}
 
 	public override TaskStatus OnUpdate()

@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaterShield
-  m_Shader: {fileID: -6465566751694194690, guid: 8c7645ba16a3be948ad379dea5225ae9,
+  m_Shader: {fileID: -6465566751694194690, guid: 415c61a1d50c7c14ba4dcc84529271c0,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
