@@ -4,30 +4,31 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
   - CinemachineTarget
   - BuildingSpot
-  - Enemy
+  - MainObjective
   - MagicWorkshop
-  - Fire
   - Object
-  - TrapWorkshop
+  - Fire
+  - MemoryBoard
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Terrain
+  - Raycast
   - Water
   - UI
-  - Raycast
-  - Ally
-  - AllyPassible
-  - 
+  - Player
+  - NPC
+  - Enemy
+  - Boss
+  - BossProjectile
+  - FriendlyProjectile
+  - EnemyProjectile
+  - Defense
+  - Terrain
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

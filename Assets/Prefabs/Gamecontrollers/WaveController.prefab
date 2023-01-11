@@ -50,28 +50,43 @@ MonoBehaviour:
   - Prefab: {fileID: 1948329710155509286, guid: 38283d0f2f9588c4a90e9a27a86fdbdc,
       type: 3}
     StrengthRating: 1
+    SpawnBias: 10
   - Prefab: {fileID: 1948329710155509286, guid: 53627a16cfeb50a4cafc5baf4783fac7,
       type: 3}
-    StrengthRating: 5
+    StrengthRating: 3
+    SpawnBias: 10
+  - Prefab: {fileID: 1948329710155509286, guid: 8c5a978d8b3d2be4cbeb47047170e688,
+      type: 3}
+    StrengthRating: 6
+    SpawnBias: 10
+  - Prefab: {fileID: 100050, guid: aad05534a7ba0dd49b8c54ce188308ec, type: 3}
+    StrengthRating: 12
+    SpawnBias: 10
+  - Prefab: {fileID: 100048, guid: 7ed3e345f07e89940ae0c1e00eeb7d1d, type: 3}
+    StrengthRating: 18
+    SpawnBias: 10
+  - Prefab: {fileID: 185802, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 3}
+    StrengthRating: 8
+    SpawnBias: 10
   DebugInfo: 0
   MaxEnemyStrengh: 1
   MaxEnemyStrengthCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.016540527
-      value: 3.9658203
-      inSlope: 0.4054657
-      outSlope: 0.4054657
+      time: -0.0016784668
+      value: 1.0105591
+      inSlope: 1.1954356
+      outSlope: 1.1954356
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 14.947716
-      value: 10.033313
-      inSlope: 0.4054657
-      outSlope: 0.4054657
+      time: 55.587734
+      value: 67.46413
+      inSlope: 1.1954356
+      outSlope: 1.1954356
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -80,7 +95,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   SecondsPerLargeWave: 30
-  WaveStrengthMultiplier: 5
+  WaveStrengthMultiplier: 15
   LargeWaveAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -94,44 +109,44 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.9928311
-      value: 1.9910468
-      inSlope: 0
-      outSlope: 0
+      time: 3.1580229
+      value: 1.8469886
+      inSlope: 0.7375787
+      outSlope: 0.7375787
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 2.0099268
-      value: 1.332076
-      inSlope: 0
-      outSlope: 0
+      time: 10.025271
+      value: 7.7385964
+      inSlope: 0.73690367
+      outSlope: 0.73690367
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 4.00043
-      value: 5.001414
-      inSlope: 0
-      outSlope: 0
+      time: 24.152575
+      value: 17.317951
+      inSlope: 0.6094423
+      outSlope: 0.6094423
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 5.9839044
-      value: 2.7676284
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
+      time: 32.134193
+      value: 21.212708
+      inSlope: 0.55841625
+      outSlope: 0.55841625
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 1
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 9.032036
-      value: 5.15434
+      time: 67.746025
+      value: 40.58253
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -171,6 +186,7 @@ MonoBehaviour:
   SpawnPerFixedUpdate: 1000
   IsActivated: 0
   roundTime: 0
+  initialPoolSize: 50
 --- !u!1 &4267196845895648570
 GameObject:
   m_ObjectHideFlags: 0

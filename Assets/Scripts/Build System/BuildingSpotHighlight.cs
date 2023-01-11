@@ -17,30 +17,13 @@ public class BuildingSpotHighlight : PersistableMonoBehaviour, IInteractable
     {
         BuildingUi.OpenWindow();
     }
-    void Awake()
-    {
-       
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-        //BuildingUi = UIController.Instance.BuildingInterface;
-        base.Start();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     internal void BuildStructure(BuildableStructure prefab)
     {
         if (CurrentBuilding == null)
         {
-            EssenceBank.Instance?.SpendEssence(prefab.EssenceCost);
+
+            
             GetComponent<MeshRenderer>().enabled = false;
             if (prefab.gameObject.name == "BuildableWall")
             {

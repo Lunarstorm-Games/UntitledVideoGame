@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7099409833043492080}
   - component: {fileID: 3311628778774612294}
   - component: {fileID: 5321771071479693344}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8264106342231565391}
   - component: {fileID: 4797507873324559879}
   - component: {fileID: 5869429962617583519}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ImpactEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

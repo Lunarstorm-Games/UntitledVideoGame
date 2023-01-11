@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9074186228458563069}
   - component: {fileID: -1450108528857507897}
   - component: {fileID: -2338750469617564991}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BasicSpellProjectile
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,15 +128,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4ad468f37e022469ef5b35cc21073b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  damage: 30
-  range: 5
   impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
     type: 3}
   hitSound: {fileID: 0}
   mana: 20
   DamageLevel: 1
   SpeedLevel: 1
+  speed: 30
+  damage: 30
+  range: 5
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6461486515272001089}
   - component: {fileID: 5648084301173534979}
   - component: {fileID: 5132594019114284057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

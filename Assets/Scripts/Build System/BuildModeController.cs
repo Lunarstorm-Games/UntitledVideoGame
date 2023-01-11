@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.scripts.Monobehaviour.Essence;
 using Assets.Scripts.Utility;
 using UnityEngine;
 
@@ -11,19 +12,15 @@ public class BuildModeController : MonoBehaviour
     [SerializeField] private LayerMask rayCollider;
     public List<BuildableStructure> BuildableStructures;
     public float interactDistance = 20f;
-    private GameObject etoBuildPopUp;
+    [SerializeField] private GameObject etoBuildPopUp;
     [ReadOnly] public BuildingSpotHighlight interactable;
     private bool isPromptOpen = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        etoBuildPopUp = UIController.Instance.transform.Find("EtoBuildPopUp").gameObject;
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (!UIController.Instance.BuildingInterface.gameObject.activeInHierarchy)
+        if (!UIController.Instance?.BuildingInterface.gameObject.activeInHierarchy??false)
         {
             GetInteractable();
         }
@@ -52,7 +49,6 @@ public class BuildModeController : MonoBehaviour
         }
         interactable = null;
         etoBuildPopUp.SetActive(false);
-
     }
 
     void OnDrawGizmos()
@@ -69,7 +65,12 @@ public class BuildModeController : MonoBehaviour
         // the menu should be based on the buildable structures
         if (buildSpot != null && buildSpot.AllowedBuildings.Any(x => x.gameObject.name == prefab.name))
         {
-            buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
+            if (EssenceBank.Instance?.EssenceAmount > prefab.EssenceCost)
+            {
+
+                EssenceBank.Instance?.SpendEssence(prefab.EssenceCost);
+                buildSpot.BuildStructure(prefab.GetComponent<BuildableStructure>());
+            }
         }
     }
 

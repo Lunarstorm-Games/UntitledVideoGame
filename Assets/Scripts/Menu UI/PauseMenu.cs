@@ -49,11 +49,12 @@ public class PauseMenu : MonoBehaviour
     {
         IsGamePaused = false;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
     {
+        MemoryBoardSaver.DeleteEnemyTrackerHistory();
         Application.Quit();
     }
 }

@@ -8,5 +8,6 @@ namespace Assets.scripts.Models.WaveModels
     {
        [SerializeField] public GameObject Prefab;
        [SerializeField] public float StrengthRating = 1f;
+        [SerializeField] [Range(0,2)]public float SpawnBias = 1f;
     }
 }

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9074186228458563069}
   - component: {fileID: -1450108528857507897}
   - component: {fileID: -138429658249881365}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SkeletonMageProjectile
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252805924365581705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.05813944, y: 0.56342375, z: 0.03979445, w: 0.8231585}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
@@ -128,13 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8d8b7cea616d64bb7e34bda9ef7ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  damage: 8
-  range: 4
   impactEffect: {fileID: 0}
   hitSound: {fileID: 0}
+  mana: 0
   DamageLevel: 1
   SpeedLevel: 1
+  speed: 4
+  damage: 10
+  range: 4
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ GameObject:
   - component: {fileID: 6461486515272001089}
   - component: {fileID: 5648084301173534979}
   - component: {fileID: 5132594019114284057}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,10 +192,10 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 2, y: 0, z: 0, w: 1}
+      - m_Value: {x: 0.041884813, y: 0, z: 2.1780102, w: 1}
         m_Name: Color
         m_Overridden: 1
-      - m_Value: {x: 0.5566038, y: 0, z: 0.03560732, w: 1}
+      - m_Value: {x: 0.07309832, y: 0.29493624, z: 0.7264151, w: 1}
         m_Name: SecondaryColor
         m_Overridden: 1
     m_Uint:
@@ -209,9 +210,9 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.20784314, g: 0, b: 0.0019607844, a: 0.30980393}
-          key1: {r: 0.5754717, g: 0.15236923, b: 0.13391477, a: 0.29411766}
-          key2: {r: 0.3647059, g: 0.007843138, b: 0, a: 0}
+          key0: {r: 0, g: 0.5247407, b: 1, a: 0.30980393}
+          key1: {r: 0.5943396, g: 0.17456056, b: 0.15512635, a: 0.29411766}
+          key2: {r: 0, g: 0.1347009, b: 0.3647059, a: 0}
           key3: {r: 0, g: 0, b: 0, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}
           key5: {r: 0, g: 0, b: 0, a: 0}
@@ -219,7 +220,7 @@ VisualEffect:
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 11565
           ctime1: 34502
-          ctime2: 65535
+          ctime2: 64957
           ctime3: 0
           ctime4: 0
           ctime5: 0

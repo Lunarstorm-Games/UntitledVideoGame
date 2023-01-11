@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9074186228458563069}
   - component: {fileID: -6779019948163241492}
   - component: {fileID: -1450108528857507897}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireballProjectile
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,15 +112,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02af3cd81eb5c3a4e97b8320a928c947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  damage: 20
-  range: 3
   impactEffect: {fileID: 8310478900511335466, guid: 65952721163e0e24e92468b780836459,
     type: 3}
   hitSound: {fileID: 0}
   mana: 35
   DamageLevel: 1
   SpeedLevel: 1
+  speed: 30
+  damage: 20
+  range: 3
   AOERadius: 5
   AOELevel: 4
 --- !u!54 &-1450108528857507897
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6461486515272001089}
   - component: {fileID: 5648084301173534979}
   - component: {fileID: 5132594019114284057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
