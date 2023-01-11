@@ -48,9 +48,11 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             mouseWorldPosition = ray.origin + ray.direction * maxRayDistance;
         }
-        CastSpell();
+
+        // player actions
         Aim();
         ChangeSpell();
+        CastSpell();
     }
 
     // cast the active spell

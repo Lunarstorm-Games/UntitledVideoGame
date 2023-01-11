@@ -17,6 +17,7 @@ public class Projectile : Weapon
     public float speed;
     public float damage;
     public float range;
+    public float cooldown;
     protected Entity shooter;
     protected Vector3 direction;
 
