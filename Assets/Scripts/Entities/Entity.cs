@@ -38,7 +38,13 @@ public class Entity : MonoBehaviour, IDamageable
     public List<Transform> TargetSpots { get => targetSpots; set => targetSpots = value; }
     
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
-    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+    public float CurrentHealth { 
+        get => currentHealth; 
+        set { 
+            if (currentHealth > maxHealth) currentHealth = maxHealth; 
+            else currentHealth = value;
+        } 
+    }
     public bool Death { get => death; set => death = value; }
 
     public virtual void OnEnable()
