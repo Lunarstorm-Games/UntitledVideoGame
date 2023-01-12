@@ -2648,7 +2648,7 @@ GameObject:
   - component: {fileID: 6501085583160568173}
   - component: {fileID: 1894003599}
   - component: {fileID: 1894003589}
-  - component: {fileID: 1979340022}
+  - component: {fileID: 1378324923318424750}
   m_Layer: 6
   m_Name: PlayerArmature
   m_TagString: Player
@@ -3021,7 +3021,7 @@ MonoBehaviour:
   crossHair: {fileID: 0}
   trapUI: {fileID: 0}
   controls: {fileID: 7478390241683647038}
---- !u!114 &1979340022
+--- !u!114 &1378324923318424750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
