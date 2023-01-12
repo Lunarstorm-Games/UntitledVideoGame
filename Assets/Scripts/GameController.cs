@@ -75,7 +75,6 @@ namespace Assets.Scripts
             UpdateTimer();
             if (Input.GetButtonUp(skipInputName) && !AttackHasStarted)
             {
-
                 UniStormManager.Instance.SetTime(19, 00);
                 TimeLoopEffectManager.StartCapture();
             }
@@ -88,13 +87,6 @@ namespace Assets.Scripts
             int minutes = UniStormSystem.Instance?.Minute ?? 0;
 
             TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
-            if (hour == 19 && !AttackHasStarted)
-            {
-                BuildModeController.Disable();
-                WaveController.GetComponent<WaveSpawner>().StartWaves();
-                //TimerUi.SetActive(false);
-                AttackHasStarted = true;
-            }
             TimerUi.GetComponent<TextMeshProUGUI>().text = $"{hour}:{minutes.ToString().PadLeft(2, '0')}";
 
             // NIGHT LASTS FROM 19 PM TO 7 AM; THE BOSS FIGHT BEGINS AT 7 AM
@@ -104,8 +96,10 @@ namespace Assets.Scripts
                 // armPos += Time.deltaTime / 83f;
                 // 5 minute day
                 // armPos += Time.deltaTime / 207.5f;
+                // 15 minute day
+                armPos += Time.deltaTime / 616f;
                 // 30 minute day
-                armPos += Time.deltaTime / 1170f;
+                // armPos += Time.deltaTime / 1170f;
             }
             else
             {
@@ -116,8 +110,8 @@ namespace Assets.Scripts
                 // 15 minute night
                 armPos += Time.deltaTime / 1245.0006f;
             }
-
-            if (UniStormSystem.Instance.Hour == 19 && UniStormSystem.Instance.Minute == 00) clockArm.eulerAngles = new Vector3(0, 0, -90);
+            
+            if (UniStormSystem.Instance.Hour == 19 && UniStormSystem.Instance.Minute == 00) armPos = 0.25f;
 
             float posNormalised = armPos % 1f;
 
@@ -131,7 +125,6 @@ namespace Assets.Scripts
                 WaveController.GetComponent<WaveSpawner>().StartWaves();
                 AttackHasStarted = true;
             }
-
         }
 
 
