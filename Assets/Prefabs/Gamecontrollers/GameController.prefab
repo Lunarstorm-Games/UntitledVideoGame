@@ -53,6 +53,8 @@ MonoBehaviour:
   BuildModeController: {fileID: 0}
   WeatherType: {fileID: 0}
   TimerUi: {fileID: 6468561090229098990, guid: 66af8238b29f1dc4bbe7d64df4a02b88, type: 3}
+  ClockUi: {fileID: 0}
+  EndBoss: {fileID: 0}
   WaveController: {fileID: 3891569744914088197}
   PreAttackTimer: 300
   SkipPreAttackTimer: 0
@@ -103,6 +105,7 @@ MonoBehaviour:
   MaxScreenshots: 5000
   ItsRewindTime: 0
   TargetRewindDuration: 10
+  blitMaterial: {fileID: 2100000, guid: 0bd1a33f280c804468cc889af69c54cd, type: 2}
 --- !u!82 &8042652706245047752
 AudioSource:
   m_ObjectHideFlags: 0

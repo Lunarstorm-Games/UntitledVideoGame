@@ -1,3 +1,4 @@
+using System;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ public class Player : Entity, IDamageable
     [SerializeField] private float healthRegenBuffRate = 5f;
     [SerializeField] public float currentMana;
     [SerializeField] public UnityEvent OnDeath;
-    
+    private Vector3 startPosition;
     private PlayerInput playerInput;
     private ThirdPersonShooterController ThirdPersonShooterController;
     private StarterAssetsInputs starterAssetInputs;
@@ -50,11 +51,12 @@ public class Player : Entity, IDamageable
         healthBar.SetMaxHealth(MaxHealth);
         currentMana = Mana;
         manaBar.SetMaxMana(Mana);
+        startPosition = transform.position;
     }
 
     void Update()
     {
-
+        
         if (isRegeneratingHealth)
         {
             RegenerateHealth();
@@ -67,6 +69,14 @@ public class Player : Entity, IDamageable
         else
         {
             RegenerateMana();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetKeyUp(KeyCode.KeypadPeriod)&&Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.position = startPosition;
         }
     }
 
