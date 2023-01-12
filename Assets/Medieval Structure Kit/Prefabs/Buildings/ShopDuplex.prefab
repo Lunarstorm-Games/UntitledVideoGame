@@ -5169,7 +5169,6 @@ GameObject:
   - component: {fileID: 4275907471734010}
   - component: {fileID: 33664659339516708}
   - component: {fileID: 23089494218843764}
-  - component: {fileID: 65733494104065862}
   m_Layer: 0
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -5243,19 +5242,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &65733494104065862
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173435443757876}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.187171, y: 2.0219347, z: 0.13318263}
-  m_Center: {x: -0.5766263, y: -0.00000005960464, z: 0.0014314054}
 --- !u!1 &1175174173659196
 GameObject:
   m_ObjectHideFlags: 0
@@ -29787,7 +29773,6 @@ GameObject:
   - component: {fileID: 4682487785079014}
   - component: {fileID: 33348198704848232}
   - component: {fileID: 23280665494229456}
-  - component: {fileID: 65212396052949410}
   m_Layer: 0
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -29861,19 +29846,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &65212396052949410
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714898322682106}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.187171, y: 2.0219347, z: 0.13318263}
-  m_Center: {x: -0.5766263, y: -0.00000005960464, z: 0.0014314054}
 --- !u!1 &1717993888209376
 GameObject:
   m_ObjectHideFlags: 0
