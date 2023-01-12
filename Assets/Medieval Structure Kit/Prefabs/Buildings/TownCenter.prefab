@@ -360,6 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5657824552900652382}
   - component: {fileID: 4943575613021771697}
+  - component: {fileID: 4659959228502302603}
   m_Layer: 0
   m_Name: TownCenter
   m_TagString: Untagged
@@ -529,6 +530,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.082959, y: 1.335286, z: 8.379832}
   m_Center: {x: 0.4552129, y: -3.2722695, z: -2.004122}
+--- !u!65 &4659959228502302603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657824552900652383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7730474, y: 1.5993874, z: 3.1996524}
+  m_Center: {x: -0.11428405, y: -1.8352873, z: -4.588109}
 --- !u!1001 &3432926633205307304
 PrefabInstance:
   m_ObjectHideFlags: 0
