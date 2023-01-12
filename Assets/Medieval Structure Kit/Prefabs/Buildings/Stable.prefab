@@ -9397,7 +9397,8 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 242.73
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65645026480464366, guid: d92ae718e0e5c44328f5e6948f08d460, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d92ae718e0e5c44328f5e6948f08d460, type: 3}
 --- !u!4 &907175189025643892 stripped
 Transform:

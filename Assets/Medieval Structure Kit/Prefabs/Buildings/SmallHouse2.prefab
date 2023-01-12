@@ -5534,7 +5534,6 @@ GameObject:
   - component: {fileID: 6364640149580937167}
   - component: {fileID: 6355895466300536123}
   - component: {fileID: 6347406522693691457}
-  - component: {fileID: 6387302913155651871}
   m_Layer: 0
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -5608,19 +5607,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6387302913155651871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6360662606789650461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.187171, y: 2.0219347, z: 0.13318263}
-  m_Center: {x: -0.5766263, y: -0.00000005960464, z: 0.0014314054}
 --- !u!1 &6360675941220538101
 GameObject:
   m_ObjectHideFlags: 0
