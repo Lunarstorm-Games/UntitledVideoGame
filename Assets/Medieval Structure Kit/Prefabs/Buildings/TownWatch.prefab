@@ -5571,6 +5571,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4601606721150220}
+  - component: {fileID: 6766443510540613243}
+  - component: {fileID: 997343382014965861}
   m_Layer: 8
   m_Name: TownWatch
   m_TagString: Untagged
@@ -5587,7 +5589,7 @@ Transform:
   m_GameObject: {fileID: 1116234234501992}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.716049, y: 2.1264156e-16, z: 0.34347534}
-  m_LocalScale: {x: 2.2376835, y: 2.14923, z: 2.2376835}
+  m_LocalScale: {x: 3.6392388, y: 3.4953835, z: 3.6392388}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4736477411859586}
@@ -5771,6 +5773,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &6766443510540613243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116234234501992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7248836, y: 1.6718781, z: 1.6900316}
+  m_Center: {x: -3.66193, y: 0.33594155, z: -1.5238745}
+--- !u!65 &997343382014965861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116234234501992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.19, y: 2.35, z: 1}
+  m_Center: {x: 0.2, y: 0, z: 2.82}
 --- !u!1 &1117030454152608
 GameObject:
   m_ObjectHideFlags: 0
@@ -13436,7 +13464,6 @@ GameObject:
   - component: {fileID: 4554856923163844}
   - component: {fileID: 33238557667283028}
   - component: {fileID: 23556350879213684}
-  - component: {fileID: 64161601373829252}
   m_Layer: 0
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -13510,20 +13537,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64161601373829252
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223806566909420}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 8a558c2745d0a45c3a54c8b9527da400, type: 3}
 --- !u!1 &1224031300584012
 GameObject:
   m_ObjectHideFlags: 0
@@ -19887,7 +19900,6 @@ GameObject:
   - component: {fileID: 4924477095244196}
   - component: {fileID: 33288119152668368}
   - component: {fileID: 23526886751841858}
-  - component: {fileID: 64504758925204212}
   m_Layer: 0
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -19960,20 +19972,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64504758925204212
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329678340098088}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: d4a93732a17444a029a241d9eda5e8d1, type: 3}
 --- !u!1 &1329820290617864
 GameObject:
   m_ObjectHideFlags: 0
@@ -36052,7 +36050,6 @@ GameObject:
   - component: {fileID: 4431932458220460}
   - component: {fileID: 33618850416967692}
   - component: {fileID: 23226924279415628}
-  - component: {fileID: 65168514662498374}
   m_Layer: 8
   m_Name: Door_LOD0
   m_TagString: Untagged
@@ -36126,19 +36123,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &65168514662498374
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544909181862096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.187171, y: 2.0219347, z: 0.13318263}
-  m_Center: {x: -0.5766263, y: -0.00000005960464, z: 0.0014314054}
 --- !u!1 &1545091882000276
 GameObject:
   m_ObjectHideFlags: 0
