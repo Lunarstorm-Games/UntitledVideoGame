@@ -84,8 +84,8 @@ Material:
     - _VisibleDistance: -39.6
     - _WetnessStrength: 0
     - _WorldPosGlobal: 0
-    - _uAttenuation: 0.52621967
-    - _uCloudAlpha: 1
+    - _uAttenuation: 0.52635914
+    - _uCloudAlpha: 1.4
     - _uCloudsBackwardScatteringG: -0.2
     - _uCloudsBaseEdgeSoftness: 0.035
     - _uCloudsBaseScale: 1.72
@@ -102,11 +102,11 @@ Material:
     - _uCloudsTurbulenceSpeed: 5
     - _uCurlScale: 20
     - _uCurlStrength: 1
-    - _uHorizonColorFadeEnd: 0
-    - _uHorizonColorFadeStart: 0
+    - _uHorizonColorFadeEnd: 0.32
+    - _uHorizonColorFadeStart: -0.2
     - _uHorizonDarkness: 1
-    - _uHorizonFadeEnd: 0.18
-    - _uHorizonFadeStart: -0.05
+    - _uHorizonFadeEnd: 0
+    - _uHorizonFadeStart: 0
     - _uHorizonHeight: 0.25
     - _uLightningContrast: 3
     - _uMoonAttenuation: 1
@@ -117,14 +117,14 @@ Material:
     - _MoonVector: {r: 0.269, g: 0.615, b: 0.74, a: 0}
     - _SunColor: {r: 1, g: 0.98999995, b: 0.87, a: 1}
     - _SunVector: {r: 0.269, g: 0.615, b: 0.74, a: 0}
-    - _uCloudsAmbientColorBottom: {r: 0.34495944, g: 0.34928104, b: 0.3639521, a: 1}
+    - _uCloudsAmbientColorBottom: {r: 0.3348072, g: 0.34104064, b: 0.3603087, a: 1}
     - _uCloudsAmbientColorTop: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     - _uCloudsColor: {r: 1, g: 1, b: 1, a: 1}
-    - _uFogColor: {r: 0.30793476, g: 0.33814755, b: 0.3759136, a: 0.005}
+    - _uFogColor: {r: 0.31675345, g: 0.3493179, b: 0.3900235, a: 0.005}
     - _uHorizonColor: {r: 1, g: 1, b: 1, a: 1}
     - _uLightningColor: {r: 0.7647059, g: 0.8352941, b: 0.8862745, a: 1}
     - _uMoonColor: {r: 0.33023313, g: 0.36793935, b: 0.38679242, a: 1}
-    - _uMoonDir: {r: 0.57357645, g: 0.27422428, b: 0.771888, a: 0}
-    - _uSunColor: {r: 0.46767718, g: 0.48978484, b: 0.5193279, a: 1}
-    - _uSunDir: {r: -0.34202024, g: -0.31457734, b: -0.88547385, a: 0}
+    - _uMoonDir: {r: 0.5735764, g: 0.32482466, b: 0.75199676, a: 0}
+    - _uSunColor: {r: 0.5264067, g: 0.5465407, b: 0.57301164, a: 1}
+    - _uSunDir: {r: -0.34202015, g: -0.3726237, b: -0.8626553, a: 0}
   m_BuildTextureStacks: []

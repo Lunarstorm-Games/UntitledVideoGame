@@ -41,7 +41,7 @@ public class DropItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && other.gameObject.layer == LayerMask.NameToLayer("AllyPassible") && !isPickedUp)
+        if (other.CompareTag("Player") && other.gameObject.layer == LayerMask.NameToLayer("Player") && !isPickedUp)
         {
             switch (Effect)
             {
