@@ -2027,23 +2027,23 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 59
   targetSpots: []
-  maxHealth: 100
+  maxHealth: 350
   currentHealth: 0
   death: 0
   speed: 3
-  aggroRange: 13
-  attackRange: 10
+  aggroRange: 16
+  attackRange: 14
   attackDelay: 3
   attackSpeed: 1
-  damage: 25
-  stoppingDistance: 6
+  damage: 20
+  stoppingDistance: 8
   EssenceSource:
     rid: 3523685444181557248
   projectileSpawnPos: {fileID: 5148497113412802063}
   projectile: {fileID: 2222146996374216796, guid: edb0f4dbacc20fc4b8b0731e32e75ac7,
     type: 3}
   shield: {fileID: 1107218947768909556}
-  shieldHealth: 150
+  shieldHealth: 350
   shieldWidth: 7
   shieldHeight: 3.5
   references:

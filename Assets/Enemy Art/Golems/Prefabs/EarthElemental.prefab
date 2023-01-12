@@ -502,15 +502,15 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 27
   targetSpots: []
-  maxHealth: 100
+  maxHealth: 500
   currentHealth: 0
   death: 0
   speed: 3
-  aggroRange: 6
-  attackRange: 2.4
+  aggroRange: 10
+  attackRange: 3
   attackDelay: 3
   attackSpeed: 1
-  damage: 10
+  damage: 15
   stoppingDistance: 2
   EssenceSource:
     rid: 3523685444181557249
