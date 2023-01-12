@@ -5571,6 +5571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4601606721150220}
+  - component: {fileID: 6766443510540613243}
   m_Layer: 8
   m_Name: TownWatch
   m_TagString: Untagged
@@ -5587,7 +5588,7 @@ Transform:
   m_GameObject: {fileID: 1116234234501992}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.716049, y: 2.1264156e-16, z: 0.34347534}
-  m_LocalScale: {x: 2.2376835, y: 2.14923, z: 2.2376835}
+  m_LocalScale: {x: 3.6392388, y: 3.4953835, z: 3.6392388}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4736477411859586}
@@ -5771,6 +5772,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &6766443510540613243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116234234501992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7248836, y: 1.6718781, z: 1.6900316}
+  m_Center: {x: -3.66193, y: 0.33594155, z: -1.5238745}
 --- !u!1 &1117030454152608
 GameObject:
   m_ObjectHideFlags: 0
