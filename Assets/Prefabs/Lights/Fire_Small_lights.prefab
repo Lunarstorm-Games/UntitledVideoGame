@@ -172,6 +172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Small_lights
       objectReference: {fileID: 0}
+    - target: {fileID: 8392073898721486495, guid: cd684bf5e14ff40bd9fde69f0ad12184,
+        type: 3}
+      propertyPath: m_IgnoreFromBuild
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd684bf5e14ff40bd9fde69f0ad12184, type: 3}
 --- !u!4 &4307230155231200881 stripped
