@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayCollider:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 65536
   BuildableStructures: []
   interactDistance: 40
   etoBuildPopUp: {fileID: 0}
@@ -2938,6 +2938,7 @@ MonoBehaviour:
   manaBar: {fileID: 0}
   Mana: 100
   manaRechargeRate: 3.5
+  healthRegenBuffRate: 5
   currentMana: 0
   OnDeath:
     m_PersistentCalls:
