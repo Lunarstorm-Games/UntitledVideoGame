@@ -67,7 +67,6 @@ public class WalkToMainObjective : Action
 
 
         animator.SetFloat("Speed", 1f);
-        targetSpot.SetValue(mainObjective.GetEntityTargetSpot());
     }
 
     public override void OnEnd()
