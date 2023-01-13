@@ -23,6 +23,10 @@ public class ChaseTarget : Action
 
         if (agent == null) return;
 
+        if (_target.Value == null) return;
+
+        agent.isStopped = false;
+        agent.speed = speed.Value;
         agent.stoppingDistance = stoppingDistance.Value;
 
 
