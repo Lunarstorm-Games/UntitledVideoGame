@@ -17,6 +17,7 @@ public class Projectile : Weapon
     public float speed;
     public float damage;
     public float range;
+    public float cooldown;
     protected Entity shooter;
     protected Vector3 direction;
 
@@ -57,8 +58,8 @@ public class Projectile : Weapon
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
     {
-        this.shooter = shooter;
-        this.direction = direction;
+            this.shooter = shooter;
+            this.direction = direction;
     }
 
     public void UpgradeDamage(float newDamage)
