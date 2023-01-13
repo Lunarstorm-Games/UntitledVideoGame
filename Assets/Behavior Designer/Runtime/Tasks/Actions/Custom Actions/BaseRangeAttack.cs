@@ -1,6 +1,7 @@
 using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using Unity.VisualScripting;
 
 public class BaseRangeAttack : Action
 {
@@ -18,6 +19,7 @@ public class BaseRangeAttack : Action
 
 	public override TaskStatus OnUpdate()
 	{
+		if (targetSpot == null || targetSpot.Value.IsDestroyed()) return TaskStatus.Failure;
 		Vector3 dir = targetSpot.Value.position - unit.Value.transform.position;
 		dir.y = 0f;
 		unit.Value.transform.rotation = Quaternion.LookRotation(dir);
