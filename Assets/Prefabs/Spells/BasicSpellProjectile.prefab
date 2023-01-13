@@ -131,12 +131,13 @@ MonoBehaviour:
   impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
     type: 3}
   hitSound: {fileID: 0}
-  mana: 20
+  mana: 15
   DamageLevel: 1
   SpeedLevel: 1
   speed: 30
-  damage: 30
-  range: 5
+  damage: 10
+  range: 20
+  cooldown: 1
 --- !u!1 &4767184517995063882
 GameObject:
   m_ObjectHideFlags: 0
