@@ -1,6 +1,7 @@
 using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using Unity.VisualScripting;
 using UnityEngine.AI;
 
 public class ChaseTarget : Action
@@ -22,22 +23,16 @@ public class ChaseTarget : Action
 
         if (agent == null) return;
 
-        if (_target.Value == null) return;
-
-        agent.isStopped = false;
-        agent.speed = speed.Value;
         agent.stoppingDistance = stoppingDistance.Value;
 
+
         targetSpot.SetValue(_target.Value.GetEntityTargetSpot());
-
-
     }
 
     public override void OnEnd()
     {
         agent.isStopped = true;
     }
-
 
 
     public override TaskStatus OnUpdate()
@@ -47,12 +42,17 @@ public class ChaseTarget : Action
             Debug.LogWarning("NavAgent is null");
             return TaskStatus.Failure;
         }
+
         if (_target.Value == null)
         {
             Debug.LogWarning("Target is null");
             return TaskStatus.Failure;
         }
+
+        if (targetSpot == null || targetSpot.Value.IsDestroyed()) return TaskStatus.Failure;
+
         agent.SetDestination(targetSpot.Value.position);
+
 
         if (!agent.pathPending)
             if (!agent.isOnOffMeshLink)
