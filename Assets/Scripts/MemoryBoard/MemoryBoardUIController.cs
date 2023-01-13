@@ -21,6 +21,11 @@ public class MemoryBoardUIController : MonoBehaviour
     public TextMeshProUGUI GoblinTracker;
     public TextMeshProUGUI OrcTracker;
     public TextMeshProUGUI LichTracker;
+    public TextMeshProUGUI ElementTracker;
+    public TextMeshProUGUI WaterTracker;
+    public TextMeshProUGUI BossTracker;
+    public GameObject Boss;
+    
     public WaveSpawner waveSpawner;
 
     private void Awake()
@@ -31,6 +36,9 @@ public class MemoryBoardUIController : MonoBehaviour
         GoblinTracker.text = "???";
         OrcTracker.text = "???";
         LichTracker.text = "???";
+        ElementTracker.text = "???";
+        WaterTracker.text = "???";
+        BossTracker.text = "???";
     }
 
     void Update()
@@ -133,7 +141,22 @@ public class MemoryBoardUIController : MonoBehaviour
                 if (enemy == "Lich" && !LichTracker.text.Contains(enemy))
                 {
                     LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
-                }    
+                } 
+                
+                if (enemy == "EarthElemental" && !LichTracker.text.Contains(enemy))
+                {
+                    LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                } 
+                
+                if (enemy == "WaterElemental" && !LichTracker.text.Contains(enemy))
+                {
+                    LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
+
+                if (Boss.activeInHierarchy)
+                {
+                    BossTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                }
                 MemoryBoardSaver.SaveEnemyTrackerHistory(this);
         }
     }

@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.14489143, g: 0.67896074, b: 0.8301887, a: 1}
+      maxColor: {r: 0.14509805, g: 0.21625991, b: 0.83137256, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.11
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -550,7 +550,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.017453292
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -601,7 +601,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 300
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -662,7 +662,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 0
+    angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -867,7 +867,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 55
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4839,8 +4839,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2404673960125796934}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0118, z: 0.0193}
-  m_LocalScale: {x: 0.15, y: 0.8201146, z: 0.17350501}
+  m_LocalPosition: {x: 0, y: 0.0626, z: 0.0026}
+  m_LocalScale: {x: 0.15, y: 1.09936, z: 0.2750575}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6625945403393479216}
@@ -4996,7 +4996,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 652d09db329589448a794cf6537d0e2c, type: 2}
+  - {fileID: 2100000, guid: 35e40a72b78cbe946ace9f36d1372296, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5037,5 +5037,5 @@ MonoBehaviour:
   SpeedLevel: 1
   speed: 75
   damage: 120
-  range: 300
+  range: 3000
   cooldown: 2
