@@ -78,7 +78,7 @@ namespace Assets.Scripts
                 UniStormManager.Instance.SetTime(19, 00);
                 TimeLoopEffectManager.StartCapture();
             }
-            if (UniStormSystem.Instance.Hour == 7 && UniStormSystem.Instance.Minute == 00) EndBoss.gameObject.SetActive(true);
+            if (UniStormSystem.Instance.Hour == 17 && UniStormSystem.Instance.Minute == 10) EndBoss.gameObject.SetActive(true);
 
         }
 

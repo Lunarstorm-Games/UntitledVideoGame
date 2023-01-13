@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        SceneManager.LoadScene("Main scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Map2", LoadSceneMode.Single);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
