@@ -27,11 +27,14 @@ namespace Assets.Scripts
         private Image dayBG;
         private Image duskBG;
         public GameObject EndBoss;
+        public GameObject EndBoss2;
         public GameObject WaveController;
         public float PreAttackTimer = 300;
         private bool AttackHasStarted = false;
         public bool SkipPreAttackTimer = false;
         public string time;
+        public bool SkipDragonFight = false;
+     
 
 
         public string skipInputName = "startAttack";
@@ -78,7 +81,13 @@ namespace Assets.Scripts
                 UniStormManager.Instance.SetTime(19, 00);
                 TimeLoopEffectManager.StartCapture();
             }
-            if (UniStormSystem.Instance.Hour == 17 && UniStormSystem.Instance.Minute == 10) EndBoss.gameObject.SetActive(true);
+            //Comment this and enable the wizard in hierarchy to skip dragon.
+
+            if (UniStormSystem.Instance.Hour == 17 && UniStormSystem.Instance.Minute == 5) {
+                if (!SkipDragonFight) EndBoss.gameObject.SetActive(true);
+
+                else EndBoss2.gameObject.SetActive(true);
+            } 
 
         }
 
