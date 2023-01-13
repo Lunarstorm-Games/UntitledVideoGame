@@ -17,6 +17,8 @@ public class Enemy : EntityAI, IPoolableObject
     public Action<GameObject> OnSetInactive { get; set; }
     public string PrefabName { get; set; }
 
+    private List<int> poisonTicks = new List<int>();
+
     [Obsolete]
     public virtual void DropEssence()
     {
@@ -62,5 +64,26 @@ public class Enemy : EntityAI, IPoolableObject
         }
         else
             Destroy(gameObject);
+    }
+
+    public void ApplyPoison(int duration, int dmg, Entity shooter)
+    {
+        poisonTicks.Add(duration);
+        StartCoroutine(DoPoisonTick(dmg, shooter));
+    }
+
+    private IEnumerator DoPoisonTick(int dmg, Entity player)
+    {
+        while (poisonTicks.Count > 0)
+        {
+            for (int i = 0; i < poisonTicks.Count; i++)
+            {
+                poisonTicks[i]--;
+            }
+            TakeDamage(dmg, player);
+            Debug.Log("Damage by poison " + gameObject);
+            poisonTicks.RemoveAll(i => i == 0);
+            yield return new WaitForSeconds(0.75f);
+        }
     }
 }
