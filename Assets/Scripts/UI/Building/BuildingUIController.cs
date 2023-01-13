@@ -32,7 +32,8 @@ public class BuildingUIController : MonoBehaviour
             //player.GetComponents<MonoBehaviour>().ToList().ForEach(x => x.enabled = false);
         }
 
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         gameObject.SetActive(true);
         essencetext.text = EssenceBank.Instance?.EssenceAmount.ToString()??"0";
     }
@@ -44,6 +45,7 @@ public class BuildingUIController : MonoBehaviour
         }
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         gameObject.SetActive(false);
     }
 

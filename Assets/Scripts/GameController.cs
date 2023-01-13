@@ -164,6 +164,17 @@ namespace Assets.Scripts
                 });
             }
         }
+        
+        public void StartTimeLoop2()
+        {
+            if (!timeLoopStarted)
+            {
+                timeLoopStarted = true;
+                SaveManager.Instance.SaveStateToFile(LevelName);
+                SceneManager.LoadScene(LevelName);
+            }
+        }
+        
         [ContextMenu("GenerateIdsForPersistable")]
         public void GenerateIdsForPersistable()
         {
