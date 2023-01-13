@@ -62,6 +62,7 @@ public class Mortar : Turret
         GameObject closest = null;
         float distance = range;
         Vector3 position = ShootingOrigin.position;
+        
         foreach (GameObject go in gos)
         {
             Vector3 diff = go.transform.position - position;

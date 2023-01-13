@@ -19,17 +19,17 @@ TagManager:
   - Raycast
   - Water
   - UI
-  - Structure
-  - Ally
-  - AllyPassible
-  - Ground
+  - Player
+  - NPC
+  - Enemy
+  - Boss
+  - BossProjectile
+  - FriendlyProjectile
+  - EnemyProjectile
+  - Defense
   - Terrain
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Structure
   - 
   - 
   - 

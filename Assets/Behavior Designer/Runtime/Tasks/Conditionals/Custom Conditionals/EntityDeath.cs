@@ -13,7 +13,8 @@ public class EntityDeath : Conditional
     {
         animator = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
-    }
+
+	}
 
 	public override TaskStatus OnUpdate()
 	{
@@ -21,7 +22,7 @@ public class EntityDeath : Conditional
         {
 			agent.isStopped = true;
 			animator.SetTrigger("Death");
-			return TaskStatus.Success;
+			return TaskStatus.Running;
 		}
 		return TaskStatus.Failure;
 	}

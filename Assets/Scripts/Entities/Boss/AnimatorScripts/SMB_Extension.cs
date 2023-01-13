@@ -36,7 +36,7 @@ public class SMB_Extension<TMonoBehaviour> : SealedSMB where TMonoBehaviour : Mo
         if (!animator.gameObject.activeSelf)
             return;
 
-        if (animator.GetCurrentAnimatorStateInfo(layerIndex).normalizedTime > 1 && !animator.IsInTransition(layerIndex))
+        if (animator.GetCurrentAnimatorStateInfo(layerIndex).normalizedTime > 0.9f && !animator.IsInTransition(layerIndex))
         {
             OnSLStateFinished(animator, stateInfo, layerIndex);
             OnSLStateFinished(animator, stateInfo, layerIndex, controller);

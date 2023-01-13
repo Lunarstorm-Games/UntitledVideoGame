@@ -1,3 +1,4 @@
+using System;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,12 +16,15 @@ public class Player : Entity, IDamageable
     [SerializeField] private ManaBar manaBar;
     [SerializeField] private float Mana;
     [SerializeField] private float manaRechargeRate = 3.5f;
+    [SerializeField] private float healthRegenBuffRate = 5f;
     [SerializeField] public float currentMana;
     [SerializeField] public UnityEvent OnDeath;
-    
+    private Vector3 startPosition;
     private PlayerInput playerInput;
     private ThirdPersonShooterController ThirdPersonShooterController;
     private StarterAssetsInputs starterAssetInputs;
+    private bool isRegeneratingHealth = false;
+    private bool hasInfiniteMana = false;
     public static Player Instance { get; private set; }
     public virtual void Awake()
     {
@@ -47,11 +51,60 @@ public class Player : Entity, IDamageable
         healthBar.SetMaxHealth(MaxHealth);
         currentMana = Mana;
         manaBar.SetMaxMana(Mana);
+        startPosition = transform.position;
     }
 
     void Update()
     {
-        RegenerateMana();
+        
+        if (isRegeneratingHealth)
+        {
+            RegenerateHealth();
+        }
+
+        if (hasInfiniteMana)
+        {
+            InfiniteMana();
+        }
+        else
+        {
+            RegenerateMana();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetKeyUp(KeyCode.KeypadPeriod)&&Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.position = startPosition;
+        }
+    }
+
+    private IEnumerator HealthRegenBuff(int duration)
+    {
+        yield return new WaitForSeconds(duration);
+        isRegeneratingHealth = false;
+    }
+    
+    private IEnumerator InfiniteManaBuff(int duration)
+    {
+        yield return new WaitForSeconds(duration);
+        hasInfiniteMana = false;
+    }
+
+    private void RegenerateHealth()
+    {
+        if (currentHealth < MaxHealth)
+        {
+            currentHealth += manaRechargeRate * Time.deltaTime;
+            healthBar?.SetHealth(currentHealth);
+        }
+    }
+
+    private void InfiniteMana()
+    {
+        currentMana = Mana;
+        manaBar?.SetMana(currentMana);
     }
 
     public override void TakeDamage(float damage, Entity origin)
@@ -79,9 +132,21 @@ public class Player : Entity, IDamageable
         {
             currentMana += manaRechargeRate * Time.deltaTime * 10f;
             manaBar?.SetMana(currentMana);
-
         }
     }
+
+    public void RegenerateHealthCoroutine(int length)
+    {
+        isRegeneratingHealth = true;
+        StartCoroutine(HealthRegenBuff(length));
+    }
+
+    public void InfiniteManaCoroutine(int length)
+    {
+        hasInfiniteMana = true;
+        StartCoroutine(InfiniteManaBuff(length));
+    }
+    
     /// <summary>
     /// Toggles all input
     /// </summary>

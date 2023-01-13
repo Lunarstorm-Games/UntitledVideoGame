@@ -2318,7 +2318,7 @@ MonoBehaviour:
   targetInterests: 27
   targetSpots:
   - {fileID: 528023993973832541}
-  maxHealth: 65
+  maxHealth: 10
   currentHealth: 0
   death: 0
   speed: 5
@@ -2326,7 +2326,7 @@ MonoBehaviour:
   attackRange: 1
   attackDelay: 1.5
   attackSpeed: 1
-  damage: 10
+  damage: 20
   stoppingDistance: 0.9
   EssenceSource:
     rid: 4388239194310311936

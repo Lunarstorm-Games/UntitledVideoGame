@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Toes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foot_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lower_Reg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper_Reg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Toes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foot_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lower_Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper_Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Index_Proximal_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hand_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lower_Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper_Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Index_Proximal_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hand_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lower_Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper_Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armor_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armor_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 3946236805235466398}
   - component: {fileID: 3343766580591746653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,8 +714,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 58.7, y: 154.07, z: 97.62}
-  m_Center: {x: 0, y: 59.2, z: 21.4}
+  m_Size: {x: 73.80013, y: 174.25064, z: 105.802505}
+  m_Center: {x: 1.4132358, y: 49.109905, z: 25.491344}
 --- !u!114 &3343766580591746653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400048}
   - component: {fileID: 13700000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GruntMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 5637566554622403604}
   - component: {fileID: 224874997419891552}
   - component: {fileID: 5150968047448248991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100050}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d839f522e96d941a1ddcd507627699, type: 3}
   m_Name: 
@@ -952,12 +952,12 @@ MonoBehaviour:
   currentHealth: 0
   death: 0
   speed: 2
-  aggroRange: 10
-  attackRange: 4
+  aggroRange: 9.42
+  attackRange: 3
   attackDelay: 3
   attackSpeed: 1
   damage: 30
-  stoppingDistance: 3
+  stoppingDistance: 2.8
   EssenceSource:
     rid: 4388239239351894016
   references:
@@ -1050,7 +1050,7 @@ MonoBehaviour:
         Death","Instant":true,"SharedBoolisDeath":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"Orc/Death","PropertyMappingOwner":0,"BooleanmValue":false}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-109.875946,336.975677)"},"ID":5,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-68.73806,120.801453)"},"ID":6,"Name":"In
         Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":1,"SinglemValue":0}},{"Type":"BaseMeleeAttack","NodeData":{"Offset":"(91.29975,117.754272)"},"ID":7,"Name":"Base
-        Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":2},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":3,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":5,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(251.985062,181.103012)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.SetSharedFloat","NodeData":{"Offset":"(-211.914886,136.170227)"},"ID":9,"Name":"Set
+        Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":2},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":3,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":4,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":5,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(251.985062,181.103012)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.SetSharedFloat","NodeData":{"Offset":"(-211.914886,136.170227)"},"ID":9,"Name":"Set
         Shared Float","Instant":true,"SharedFloattargetValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0},"SharedFloattargetVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}},{"Type":"InAggroRange","NodeData":{"Offset":"(-71.95864,126.566124)"},"ID":10,"Name":"In
         Aggro Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."},"SharedFloat_aggroRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"Orc/AggroRange","PropertyMappingOwner":6,"SinglemValue":0}},{"Type":"ChaseTarget","NodeData":{"Offset":"(65.20102,115.080994)"},"ID":11,"Name":"Chase
@@ -1061,12 +1061,11 @@ MonoBehaviour:
         By Player","Instant":true,"SharedEntitytarget":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."},"SharedEntitytargetPlayer":{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"Orc/HitByTarget","PropertyMappingOwner":11}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.SetSharedEntity","NodeData":{"Offset":"(-62.22029,149.740723)"},"ID":17,"Name":"Set
         Shared Entity","Instant":true,"SharedEntitytargetValue":{"Type":"SharedEntity","Name":null},"SharedEntitytargetVariable":{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"Orc/HitByTarget","PropertyMappingOwner":12}},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(76.52945,185.678284)"},"ID":18,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-60,110)"},"ID":19,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"InAttackRange","NodeData":{"Offset":"(-90,130)"},"ID":20,"Name":"In
-        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":13,"SinglemValue":0}},{"Type":"BaseMeleeAttack","NodeData":{"Offset":"(70,130)"},"ID":21,"Name":"Base
-        Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":14},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":15,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":17,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(80,110)"},"ID":22,"Name":"Chase
-        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":18,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":19,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
+        Attack Range","Instant":true,"SharedEntity_target":{"Type":"SharedEntity","Name":null},"SharedFloat_attackRange":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0}},{"Type":"BaseMeleeAttack","NodeData":{"Offset":"(70,130)"},"ID":21,"Name":"Base
+        Melee Attack","Instant":true,"SharedEntityunit":{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":13},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedFloatattackSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":14,"SinglemValue":0},"SharedFloatattackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":15,"SinglemValue":0},"SharedFloatdamage":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":16,"SinglemValue":0},"SharedFloatcurrentAttackDelay":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}}]},{"Type":"ChaseTarget","NodeData":{"Offset":"(80,110)"},"ID":22,"Name":"Chase
+        Target","Instant":true,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":17,"SinglemValue":0},"SharedFloatstoppingDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":18,"SinglemValue":0},"SharedTransformtargetSpot":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},"SharedEntity_target":{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
         current target it is locked on."}}]}]}],"Variables":[{"Type":"SharedEntity","Name":"Target","IsShared":true,"Tooltip":"The
-        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":20},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"Orc/Death","PropertyMappingOwner":21,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"Orc/AggroRange","PropertyMappingOwner":22,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":25,"SinglemValue":0},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"Orc/HitByTarget","PropertyMappingOwner":26},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":29,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
+        current target it is locked on."},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"TargetSpot","IsShared":true},{"Type":"SharedEntity","Name":"Unit","IsShared":true,"EntitymValue":19},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"Death","IsShared":true,"PropertyMapping":"Orc/Death","PropertyMappingOwner":20,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AggroRange","IsShared":true,"PropertyMapping":"Orc/AggroRange","PropertyMappingOwner":21,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackRange","IsShared":true,"PropertyMapping":"Orc/AttackRange","PropertyMappingOwner":22,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Speed","IsShared":true,"PropertyMapping":"Orc/Speed","PropertyMappingOwner":23,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"StoppingDistance","IsShared":true,"PropertyMapping":"Orc/StoppingDistance","PropertyMappingOwner":24,"SinglemValue":0},{"Type":"SharedEntity","Name":"HitByTarget","IsShared":true,"PropertyMapping":"Orc/HitByTarget","PropertyMappingOwner":25},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackDelay","IsShared":true,"PropertyMapping":"Orc/AttackDelay","PropertyMappingOwner":26,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"AttackSpeed","IsShared":true,"PropertyMapping":"Orc/AttackSpeed","PropertyMappingOwner":27,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"Damage","IsShared":true,"PropertyMapping":"Orc/Damage","PropertyMappingOwner":28,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"CurrentAttackDelay","IsShared":true,"SinglemValue":0}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -1076,7 +1075,6 @@ MonoBehaviour:
         - {fileID: 100050}
         - {fileID: 100050}
         - {fileID: 1209047138457339974}
-        - {fileID: 100050}
         - {fileID: 100050}
         - {fileID: 100050}
         - {fileID: 100050}
@@ -1117,7 +1115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 930046014958212561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TargetOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
