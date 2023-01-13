@@ -3043,4 +3043,8 @@ MonoBehaviour:
   GoblinTracker: {fileID: 0}
   OrcTracker: {fileID: 0}
   LichTracker: {fileID: 0}
+  ElementTracker: {fileID: 0}
+  WaterTracker: {fileID: 0}
+  BossTracker: {fileID: 0}
+  Boss: {fileID: 0}
   waveSpawner: {fileID: 0}
