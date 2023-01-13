@@ -5038,4 +5038,4 @@ MonoBehaviour:
   speed: 75
   damage: 120
   range: 300
-  cooldown: 5
+  cooldown: 2
