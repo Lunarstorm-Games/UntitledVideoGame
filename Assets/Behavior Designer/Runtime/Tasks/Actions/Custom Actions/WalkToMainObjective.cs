@@ -36,7 +36,7 @@ public class WalkToMainObjective : Action
         }
         else if(targetWaypoint !=null)
         {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            if (agent.remainingDistance <= agent.stoppingDistance*2)
             {
                 targetWaypoint = targetWaypoint.NextNode();
             }
