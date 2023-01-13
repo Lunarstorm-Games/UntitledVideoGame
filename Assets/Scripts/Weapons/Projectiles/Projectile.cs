@@ -54,8 +54,8 @@ public class Projectile : Weapon
 
     public virtual void Initialize(Entity shooter, Vector3 direction)
     {
-        this.shooter = shooter;
-        this.direction = direction;
+            this.shooter = shooter;
+            this.direction = direction;
     }
 
     public void UpgradeDamage(float newDamage)

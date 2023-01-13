@@ -4761,7 +4761,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 652d09db329589448a794cf6537d0e2c, type: 2}
+  - {fileID: 2100000, guid: 35e40a72b78cbe946ace9f36d1372296, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4839,8 +4839,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2404673960125796934}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.5, z: 0.15}
+  m_LocalPosition: {x: 0, y: 0.0118, z: 0.0193}
+  m_LocalScale: {x: 0.15, y: 0.8201146, z: 0.17350501}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6625945403393479216}
@@ -4874,7 +4874,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 652d09db329589448a794cf6537d0e2c, type: 2}
+  - {fileID: 2100000, guid: 35e40a72b78cbe946ace9f36d1372296, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4921,8 +4921,8 @@ GameObject:
   - component: {fileID: 6625945403393479216}
   - component: {fileID: -3625819031811135442}
   - component: {fileID: 541089089431003527}
-  - component: {fileID: 1516860295110639368}
   - component: {fileID: 6940264812785414613}
+  - component: {fileID: -7499056273925531888}
   m_Layer: 0
   m_Name: Spell_IceLance
   m_TagString: Player
@@ -4976,27 +4976,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1516860295110639368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8395340073941476701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e4ad468f37e022469ef5b35cc21073b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactEffect: {fileID: 4797507873324559879, guid: 370a405a42ee93046a3e26e90eabd501,
-    type: 3}
-  hitSound: {fileID: 0}
-  mana: 10
-  DamageLevel: 1
-  SpeedLevel: 1
-  speed: 15
-  damage: 11
-  range: 10
 --- !u!23 &6940264812785414613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5039,3 +5018,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7499056273925531888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395340073941476701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88c740bba6fd5e4e8ac57401fc802ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactEffect: {fileID: 0}
+  hitSound: {fileID: 0}
+  mana: 50
+  DamageLevel: 1
+  SpeedLevel: 1
+  speed: 75
+  damage: 120
+  range: 300
+  cooldown: 5

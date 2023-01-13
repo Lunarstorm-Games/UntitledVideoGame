@@ -22,6 +22,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     private SpellInventory spellInventory;
     private SpellUI spellUI;
     private Vector3 mouseWorldPosition;
+    //float lastShot;
+    float nextFireTime = 0;
 
     private void Awake()
     {
@@ -58,22 +60,30 @@ public class ThirdPersonShooterController : MonoBehaviour
     // cast the active spell
     void CastSpell()
     {
-        if (_starterAssetsInputs.attack && !isPromptOpen)
+        //if (Time.time - lastShot < projectilePrefab.cooldown)
+        //{
+        //    return;
+        //}
+        if (Time.time > nextFireTime)
         {
-            if (Player.Instance.currentMana >= projectilePrefab.mana)
+            if (_starterAssetsInputs.attack && !isPromptOpen)
             {
-                _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
-                Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-                Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-                projectile.Initialize(GetComponent<Entity>(), aimDir);
-
-                Player.Instance.UseMana(projectile.mana);
-                _starterAssetsInputs.attack = false;
+                if (Player.Instance.currentMana >= projectilePrefab.mana)
+                {
+                    _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
+                    Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+                    Projectile projectile = GameObject.Instantiate<Projectile>(projectilePrefab, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                    projectile.Initialize(GetComponent<Entity>(), aimDir);
+                    //lastShot= Time.time;
+                    nextFireTime= Time.time + projectilePrefab.cooldown;
+                    Player.Instance.UseMana(projectile.mana);
+                    _starterAssetsInputs.attack = false;
+                }
             }
-        }
-        else
-        {
-            _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
+            else
+            {
+                    _animator.SetLayerWeight(1, Mathf.Lerp(_animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
+            }
         }
     }
 

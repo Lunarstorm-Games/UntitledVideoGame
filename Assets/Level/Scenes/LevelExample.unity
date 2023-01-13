@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -77298,6 +77298,23 @@ PrefabInstance:
       propertyPath: _trapBuildingManager
       value: 
       objectReference: {fileID: 1202269529}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.data[2]
+      value: 
+      objectReference: {fileID: -7499056273925531888, guid: cfd6a190e1692184386bb7a1d86d340f,
+        type: 3}
+    - target: {fileID: 1680537851718145224, guid: 393257435a4a4c74db7262c28c1fad54,
+        type: 3}
+      propertyPath: spells.Array.data[3]
+      value: 
+      objectReference: {fileID: 5127622129773943558, guid: a417ef09a02687f4dbb714ea7037d1c1,
+        type: 3}
     - target: {fileID: 4143355195471934057, guid: 393257435a4a4c74db7262c28c1fad54,
         type: 3}
       propertyPath: manaBar
@@ -80603,7 +80620,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
+  m_fontSizeMin: 10.938935
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
