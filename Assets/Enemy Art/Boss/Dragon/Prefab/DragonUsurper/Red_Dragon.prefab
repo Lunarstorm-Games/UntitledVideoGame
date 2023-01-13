@@ -1434,7 +1434,7 @@ MonoBehaviour:
   targetInterests: 1
   targetSpots:
   - {fileID: 475036}
-  maxHealth: 100
+  maxHealth: 1600
   currentHealth: 0
   death: 0
   healthBar: {fileID: 863744130694357095}

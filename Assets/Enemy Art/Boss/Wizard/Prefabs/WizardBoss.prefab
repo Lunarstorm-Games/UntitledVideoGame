@@ -605,25 +605,25 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 1
   targetSpots: []
-  maxHealth: 5000
+  maxHealth: 1600
   currentHealth: 0
   death: 0
   healthBar: {fileID: 4216841884440963330}
-  speed: 4
+  speed: 6.5
   stoppingDistance: 11
   attackRange: 12
-  thunder_damage: 20
+  thunder_damage: 15
   thunder_speed: 7
   thunderAOEDamage: 2.5
   thunderAOETime: 4
   thunderAOETickRate: 0.3
-  thunderAOERadius: 6
+  thunderAOERadius: 4
   thunder_attackSpeed: 2
   thunder_projectile: {fileID: 5950141548723231574, guid: b4d5bfa6efddcae4697c90e861f03d15,
     type: 3}
-  thunder_amount: 4
+  thunder_amount: 3
   thunder_attackDelay: 5
-  missile_damage: 20
+  missile_damage: 15
   missile_speed: 7
   missile_attackSpeed: 2
   missile_amount: 6
@@ -712,8 +712,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &1251583507443948
 GameObject:
   m_ObjectHideFlags: 0
