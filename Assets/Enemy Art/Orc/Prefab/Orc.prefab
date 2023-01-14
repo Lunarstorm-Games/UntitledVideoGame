@@ -948,7 +948,7 @@ MonoBehaviour:
   targetInterests: 27
   targetSpots:
   - {fileID: 930046014958212561}
-  maxHealth: 400
+  maxHealth: 250
   currentHealth: 0
   death: 0
   speed: 2
@@ -1104,8 +1104,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &7883266121447399594
 GameObject:
   m_ObjectHideFlags: 0

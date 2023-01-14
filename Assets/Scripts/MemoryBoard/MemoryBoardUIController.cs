@@ -25,6 +25,7 @@ public class MemoryBoardUIController : MonoBehaviour
     public TextMeshProUGUI WaterTracker;
     public TextMeshProUGUI BossTracker;
     public GameObject Boss;
+    public GameObject SpellUI;
     
     public WaveSpawner waveSpawner;
 
@@ -70,6 +71,7 @@ public class MemoryBoardUIController : MonoBehaviour
     public void ShowPanel()
     {
         memoryBoardUI.SetActive(true);
+        SpellUI.SetActive(false);
         LoadMemoryBoard();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -80,6 +82,7 @@ public class MemoryBoardUIController : MonoBehaviour
     public void HidePanel()
     {
         memoryBoardUI.SetActive(false);
+        SpellUI.SetActive(true);
         playerInput.actions.Enable();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -101,6 +104,7 @@ public class MemoryBoardUIController : MonoBehaviour
         {
             memoryBoardUI.SetActive(false);
             memoryBoardPopUp.SetActive(false);
+            SpellUI.SetActive(true);
         }
     }
     
@@ -145,7 +149,7 @@ public class MemoryBoardUIController : MonoBehaviour
                 
                 if (enemy == "EarthElemental" && !LichTracker.text.Contains(enemy))
                 {
-                    LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                    ElementTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
                 } 
                 
                 if (enemy == "WaterElemental" && !LichTracker.text.Contains(enemy))
