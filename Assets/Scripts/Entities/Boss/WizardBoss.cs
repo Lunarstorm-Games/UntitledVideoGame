@@ -90,7 +90,7 @@ public class WizardBoss : Entity
         base.DeathAnimEvent();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("EndingMenu",LoadSceneMode.Single);
     }
 
     public Projectile MissileProjectile(Vector3 spawnPos)
