@@ -502,7 +502,7 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 27
   targetSpots: []
-  maxHealth: 250
+  maxHealth: 200
   currentHealth: 0
   death: 0
   speed: 3
