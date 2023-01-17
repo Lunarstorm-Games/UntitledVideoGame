@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 5150968047448248991}
   m_Layer: 8
   m_Name: Orc
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
   targetInterests: 27
   targetSpots:
   - {fileID: 930046014958212561}
-  maxHealth: 400
+  maxHealth: 250
   currentHealth: 0
   death: 0
   speed: 2
@@ -1104,8 +1104,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &7883266121447399594
 GameObject:
   m_ObjectHideFlags: 0

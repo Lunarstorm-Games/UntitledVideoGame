@@ -2027,7 +2027,7 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 59
   targetSpots: []
-  maxHealth: 350
+  maxHealth: 150
   currentHealth: 0
   death: 0
   speed: 3
@@ -2115,8 +2115,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!65 &1772457488118898081
 BoxCollider:
   m_ObjectHideFlags: 0

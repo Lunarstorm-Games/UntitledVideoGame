@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 6526958484978963444}
   m_Layer: 8
   m_Name: Lich
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,8 +1060,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &3260047081664522482
 GameObject:
   m_ObjectHideFlags: 0

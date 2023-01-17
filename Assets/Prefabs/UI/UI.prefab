@@ -1477,9 +1477,8 @@ RectTransform:
   - {fileID: 2122776064}
   - {fileID: 645113458}
   - {fileID: 241668818}
-  - {fileID: 1294331638}
   m_Father: {fileID: 1135061758940401362}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2324,7 +2323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.163086, y: -28.638123}
+  m_AnchoredPosition: {x: 5.163086, y: -28.638184}
   m_SizeDelta: {x: -629.6741, y: -32.723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1209185131
@@ -2811,15 +2810,15 @@ RectTransform:
   m_GameObject: {fileID: 1294331637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3287995, y: 1.3287995, z: 1.3287995}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 650586276}
-  m_RootOrder: 7
+  m_Father: {fileID: 1135061758940401362}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -616.42694, y: -351.1513}
+  m_AnchoredPosition: {x: -819.1078, y: -466.60968}
   m_SizeDelta: {x: 208.5654, y: 28.2205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1294331640
@@ -4129,7 +4128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1135061758940401362}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1775210406
 MonoBehaviour:
@@ -4859,7 +4858,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 21.233013
+  m_fontSizeMin: 15.177672
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -7108,6 +7107,7 @@ RectTransform:
   - {fileID: 6417486963437960350}
   - {fileID: 3250497643926071431}
   - {fileID: 1871690120}
+  - {fileID: 1294331638}
   - {fileID: 650586276}
   - {fileID: 4234325984689678466}
   - {fileID: 1775210407}
@@ -7319,7 +7319,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 21.233013
+  m_fontSizeMin: 15.177672
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -8738,7 +8738,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1135061758940401362}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10715,7 +10715,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 12.866667
   m_fontSizeMax: 500
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -11510,7 +11510,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 21.233013
+  m_fontSizeMin: 15.177672
   m_fontSizeMax: 500
   m_fontStyle: 16
   m_HorizontalAlignment: 1
@@ -13900,7 +13900,7 @@ RectTransform:
   - {fileID: 6961042834931293716}
   - {fileID: 2667443092449044563}
   m_Father: {fileID: 1135061758940401362}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -15682,7 +15682,7 @@ PrefabInstance:
     - target: {fileID: 3429670818831494907, guid: aadc68beaa9a59a48ac438d9cb699724,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3429670818831494907, guid: aadc68beaa9a59a48ac438d9cb699724,
         type: 3}
@@ -16247,7 +16247,7 @@ PrefabInstance:
     - target: {fileID: 5647876478593213926, guid: 880f0e88efe650c409a36df2a2713ae5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5647876478593213926, guid: 880f0e88efe650c409a36df2a2713ae5,
         type: 3}

@@ -78,7 +78,12 @@ namespace Assets.Scripts
                 UniStormManager.Instance.SetTime(19, 00);
                 TimeLoopEffectManager.StartCapture();
             }
-            if (UniStormSystem.Instance.Hour == 7 && UniStormSystem.Instance.Minute == 00) EndBoss.gameObject.SetActive(true);
+
+            if (UniStormSystem.Instance.Hour == 7 && UniStormSystem.Instance.Minute == 00)
+            {
+                WaveController.SetActive(false);
+                EndBoss.gameObject.SetActive(true);
+            }
 
         }
 
@@ -164,6 +169,17 @@ namespace Assets.Scripts
                 });
             }
         }
+        
+        public void StartTimeLoop2()
+        {
+            if (!timeLoopStarted)
+            {
+                timeLoopStarted = true;
+                SaveManager.Instance.SaveStateToFile(LevelName);
+                SceneManager.LoadScene(LevelName);
+            }
+        }
+        
         [ContextMenu("GenerateIdsForPersistable")]
         public void GenerateIdsForPersistable()
         {

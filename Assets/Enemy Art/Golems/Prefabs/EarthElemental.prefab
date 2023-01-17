@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 4627303839591138922}
   m_Layer: 8
   m_Name: EarthElemental
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 27
   targetSpots: []
-  maxHealth: 500
+  maxHealth: 200
   currentHealth: 0
   death: 0
   speed: 3
@@ -609,8 +609,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!65 &2101331878235357431
 BoxCollider:
   m_ObjectHideFlags: 0

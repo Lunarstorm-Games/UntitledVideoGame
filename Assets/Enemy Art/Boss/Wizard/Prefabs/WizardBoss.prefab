@@ -605,7 +605,7 @@ MonoBehaviour:
   entityType: 4
   targetInterests: 1
   targetSpots: []
-  maxHealth: 5000
+  maxHealth: 7000
   currentHealth: 0
   death: 0
   healthBar: {fileID: 4216841884440963330}
