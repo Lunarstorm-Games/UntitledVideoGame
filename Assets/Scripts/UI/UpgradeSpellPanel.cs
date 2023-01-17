@@ -316,7 +316,7 @@ public class UpgradeSpellPanel : MonoBehaviour
               }
               break;
 
-          case "Ice Lance Damage":
+          case "Ice Lance Spell Damage":
                 if (essenceBank.SpendEssence(spellUpgrades[5].UpgradeCost))
                 {
                     spells[2].UpgradeDamage(spellUpgrades[5].Value);
