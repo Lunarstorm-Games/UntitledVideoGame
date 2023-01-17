@@ -83,6 +83,10 @@ public class UpgradeSpellPanel : MonoBehaviour
         buttons[3].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[1].SpeedLevel.ToString();
         buttons[4].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[4].Icon;
         buttons[4].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[1].GetComponent<AOEProjectile>().AOELevel.ToString();
+        buttons[5].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[5].Icon;
+        buttons[5].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[3].DamageLevel.ToString();
+        buttons[6].transform.Find("Icon").GetComponent<Image>().sprite = spellUpgrades[6].Icon;
+        buttons[6].transform.Find("LevelBg").GetComponentInChildren<TextMeshProUGUI>().text = spells[2].DamageLevel.ToString();
     }
     
     private void SetSpellPanelData(Sprite _icon, string _upgradeName, string _description, int _currentLevel, float _currentStat, float _futureStat, int _upgradeCost)
@@ -126,7 +130,17 @@ public class UpgradeSpellPanel : MonoBehaviour
                     spells[1].GetComponent<AOEProjectile>().AOERadius, (spells[1].GetComponent<AOEProjectile>().AOERadius + spellUpgrades[4].Value), 
                     spellUpgrades[4].UpgradeCost);
                 break;
-            
+            case "lance dmg":
+                SetSpellPanelData(spellUpgrades[5].Icon, spellUpgrades[5].Name, spellUpgrades[5].Description, spells[2].DamageLevel,
+                    spells[2].damage, (spells[2].damage + spellUpgrades[5].Value),
+                    spellUpgrades[5].UpgradeCost);
+                break;
+            case "poison dmg":
+                SetSpellPanelData(spellUpgrades[6].Icon, spellUpgrades[6].Name, spellUpgrades[6].Description, spells[3].DamageLevel,
+                    spells[3].damage, (spells[3].damage + spellUpgrades[6].Value),
+                    spellUpgrades[6].UpgradeCost);
+                break;
+
             default:
                 Debug.LogWarning("No Such Spell Found");
                 break;
@@ -290,8 +304,39 @@ public class UpgradeSpellPanel : MonoBehaviour
                   ShowWarning("You do not have enough essence to increase the damage of your Fireball Spell");
               }
               break;
-          
-          default:
+
+          case "Ice Lance Damage":
+                if (essenceBank.SpendEssence(spellUpgrades[5].UpgradeCost))
+                {
+                    spells[2].UpgradeDamage(spellUpgrades[5].Value);
+                    spellUpgrades[5].UpgradeCost = Mathf.RoundToInt(spellUpgrades[5].UpgradeCost * 1.3f);
+                    SetEssence(essenceBank.EssenceAmount);
+                    SetLeftPaneData();
+                    HideSpellPanel();
+                    ShowSpellPanel("lance dmg");
+                }
+                else
+                {
+                    ShowWarning("You do not have enough essence to increase the damage of your Light Spell");
+                }
+                break;
+          case "Poison Spell Damage":
+                if (essenceBank.SpendEssence(spellUpgrades[6].UpgradeCost))
+                {
+                    spells[3].UpgradeDamage(spellUpgrades[6].Value);
+                    spellUpgrades[6].UpgradeCost = Mathf.RoundToInt(spellUpgrades[6].UpgradeCost * 1.3f);
+                    SetEssence(essenceBank.EssenceAmount);
+                    SetLeftPaneData();
+                    HideSpellPanel();
+                    ShowSpellPanel("poison dmg");
+                }
+                else
+                {
+                    ShowWarning("You do not have enough essence to increase the damage of your Light Spell");
+                }
+                break;
+
+            default:
               Debug.LogWarning("No such spell");
               break;
         }
