@@ -5029,7 +5029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76e12ae79fe1c54da5aad446341ddb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactEffect: {fileID: 8310478900511335466, guid: 65952721163e0e24e92468b780836459,
+  impactEffect: {fileID: 8310478900511335466, guid: e9d7df67386014b48aa554dde1560ddc,
     type: 3}
   hitSound: {fileID: 0}
   mana: 65
