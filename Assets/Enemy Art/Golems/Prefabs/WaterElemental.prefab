@@ -2052,7 +2052,7 @@ MonoBehaviour:
     - rid: 3523685444181557248
       type: {class: EssenceSourceLogic, ns: Assets.scripts.Logic, asm: Assembly-CSharp}
       data:
-        EssenceValue: 0
+        EssenceValue: 40
 --- !u!114 &6229923334139454735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,8 +2115,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.4
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!65 &1772457488118898081
 BoxCollider:
   m_ObjectHideFlags: 0
