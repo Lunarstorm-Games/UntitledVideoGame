@@ -154,7 +154,7 @@ public class MemoryBoardUIController : MonoBehaviour
                 
                 if (enemy == "WaterElemental" && !LichTracker.text.Contains(enemy))
                 {
-                    LichTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
+                    WaterTracker.text = $"{enemy} first appeared at {hour}:{minutes.ToString().PadLeft(2, '0')}";
                 }
 
                 if (Boss.activeInHierarchy)
