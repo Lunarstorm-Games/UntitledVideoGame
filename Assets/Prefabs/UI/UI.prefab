@@ -8520,8 +8520,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2232191806959893533}
-  - {fileID: 4380603499103043575}
   - {fileID: 4555647131706471136}
+  - {fileID: 4380603499103043575}
   m_Father: {fileID: 1787472006928097727}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12060,7 +12060,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6961042834931293716}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13104,7 +13104,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6961042834931293716}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13959,6 +13959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell1Panel: {fileID: 818407709740624844}
   spell2Panel: {fileID: 7663977026598853482}
+  spell3Panel: {fileID: 0}
+  spell4Panel: {fileID: 0}
 --- !u!1 &8063395351361365759
 GameObject:
   m_ObjectHideFlags: 0
