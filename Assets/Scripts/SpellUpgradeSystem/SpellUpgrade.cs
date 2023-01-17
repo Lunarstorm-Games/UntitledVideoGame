@@ -9,7 +9,7 @@ public class SpellUpgrade : ScriptableObject
     public Sprite Icon;
     [Tooltip("Upgrade cost per level")]
     public int UpgradeCost;
-    public enum UpgradeType { Damage, Speed, AOE}
+    public enum UpgradeType { Damage }
 
     [Header("Upgrade Type and Amount per Level")]
     public UpgradeType type;
